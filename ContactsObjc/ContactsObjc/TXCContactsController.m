@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        _internalContacts = [[NSMutableArray alloc] init];
+        _internalContacts = [[[NSMutableArray alloc] init] autorelease];
         [self addTextContacts];
     }
     return self;
