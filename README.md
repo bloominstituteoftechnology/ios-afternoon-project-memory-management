@@ -19,6 +19,7 @@ You will be implementing a basic contacts manager app. It should include:
     2. email address
     3. phone number
 - Tapping a contact should show the detail view controller and allow you to **edit it**.
+- For testing add some test data so that there's initial contact cards you can see. (You can remove if you have persistence or a web backend)
 
 ### Part 0 - Preparation
 
@@ -58,4 +59,5 @@ If you finish early or want to push yourself, here are a few additional features
 - Add an option to export the contact information as a "contacts.CSV" file to disk (comma separated file)
 - Add an option to share a contact card using a CIQRCodeGenerator filter from Core Image (See [HackingWithSwift tutorial](https://www.hackingwithswift.com/example-code/media/how-to-create-a-qr-code)).
 - Implement persistence using Core Data.
+- Download "fake" users from a web API like [Random User](https://randomuser.me) and present these as contacts
 
