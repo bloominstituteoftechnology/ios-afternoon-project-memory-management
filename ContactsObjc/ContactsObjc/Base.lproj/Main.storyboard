@@ -13,13 +13,13 @@
         <!--Contacts-->
         <scene sceneID="B4C-Me-bNS">
             <objects>
-                <tableViewController id="ncd-Rj-ATL" sceneMemberID="viewController">
+                <tableViewController id="ncd-Rj-ATL" customClass="TXCContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9wx-BU-Fe6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="wt9-Gs-0bR" style="IBUITableViewCellStyleDefault" id="wjq-Nx-qIM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="wt9-Gs-0bR" style="IBUITableViewCellStyleDefault" id="wjq-Nx-qIM">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wjq-Nx-qIM" id="e8Z-a1-H2y">
@@ -60,7 +60,7 @@
         <!--Title-->
         <scene sceneID="c49-oh-whJ">
             <objects>
-                <viewController id="h0Y-fx-NjX" sceneMemberID="viewController">
+                <viewController id="h0Y-fx-NjX" customClass="TXCContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzD-lv-BTs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NXj-vA-xn2">
                                 <rect key="frame" x="8" y="280" width="398" height="93.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-gB-cs4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-gB-cs4" customClass="TXCCon">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -126,6 +126,11 @@
                     <navigationItem key="navigationItem" title="Title" id="8wz-Jp-cPx">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="qWJ-db-ujH"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="AJr-cH-R2L" id="2Ud-fV-QxO"/>
+                        <outlet property="nameLabel" destination="OUw-gB-cs4" id="F7k-lh-0QF"/>
+                        <outlet property="phoneLabel" destination="2U7-tK-3Lc" id="wYd-Rk-XQ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbH-VQ-R6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

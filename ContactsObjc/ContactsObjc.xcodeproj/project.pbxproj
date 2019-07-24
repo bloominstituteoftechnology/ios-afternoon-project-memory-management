@@ -12,6 +12,10 @@
 		422EE3D322E8EC7F009DCC4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422EE3D222E8EC7F009DCC4E /* Assets.xcassets */; };
 		422EE3D622E8EC7F009DCC4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422EE3D422E8EC7F009DCC4E /* LaunchScreen.storyboard */; };
 		422EE3D922E8EC7F009DCC4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 422EE3D822E8EC7F009DCC4E /* main.m */; };
+		422EE3E122E8EFD6009DCC4E /* TXCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 422EE3E022E8EFD6009DCC4E /* TXCContact.m */; };
+		422EE3E722E8F304009DCC4E /* TXCContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422EE3E622E8F304009DCC4E /* TXCContactsTableViewController.m */; };
+		422EE3EA22E8F31F009DCC4E /* TXCContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422EE3E922E8F31F009DCC4E /* TXCContactsController.m */; };
+		422EE3ED22E8F339009DCC4E /* TXCContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422EE3EC22E8F339009DCC4E /* TXCContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,14 @@
 		422EE3D522E8EC7F009DCC4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422EE3D722E8EC7F009DCC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422EE3D822E8EC7F009DCC4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		422EE3DF22E8EFD6009DCC4E /* TXCContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXCContact.h; sourceTree = "<group>"; };
+		422EE3E022E8EFD6009DCC4E /* TXCContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCContact.m; sourceTree = "<group>"; };
+		422EE3E522E8F304009DCC4E /* TXCContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXCContactsTableViewController.h; sourceTree = "<group>"; };
+		422EE3E622E8F304009DCC4E /* TXCContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCContactsTableViewController.m; sourceTree = "<group>"; };
+		422EE3E822E8F31F009DCC4E /* TXCContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXCContactsController.h; sourceTree = "<group>"; };
+		422EE3E922E8F31F009DCC4E /* TXCContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCContactsController.m; sourceTree = "<group>"; };
+		422EE3EB22E8F339009DCC4E /* TXCContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXCContactDetailViewController.h; sourceTree = "<group>"; };
+		422EE3EC22E8F339009DCC4E /* TXCContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,14 @@
 			children = (
 				422EE3C922E8EC7D009DCC4E /* AppDelegate.h */,
 				422EE3CA22E8EC7D009DCC4E /* AppDelegate.m */,
+				422EE3DF22E8EFD6009DCC4E /* TXCContact.h */,
+				422EE3E022E8EFD6009DCC4E /* TXCContact.m */,
+				422EE3E822E8F31F009DCC4E /* TXCContactsController.h */,
+				422EE3E922E8F31F009DCC4E /* TXCContactsController.m */,
+				422EE3E522E8F304009DCC4E /* TXCContactsTableViewController.h */,
+				422EE3E622E8F304009DCC4E /* TXCContactsTableViewController.m */,
+				422EE3EB22E8F339009DCC4E /* TXCContactDetailViewController.h */,
+				422EE3EC22E8F339009DCC4E /* TXCContactDetailViewController.m */,
 				422EE3CF22E8EC7D009DCC4E /* Main.storyboard */,
 				422EE3D222E8EC7F009DCC4E /* Assets.xcassets */,
 				422EE3D422E8EC7F009DCC4E /* LaunchScreen.storyboard */,
@@ -137,6 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				422EE3D922E8EC7F009DCC4E /* main.m in Sources */,
+				422EE3EA22E8F31F009DCC4E /* TXCContactsController.m in Sources */,
+				422EE3E122E8EFD6009DCC4E /* TXCContact.m in Sources */,
+				422EE3E722E8F304009DCC4E /* TXCContactsTableViewController.m in Sources */,
+				422EE3ED22E8F339009DCC4E /* TXCContactDetailViewController.m in Sources */,
 				422EE3CB22E8EC7D009DCC4E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
