@@ -20,11 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    _contactsController = [[[TXCContactsController alloc] init] autorelease];
     
 }
 
+- (TXCContactsController *)contactsController {
+    if (_contactsController == nil) {
+        _contactsController = [[[TXCContactsController alloc] init] autorelease];
+    }
+    return _contactsController;
+}
 #pragma mark - Table view data source
 
 

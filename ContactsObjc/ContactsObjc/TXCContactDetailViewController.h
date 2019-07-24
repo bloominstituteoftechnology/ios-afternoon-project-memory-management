@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@property (retain) TXCContactsController *contactsController;
-@property (retain, nonatomic) TXCContact *contact;
+@property (copy) TXCContactsController *contactsController;
+@property (copy, nonatomic) TXCContact *contact;
 
 @end
 
