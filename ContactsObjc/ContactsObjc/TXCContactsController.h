@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TXCContactsController : NSObject
 
-@property (retain) NSArray<TXCContact *> *contacts;
+@property (copy) NSArray<TXCContact *> *contacts;
 
 @end
 

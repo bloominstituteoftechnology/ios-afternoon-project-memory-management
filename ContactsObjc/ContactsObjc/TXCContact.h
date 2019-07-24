@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TXCContact : NSObject
 
-@property (retain) NSString *name;
-@property (retain) NSString *email;
-@property (retain) NSString *phone;
+@property  (copy) NSString *name;
+@property  (copy) NSString *email;
+@property  (copy) NSString *phone;
 
 
 - (instancetype)initWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;

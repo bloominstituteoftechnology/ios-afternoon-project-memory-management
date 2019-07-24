@@ -13,6 +13,7 @@
 
 @interface TXCContactsTableViewController ()
 
+
 @end
 
 @implementation TXCContactsTableViewController
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _contactsController = [[TXCContactsController alloc] init];
+    _contactsController = [[[TXCContactsController alloc] init] autorelease];
     
 }
 
@@ -48,16 +49,16 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"CellSegue"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        TXCContact *contact = self.contactsController.contacts[indexPath.row];
-        TXCContactDetailViewController *detailVC = segue.destinationViewController;
-        detailVC.contact = contact;
-        detailVC.contactsController = self.contactsController;
-    } else if ([segue.identifier isEqualToString:@"AddSegue"]) {
-        TXCContactDetailViewController *detailVC = segue.destinationViewController;
-        detailVC.contactsController = self.contactsController;
-    }
+        if ([segue.identifier isEqualToString:@"CellSegue"]) {
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            TXCContact *contact = self.contactsController.contacts[indexPath.row];
+            TXCContactDetailViewController *detailVC = segue.destinationViewController;
+            detailVC.contact = contact;
+            detailVC.contactsController = self.contactsController;
+        } else if ([segue.identifier isEqualToString:@"AddSegue"]) {
+            TXCContactDetailViewController *detailVC = segue.destinationViewController;
+            detailVC.contactsController = self.contactsController;
+        }
     
 }
 

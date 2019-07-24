@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TXCContactsTableViewController : UITableViewController
 
-@property (retain) TXCContactsController *contactsController;
+@property (copy) TXCContactsController *contactsController;
 
 @end
 
