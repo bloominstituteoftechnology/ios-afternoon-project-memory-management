@@ -6,13 +6,18 @@ The goal of this project is to solidify your understanding of the reference coun
 
 ## Instructions
 
-You will need to create your own Xcode project and repository. Commit regularly as you complete the requirements in this project.
+Fork and clone this repository.
+
+You will need to create your own Xcode project. Commit regularly as you complete the requirements in this project.
 
 You will be implementing a basic contacts manager app. It should include:
 
 - A main view with a table view displaying contact names
-- A plus button used to create a new contact
-- A detail view controller used to display, enter, and edit more information for each contact, including at least: **name, email address, phone number**.
+- A plus (+) button used to create a new contact
+- A detail view controller used to display, enter, and edit more information for each contact, including at least: 
+    1. name 
+    2. email address
+    3. phone number
 - Tapping a contact should show the detail view controller and allow you to **edit it**.
 
 ### Part 0 - Preparation
@@ -22,7 +27,7 @@ When you create a new project, by default, ARC is enabled. You'll need to disabl
 1. Create the project
 2. Select the project itself in the files navigator
 3. Select the "Build Settings" tab
-4. Select the Project itself under "PROJECT", not the app target
+4. Select the Project itself under "PROJECT", not the app target (This will set it for all targets, but you can enabled it for individual targets)
 5. Search for "objective-c automatic" which will bring up the "Objective-C Automatic Reference Counting" setting.
 6. Change the setting to `NO` to disable automatic reference counting.
 
@@ -49,6 +54,8 @@ Run the app and test to make sure it functions correctly.
 ## Go Further
 
 If you finish early or want to push yourself, here are a few additional features you can implement:
-
-- Implement persistence using Core Data.
 - Add support for contacts having a photo. Does this effect memory usage as the app runs?
+- Add an option to export the contact information as a "contacts.CSV" file to disk (comma separated file)
+- Add an option to share a contact card using a CIQRCodeGenerator filter from Core Image (See [HackingWithSwift tutorial](https://www.hackingwithswift.com/example-code/media/how-to-create-a-qr-code)).
+- Implement persistence using Core Data.
+
