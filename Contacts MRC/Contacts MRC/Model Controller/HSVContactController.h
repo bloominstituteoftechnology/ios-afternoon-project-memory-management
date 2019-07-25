@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class HSVContact;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSVContactController : NSObject
+
+
+- (NSArray *)contacts;
+
+
 
 @end
 

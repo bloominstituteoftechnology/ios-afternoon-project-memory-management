@@ -7,8 +7,13 @@
 //
 
 #import "HSVContactsTableViewController.h"
+#import "HSVContactController.h"
+
 
 @interface HSVContactsTableViewController ()
+
+@property (nonatomic) HSVContactController *contactController;
+
 
 @end
 
