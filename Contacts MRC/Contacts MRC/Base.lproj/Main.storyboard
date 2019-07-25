@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="RfW-8r-BNN" kind="show" id="irD-uV-vNx"/>
+                                    <segue destination="RfW-8r-BNN" kind="show" identifier="ViewSegue" id="irD-uV-vNx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,7 +53,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zLv-Z9-jVU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QWb-jp-1ZZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QWb-jp-1ZZ">
+                            <connections>
+                                <segue destination="RfW-8r-BNN" kind="show" identifier="AddSegue" id="j9F-G4-koZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys6-Mt-NUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,4 +143,7 @@
             <point key="canvasLocation" x="-50.724637681159422" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="irD-uV-vNx"/>
+    </inferredMetricsTieBreakers>
 </document>

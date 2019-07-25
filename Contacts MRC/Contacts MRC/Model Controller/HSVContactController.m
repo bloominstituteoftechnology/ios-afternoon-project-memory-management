@@ -33,8 +33,9 @@
 	return [[self.internalContacts copy] autorelease];
 }
 
-
-
+- (void)addInternalContact:(HSVContact *)contact {
+	[_internalContacts addObject:contact];
+}
 
 - (void)addTestData{
 	HSVContact *hector = [[[HSVContact alloc] initWithname:@"Hecotor" email:@"email@hector.com" phoneNumber:@"1-211-511-9121"] autorelease];

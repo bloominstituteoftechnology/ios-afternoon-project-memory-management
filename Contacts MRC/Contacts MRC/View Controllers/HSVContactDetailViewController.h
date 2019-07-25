@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class HSVContactController;
+@class HSVContact;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSVContactDetailViewController : UIViewController
+
+@property (nonatomic, strong) HSVContactController *contactController;
+@property (nonatomic, strong) HSVContact *contact;
+
 
 @end
 

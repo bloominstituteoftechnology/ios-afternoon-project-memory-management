@@ -8,7 +8,8 @@
 
 #import "HSVContactsTableViewController.h"
 #import "HSVContactController.h"
-
+#import "HSVContact.h"
+#import "HSVContactDetailViewController.h"
 
 @interface HSVContactsTableViewController ()
 
@@ -91,14 +92,21 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	if ([[segue identifier] isEqualToString:@"AddSegue"]) {
+		HSVContactDetailViewController *vc = (HSVContactDetailViewController *)[segue destinationViewController];
+		vc.contactController = self.contactController;
+	}else if ([[segue identifier] isEqualToString:@"AddSegue"]) {
+		HSVContactDetailViewController *vc = (HSVContactDetailViewController *)[segue destinationViewController];
+		
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		
+		vc.contactController = self.contactController;
+		vc.contact = self.contactController.contacts[indexPath.row];
+	}
 }
-*/
+
 
 @end
