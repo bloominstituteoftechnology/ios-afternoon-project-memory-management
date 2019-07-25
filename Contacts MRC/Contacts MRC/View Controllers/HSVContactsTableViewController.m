@@ -19,6 +19,16 @@
 
 @implementation HSVContactsTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	if (self) {
+		_contactController = [[HSVContactController alloc] init];
+	}
+	return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 10;
+    return [self.contactController.contacts count];
 }
 
 

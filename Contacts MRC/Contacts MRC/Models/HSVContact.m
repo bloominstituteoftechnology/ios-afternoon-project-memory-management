@@ -27,7 +27,15 @@
 
 
 
-
+- (void)dealloc {
+	[_name release];
+	[_email release];
+	[_phoneNumber release];
+	
+	[super dealloc];
+	
+	
+}
 
 
 @end

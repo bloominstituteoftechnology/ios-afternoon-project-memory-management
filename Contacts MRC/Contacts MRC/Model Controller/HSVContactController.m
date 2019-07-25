@@ -12,7 +12,7 @@
 
 @interface HSVContactController ()
 
-@property (nonatomic, copy) NSMutableArray<HSVContact *> *internalContacts;
+@property (nonatomic, retain) NSMutableArray<HSVContact *> *internalContacts;
 
 @end
 
@@ -30,25 +30,29 @@
 }
 
 - (NSArray *)contacts{
-	return [self.internalContacts copy];
+	return [[self.internalContacts copy] autorelease];
 }
 
 
 
 
 - (void)addTestData{
-	HSVContact *hector = [[HSVContact alloc] initWithname:@"Hecotor" email:@"email@hector.com" phoneNumber:@"1-211-511-9121"];
+	HSVContact *hector = [[[HSVContact alloc] initWithname:@"Hecotor" email:@"email@hector.com" phoneNumber:@"1-211-511-9121"] autorelease];
 	[self.internalContacts addObject:hector];
 	
-	HSVContact *john = [[HSVContact alloc] initWithname:@"John" email:@"email@John.com" phoneNumber:@"1-211-511-9121"];
+	HSVContact *john = [[[HSVContact alloc] initWithname:@"John" email:@"email@John.com" phoneNumber:@"1-211-511-9121"] autorelease];
 	[self.internalContacts addObject:john];
 
-	HSVContact *sam = [[HSVContact alloc] initWithname:@"Sam" email:@"email@Sam.com" phoneNumber:@"1-211-511-9121"];
+	HSVContact *sam = [[[HSVContact alloc] initWithname:@"Sam" email:@"email@Sam.com" phoneNumber:@"1-211-511-9121"] autorelease];
 	[self.internalContacts addObject:sam];
 
 }
 
-
+- (void)dealloc {
+	[_internalContacts release];
+	
+	[super dealloc];
+}
 
 
 @end
