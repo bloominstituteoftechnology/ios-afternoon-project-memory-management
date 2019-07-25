@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Contacts Table View Controller-->
         <scene sceneID="g8z-nF-uC5">
             <objects>
-                <tableViewController id="020-wk-aBZ" sceneMemberID="viewController">
+                <tableViewController id="020-wk-aBZ" customClass="HSVContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nCB-DE-0eO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="859.4202898550725" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="UIh-wZ-hGh">
             <objects>
-                <viewController id="RfW-8r-BNN" sceneMemberID="viewController">
+                <viewController id="RfW-8r-BNN" customClass="HSVContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7em-ih-O8m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		E8E2BFDB22EA4524003E57A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E2BFDA22EA4524003E57A9 /* AppDelegate.m */; };
-		E8E2BFDE22EA4524003E57A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E2BFDD22EA4524003E57A9 /* ViewController.m */; };
 		E8E2BFE122EA4524003E57A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E2BFDF22EA4524003E57A9 /* Main.storyboard */; };
 		E8E2BFE322EA4525003E57A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E2BFE222EA4525003E57A9 /* Assets.xcassets */; };
 		E8E2BFE622EA4525003E57A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E2BFE422EA4525003E57A9 /* LaunchScreen.storyboard */; };
 		E8E2BFE922EA4525003E57A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E2BFE822EA4525003E57A9 /* main.m */; };
+		E8E2BFF522EA4952003E57A9 /* HSVContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E2BFF422EA4952003E57A9 /* HSVContactDetailViewController.m */; };
+		E8E2BFF822EA49B4003E57A9 /* HSVContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E2BFF722EA49B4003E57A9 /* HSVContactsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E8E2BFD622EA4524003E57A9 /* Contacts MRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts MRC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E2BFD922EA4524003E57A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E2BFDA22EA4524003E57A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E8E2BFDC22EA4524003E57A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8E2BFDD22EA4524003E57A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E8E2BFE022EA4524003E57A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8E2BFE222EA4525003E57A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8E2BFE522EA4525003E57A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8E2BFE722EA4525003E57A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E2BFE822EA4525003E57A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E8E2BFF322EA4952003E57A9 /* HSVContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVContactDetailViewController.h; sourceTree = "<group>"; };
+		E8E2BFF422EA4952003E57A9 /* HSVContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVContactDetailViewController.m; sourceTree = "<group>"; };
+		E8E2BFF622EA49B4003E57A9 /* HSVContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVContactsTableViewController.h; sourceTree = "<group>"; };
+		E8E2BFF722EA49B4003E57A9 /* HSVContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVContactsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +76,10 @@
 		E8E2BFEF22EA4587003E57A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8E2BFDC22EA4524003E57A9 /* ViewController.h */,
-				E8E2BFDD22EA4524003E57A9 /* ViewController.m */,
+				E8E2BFF622EA49B4003E57A9 /* HSVContactsTableViewController.h */,
+				E8E2BFF722EA49B4003E57A9 /* HSVContactsTableViewController.m */,
+				E8E2BFF322EA4952003E57A9 /* HSVContactDetailViewController.h */,
+				E8E2BFF422EA4952003E57A9 /* HSVContactDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		E8E2BFCE22EA4524003E57A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HSV;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Hector Steven";
 				TargetAttributes = {
@@ -149,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E2BFDE22EA4524003E57A9 /* ViewController.m in Sources */,
+				E8E2BFF822EA49B4003E57A9 /* HSVContactsTableViewController.m in Sources */,
+				E8E2BFF522EA4952003E57A9 /* HSVContactDetailViewController.m in Sources */,
 				E8E2BFE922EA4525003E57A9 /* main.m in Sources */,
 				E8E2BFDB22EA4524003E57A9 /* AppDelegate.m in Sources */,
 			);
