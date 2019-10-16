@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="kEx-4Z-If7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowContactSegue" id="kEx-4Z-If7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -38,6 +38,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="s5T-fZ-Nx0">
                             <connections>
                                 <action selector="plusButtonPressed:" destination="W95-sJ-EJ1" id="yuW-lr-dEx"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="CreateContactSegue" id="kzX-0l-5eU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,4 +124,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="23.4375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kEx-4Z-If7"/>
+    </inferredMetricsTieBreakers>
 </document>

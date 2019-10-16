@@ -9,6 +9,7 @@
 #import "REPContactsTableViewController.h"
 #import "REPContactController.h"
 #import "REPContact.h"
+#import "REPContactDetailViewController.h"
 
 @interface REPContactsTableViewController ()
 
@@ -21,8 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	_contactController = [REPContactController controller];
-	[_contactController retain];
+	self.contactController = [REPContactController controller];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.tableView reloadData];
 }
 
 - (void)dealloc {
@@ -32,6 +37,22 @@
 }
 
 - (IBAction)plusButtonPressed:(UIBarButtonItem *)sender {
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"ShowContactSegue"]) {
+		REPContactDetailViewController *detailVC = segue.destinationViewController;
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+		REPContact *contact = self.contactController.contacts[indexPath.row];
+		detailVC.contactController = self.contactController;
+		detailVC.contact = contact;
+	}
+
+	if ([segue.identifier isEqualToString:@"CreateContactSegue"]) {
+		REPContactDetailViewController *detailVC = segue.destinationViewController;
+		detailVC.contactController = self.contactController;
+	}
 }
 
 // MARK: - Table view data source

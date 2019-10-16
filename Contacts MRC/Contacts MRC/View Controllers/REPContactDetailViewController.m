@@ -7,6 +7,8 @@
 //
 
 #import "REPContactDetailViewController.h"
+#import "REPContactController.h"
+#import "REPContact.h"
 
 @interface REPContactDetailViewController ()
 @property (unsafe_unretained, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -24,6 +26,14 @@
 }
 
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
+	NSString *name = self.nameTextField.text;
+	NSString *email = self.emailTextField.text;
+	NSString *phone = self.phoneTextField.text;
+
+	if (name) {
+		[self.contactController createContactWithName:name email:email andPhone:phone];
+		[self.navigationController popViewControllerAnimated:YES];
+	}
 }
 
 - (void)dealloc {
