@@ -13,7 +13,9 @@
 		B5C9A3BB2357B157009AFA06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C9A3BA2357B157009AFA06 /* Assets.xcassets */; };
 		B5C9A3BE2357B157009AFA06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C9A3BC2357B157009AFA06 /* LaunchScreen.storyboard */; };
 		B5C9A3C12357B157009AFA06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A3C02357B157009AFA06 /* main.m */; };
-		B5C9A3C92357B44B009AFA06 /* ContactsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A3C82357B44B009AFA06 /* ContactsTableVC.m */; };
+		B5C9A3C92357B44B009AFA06 /* JSContactsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A3C82357B44B009AFA06 /* JSContactsTableVC.m */; };
+		B5C9A3CC2357B5DE009AFA06 /* JSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A3CB2357B5DE009AFA06 /* JSContactController.m */; };
+		B5C9A3CF2357B67B009AFA06 /* JSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A3CE2357B67B009AFA06 /* JSContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +29,12 @@
 		B5C9A3BD2357B157009AFA06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C9A3BF2357B157009AFA06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C9A3C02357B157009AFA06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B5C9A3C72357B44B009AFA06 /* ContactsTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableVC.h; sourceTree = "<group>"; };
-		B5C9A3C82357B44B009AFA06 /* ContactsTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableVC.m; sourceTree = "<group>"; };
+		B5C9A3C72357B44B009AFA06 /* JSContactsTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSContactsTableVC.h; sourceTree = "<group>"; };
+		B5C9A3C82357B44B009AFA06 /* JSContactsTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSContactsTableVC.m; sourceTree = "<group>"; };
+		B5C9A3CA2357B5DE009AFA06 /* JSContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSContactController.h; sourceTree = "<group>"; };
+		B5C9A3CB2357B5DE009AFA06 /* JSContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSContactController.m; sourceTree = "<group>"; };
+		B5C9A3CD2357B67B009AFA06 /* JSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSContact.h; sourceTree = "<group>"; };
+		B5C9A3CE2357B67B009AFA06 /* JSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,12 @@
 				B5C9A3AF2357B154009AFA06 /* AppDelegate.m */,
 				B5C9A3B12357B154009AFA06 /* SceneDelegate.h */,
 				B5C9A3B22357B154009AFA06 /* SceneDelegate.m */,
-				B5C9A3C72357B44B009AFA06 /* ContactsTableVC.h */,
-				B5C9A3C82357B44B009AFA06 /* ContactsTableVC.m */,
+				B5C9A3C72357B44B009AFA06 /* JSContactsTableVC.h */,
+				B5C9A3C82357B44B009AFA06 /* JSContactsTableVC.m */,
+				B5C9A3CA2357B5DE009AFA06 /* JSContactController.h */,
+				B5C9A3CB2357B5DE009AFA06 /* JSContactController.m */,
+				B5C9A3CD2357B67B009AFA06 /* JSContact.h */,
+				B5C9A3CE2357B67B009AFA06 /* JSContact.m */,
 				B5C9A3B72357B154009AFA06 /* Main.storyboard */,
 				B5C9A3BA2357B157009AFA06 /* Assets.xcassets */,
 				B5C9A3BC2357B157009AFA06 /* LaunchScreen.storyboard */,
@@ -147,9 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C9A3C92357B44B009AFA06 /* ContactsTableVC.m in Sources */,
+				B5C9A3C92357B44B009AFA06 /* JSContactsTableVC.m in Sources */,
 				B5C9A3B02357B154009AFA06 /* AppDelegate.m in Sources */,
 				B5C9A3C12357B157009AFA06 /* main.m in Sources */,
+				B5C9A3CF2357B67B009AFA06 /* JSContact.m in Sources */,
+				B5C9A3CC2357B5DE009AFA06 /* JSContactController.m in Sources */,
 				B5C9A3B32357B154009AFA06 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

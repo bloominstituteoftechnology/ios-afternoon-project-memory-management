@@ -1,5 +1,5 @@
 //
-//  ContactsTableVC.h
+//  JSContactsTableVC.h
 //  Contacts-C
 //
 //  Created by Jeffrey Santana on 10/16/19.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ContactsTableVC : UITableViewController
+@interface JSContactsTableVC : UITableViewController
 
 @end
 
