@@ -20,9 +20,24 @@
 
 @implementation REPContactDetailViewController
 
+- (void)setContact:(REPContact *)contact {
+	_contact = contact;
+	[self updateViews];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)updateViews {
+	[self loadViewIfNeeded];
+	if (self.contact) {
+		self.nameTextField.text = self.contact.name;
+		self.emailTextField.text = self.contact.email;
+		self.phoneTextField.text = self.contact.phone;
+		self.navigationItem.title = self.contact.name;
+	}
 }
 
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
@@ -30,10 +45,16 @@
 	NSString *email = self.emailTextField.text;
 	NSString *phone = self.phoneTextField.text;
 
-	if (name) {
-		[self.contactController createContactWithName:name email:email andPhone:phone];
-		[self.navigationController popViewControllerAnimated:YES];
+	if (!name) {
+		return;
 	}
+
+	if (self.contact) {
+		[self.contactController updateContact:self.contact withName:name email:email andPhone:phone];
+	} else {
+		[self.contactController createContactWithName:name email:email andPhone:phone];
+	}
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)dealloc {
