@@ -21,7 +21,7 @@ You will be implementing a basic contacts manager app. It should include:
 - Tapping a contact should show the detail view controller and allow you to **edit it**.
 - For testing add some test data so that there's initial contact cards you can see. (You can remove if you have persistence or a web backend)
 
-### Part 0 - Preparation
+### Disable ARC First
 
 When you create a new project, by default, ARC is enabled. You'll need to disable ARC so you can use manual reference counting. To do so, follow these steps:
 
