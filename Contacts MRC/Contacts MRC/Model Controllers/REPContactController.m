@@ -7,7 +7,45 @@
 //
 
 #import "REPContactController.h"
+#import "REPContact.h"
+
+@interface REPContactController()
+
+@property (retain) NSMutableArray<REPContact *> *internalContacts;
+
+@end
 
 @implementation REPContactController
+
+// TODO: Make sure this is safe
+- (NSArray<REPContact *> *)contacts {
+	return [[self.internalContacts copy] autorelease];
+//	return [self.internalContacts copy];
+}
+
+- (instancetype)init {
+	if (self = [super init]) {
+		_internalContacts = [NSMutableArray array];
+	}
+	return self;
+}
+
+- (void)dealloc {
+	[_internalContacts release];
+	[super dealloc];
+}
+
+- (void)createContactWithName:(NSString *)name email:(NSString *)email andPhone:(NSString *)phone {
+	REPContact *contact = [[REPContact alloc] initWithName:name email:email phone:phone];
+
+	[self.internalContacts addObject:contact];
+	[contact release];
+}
+
+- (void)updateContact:(REPContact *)contact withName:(NSString *)name email:(NSString *)email andPhone:(NSString *)phone {
+	contact.name = name;
+	contact.email = email;
+	contact.phone = phone;
+}
 
 @end

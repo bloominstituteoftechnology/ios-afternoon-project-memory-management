@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface REPContact : NSObject
 
+@property (copy) NSString *name;
+@property (copy) NSString *email;
+@property (copy) NSString *phone;
+
++ (REPContact *)contactWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
+
+- (instancetype)initWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
+
 @end
 
 NS_ASSUME_NONNULL_END
