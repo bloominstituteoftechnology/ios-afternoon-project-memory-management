@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		33C92DBB2357A7FF0061B0F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DBA2357A7FF0061B0F8 /* AppDelegate.m */; };
-		33C92DC12357A7FF0061B0F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DC02357A7FF0061B0F8 /* ViewController.m */; };
+		33C92DC12357A7FF0061B0F8 /* REPContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DC02357A7FF0061B0F8 /* REPContactDetailViewController.m */; };
 		33C92DC42357A7FF0061B0F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C92DC22357A7FF0061B0F8 /* Main.storyboard */; };
 		33C92DC62357A8000061B0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C92DC52357A8000061B0F8 /* Assets.xcassets */; };
 		33C92DC92357A8000061B0F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C92DC72357A8000061B0F8 /* LaunchScreen.storyboard */; };
 		33C92DCC2357A8000061B0F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DCB2357A8000061B0F8 /* main.m */; };
+		33C92DD52357AB5D0061B0F8 /* REPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33C92DB62357A7FF0061B0F8 /* Contacts MRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts MRC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C92DB92357A7FF0061B0F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33C92DBA2357A7FF0061B0F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		33C92DBF2357A7FF0061B0F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		33C92DC02357A7FF0061B0F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		33C92DBF2357A7FF0061B0F8 /* REPContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPContactDetailViewController.h; sourceTree = "<group>"; };
+		33C92DC02357A7FF0061B0F8 /* REPContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPContactDetailViewController.m; sourceTree = "<group>"; };
 		33C92DC32357A7FF0061B0F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33C92DC52357A8000061B0F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33C92DC82357A8000061B0F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C92DCA2357A8000061B0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C92DCB2357A8000061B0F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33C92DD32357AB5D0061B0F8 /* REPContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPContactsTableViewController.h; sourceTree = "<group>"; };
+		33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPContactsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +61,16 @@
 		33C92DB82357A7FF0061B0F8 /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
-				33C92DBF2357A7FF0061B0F8 /* ViewController.h */,
-				33C92DC02357A7FF0061B0F8 /* ViewController.m */,
-				33C92DD22357A8590061B0F8 /* misc */,
+				33C92DBF2357A7FF0061B0F8 /* REPContactDetailViewController.h */,
+				33C92DC02357A7FF0061B0F8 /* REPContactDetailViewController.m */,
+				33C92DD32357AB5D0061B0F8 /* REPContactsTableViewController.h */,
+				33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */,
+				33C92DD22357A8590061B0F8 /* Misc */,
 			);
 			path = "Contacts MRC";
 			sourceTree = "<group>";
 		};
-		33C92DD22357A8590061B0F8 /* misc */ = {
+		33C92DD22357A8590061B0F8 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
 				33C92DB92357A7FF0061B0F8 /* AppDelegate.h */,
@@ -76,7 +81,7 @@
 				33C92DCA2357A8000061B0F8 /* Info.plist */,
 				33C92DCB2357A8000061B0F8 /* main.m */,
 			);
-			path = misc;
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +110,7 @@
 		33C92DAE2357A7FF0061B0F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = REP;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Red_Egg Productions";
 				TargetAttributes = {
@@ -149,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33C92DC12357A7FF0061B0F8 /* ViewController.m in Sources */,
+				33C92DD52357AB5D0061B0F8 /* REPContactsTableViewController.m in Sources */,
+				33C92DC12357A7FF0061B0F8 /* REPContactDetailViewController.m in Sources */,
 				33C92DBB2357A7FF0061B0F8 /* AppDelegate.m in Sources */,
 				33C92DCC2357A8000061B0F8 /* main.m in Sources */,
 			);
