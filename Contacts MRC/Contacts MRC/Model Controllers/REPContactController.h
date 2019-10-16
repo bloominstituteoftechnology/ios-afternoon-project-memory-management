@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSArray<REPContact *> *contacts;
 
++ (REPContactController *)controller;
+
 - (void)createContactWithName:(NSString *)name email:(NSString *)email andPhone:(NSString *)phone;
 
 - (void)updateContact:(REPContact *)contact withName:(NSString *)name email:(NSString *)email andPhone:(NSString *)phone;

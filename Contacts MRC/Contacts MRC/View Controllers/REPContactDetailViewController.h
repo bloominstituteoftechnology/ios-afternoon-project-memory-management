@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class REPContactController;
+@class REPContact;
 
 @interface REPContactDetailViewController : UIViewController
+
+@property (assign, nonatomic) REPContact *contact;
+@property (assign, nonatomic) REPContactController *contactController;
 
 
 @end

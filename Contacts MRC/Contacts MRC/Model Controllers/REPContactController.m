@@ -19,8 +19,10 @@
 
 // TODO: Make sure this is safe
 - (NSArray<REPContact *> *)contacts {
-	return [[self.internalContacts copy] autorelease];
+	NSArray *theContacts = [[self.internalContacts copy] autorelease];
 //	return [self.internalContacts copy];
+
+	return theContacts;
 }
 
 - (instancetype)init {
@@ -28,6 +30,10 @@
 		_internalContacts = [NSMutableArray array];
 	}
 	return self;
+}
+
++ (REPContactController *)controller {
+	return [[[REPContactController alloc] init] autorelease];
 }
 
 - (void)dealloc {
