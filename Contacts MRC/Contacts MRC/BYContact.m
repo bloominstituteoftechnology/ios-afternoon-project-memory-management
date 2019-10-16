@@ -30,4 +30,12 @@
     [super dealloc];
 }
 
+//@synthesize name = _name;
+//- (void)setCar:(Car *)car {
+//    if (_car != car) {
+//        [_car release];
+//        _car = [car retain];
+//    }
+//}
+
 @end

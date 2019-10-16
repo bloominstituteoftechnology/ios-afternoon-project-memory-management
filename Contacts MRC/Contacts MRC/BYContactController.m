@@ -21,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        _internalArray = [NSMutableArray array];
+        _internalArray = [[[[NSMutableArray alloc] init] retain] autorelease];
     }
     return self;
 }

@@ -21,7 +21,7 @@
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
-        _controller = [[[BYContactController alloc] init] autorelease];
+        _controller = [[[[BYContactController alloc] init] retain] autorelease];
     }
     return self;
 }
@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self createNewData];
 }
 
 - (void)createNewData {
