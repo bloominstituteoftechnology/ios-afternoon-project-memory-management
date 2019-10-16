@@ -30,6 +30,18 @@
     }
 }
 
+- (IBAction)save:(id)sender {
+    if (self.nameTextField != nil && self.phoneTextField != nil && self.emailTextField != nil) {
+        if (self.contact) {
+            [self.controller updateContact:self.contact name:self.nameTextField.text phoneNumber:self.phoneTextField.text email:self.emailTextField.text];
+        } else {
+            [self.controller addContactWithName:self.nameTextField.text phoneNumber:self.phoneTextField.text email:self.emailTextField.text];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+
 
 - (void)dealloc {
     [_nameTextField release];

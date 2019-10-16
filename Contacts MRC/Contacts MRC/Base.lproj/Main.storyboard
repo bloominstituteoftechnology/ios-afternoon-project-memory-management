@@ -129,7 +129,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ktc-V3-Sab">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fxM-Z2-iIO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fxM-Z2-iIO">
+                            <connections>
+                                <action selector="save:" destination="BYZ-38-t0r" id="PND-fn-ADm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="iBQ-yQ-9uz" id="hjT-jy-gaQ"/>
