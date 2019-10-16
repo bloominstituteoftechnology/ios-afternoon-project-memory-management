@@ -28,6 +28,7 @@
 - (instancetype)init {
 	if (self = [super init]) {
 		_internalContacts = [NSMutableArray array];
+		[_internalContacts retain];
 	}
 	return self;
 }
