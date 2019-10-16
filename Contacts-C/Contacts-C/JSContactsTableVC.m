@@ -12,7 +12,7 @@
 
 @interface JSContactsTableVC ()
 
-@property JSContactController *contactController;
+@property (retain) JSContactController *contactController;
 
 @end
 
@@ -32,6 +32,11 @@
 	self.contactController = [[[JSContactController alloc] init] autorelease];
 }
 
+- (void)dealloc {
+	[_contactController release];
+	[super dealloc];
+}
+
 // MARK: - IBActions
 
 
@@ -40,8 +45,12 @@
 
 // MARK: - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 0;
+	return self.contactController.contacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

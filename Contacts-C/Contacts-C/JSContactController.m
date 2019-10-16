@@ -11,7 +11,7 @@
 
 @interface JSContactController ()
 
-@property NSMutableArray<JSContact *> *internalContacts;
+@property (retain) NSMutableArray<JSContact *> *internalContacts;
 
 @end
 
@@ -20,17 +20,27 @@
 - (instancetype)init {
 	self = [super init];
 	if (self) {
-		_internalContacts = [[[NSMutableArray alloc] init] autorelease];
+		_internalContacts = [[NSMutableArray alloc] init];
+		
 		[self addTestData];
 	}
 	return self;
 }
+
+- (void)dealloc {
+	[_internalContacts release];
+	[super dealloc];
+}
+
 - (NSArray *)contacts {
-	return [[self.internalContacts copy] autorelease];
+	return self.internalContacts;
 }
 
 - (void)addTestData {
-	[self.internalContacts addObject:[[[JSContact alloc] initWithName:@"Lidia Rodriguez" relationship:@"Mother"] autorelease]];
-	[self.internalContacts addObject:[[[JSContact alloc] initWithName:@"Maximo Santana" relationship:@"Father"] autorelease]];
+	JSContact *testContact1 = [[[JSContact alloc] initWithName:@"Lidia Rodriguez" relationship:@"Mother"] autorelease];
+	JSContact *testContact2 = [[[JSContact alloc] initWithName:@"Maximo Santana" relationship:@"Father"] autorelease];
+	
+	[self.internalContacts addObject:testContact1];
+	[self.internalContacts addObject:testContact2];
 }
 @end
