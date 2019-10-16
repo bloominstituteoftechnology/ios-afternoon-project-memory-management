@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class BYContact;
+@class BYContactController;
 
 @interface BYContactDetailViewController : UIViewController
 
 @property (retain) BYContact *contact;
+@property (retain) BYContactController *controller;
 
 @end
 

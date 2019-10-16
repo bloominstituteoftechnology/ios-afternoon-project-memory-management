@@ -8,6 +8,7 @@
 
 #import "BYContactDetailViewController.h"
 #import "BYContact.h"
+#import "BYContactController.h"
 
 @interface BYContactDetailViewController ()
 
@@ -32,8 +33,15 @@
 
 - (void)dealloc {
     [_nameTextField release];
+    _nameTextField = nil;
     [_phoneTextField release];
+    _phoneTextField = nil;
     [_emailTextField release];
+    _emailTextField = nil;
+    [_controller release];
+    _controller = nil;
+    [_contact release];
+    _contact = nil;
     [super dealloc];
 }
 @end

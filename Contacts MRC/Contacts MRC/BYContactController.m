@@ -32,17 +32,24 @@
 }
 
 - (void)updateContact:(BYContact *)contact name:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email {
-    NSUInteger index = [_internalArray indexOfObject:contact];
-    BYContact *contactToChange = [self.internalArray[index] autorelease];
+    NSUInteger index = [[[_internalArray indexOfObject:contact] retain] autorelease];
+    BYContact *contactToChange = [self.internalArray[index] retain];
     contactToChange.name = name;
     contactToChange.email = email;
     contactToChange.phoneNumber = phoneNumber;
+    [contactToChange release];
+}
+
+- (NSArray *)contacts {
+    return [[self.internalArray copy] autorelease];
 }
 
 - (void)dealloc
 {
     [_internalArray release];
     _internalArray = nil;
+    [_contacts release];
+    //_contacts = nil;
     [super dealloc];
 }
 

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BYContactController : NSObject
 
-@property (copy) NSArray *contacts;
+@property (nonatomic, copy) NSArray *contacts;
 
 - (void)addContactWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email;
 - (void)updateContact: (BYContact *)contact name:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email;
