@@ -9,6 +9,10 @@
 #import "REPContactDetailViewController.h"
 
 @interface REPContactDetailViewController ()
+@property (unsafe_unretained, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *nameTextField;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *emailTextField;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end
 
@@ -19,5 +23,11 @@
 	// Do any additional setup after loading the view.
 }
 
+- (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
+}
+
+- (void)dealloc {
+	[super dealloc];
+}
 
 @end
