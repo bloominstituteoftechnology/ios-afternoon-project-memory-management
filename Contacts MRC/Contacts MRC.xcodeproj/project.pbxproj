@@ -14,6 +14,8 @@
 		33C92DC92357A8000061B0F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C92DC72357A8000061B0F8 /* LaunchScreen.storyboard */; };
 		33C92DCC2357A8000061B0F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DCB2357A8000061B0F8 /* main.m */; };
 		33C92DD52357AB5D0061B0F8 /* REPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */; };
+		33C92DDB2357B3250061B0F8 /* REPContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DDA2357B3250061B0F8 /* REPContactController.m */; };
+		33C92DDE2357B32E0061B0F8 /* REPContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C92DDD2357B32E0061B0F8 /* REPContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		33C92DCB2357A8000061B0F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33C92DD32357AB5D0061B0F8 /* REPContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPContactsTableViewController.h; sourceTree = "<group>"; };
 		33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPContactsTableViewController.m; sourceTree = "<group>"; };
+		33C92DD92357B3250061B0F8 /* REPContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPContactController.h; sourceTree = "<group>"; };
+		33C92DDA2357B3250061B0F8 /* REPContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPContactController.m; sourceTree = "<group>"; };
+		33C92DDC2357B32E0061B0F8 /* REPContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPContact.h; sourceTree = "<group>"; };
+		33C92DDD2357B32E0061B0F8 /* REPContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +67,9 @@
 		33C92DB82357A7FF0061B0F8 /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
-				33C92DBF2357A7FF0061B0F8 /* REPContactDetailViewController.h */,
-				33C92DC02357A7FF0061B0F8 /* REPContactDetailViewController.m */,
-				33C92DD32357AB5D0061B0F8 /* REPContactsTableViewController.h */,
-				33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */,
+				33C92DD72357B2FA0061B0F8 /* Models */,
+				33C92DD82357B3020061B0F8 /* Model Controllers */,
+				33C92DD62357B2EE0061B0F8 /* View Controllers */,
 				33C92DD22357A8590061B0F8 /* Misc */,
 			);
 			path = "Contacts MRC";
@@ -82,6 +87,35 @@
 				33C92DCB2357A8000061B0F8 /* main.m */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		33C92DD62357B2EE0061B0F8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33C92DBF2357A7FF0061B0F8 /* REPContactDetailViewController.h */,
+				33C92DC02357A7FF0061B0F8 /* REPContactDetailViewController.m */,
+				33C92DD32357AB5D0061B0F8 /* REPContactsTableViewController.h */,
+				33C92DD42357AB5D0061B0F8 /* REPContactsTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		33C92DD72357B2FA0061B0F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33C92DDC2357B32E0061B0F8 /* REPContact.h */,
+				33C92DDD2357B32E0061B0F8 /* REPContact.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33C92DD82357B3020061B0F8 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33C92DD92357B3250061B0F8 /* REPContactController.h */,
+				33C92DDA2357B3250061B0F8 /* REPContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C92DDE2357B32E0061B0F8 /* REPContact.m in Sources */,
 				33C92DD52357AB5D0061B0F8 /* REPContactsTableViewController.m in Sources */,
 				33C92DC12357A7FF0061B0F8 /* REPContactDetailViewController.m in Sources */,
+				33C92DDB2357B3250061B0F8 /* REPContactController.m in Sources */,
 				33C92DBB2357A7FF0061B0F8 /* AppDelegate.m in Sources */,
 				33C92DCC2357A8000061B0F8 /* main.m in Sources */,
 			);
