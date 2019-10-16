@@ -56,6 +56,7 @@ Run the app and test to make sure it functions correctly.
 
 If you finish early or want to push yourself, here are a few additional features you can implement:
 - Add support for contacts having a photo. Does this effect memory usage as the app runs?
+- Stylize the table view cell using tips from [Refactoring UI](https://twitter.com/steveschoger/status/910162010754748416?s=21)
 - Add an option to export the contact information as a "contacts.CSV" file to disk (comma separated file)
 - Add an option to share a contact card using a CIQRCodeGenerator filter from Core Image (See [HackingWithSwift tutorial](https://www.hackingwithswift.com/example-code/media/how-to-create-a-qr-code)).
 - Implement persistence using Core Data.
