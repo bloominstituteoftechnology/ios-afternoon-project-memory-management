@@ -32,6 +32,23 @@ When you create a new project, by default, ARC is enabled. You'll need to disabl
 5. Search for "objective-c automatic" which will bring up the "Objective-C Automatic Reference Counting" setting.
 6. Change the setting to `NO` to disable automatic reference counting.
 
+#### Xcode 11 Bug
+
+Xcode 11's template has changed for an iOS app, and your app with MRC may crash in the main.m file. Make sure you change the main.m so that all the logic happens within the `@autorelease` block. (Paul reported the Apple Bug: FB7388324)
+
+Your main.m file should look like: 
+
+```swift
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+
+int main(int argc, char * argv[]) {
+	@autoreleasepool {
+		return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+	}
+}
+```
+
 ### Part 1 - Storyboard
 
 Build your storyboard as you normally would. MRC makes no difference in Interface Builder, and you'll build things as you always have.
