@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     [_controller retain];
+    [self updateViews];
 }
 
 
@@ -44,10 +45,10 @@
 
 - (void)updateViews {
     if (_contact) {
-        _contactNameTextField.text = _contact.name;
-        _contactNicknameTextField.text = _contact.nickname;
-        _contactEmailTextField.text = _contact.email;
-        _contactPhoneNumberTextField.text = _contact.phoneNumber;
+        [_contactNameTextField setText:_contact.name];
+        [_contactNicknameTextField setText:_contact.nickname];
+        [_contactEmailTextField setText:_contact.email];
+        [_contactPhoneNumberTextField setText:_contact.phoneNumber];
     }
 }
 
