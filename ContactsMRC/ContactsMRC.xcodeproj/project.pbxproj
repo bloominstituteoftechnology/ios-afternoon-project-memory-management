@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		779CAD85237CC70100D93E7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CAD84237CC70100D93E7F /* AppDelegate.m */; };
 		779CAD88237CC70100D93E7F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CAD87237CC70100D93E7F /* SceneDelegate.m */; };
-		779CAD8B237CC70100D93E7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CAD8A237CC70100D93E7F /* ViewController.m */; };
 		779CAD8E237CC70100D93E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779CAD8C237CC70100D93E7F /* Main.storyboard */; };
 		779CAD90237CC70300D93E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 779CAD8F237CC70300D93E7F /* Assets.xcassets */; };
 		779CAD93237CC70300D93E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779CAD91237CC70300D93E7F /* LaunchScreen.storyboard */; };
 		779CAD96237CC70300D93E7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CAD95237CC70300D93E7F /* main.m */; };
+		779CADA4237CCB0F00D93E7F /* CDBContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CADA3237CCB0F00D93E7F /* CDBContactTableViewController.m */; };
+		779CADA7237CCB2100D93E7F /* CDBContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CADA6237CCB2100D93E7F /* CDBContactDetailViewController.m */; };
+		779CADAA237CCB3400D93E7F /* CDBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CADA9237CCB3400D93E7F /* CDBContact.m */; };
+		779CADAD237CCB5D00D93E7F /* CDBContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779CADAC237CCB5D00D93E7F /* CDBContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,19 @@
 		779CAD84237CC70100D93E7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		779CAD86237CC70100D93E7F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		779CAD87237CC70100D93E7F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		779CAD89237CC70100D93E7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		779CAD8A237CC70100D93E7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		779CAD8D237CC70100D93E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		779CAD8F237CC70300D93E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		779CAD92237CC70300D93E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		779CAD94237CC70300D93E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		779CAD95237CC70300D93E7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		779CADA2237CCB0F00D93E7F /* CDBContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBContactTableViewController.h; sourceTree = "<group>"; };
+		779CADA3237CCB0F00D93E7F /* CDBContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBContactTableViewController.m; sourceTree = "<group>"; };
+		779CADA5237CCB2100D93E7F /* CDBContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBContactDetailViewController.h; sourceTree = "<group>"; };
+		779CADA6237CCB2100D93E7F /* CDBContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBContactDetailViewController.m; sourceTree = "<group>"; };
+		779CADA8237CCB3400D93E7F /* CDBContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBContact.h; sourceTree = "<group>"; };
+		779CADA9237CCB3400D93E7F /* CDBContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBContact.m; sourceTree = "<group>"; };
+		779CADAB237CCB5D00D93E7F /* CDBContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBContactController.h; sourceTree = "<group>"; };
+		779CADAC237CCB5D00D93E7F /* CDBContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +70,57 @@
 		779CAD82237CC70100D93E7F /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
+				779CADB1237CCB9100D93E7F /* Storyboards */,
+				779CADAE237CCB6F00D93E7F /* View Controllers */,
+				779CADB0237CCB8100D93E7F /* Model Controllers */,
+				779CADAF237CCB7B00D93E7F /* Model */,
+				779CAD8F237CC70300D93E7F /* Assets.xcassets */,
 				779CAD83237CC70100D93E7F /* AppDelegate.h */,
 				779CAD84237CC70100D93E7F /* AppDelegate.m */,
 				779CAD86237CC70100D93E7F /* SceneDelegate.h */,
 				779CAD87237CC70100D93E7F /* SceneDelegate.m */,
-				779CAD89237CC70100D93E7F /* ViewController.h */,
-				779CAD8A237CC70100D93E7F /* ViewController.m */,
-				779CAD8C237CC70100D93E7F /* Main.storyboard */,
-				779CAD8F237CC70300D93E7F /* Assets.xcassets */,
-				779CAD91237CC70300D93E7F /* LaunchScreen.storyboard */,
 				779CAD94237CC70300D93E7F /* Info.plist */,
 				779CAD95237CC70300D93E7F /* main.m */,
 			);
 			path = ContactsMRC;
+			sourceTree = "<group>";
+		};
+		779CADAE237CCB6F00D93E7F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				779CADA2237CCB0F00D93E7F /* CDBContactTableViewController.h */,
+				779CADA3237CCB0F00D93E7F /* CDBContactTableViewController.m */,
+				779CADA5237CCB2100D93E7F /* CDBContactDetailViewController.h */,
+				779CADA6237CCB2100D93E7F /* CDBContactDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		779CADAF237CCB7B00D93E7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				779CADA8237CCB3400D93E7F /* CDBContact.h */,
+				779CADA9237CCB3400D93E7F /* CDBContact.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		779CADB0237CCB8100D93E7F /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				779CADAB237CCB5D00D93E7F /* CDBContactController.h */,
+				779CADAC237CCB5D00D93E7F /* CDBContactController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		779CADB1237CCB9100D93E7F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				779CAD8C237CC70100D93E7F /* Main.storyboard */,
+				779CAD91237CC70300D93E7F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +149,7 @@
 		779CAD78237CC70100D93E7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CDB;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Ciara Beitel";
 				TargetAttributes = {
@@ -146,9 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				779CAD8B237CC70100D93E7F /* ViewController.m in Sources */,
+				779CADAA237CCB3400D93E7F /* CDBContact.m in Sources */,
 				779CAD85237CC70100D93E7F /* AppDelegate.m in Sources */,
 				779CAD96237CC70300D93E7F /* main.m in Sources */,
+				779CADA7237CCB2100D93E7F /* CDBContactDetailViewController.m in Sources */,
+				779CADAD237CCB5D00D93E7F /* CDBContactController.m in Sources */,
+				779CADA4237CCB0F00D93E7F /* CDBContactTableViewController.m in Sources */,
 				779CAD88237CC70100D93E7F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

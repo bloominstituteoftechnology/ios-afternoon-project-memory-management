@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CDBContactDetailViewController.h
 //  ContactsMRC
 //
 //  Created by Ciara Beitel on 11/13/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface CDBContactDetailViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
