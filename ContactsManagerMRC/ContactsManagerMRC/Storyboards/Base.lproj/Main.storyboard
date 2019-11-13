@@ -122,15 +122,15 @@
                     <navigationItem key="navigationItem" title="Add Contact" id="PdP-Y9-oTg">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="4uI-rq-Dhn">
                             <connections>
-                                <action selector="saveTapped:" destination="BYZ-38-t0r" id="irT-Wy-BBK"/>
+                                <action selector="saveTapped:" destination="BYZ-38-t0r" id="dS0-ib-Sb8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="contactEmailTextField" destination="IkF-Xp-0dr" id="oR0-Fj-ooc"/>
-                        <outlet property="contactNameTextField" destination="Csb-pg-BY8" id="sJF-he-8Zz"/>
-                        <outlet property="contactNicknameTextField" destination="g3g-Yz-Bgq" id="7LQ-4U-si6"/>
-                        <outlet property="contactPhoneNumberTextField" destination="2Ms-4d-lh9" id="ztP-YR-6d7"/>
+                        <outlet property="contactEmailTextField" destination="IkF-Xp-0dr" id="rK7-m4-gDm"/>
+                        <outlet property="contactNameTextField" destination="Csb-pg-BY8" id="SDE-Or-4VA"/>
+                        <outlet property="contactNicknameTextField" destination="g3g-Yz-Bgq" id="tLb-we-Red"/>
+                        <outlet property="contactPhoneNumberTextField" destination="2Ms-4d-lh9" id="giA-eo-uIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

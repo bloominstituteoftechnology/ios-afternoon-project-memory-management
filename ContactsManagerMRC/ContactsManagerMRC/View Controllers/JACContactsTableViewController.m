@@ -72,9 +72,8 @@
     JACContactDetailViewController *detailVC = [segue destinationViewController];
     
     if ([[segue identifier] isEqual:@"ShowAddContactSegue"]) {
-        
-        
-    } else if ([[segue identifier] isEqual:@""]) {
+        detailVC.controller = self.controller;
+    } else if ([[segue identifier] isEqual:@"ShowContactDetailSegue"]) {
         detailVC.controller = self.controller;
         detailVC.contact = [_controller getContactAtIndex:(int)self.tableView.indexPathForSelectedRow];
     }
