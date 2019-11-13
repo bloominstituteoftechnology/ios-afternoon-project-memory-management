@@ -10,12 +10,11 @@
 
 @implementation JACContact
 - (instancetype)initWithName:(NSString *)name nickname:(nullable NSString *)nickname email:(NSString *)email phoneNumber:(NSString *)phoneNumber {
-    self = [super init];
-    if (self) {
-        _name = name;
-        _phoneNumber = phoneNumber;
-        _email = email;
-        _nickname = nickname;
+    if (self = [super init]) {
+        _name = [name retain];
+        _phoneNumber = [phoneNumber retain];
+        _email = [email retain];
+        _nickname = [nickname retain];
         
         NSLog(@"Contact.init");
     }
@@ -27,6 +26,7 @@
     [_nickname release];
     [_email release];
     [_phoneNumber release];
+    
     NSLog(@"Contact.dealloc");
     [super dealloc];
 }

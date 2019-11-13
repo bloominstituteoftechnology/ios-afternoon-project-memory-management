@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class JACContact;
+@class JACContactController;
 @interface JACContactDetailViewController : UIViewController
+
+@property (nonatomic, retain) JACContact *contact;
+@property (nonatomic, retain) JACContactController *controller;
 
 @end
 

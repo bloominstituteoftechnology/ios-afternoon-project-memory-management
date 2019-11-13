@@ -7,34 +7,48 @@
 //
 
 #import "JACContactsTableViewController.h"
+#import "JACContactDetailViewController.h"
+#import "JACContactController.h"
+#import "JACContact.h"
 
 @interface JACContactsTableViewController ()
-
+@property (nonatomic, retain) JACContactController *controller;
 @end
 
 @implementation JACContactsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder]) {
+        _controller = [[[JACContactController alloc] init] retain];
+    }
+    return self;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [self.controller getContactsCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @"Name"; //TODO
-    cell.detailTextLabel.text = @"(123) 456-7890"; //TODO
+    JACContact *contact = [[self.controller getContactAtIndex:(int)[indexPath row]] retain];
+    
+    cell.textLabel.text = contact.name;
+    cell.detailTextLabel.text = contact.phoneNumber;
+    
+    [contact release];
     
     return cell;
 }
@@ -47,34 +61,28 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //TODO
+        [_controller removeContactAtIndex:(int)[indexPath row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    JACContactDetailViewController *detailVC = [segue destinationViewController];
+    
+    if ([[segue identifier] isEqual:@"ShowAddContactSegue"]) {
+        
+        
+    } else if ([[segue identifier] isEqual:@""]) {
+        detailVC.controller = self.controller;
+        detailVC.contact = [_controller getContactAtIndex:(int)self.tableView.indexPathForSelectedRow];
+    }
 }
-*/
+
+- (void)dealloc {
+    [_controller release];
+    [super dealloc];
+}
 
 @end
