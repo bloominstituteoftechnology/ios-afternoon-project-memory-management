@@ -45,7 +45,7 @@
     
     JACContact *contact = [[self.controller getContactAtIndex:(int)[indexPath row]] retain];
     
-    cell.textLabel.text = contact.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ | %@", contact.nickname, contact.name];
     cell.detailTextLabel.text = contact.phoneNumber;
     
     [contact release];
