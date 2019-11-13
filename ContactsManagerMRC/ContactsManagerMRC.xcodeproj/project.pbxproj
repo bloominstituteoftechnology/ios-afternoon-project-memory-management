@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		0EA854B5237CA5A4002D4F97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854B4237CA5A4002D4F97 /* AppDelegate.m */; };
 		0EA854B8237CA5A4002D4F97 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854B7237CA5A4002D4F97 /* SceneDelegate.m */; };
-		0EA854BB237CA5A5002D4F97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854BA237CA5A4002D4F97 /* ViewController.m */; };
 		0EA854BE237CA5A5002D4F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA854BC237CA5A5002D4F97 /* Main.storyboard */; };
 		0EA854C0237CA5A8002D4F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA854BF237CA5A8002D4F97 /* Assets.xcassets */; };
 		0EA854C3237CA5A8002D4F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA854C1237CA5A8002D4F97 /* LaunchScreen.storyboard */; };
 		0EA854C6237CA5A8002D4F97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854C5237CA5A8002D4F97 /* main.m */; };
+		0EA854D1237CAA42002D4F97 /* JACContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854D0237CAA42002D4F97 /* JACContactDetailViewController.m */; };
+		0EA854D4237CAADF002D4F97 /* JACContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854D3237CAADF002D4F97 /* JACContactsTableViewController.m */; };
+		0EA854D7237CAC2E002D4F97 /* JACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854D6237CAC2E002D4F97 /* JACContact.m */; };
+		0EA854DB237CAF56002D4F97 /* JACContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA854DA237CAF56002D4F97 /* JACContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,19 @@
 		0EA854B4237CA5A4002D4F97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0EA854B6237CA5A4002D4F97 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		0EA854B7237CA5A4002D4F97 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0EA854B9237CA5A4002D4F97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0EA854BA237CA5A4002D4F97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0EA854BD237CA5A5002D4F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EA854BF237CA5A8002D4F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA854C2237CA5A8002D4F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EA854C4237CA5A8002D4F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA854C5237CA5A8002D4F97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0EA854CF237CAA42002D4F97 /* JACContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACContactDetailViewController.h; sourceTree = "<group>"; };
+		0EA854D0237CAA42002D4F97 /* JACContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACContactDetailViewController.m; sourceTree = "<group>"; };
+		0EA854D2237CAADF002D4F97 /* JACContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACContactsTableViewController.h; sourceTree = "<group>"; };
+		0EA854D3237CAADF002D4F97 /* JACContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACContactsTableViewController.m; sourceTree = "<group>"; };
+		0EA854D5237CAC2E002D4F97 /* JACContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACContact.h; sourceTree = "<group>"; };
+		0EA854D6237CAC2E002D4F97 /* JACContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACContact.m; sourceTree = "<group>"; };
+		0EA854D9237CAF56002D4F97 /* JACContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACContactController.h; sourceTree = "<group>"; };
+		0EA854DA237CAF56002D4F97 /* JACContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,8 @@
 				0EA854CC237CA6A7002D4F97 /* Resources */,
 				0EA854CD237CA6B1002D4F97 /* View Controllers */,
 				0EA854CE237CA6BD002D4F97 /* Storyboards */,
+				0EA854D8237CAC35002D4F97 /* Models */,
+				0EA854DC237CAF5A002D4F97 /* Model Controllers */,
 			);
 			path = ContactsManagerMRC;
 			sourceTree = "<group>";
@@ -85,8 +96,10 @@
 		0EA854CD237CA6B1002D4F97 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0EA854B9237CA5A4002D4F97 /* ViewController.h */,
-				0EA854BA237CA5A4002D4F97 /* ViewController.m */,
+				0EA854CF237CAA42002D4F97 /* JACContactDetailViewController.h */,
+				0EA854D0237CAA42002D4F97 /* JACContactDetailViewController.m */,
+				0EA854D2237CAADF002D4F97 /* JACContactsTableViewController.h */,
+				0EA854D3237CAADF002D4F97 /* JACContactsTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -98,6 +111,24 @@
 				0EA854C1237CA5A8002D4F97 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0EA854D8237CAC35002D4F97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EA854D5237CAC2E002D4F97 /* JACContact.h */,
+				0EA854D6237CAC2E002D4F97 /* JACContact.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0EA854DC237CAF5A002D4F97 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EA854D9237CAF56002D4F97 /* JACContactController.h */,
+				0EA854DA237CAF56002D4F97 /* JACContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +157,7 @@
 		0EA854A8237CA5A4002D4F97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JAC;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Mazjap Co";
 				TargetAttributes = {
@@ -170,10 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EA854BB237CA5A5002D4F97 /* ViewController.m in Sources */,
 				0EA854B5237CA5A4002D4F97 /* AppDelegate.m in Sources */,
 				0EA854C6237CA5A8002D4F97 /* main.m in Sources */,
+				0EA854DB237CAF56002D4F97 /* JACContactController.m in Sources */,
+				0EA854D4237CAADF002D4F97 /* JACContactsTableViewController.m in Sources */,
 				0EA854B8237CA5A4002D4F97 /* SceneDelegate.m in Sources */,
+				0EA854D1237CAA42002D4F97 /* JACContactDetailViewController.m in Sources */,
+				0EA854D7237CAC2E002D4F97 /* JACContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
