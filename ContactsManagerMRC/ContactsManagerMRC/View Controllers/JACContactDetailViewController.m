@@ -29,7 +29,13 @@
 
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
-    if (_controller) {
+    if (_contact) {
+        _contact.name = _contactNameTextField.text;
+        _contact.nickname = _contactNicknameTextField.text;
+        _contact.email = _contactEmailTextField.text;
+        _contact.phoneNumber = _contactPhoneNumberTextField.text;
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
         _contact = [[[JACContact alloc] initWithName:_contactNameTextField.text nickname:_contactNicknameTextField.text email:_contactEmailTextField.text phoneNumber:_contactPhoneNumberTextField.text] retain];
         [_controller addContact:self.contact];
         [self.navigationController popViewControllerAnimated:YES];
@@ -45,6 +51,7 @@
 
 - (void)updateViews {
     if (_contact) {
+        [self setTitle:_contact.name];
         [_contactNameTextField setText:_contact.name];
         [_contactNicknameTextField setText:_contact.nickname];
         [_contactEmailTextField setText:_contact.email];
