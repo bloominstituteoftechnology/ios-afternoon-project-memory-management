@@ -10,7 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CDBContact;
+
 @interface CDBContactController : NSObject
+
+- (void)addContact:(CDBContact *)contact;
+
 
 @end
 
