@@ -7,8 +7,14 @@
 //
 
 #import "CDBContactDetailViewController.h"
+#import "CDBContact.h"
+#import "CDBContactController.h"
 
 @interface CDBContactDetailViewController ()
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end
 
@@ -16,17 +22,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.nameTextField.text = self.contact.name;
+    self.emailTextField.text = self.contact.email;
+    self.phoneTextField.text = self.contact.phoneNumber;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)save:(id)sender {
+    if (self.nameTextField != nil && self.emailTextField != nil && self.phoneTextField != nil) {
+        [self.contactController addContactWithName:self.nameTextField.text withEmail:self.emailTextField.text withPhoneNumber:self.phoneTextField.text];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+- (void)dealloc {
+    [_nameTextField release];
+    _nameTextField = nil;
+    [_emailTextField release];
+    _emailTextField = nil;
+    [_phoneTextField release];
+    _phoneTextField = nil;
+    [_contact release];
+    _contact = nil;
+    [_contactController release];
+    _contactController = nil;
+    [super dealloc];
+}
 
 @end

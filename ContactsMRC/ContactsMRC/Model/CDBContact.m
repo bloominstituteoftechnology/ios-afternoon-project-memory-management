@@ -9,6 +9,7 @@
 #import "CDBContact.h"
 
 @implementation CDBContact
+
 - (instancetype)initWithName:(NSString *)name withEmail:(NSString *)email withPhoneNumber:(NSString *)phoneNumber {
     if (self = [super init]) {
             _name = [name retain];

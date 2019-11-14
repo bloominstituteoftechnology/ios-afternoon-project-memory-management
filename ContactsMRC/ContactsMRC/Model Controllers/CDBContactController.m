@@ -7,29 +7,35 @@
 //
 
 #import "CDBContactController.h"
+#import "CDBContact.h"
 
 @interface CDBContactController ()
 
-@property (nonatomic, retain) NSMutableArray *contacts;
+@property (nonatomic, retain) NSMutableArray *internalContactsArray;
 
 @end
 
 @implementation CDBContactController
 
 - (instancetype)init {
-    if (self = [super init]) {
-        _contacts = [[[NSMutableArray alloc] init] retain];
+    self = [super init];
+    if (self) {                         // buy the land] make it] own it] give it back]
+        _internalContactsArray = [[[[NSMutableArray alloc] init] retain] autorelease];
     }
     return self;
 }
 
-- (void)addContact:(CDBContact *)contact {
-    if (_contacts) {
-        [_contacts addObject:contact];
-    }
+- (void)addContactWithName:(NSString *)name withEmail:(NSString *)email withPhoneNumber:(NSString *)phoneNumber {
+    CDBContact *newContact = [[[CDBContact alloc] initWithName:name withEmail:email withPhoneNumber:phoneNumber] autorelease];
+    [self.internalContactsArray addObject:newContact];
+}
+
+- (NSArray *)contacts {
+    return [[self.internalContactsArray copy] autorelease];
 }
 
 - (void)dealloc {
+    [_internalContactsArray release];
     [_contacts release];
     [super dealloc];
 }

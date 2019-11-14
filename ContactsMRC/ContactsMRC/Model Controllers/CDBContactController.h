@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CDBContactController : NSObject
 
-- (void)addContact:(CDBContact *)contact;
+@property (nonatomic, retain) NSMutableArray *contacts;
 
+- (void)addContactWithName:(NSString *)name withEmail:(NSString *)email withPhoneNumber:(NSString *)phoneNumber;
 
 @end
 

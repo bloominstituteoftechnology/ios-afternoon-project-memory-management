@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class CDBContact;
+@class CDBContactController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CDBContactDetailViewController : UIViewController
+
+@property (nonatomic, retain) CDBContact *contact;
+@property (nonatomic, retain) CDBContactController *contactController;
 
 @end
 

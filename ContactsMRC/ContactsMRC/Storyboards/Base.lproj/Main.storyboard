@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Contact Table View Controller-->
         <scene sceneID="7LN-oW-JCd">
             <objects>
-                <tableViewController id="XbB-Ra-5LH" sceneMemberID="viewController">
+                <tableViewController id="XbB-Ra-5LH" customClass="CDBContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UyU-lB-2M4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="mgp-VL-snT" detailTextLabel="2ug-jb-QNo" style="IBUITableViewCellStyleValue1" id="7Fu-rN-9f7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="mgp-VL-snT" detailTextLabel="2ug-jb-QNo" style="IBUITableViewCellStyleValue1" id="7Fu-rN-9f7">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Fu-rN-9f7" id="RYW-AH-Vyv">
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1017" y="60"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="rmx-0A-5k7">
             <objects>
-                <viewController id="mgY-L1-c6A" sceneMemberID="viewController">
+                <viewController id="mgY-L1-c6A" customClass="CDBContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERn-SA-RZI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,8 +124,17 @@
                         <viewLayoutGuide key="safeArea" id="bhK-Av-vPr"/>
                     </view>
                     <navigationItem key="navigationItem" id="0O0-dZ-eu2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="t2V-vi-fDS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="t2V-vi-fDS">
+                            <connections>
+                                <action selector="save:" destination="mgY-L1-c6A" id="zwX-aM-clh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="0eh-pZ-42T" id="MOG-N4-FAM"/>
+                        <outlet property="nameTextField" destination="iMy-Zf-w9O" id="8Tz-e0-Adi"/>
+                        <outlet property="phoneTextField" destination="jwn-d3-O4H" id="GgI-tw-dlk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1v3-If-TsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +160,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SMT-lf-AbA"/>
+        <segue reference="HX8-g5-fec"/>
     </inferredMetricsTieBreakers>
 </document>
