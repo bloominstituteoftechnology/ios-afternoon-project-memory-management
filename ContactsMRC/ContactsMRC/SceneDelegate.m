@@ -2,6 +2,8 @@
 
 @interface SceneDelegate ()
 
+@property (nonatomic, retain) SceneDelegate *sceneDelegate;
+
 @end
 
 @implementation SceneDelegate
@@ -46,5 +48,10 @@
     // to restore the scene back to its current state.
 }
 
+- (void)dealloc {
+    [_sceneDelegate release];
+    [_window release];
+    [super dealloc];
+}
 
 @end

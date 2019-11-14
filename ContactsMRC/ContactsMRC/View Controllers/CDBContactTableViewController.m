@@ -74,5 +74,9 @@
     }
 }
 
+- (void)dealloc {
+    [_contactController release];
+    [super dealloc];
+}
 
 @end

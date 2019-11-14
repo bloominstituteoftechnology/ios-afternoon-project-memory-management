@@ -12,9 +12,9 @@
 
 @interface CDBContactDetailViewController ()
 
-@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
-@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
-@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (nonatomic, retain) IBOutlet UITextField *nameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *emailTextField;
+@property (nonatomic, retain) IBOutlet UITextField *phoneTextField;
 
 @end
 
@@ -42,9 +42,7 @@
     [_phoneTextField release];
     _phoneTextField = nil;
     [_contact release];
-    _contact = nil;
     [_contactController release];
-    _contactController = nil;
     [super dealloc];
 }
 
