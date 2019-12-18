@@ -33,7 +33,7 @@
 */
 
 - (void)dealloc {
-    [_nameTextFIeld release];
+    [_nameTextField release];
     [_emailTextField release];
     [_phoneNumberTextField release];
     [super dealloc];
