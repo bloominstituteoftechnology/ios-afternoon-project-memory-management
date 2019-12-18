@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface LSIContact : NSObject
 
-@end
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *phone;
+@property (nonatomic, retain) NSString *email;
 
-NS_ASSUME_NONNULL_END
+- (instancetype)initWithName:(NSString *)name
+                       phone:(NSString *)phone
+                       email:(NSString *)email;
+
+@end
