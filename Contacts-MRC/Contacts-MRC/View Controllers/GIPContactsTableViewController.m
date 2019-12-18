@@ -7,10 +7,12 @@
 //
 
 #import "GIPContactsTableViewController.h"
+#import "GIPDetailViewController.h"
 #import "GIPContactController.h"
 #import "GIPContact.h"
 
 @interface GIPContactsTableViewController ()
+- (IBAction)addNewContact:(id)sender;
 
 @end
 
@@ -60,9 +62,19 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"AddNewContactSegue"]) {
+        GIPDetailViewController *detailVC = (GIPDetailViewController *)segue.destinationViewController;
+        detailVC.controller = self.controller;
+    } else if ([segue.identifier isEqualToString:@"DetailViewSegue"]) {
+        GIPDetailViewController *detailVC = (GIPDetailViewController *)segue.destinationViewController;
+        detailVC.controller = self.controller;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        detailVC.contact = [self.controller.contacts objectAtIndex:indexPath.row];
+    }
 }
 
 
+- (IBAction)addNewContact:(id)sender {
+    [self performSegueWithIdentifier:@"AddNewContactSegue" sender:self];
+}
 @end

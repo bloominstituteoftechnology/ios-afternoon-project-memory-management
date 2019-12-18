@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+@class GIPContactController, GIPContact;
 
 @interface GIPDetailViewController : UIViewController
 
-@end
+@property (retain, nonnull) GIPContactController *controller;
+@property (retain, nullable) GIPContact *contact;
 
-NS_ASSUME_NONNULL_END
+@end
