@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class LSIContact;
+//@class LSIContact;
 @class LSIContactController;
 
 @interface LSIContactDetailViewController : UIViewController
 
-@property (nonatomic, readwrite, retain) LSIContact *contact;
+//@property (nonatomic, readwrite, retain) LSIContact *contact;
+@property NSInteger index;
 @property (nonatomic, readwrite, retain) LSIContactController *controller;
 
 @end

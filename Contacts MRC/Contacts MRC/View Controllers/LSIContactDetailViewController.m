@@ -8,6 +8,7 @@
 
 #import "LSIContactDetailViewController.h"
 #import "LSIContact.h"
+#import "LSIContactController.h"
 
 @interface LSIContactDetailViewController ()
 
@@ -22,20 +23,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.contact) {
-        [self setTitle:[self.contact name]];
-        
-        [self.nameTextField setText:[self.contact name]];
-        [self.phoneTextField setText:[self.contact phone]];
-        [self.emailTextField setText:[self.contact email]];
+    if (self.index != -1) {
+        LSIContact *contact = self.controller.contacts[self.index];
+        if (contact) {
+            [self setTitle:[contact name]];
+            
+            [self.nameTextField setText:[contact name]];
+            [self.phoneTextField setText:[contact phone]];
+            [self.emailTextField setText:[contact email]];
+        }
     } else {
         [self setTitle:@"New Contact"];
     }
-}
-
-- (void)setContact:(LSIContact *)contact {
-    [_contact release];
-    _contact = [contact retain];
 }
 
 - (void)setController:(LSIContactController *)controller {
@@ -43,19 +42,25 @@
     _controller = [controller retain];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)save:(id)sender {
+    NSString *name = [self.nameTextField text];
+    NSString *phone = [self.phoneTextField text];
+    NSString *email = [self.emailTextField text];
+    
+    if (!name || !phone || !email) {
+        return;
+    }
+    
+    if (self.index == -1) {
+        LSIContact *contact = [[[LSIContact alloc] initWithName:name phone:phone email:email] autorelease];
+        [[self.controller contacts] addObject:contact];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        NSLog(@"Update contact");
+    }
 }
-*/
 
 - (void)dealloc {
-    [_contact release];
-    _contact = nil;
     [_controller release];
     _controller = nil;
     

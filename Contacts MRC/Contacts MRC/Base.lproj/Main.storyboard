@@ -110,7 +110,11 @@
                         <viewLayoutGuide key="safeArea" id="lU3-TF-fAt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact" id="KGj-jH-3Yo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="B2J-BG-hlG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="B2J-BG-hlG">
+                            <connections>
+                                <action selector="save:" destination="dX4-7F-JEp" id="Vca-fx-T2c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="Pby-KQ-Dba" id="y4E-JA-FAS"/>

@@ -23,7 +23,11 @@
     [super viewDidLoad];
     
     _controller = [[LSIContactController alloc] init];
-    NSLog(@"Contacts: %@", self.controller.contacts);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -81,13 +85,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     LSIContactDetailViewController *detailVC = segue.destinationViewController;
     if ([detailVC isKindOfClass:[LSIContactDetailViewController class]]) {
-        NSLog(@"%@", self.controller.contacts);
         [detailVC setController:self.controller];
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         if (indexPath) {
-            LSIContact *contact = self.controller.contacts[indexPath.row];
-            [detailVC setContact:contact];
+            [detailVC setIndex:indexPath.row];
+        } else {
+            [detailVC setIndex:-1];
         }
     }
 }
