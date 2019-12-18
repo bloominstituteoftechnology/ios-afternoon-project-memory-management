@@ -15,6 +15,7 @@
 		5945462223AAC05100198C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462123AAC05100198C34 /* main.m */; };
 		5945462B23AAC54D00198C34 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462A23AAC54D00198C34 /* LSIContact.m */; };
 		5945462F23AAC78A00198C34 /* LSIContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462E23AAC78A00198C34 /* LSIContactsTableViewController.m */; };
+		5945463323AAC7FA00198C34 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945463223AAC7FA00198C34 /* LSIContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		5945462A23AAC54D00198C34 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
 		5945462D23AAC78A00198C34 /* LSIContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactsTableViewController.h; sourceTree = "<group>"; };
 		5945462E23AAC78A00198C34 /* LSIContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactsTableViewController.m; sourceTree = "<group>"; };
+		5945463123AAC7FA00198C34 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
+		5945463223AAC7FA00198C34 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				5945461023AAC04D00198C34 /* AppDelegate.m */,
 				5945461223AAC04D00198C34 /* SceneDelegate.h */,
 				5945461323AAC04D00198C34 /* SceneDelegate.m */,
+				5945463023AAC7EC00198C34 /* Model Controllers */,
 				5945462C23AAC77900198C34 /* View Controllers */,
 				5945462823AAC4BF00198C34 /* Model */,
 				5945461823AAC04D00198C34 /* Main.storyboard */,
@@ -95,6 +99,15 @@
 				5945462E23AAC78A00198C34 /* LSIContactsTableViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5945463023AAC7EC00198C34 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5945463123AAC7FA00198C34 /* LSIContactController.h */,
+				5945463223AAC7FA00198C34 /* LSIContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +186,7 @@
 				5945462F23AAC78A00198C34 /* LSIContactsTableViewController.m in Sources */,
 				5945461423AAC04D00198C34 /* SceneDelegate.m in Sources */,
 				5945462B23AAC54D00198C34 /* LSIContact.m in Sources */,
+				5945463323AAC7FA00198C34 /* LSIContactController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

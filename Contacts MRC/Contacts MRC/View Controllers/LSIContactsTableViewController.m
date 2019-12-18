@@ -7,8 +7,12 @@
 //
 
 #import "LSIContactsTableViewController.h"
+#import "LSIContactController.h"
+#import "LSIContact.h"
 
 @interface LSIContactsTableViewController ()
+
+@property (nonatomic, retain) LSIContactController *controller;
 
 @end
 
@@ -17,29 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _controller = [[LSIContactController alloc] init];
+    NSLog(@"Contacts: %@", self.controller.contacts);
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[self.controller contacts] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    LSIContact *contact = self.controller.contacts[indexPath.row];
+    [[cell textLabel] setText:[contact name]];
     
     return cell;
 }
@@ -87,5 +83,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)dealloc {
+    [_controller release];
+    _controller = nil;
+    
+    [super dealloc];
+}
 
 @end
