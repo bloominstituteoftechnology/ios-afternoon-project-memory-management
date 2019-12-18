@@ -77,4 +77,10 @@
 - (IBAction)addNewContact:(id)sender {
     [self performSegueWithIdentifier:@"AddNewContactSegue" sender:self];
 }
+
+- (void)dealloc {
+    [_controller release];
+    _controller = nil;
+    [super dealloc];
+}
 @end
