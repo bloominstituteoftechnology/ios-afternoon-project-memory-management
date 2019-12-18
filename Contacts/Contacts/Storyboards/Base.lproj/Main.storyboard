@@ -129,7 +129,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Contact" id="c9m-89-0Gq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZHE-vh-0Va"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZHE-vh-0Va">
+                            <connections>
+                                <action selector="saveContact:" destination="BYZ-38-t0r" id="CCn-kU-B3p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="bq3-n1-B9j" id="46x-7h-QKw"/>

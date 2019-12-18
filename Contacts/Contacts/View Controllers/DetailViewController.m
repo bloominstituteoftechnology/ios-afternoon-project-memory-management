@@ -22,6 +22,9 @@
     [super viewDidLoad];
 }
 
+- (IBAction)saveContact:(UIBarButtonItem *)sender {
+    
+}
 
 - (void)dealloc {
     [_nameTextField release];
