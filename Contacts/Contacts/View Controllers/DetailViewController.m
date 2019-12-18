@@ -10,14 +10,23 @@
 
 @interface DetailViewController ()
 
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+
 @end
 
 @implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 
+- (void)dealloc {
+    [_nameTextField release];
+    [_phoneTextField release];
+    [_emailTextField release];
+    [super dealloc];
+}
 @end

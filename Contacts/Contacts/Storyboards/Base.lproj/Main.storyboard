@@ -131,6 +131,11 @@
                     <navigationItem key="navigationItem" title="Add New Contact" id="c9m-89-0Gq">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZHE-vh-0Va"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="bq3-n1-B9j" id="46x-7h-QKw"/>
+                        <outlet property="nameTextField" destination="UJR-73-spg" id="sBE-S6-2xz"/>
+                        <outlet property="phoneTextField" destination="IqI-KK-UqT" id="fZ0-9P-A3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
