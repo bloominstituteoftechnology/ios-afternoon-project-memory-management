@@ -16,6 +16,7 @@
 		A6DB5D3B23AACC9B003ABE34 /* GIPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D3A23AACC9B003ABE34 /* GIPContactsTableViewController.m */; };
 		A6DB5D3E23AACCAE003ABE34 /* GIPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D3D23AACCAE003ABE34 /* GIPDetailViewController.m */; };
 		A6DB5D4223AACDC9003ABE34 /* GIPContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D4123AACDC9003ABE34 /* GIPContact.m */; };
+		A6DB5D4623AAD4FD003ABE34 /* GIPContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D4523AAD4FD003ABE34 /* GIPContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		A6DB5D3D23AACCAE003ABE34 /* GIPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPDetailViewController.m; sourceTree = "<group>"; };
 		A6DB5D4023AACDC9003ABE34 /* GIPContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPContact.h; sourceTree = "<group>"; };
 		A6DB5D4123AACDC9003ABE34 /* GIPContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPContact.m; sourceTree = "<group>"; };
+		A6DB5D4423AAD4FD003ABE34 /* GIPContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPContactController.h; sourceTree = "<group>"; };
+		A6DB5D4523AAD4FD003ABE34 /* GIPContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +80,8 @@
 				A6DB5D3123AAC850003ABE34 /* Info.plist */,
 				A6DB5D3223AAC850003ABE34 /* main.m */,
 				A6DB5D3F23AACDA6003ABE34 /* View Controllers */,
-				A6DB5D4023AACDC9003ABE34 /* GIPContact.h */,
-				A6DB5D4123AACDC9003ABE34 /* GIPContact.m */,
+				A6DB5D4323AAD491003ABE34 /* Models */,
+				A6DB5D4723AAD552003ABE34 /* Model Controllers */,
 			);
 			path = "Contacts-MRC";
 			sourceTree = "<group>";
@@ -92,6 +95,24 @@
 				A6DB5D3D23AACCAE003ABE34 /* GIPDetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A6DB5D4323AAD491003ABE34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6DB5D4023AACDC9003ABE34 /* GIPContact.h */,
+				A6DB5D4123AACDC9003ABE34 /* GIPContact.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A6DB5D4723AAD552003ABE34 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6DB5D4423AAD4FD003ABE34 /* GIPContactController.h */,
+				A6DB5D4523AAD4FD003ABE34 /* GIPContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +191,7 @@
 				A6DB5D3323AAC850003ABE34 /* main.m in Sources */,
 				A6DB5D3E23AACCAE003ABE34 /* GIPDetailViewController.m in Sources */,
 				A6DB5D3B23AACC9B003ABE34 /* GIPContactsTableViewController.m in Sources */,
+				A6DB5D4623AAD4FD003ABE34 /* GIPContactController.m in Sources */,
 				A6DB5D2523AAC84F003ABE34 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
