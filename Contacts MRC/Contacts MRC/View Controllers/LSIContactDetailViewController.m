@@ -54,10 +54,14 @@
     if (self.index == -1) {
         LSIContact *contact = [[[LSIContact alloc] initWithName:name phone:phone email:email] autorelease];
         [[self.controller contacts] addObject:contact];
-        [self.navigationController popViewControllerAnimated:YES];
     } else {
-        NSLog(@"Update contact");
+        LSIContact *contact = self.controller.contacts[self.index];
+        [contact setName:name];
+        [contact setPhone:phone];
+        [contact setEmail:email];
     }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)dealloc {
