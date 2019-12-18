@@ -9,6 +9,7 @@
 #import "LSIContactsTableViewController.h"
 #import "LSIContactController.h"
 #import "LSIContact.h"
+#import "LSIContactDetailViewController.h"
 
 @interface LSIContactsTableViewController ()
 
@@ -74,15 +75,22 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    LSIContactDetailViewController *detailVC = segue.destinationViewController;
+    if ([detailVC isKindOfClass:[LSIContactDetailViewController class]]) {
+        NSLog(@"%@", self.controller.contacts);
+        [detailVC setController:self.controller];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        if (indexPath) {
+            LSIContact *contact = self.controller.contacts[indexPath.row];
+            [detailVC setContact:contact];
+        }
+    }
 }
-*/
 
 - (void)dealloc {
     [_controller release];

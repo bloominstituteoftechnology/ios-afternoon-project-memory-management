@@ -57,7 +57,7 @@
         <!--Contact-->
         <scene sceneID="7EE-TI-brG">
             <objects>
-                <viewController id="dX4-7F-JEp" sceneMemberID="viewController">
+                <viewController id="dX4-7F-JEp" customClass="LSIContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0E0-uZ-k2d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +112,11 @@
                     <navigationItem key="navigationItem" title="Contact" id="KGj-jH-3Yo">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="B2J-BG-hlG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="Pby-KQ-Dba" id="y4E-JA-FAS"/>
+                        <outlet property="nameTextField" destination="t2H-a9-dLU" id="2TD-u7-dMV"/>
+                        <outlet property="phoneTextField" destination="27Z-4g-fO7" id="otA-Vf-WbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHy-Q9-i86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

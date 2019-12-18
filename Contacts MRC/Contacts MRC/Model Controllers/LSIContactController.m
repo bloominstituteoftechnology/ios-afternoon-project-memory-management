@@ -19,7 +19,8 @@
         LSIContact *gipyo = [[[LSIContact alloc] initWithName:@"Gi Pyo" phone:@"555-5678" email:@"gipyo@example.com"] autorelease];
         LSIContact *jesse = [[[LSIContact alloc] initWithName:@"Jesse" phone:@"555-9090" email:@"jesse@example.com"] autorelease];
         
-        _contacts = [NSMutableArray arrayWithObjects:isaac, gipyo, jesse, nil];
+        _contacts = [[NSMutableArray alloc] initWithObjects:isaac, gipyo, jesse, nil];
+        //_contacts = [[NSMutableArray arrayWithObjects:isaac, gipyo, jesse, nil] retain];
     }
     return self;
 }

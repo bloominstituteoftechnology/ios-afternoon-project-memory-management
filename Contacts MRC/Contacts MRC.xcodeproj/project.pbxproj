@@ -16,6 +16,7 @@
 		5945462B23AAC54D00198C34 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462A23AAC54D00198C34 /* LSIContact.m */; };
 		5945462F23AAC78A00198C34 /* LSIContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462E23AAC78A00198C34 /* LSIContactsTableViewController.m */; };
 		5945463323AAC7FA00198C34 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945463223AAC7FA00198C34 /* LSIContactController.m */; };
+		5945463623AACCBC00198C34 /* LSIContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945463523AACCBC00198C34 /* LSIContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		5945462E23AAC78A00198C34 /* LSIContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactsTableViewController.m; sourceTree = "<group>"; };
 		5945463123AAC7FA00198C34 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
 		5945463223AAC7FA00198C34 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
+		5945463423AACCBC00198C34 /* LSIContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactDetailViewController.h; sourceTree = "<group>"; };
+		5945463523AACCBC00198C34 /* LSIContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 			children = (
 				5945462D23AAC78A00198C34 /* LSIContactsTableViewController.h */,
 				5945462E23AAC78A00198C34 /* LSIContactsTableViewController.m */,
+				5945463423AACCBC00198C34 /* LSIContactDetailViewController.h */,
+				5945463523AACCBC00198C34 /* LSIContactDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				5945462223AAC05100198C34 /* main.m in Sources */,
 				5945462F23AAC78A00198C34 /* LSIContactsTableViewController.m in Sources */,
 				5945461423AAC04D00198C34 /* SceneDelegate.m in Sources */,
+				5945463623AACCBC00198C34 /* LSIContactDetailViewController.m in Sources */,
 				5945462B23AAC54D00198C34 /* LSIContact.m in Sources */,
 				5945463323AAC7FA00198C34 /* LSIContactController.m in Sources */,
 			);
