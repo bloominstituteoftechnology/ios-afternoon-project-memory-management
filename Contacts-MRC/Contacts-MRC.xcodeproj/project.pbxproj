@@ -13,6 +13,8 @@
 		A6DB5D2D23AAC850003ABE34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6DB5D2C23AAC850003ABE34 /* Assets.xcassets */; };
 		A6DB5D3023AAC850003ABE34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6DB5D2E23AAC850003ABE34 /* LaunchScreen.storyboard */; };
 		A6DB5D3323AAC850003ABE34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D3223AAC850003ABE34 /* main.m */; };
+		A6DB5D3B23AACC9B003ABE34 /* GIPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D3A23AACC9B003ABE34 /* GIPContactsTableViewController.m */; };
+		A6DB5D3E23AACCAE003ABE34 /* GIPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5D3D23AACCAE003ABE34 /* GIPDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		A6DB5D2F23AAC850003ABE34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6DB5D3123AAC850003ABE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6DB5D3223AAC850003ABE34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6DB5D3923AACC9B003ABE34 /* GIPContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPContactsTableViewController.h; sourceTree = "<group>"; };
+		A6DB5D3A23AACC9B003ABE34 /* GIPContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPContactsTableViewController.m; sourceTree = "<group>"; };
+		A6DB5D3C23AACCAE003ABE34 /* GIPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPDetailViewController.h; sourceTree = "<group>"; };
+		A6DB5D3D23AACCAE003ABE34 /* GIPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				A6DB5D2E23AAC850003ABE34 /* LaunchScreen.storyboard */,
 				A6DB5D3123AAC850003ABE34 /* Info.plist */,
 				A6DB5D3223AAC850003ABE34 /* main.m */,
+				A6DB5D3923AACC9B003ABE34 /* GIPContactsTableViewController.h */,
+				A6DB5D3A23AACC9B003ABE34 /* GIPContactsTableViewController.m */,
+				A6DB5D3C23AACCAE003ABE34 /* GIPDetailViewController.h */,
+				A6DB5D3D23AACCAE003ABE34 /* GIPDetailViewController.m */,
 			);
 			path = "Contacts-MRC";
 			sourceTree = "<group>";
@@ -97,6 +107,7 @@
 		A6DB5D1523AAC84F003ABE34 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GIP;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "GIPGIP Studio";
 				TargetAttributes = {
@@ -143,6 +154,8 @@
 			files = (
 				A6DB5D2223AAC84F003ABE34 /* AppDelegate.m in Sources */,
 				A6DB5D3323AAC850003ABE34 /* main.m in Sources */,
+				A6DB5D3E23AACCAE003ABE34 /* GIPDetailViewController.m in Sources */,
+				A6DB5D3B23AACC9B003ABE34 /* GIPContactsTableViewController.m in Sources */,
 				A6DB5D2523AAC84F003ABE34 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
