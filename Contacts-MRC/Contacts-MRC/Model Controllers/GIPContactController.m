@@ -21,7 +21,11 @@
 {
     self = [super init];
     if (self) {
-        _internalContacts = [[[NSMutableArray alloc] init] autorelease];
+        
+        _internalContacts = [[[NSMutableArray alloc] initWithObjects:
+                              [[GIPContact alloc] initWithName:@"John" email:@"johngk93@gmail.com" phoneNumber:@"7143368822"],
+                              [[GIPContact alloc] initWithName:@"Steve" email:@"stebong@gmail.com" phoneNumber:@"5627145544"],
+                              nil] autorelease];
     }
     return self;
 }
@@ -43,6 +47,11 @@
 - (void)removeContact:(GIPContact *)contact {
     [self.internalContacts removeObject:contact];
     // [contact release];
+}
+
+- (void)dealloc {
+    
+    [super dealloc];
 }
 
 @end
