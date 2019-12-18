@@ -13,6 +13,7 @@
 		5945461C23AAC05100198C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5945461B23AAC05100198C34 /* Assets.xcassets */; };
 		5945461F23AAC05100198C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5945461D23AAC05100198C34 /* LaunchScreen.storyboard */; };
 		5945462223AAC05100198C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462123AAC05100198C34 /* main.m */; };
+		5945462B23AAC54D00198C34 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945462A23AAC54D00198C34 /* LSIContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		5945461E23AAC05100198C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5945462023AAC05100198C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5945462123AAC05100198C34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5945462923AAC54D00198C34 /* LSIContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContact.h; sourceTree = "<group>"; };
+		5945462A23AAC54D00198C34 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				5945461023AAC04D00198C34 /* AppDelegate.m */,
 				5945461223AAC04D00198C34 /* SceneDelegate.h */,
 				5945461323AAC04D00198C34 /* SceneDelegate.m */,
+				5945462823AAC4BF00198C34 /* Model */,
 				5945461823AAC04D00198C34 /* Main.storyboard */,
 				5945461B23AAC05100198C34 /* Assets.xcassets */,
 				5945461D23AAC05100198C34 /* LaunchScreen.storyboard */,
@@ -69,6 +73,15 @@
 				5945462123AAC05100198C34 /* main.m */,
 			);
 			path = "Contacts MRC";
+			sourceTree = "<group>";
+		};
+		5945462823AAC4BF00198C34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5945462923AAC54D00198C34 /* LSIContact.h */,
+				5945462A23AAC54D00198C34 /* LSIContact.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +110,7 @@
 		5945460423AAC04D00198C34 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LSI;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Isaac Lyons";
 				TargetAttributes = {
@@ -144,6 +158,7 @@
 				5945461123AAC04D00198C34 /* AppDelegate.m in Sources */,
 				5945462223AAC05100198C34 /* main.m in Sources */,
 				5945461423AAC04D00198C34 /* SceneDelegate.m in Sources */,
+				5945462B23AAC54D00198C34 /* LSIContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
