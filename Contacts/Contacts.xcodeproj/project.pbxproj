@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		80D49D5923AAC04D00DB321B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49D5823AAC04D00DB321B /* AppDelegate.m */; };
 		80D49D5C23AAC04D00DB321B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49D5B23AAC04D00DB321B /* SceneDelegate.m */; };
-		80D49D5F23AAC04D00DB321B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49D5E23AAC04D00DB321B /* ViewController.m */; };
+		80D49D5F23AAC04D00DB321B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49D5E23AAC04D00DB321B /* DetailViewController.m */; };
 		80D49D6223AAC04D00DB321B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D49D6023AAC04D00DB321B /* Main.storyboard */; };
 		80D49D6423AAC05100DB321B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D49D6323AAC05100DB321B /* Assets.xcassets */; };
 		80D49D6723AAC05100DB321B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D49D6523AAC05100DB321B /* LaunchScreen.storyboard */; };
 		80D49D6A23AAC05100DB321B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49D6923AAC05100DB321B /* main.m */; };
+		80D49D7223AACB3F00DB321B /* JLRContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49D7123AACB3F00DB321B /* JLRContactsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		80D49D5823AAC04D00DB321B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		80D49D5A23AAC04D00DB321B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		80D49D5B23AAC04D00DB321B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		80D49D5D23AAC04D00DB321B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		80D49D5E23AAC04D00DB321B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80D49D5D23AAC04D00DB321B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		80D49D5E23AAC04D00DB321B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		80D49D6123AAC04D00DB321B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80D49D6323AAC05100DB321B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80D49D6623AAC05100DB321B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80D49D6823AAC05100DB321B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D49D6923AAC05100DB321B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80D49D7023AACB3F00DB321B /* JLRContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLRContactsTableViewController.h; sourceTree = "<group>"; };
+		80D49D7123AACB3F00DB321B /* JLRContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLRContactsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +64,45 @@
 		80D49D5623AAC04D00DB321B /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				80D49D5723AAC04D00DB321B /* AppDelegate.h */,
-				80D49D5823AAC04D00DB321B /* AppDelegate.m */,
-				80D49D5A23AAC04D00DB321B /* SceneDelegate.h */,
-				80D49D5B23AAC04D00DB321B /* SceneDelegate.m */,
-				80D49D5D23AAC04D00DB321B /* ViewController.h */,
-				80D49D5E23AAC04D00DB321B /* ViewController.m */,
-				80D49D6023AAC04D00DB321B /* Main.storyboard */,
-				80D49D6323AAC05100DB321B /* Assets.xcassets */,
-				80D49D6523AAC05100DB321B /* LaunchScreen.storyboard */,
+				80D49D7323AACB6A00DB321B /* View Controllers */,
+				80D49D7423AACBB900DB321B /* Storyboards */,
+				80D49D7523AACBCF00DB321B /* Resources */,
 				80D49D6823AAC05100DB321B /* Info.plist */,
-				80D49D6923AAC05100DB321B /* main.m */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		80D49D7323AACB6A00DB321B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80D49D5D23AAC04D00DB321B /* DetailViewController.h */,
+				80D49D5E23AAC04D00DB321B /* DetailViewController.m */,
+				80D49D7023AACB3F00DB321B /* JLRContactsTableViewController.h */,
+				80D49D7123AACB3F00DB321B /* JLRContactsTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		80D49D7423AACBB900DB321B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				80D49D6023AAC04D00DB321B /* Main.storyboard */,
+				80D49D6523AAC05100DB321B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		80D49D7523AACBCF00DB321B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80D49D5A23AAC04D00DB321B /* SceneDelegate.h */,
+				80D49D5B23AAC04D00DB321B /* SceneDelegate.m */,
+				80D49D5723AAC04D00DB321B /* AppDelegate.h */,
+				80D49D5823AAC04D00DB321B /* AppDelegate.m */,
+				80D49D6323AAC05100DB321B /* Assets.xcassets */,
+				80D49D6923AAC05100DB321B /* main.m */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80D49D5F23AAC04D00DB321B /* ViewController.m in Sources */,
+				80D49D5F23AAC04D00DB321B /* DetailViewController.m in Sources */,
 				80D49D5923AAC04D00DB321B /* AppDelegate.m in Sources */,
 				80D49D6A23AAC05100DB321B /* main.m in Sources */,
+				80D49D7223AACB3F00DB321B /* JLRContactsTableViewController.m in Sources */,
 				80D49D5C23AAC04D00DB321B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  DetailViewController.m
 //  Contacts
 //
 //  Created by Jesse Ruiz on 12/18/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DetailViewController.h"
 
-@interface ViewController ()
+@interface DetailViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
