@@ -25,7 +25,7 @@
 @implementation GIPDetailViewController
 
 - (void)setContact:(GIPContact *)contact {
-    _contact = contact;
+    _contact = [contact retain];
     [self updateViews];
 }
 
