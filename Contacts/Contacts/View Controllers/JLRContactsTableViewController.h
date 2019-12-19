@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class JLRContactController;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JLRContactsTableViewController : UITableViewController
+
+@property (nonatomic, retain) JLRContactController *controller;
 
 @end
 

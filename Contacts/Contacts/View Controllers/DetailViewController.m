@@ -53,6 +53,8 @@
     [_nameTextField release];
     [_phoneTextField release];
     [_emailTextField release];
+    [_contact release];
+    [_controller release];
     [super dealloc];
 }
 @end

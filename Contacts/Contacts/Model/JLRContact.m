@@ -44,11 +44,8 @@
 
 - (void)dealloc {
     [_name release];
-    _name = nil;
     [_phone release];
-    _phone = nil;
     [_email release];
-    _email = nil;
     NSLog(@"Contact.dealloc");
     [super dealloc];
 }
