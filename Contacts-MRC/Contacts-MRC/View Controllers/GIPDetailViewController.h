@@ -11,7 +11,7 @@
 
 @interface GIPDetailViewController : UIViewController
 
-@property (retain, nonnull) GIPContactController *controller;
-@property (retain, nullable) GIPContact *contact;
+@property (nonatomic, retain, nullable) GIPContactController *controller;
+@property (nonatomic, retain, nullable) GIPContact *contact;
 
 @end

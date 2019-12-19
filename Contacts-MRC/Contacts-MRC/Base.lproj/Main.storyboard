@@ -93,10 +93,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HaR-YG-omI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mMQ-25-Bxf"/>
+                    <navigationItem key="navigationItem" id="mMQ-25-Bxf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1Oi-2q-FlT">
+                            <connections>
+                                <action selector="saveContact:" destination="XT7-OJ-lKA" id="k6r-Mz-Bl9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="oip-9H-3dE" id="74I-2M-QLT"/>
-                        <outlet property="nameTextFIeld" destination="bAx-d9-nc7" id="fhH-sY-or5"/>
+                        <outlet property="nameTextField" destination="bAx-d9-nc7" id="Sa6-8c-qFL"/>
                         <outlet property="phoneNumberTextField" destination="J0f-0f-Twa" id="FBf-5D-fgn"/>
                     </connections>
                 </viewController>
