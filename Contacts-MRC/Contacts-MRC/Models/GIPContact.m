@@ -13,9 +13,9 @@
 - (instancetype)initWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber {
     self = [super init];
     if (self) {
-        _name = [name retain];
-        _email = [email retain];
-        _phoneNumber = [phoneNumber retain];
+        _name = [name copy];
+        _email = [email copy];
+        _phoneNumber = [phoneNumber copy];
     }
     return self;
 }
