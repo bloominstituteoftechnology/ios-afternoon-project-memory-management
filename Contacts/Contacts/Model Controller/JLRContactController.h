@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JLRContactController : NSObject
 
+@property (nonatomic, retain) NSMutableArray *contacts;
+
 - (JLRContact *)createContactWithName:(NSString *)name
                                 phone:(NSString *)phone
                                 email:(NSString *)email;

@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "JLRContact.h"
+#import "JLRContactController.h"
 
 @interface DetailViewController ()
 
@@ -20,10 +22,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateViews];
+}
+
+- (void)updateViews {
+    if (self.contact) {
+        self.title = self.contact.name;
+        self.nameTextField.text = self.contact.name;
+        self.phoneTextField.text = self.contact.phone;
+        self.emailTextField.text = self.contact.email;
+    } else {
+        self.title = @"Add New Contact";
+    }
 }
 
 - (IBAction)saveContact:(UIBarButtonItem *)sender {
+    NSString *name = self.nameTextField.text;
+    NSString *phone = self.phoneTextField.text;
+    NSString *email = self.emailTextField.text;
     
+    if (self.contact) {
+        [self.controller updateContact:self.contact withName:name phone:phone andEmail:email];
+    } else {
+        [self.controller createContactWithName:name phone:phone email:email];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)dealloc {

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class JLRContact;
+@class JLRContactController;
 @interface DetailViewController : UIViewController
 
+@property (nonatomic, retain) JLRContact *contact;
+@property (nonatomic, retain) JLRContactController *controller;
 
 @end
 
