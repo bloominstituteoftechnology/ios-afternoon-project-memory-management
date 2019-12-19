@@ -20,11 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
                        phone:(NSString *)phone
                        email:(NSString *)email;
 
-- (instancetype)initWithFileDictionary:(NSDictionary *)dictionary;
-
-- (NSDictionary *)toDictionary;
-
-
 @end
 
 NS_ASSUME_NONNULL_END

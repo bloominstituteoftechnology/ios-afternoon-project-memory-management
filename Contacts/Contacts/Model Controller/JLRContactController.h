@@ -8,22 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class JLRContact;
 NS_ASSUME_NONNULL_BEGIN
+
+@class JLRContact;
 
 @interface JLRContactController : NSObject
 
 @property (nonatomic, retain) NSMutableArray *contacts;
 
-- (JLRContact *)createContactWithName:(NSString *)name
+- (void)createContactWithName:(NSString *)name
                                 phone:(NSString *)phone
                                 email:(NSString *)email;
-
-- (void)updateContact:(JLRContact *)contact withName:(NSString *)name
-                phone:(NSString *)phone
-             andEmail:(NSString *)email;
-
-- (void)deleteContact:(JLRContact *)contact;
 
 @end
 

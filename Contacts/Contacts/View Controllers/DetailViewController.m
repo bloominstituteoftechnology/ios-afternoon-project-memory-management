@@ -40,19 +40,17 @@
     NSString *name = self.nameTextField.text;
     NSString *phone = self.phoneTextField.text;
     NSString *email = self.emailTextField.text;
-    
-    if (self.contact) {
-        [self.controller updateContact:self.contact withName:name phone:phone andEmail:email];
-    } else {
-        [self.controller createContactWithName:name phone:phone email:email];
-    }
+    [self.controller createContactWithName:name phone:phone email:email];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)dealloc {
     [_nameTextField release];
+    _nameTextField = nil;
     [_phoneTextField release];
+    _phoneTextField = nil;
     [_emailTextField release];
+    _emailTextField = nil;
     [_contact release];
     [_controller release];
     [super dealloc];

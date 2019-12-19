@@ -23,25 +23,6 @@
     return self;
 }
 
-- (instancetype)initWithFileDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    if (self) {
-        self.name = dictionary[@"name"];
-        self.phone = dictionary[@"phone"];
-        self.email = dictionary[@"email"];
-    }
-    return self;
-}
-
-- (NSDictionary *)toDictionary {
-    NSDictionary *dictionary = [[[NSDictionary alloc] init] autorelease];
-    [dictionary setValue:self.name forKey:@"name"];
-    [dictionary setValue:self.phone forKey:@"phone"];
-    [dictionary setValue:self.email forKey:@"email"];
-    
-    return dictionary;
-}
-
 - (void)dealloc {
     [_name release];
     [_phone release];
