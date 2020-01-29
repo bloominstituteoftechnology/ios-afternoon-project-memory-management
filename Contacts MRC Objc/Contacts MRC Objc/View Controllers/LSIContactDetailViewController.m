@@ -7,12 +7,14 @@
 //
 
 #import "LSIContactDetailViewController.h"
+#import "LSIContact.h"
+#import "LSIContactController.h"
 
 @interface LSIContactDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UILabel *phoneNumTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneNumTextField;
 
 @end
 
@@ -20,10 +22,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self updateViews];
 }
 
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
+}
+
+-(void)updateViews {
+    
+    if (self.contact) {
+        
+        NSString *phoneNum = [@(self.contact.phoneNum) stringValue];
+        
+        self.nameTextField.text = self.contact.name;
+        self.emailTextField.text = self.contact.email;
+        self.phoneNumTextField.text = phoneNum;
+    } else {
+        self.title = @"New Contact";
+        NSLog(@"Contact was nil");
+    }
 }
 
 /*
@@ -36,4 +54,8 @@
 }
 */
 
+- (void)dealloc {
+    [_phoneNumTextField release];
+    [super dealloc];
+}
 @end
