@@ -24,6 +24,7 @@
 
 - (IBAction)saveTapped:(id)sender;
 
+- (void)setQRCodeForContact;
 - (UIImage *_Nullable)qrCodeFromString:(NSString *)string;
 
 @end
@@ -37,6 +38,7 @@
 {
     [super viewDidLoad];
     [self setUpViewsForContact];
+    [self setQRCodeForContact];
 }
 
 - (void)setUpViewsForContact
@@ -82,13 +84,25 @@
 
 #pragma mark - QR Code
 
+- (void)setQRCodeForContact
+{
+    if ([self.nameTextField.text isEqualToString:@""]) { return; }
+    NSString *contactCardString = [NSString stringWithFormat:@"%@\nEmail: %@\nPhone: %@",
+                                   self.nameTextField.text,
+                                   self.emailTextField.text,
+                                   self.phoneTextField.text];
+    self.qrCodeImageView.image = [self qrCodeFromString:contactCardString];
+}
+
 - (UIImage *)qrCodeFromString:(NSString *)string
 {
-    NSData *data = [[string dataUsingEncoding:NSNonLossyASCIIStringEncoding] autorelease];
+    NSData *data = [string dataUsingEncoding:NSNonLossyASCIIStringEncoding];
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+
     [filter setValue:data forKey:@"inputMessage"];
     CGAffineTransform transform = CGAffineTransformMakeScale(3, 3);
     CIImage *output = [filter.outputImage imageByApplyingTransform:transform];
+
     if (output) {
         return [UIImage imageWithCIImage:output];
     } else {
