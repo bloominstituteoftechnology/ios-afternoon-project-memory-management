@@ -10,6 +10,10 @@
 
 @interface SKSContactsDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *numberTextField;
+
 @end
 
 @implementation SKSContactsDetailViewController
@@ -19,6 +23,9 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 
