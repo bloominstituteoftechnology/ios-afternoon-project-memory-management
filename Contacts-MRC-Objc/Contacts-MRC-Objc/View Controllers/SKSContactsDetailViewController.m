@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *numberTextField;
 
+- (void)saveContact;
+
 @end
 
 @implementation SKSContactsDetailViewController
@@ -35,7 +37,28 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    [self saveContact];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)saveContact {
+
+    NSString *nameString = self.nameTextField.text;
+    NSString *emailString = self.emailTextField.text;
+    NSString *numberString = self.numberTextField.text;
+
+    if (self.contact) {
+
+    } else {
+        if (nameString.length > 0 && emailString.length > 0 &&
+            numberString.length > 0 ) {
+
+            SKSContact *contact = [SKSContact contactWithName:nameString
+                                                        email:emailString
+                                                       number:numberString];
+            [self.contactsController addContact: contact];
+        }
+    }
 }
 
 - (void)dealloc {
