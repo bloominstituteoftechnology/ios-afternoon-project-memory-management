@@ -10,9 +10,14 @@
 #import "JBContact.h"
 
 
+// TODO: set to NO when not testing
+static BOOL usingMockData = YES;
+
+
 @interface JBContactsController()
 
 @property (retain, nonatomic) NSMutableArray *privateContacts;
++ (NSArray<JBContact *> *)mockData;
 
 @end
 
@@ -23,9 +28,34 @@
 {
     self = [super init];
     if (self) {
-        _privateContacts = [[NSMutableArray alloc] init];
+        if (usingMockData) {
+            _privateContacts = [JBContactsController.mockData mutableCopy];
+        } else {
+            _privateContacts = [[NSMutableArray alloc] init];
+        }
     }
     return self;
+}
+
++ (NSArray<JBContact *> *)mockData
+{
+    return [[NSArray alloc] initWithObjects:
+            [[JBContact alloc] initWithName:@"Jon Bash"
+                               emailAddress:@"jonbash@pm.me"
+                                phoneNumber:@"5551234567"],
+            [[JBContact alloc] initWithName:@"Elie Hartman"
+                               emailAddress:@"eliehazemail@realsite.com"
+                                phoneNumber:@"5559876543"],
+            [[JBContact alloc] initWithName:@"Michele Bash"
+                               emailAddress:nil
+                                phoneNumber:@"5551112222"],
+            [[JBContact alloc] initWithName:@"Phoneless Joe"
+                               emailAddress:@"joe@no.phone"
+                                phoneNumber:nil],
+            [[JBContact alloc] initWithName:@"Skeleton Harvester"
+                               emailAddress:nil
+                                phoneNumber:nil],
+            nil];
 }
 
 - (NSArray<JBContact *> *)contacts
