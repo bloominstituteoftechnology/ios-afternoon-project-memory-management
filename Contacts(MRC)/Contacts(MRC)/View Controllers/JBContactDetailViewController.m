@@ -53,7 +53,7 @@
     if (self.contact) {
         self.nameTextField.text = self.contact.name;
         self.emailTextField.text = self.contact.emailAddress;
-        self.phoneTextField.text = self.contact.phoneNumber;
+        self.phoneTextField.text = [self formatPhoneNumberFromString:self.contact.phoneNumber];
     }
 }
 
@@ -163,6 +163,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    if (textField == self.phoneTextField) {
+        textField.text = [self formatPhoneNumberFromString:textField.text];
+    }
     [self setQRCodeForContact];
 }
 
@@ -181,5 +184,22 @@ replacementString:(NSString *)string
     return YES;
 }
 
+#pragma mark - Helpers
+
+- (NSString *)formatPhoneNumberFromString:(NSString *)originalString
+{
+    NSMutableString *formattedNumber = [[@"(" mutableCopy] autorelease];
+    for (int i = 0; i < originalString.length; i++) {
+        [formattedNumber appendFormat:@"%c", [originalString characterAtIndex:i]];
+        if (i == 2) {
+            [formattedNumber appendString:@") "];
+        } else if (i == 5) {
+            [formattedNumber appendString:@"-"];
+        } else if (i == 9) {
+            break;
+        }
+    }
+    return [[formattedNumber copy] autorelease];
+}
 
 @end
