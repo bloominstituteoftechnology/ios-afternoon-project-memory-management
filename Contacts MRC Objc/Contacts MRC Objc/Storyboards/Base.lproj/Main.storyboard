@@ -10,7 +10,7 @@
         <!--Contact Info-->
         <scene sceneID="0f5-AE-Pyk">
             <objects>
-                <viewController id="63Y-m7-yD7" sceneMemberID="viewController">
+                <viewController id="63Y-m7-yD7" customClass="LSIContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8jO-l5-NoT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,8 +87,17 @@
                         <viewLayoutGuide key="safeArea" id="nmE-6k-uRK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Info" id="9ca-de-DU1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="euv-0b-D6x"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="euv-0b-D6x">
+                            <connections>
+                                <action selector="saveBarButtonTapped:" destination="63Y-m7-yD7" id="rLM-r4-KVX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="cD0-n1-8fj" id="w7w-Gh-wkA"/>
+                        <outlet property="nameTextField" destination="JhZ-BQ-ucX" id="4xG-II-3gB"/>
+                        <outlet property="phoneNumTextField" destination="hfm-TG-q9d" id="2rg-A4-zgu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqt-AE-uXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +106,7 @@
         <!--Contacts-->
         <scene sceneID="MaI-Ok-sg9">
             <objects>
-                <tableViewController id="i9k-4g-xB2" sceneMemberID="viewController">
+                <tableViewController id="i9k-4g-xB2" customClass="LSIContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LYZ-0D-mZ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

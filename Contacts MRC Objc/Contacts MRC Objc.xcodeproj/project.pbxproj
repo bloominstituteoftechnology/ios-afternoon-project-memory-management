@@ -13,6 +13,8 @@
 		FA30D83723E220B700655567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA30D83623E220B700655567 /* Assets.xcassets */; };
 		FA30D83A23E220B700655567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA30D83823E220B700655567 /* LaunchScreen.storyboard */; };
 		FA30D83D23E220B700655567 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D83C23E220B700655567 /* main.m */; };
+		FA30D84A23E224C400655567 /* LSIContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D84923E224C400655567 /* LSIContactsTableViewController.m */; };
+		FA30D85023E2251900655567 /* LSIContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D84F23E2251900655567 /* LSIContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		FA30D83923E220B700655567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA30D83B23E220B700655567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA30D83C23E220B700655567 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA30D84823E224C400655567 /* LSIContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactsTableViewController.h; sourceTree = "<group>"; };
+		FA30D84923E224C400655567 /* LSIContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactsTableViewController.m; sourceTree = "<group>"; };
+		FA30D84E23E2251900655567 /* LSIContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactDetailViewController.h; sourceTree = "<group>"; };
+		FA30D84F23E2251900655567 /* LSIContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,10 @@
 		FA30D84723E2216D00655567 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA30D84823E224C400655567 /* LSIContactsTableViewController.h */,
+				FA30D84923E224C400655567 /* LSIContactsTableViewController.m */,
+				FA30D84E23E2251900655567 /* LSIContactDetailViewController.h */,
+				FA30D84F23E2251900655567 /* LSIContactDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 		FA30D81F23E220B300655567 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LSI;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -183,6 +194,8 @@
 			files = (
 				FA30D82C23E220B300655567 /* AppDelegate.m in Sources */,
 				FA30D83D23E220B700655567 /* main.m in Sources */,
+				FA30D84A23E224C400655567 /* LSIContactsTableViewController.m in Sources */,
+				FA30D85023E2251900655567 /* LSIContactDetailViewController.m in Sources */,
 				FA30D82F23E220B300655567 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
