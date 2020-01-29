@@ -24,11 +24,20 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_name release];
+    if (_emailAddress) { [_emailAddress release]; }
+    if (_phoneNumber) { [_phoneNumber release]; }
+    [super dealloc];
+}
+
 - (void)setName:(NSString *)name
 {
     if (_name != name) {
         [_name release];
         _name = [name retain];
+//        _name = (name) ? [name retain] : name; // ??? try this if crashes
     }
 }
 

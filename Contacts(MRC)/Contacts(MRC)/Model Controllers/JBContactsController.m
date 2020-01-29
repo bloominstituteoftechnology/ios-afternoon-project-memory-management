@@ -39,23 +39,29 @@ static BOOL usingMockData = YES;
 
 + (NSArray<JBContact *> *)mockData
 {
-    return [[NSArray alloc] initWithObjects:
-            [[JBContact alloc] initWithName:@"Jon Bash"
-                               emailAddress:@"jonbash@pm.me"
-                                phoneNumber:@"5551234567"],
-            [[JBContact alloc] initWithName:@"Elie Hartman"
-                               emailAddress:@"eliehazemail@realsite.com"
-                                phoneNumber:@"5559876543"],
-            [[JBContact alloc] initWithName:@"Michele Bash"
-                               emailAddress:nil
-                                phoneNumber:@"5551112222"],
-            [[JBContact alloc] initWithName:@"Phoneless Joe"
-                               emailAddress:@"joe@no.phone"
-                                phoneNumber:nil],
-            [[JBContact alloc] initWithName:@"Skeleton Harvester"
-                               emailAddress:nil
-                                phoneNumber:nil],
-            nil];
+    return [[[NSArray alloc] initWithObjects:
+             [[[JBContact alloc] initWithName:@"Jon Bash"
+                                 emailAddress:@"jonbash@pm.me"
+                                  phoneNumber:@"5551234567"]
+              autorelease],
+             [[[JBContact alloc] initWithName:@"Elie Hartman"
+                                 emailAddress:@"eliehazemail@realsite.com"
+                                  phoneNumber:@"5559876543"]
+              autorelease],
+             [[[JBContact alloc] initWithName:@"Michele Bash"
+                                 emailAddress:nil
+                                  phoneNumber:@"5551112222"]
+              autorelease],
+             [[[JBContact alloc] initWithName:@"Phoneless Joe"
+                                 emailAddress:@"joe@no.phone"
+                                  phoneNumber:nil]
+              autorelease],
+             [[[JBContact alloc] initWithName:@"Skeleton Harvester"
+                                 emailAddress:nil
+                                  phoneNumber:nil]
+              autorelease],
+             nil]
+            autorelease];
 }
 
 - (NSArray<JBContact *> *)contacts
@@ -67,10 +73,11 @@ static BOOL usingMockData = YES;
               emailAddress:(NSString *)emailAddress
                phoneNumber:(NSString *)phoneNumber
 {
-    [self.privateContacts
-     addObject:[[JBContact alloc] initWithName:name
-                                  emailAddress:emailAddress
-                                   phoneNumber:phoneNumber]];
+    JBContact *newContact = [[[JBContact alloc] initWithName:name
+                                                emailAddress:emailAddress
+                                                 phoneNumber:phoneNumber]
+                             autorelease];
+    [self.privateContacts addObject:newContact];
 }
 
 - (void)updateContact:(JBContact *)contact
