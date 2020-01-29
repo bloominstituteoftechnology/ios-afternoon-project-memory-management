@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIContactController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContactsTableViewController : UITableViewController
+
+@property (nonatomic) LSIContactController *contactController;
 
 @end
 

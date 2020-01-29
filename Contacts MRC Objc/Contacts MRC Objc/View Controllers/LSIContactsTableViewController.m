@@ -7,6 +7,9 @@
 //
 
 #import "LSIContactsTableViewController.h"
+#import "LSIContactController.h"
+#import "LSIContact.h"
+#import "LSIContactDetailViewController.h"
 
 @interface LSIContactsTableViewController ()
 
@@ -24,27 +27,36 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _contactController = [[LSIContactController alloc] init];
+    }
+    return self;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.contactController.contacts.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    LSIContact *contact = self.contactController.contacts[indexPath.row];
+    
+    cell.textLabel.text = contact.name;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -80,14 +92,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@""]) {
+        
+        LSIContactDetailViewController *detailVC = (LSIContactDetailViewController *)[segue destinationViewController];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        LSIContact *contact = self.contactController.contacts[indexPath.row];
+        
+        detailVC.contact = contact;
+        detailVC.contactController = self.contactController;
+    }
+    
 }
-*/
+
 
 @end
