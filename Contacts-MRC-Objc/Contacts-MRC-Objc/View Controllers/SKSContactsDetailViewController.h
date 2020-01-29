@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class SKSContactsController, SKSContact;
 
 @interface SKSContactsDetailViewController : UIViewController
 
+@property (nonatomic, retain) SKSContactsController *contactsController;
+@property (nonatomic, retain) SKSContact *contact;
+
 @end
 
-NS_ASSUME_NONNULL_END

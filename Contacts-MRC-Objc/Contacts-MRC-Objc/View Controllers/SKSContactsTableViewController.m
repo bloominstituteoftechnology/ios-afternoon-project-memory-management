@@ -103,6 +103,16 @@ static NSString * const reuseIdentifier = @"ContactCell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    SKSContactsDetailViewController *detailVC = [segue destinationViewController];
+    if ([detailVC isKindOfClass:[SKSContactsDetailViewController class]]) {
+
+        detailVC.contactsController = self.contactController;
+
+        if ([[segue identifier] isEqualToString:@"ShowDetailContactSegue"]) {
+            NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+            detailVC.contact = self.contactController.contacts[indexPath.row];
+        }
+    }
 
 }
 

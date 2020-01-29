@@ -7,6 +7,8 @@
 //
 
 #import "SKSContactsDetailViewController.h"
+#import "SKSContactsController.h"
+#import "SKSContact.h"
 
 @interface SKSContactsDetailViewController ()
 
@@ -20,20 +22,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
+}
+
+- (void)updateViews {
+    if (self.contact) {
+        self.title = @"Edit Contact";
+        [self.nameTextField setText:self.contact.name];
+        [self.emailTextField setText:self.contact.email];
+        [self.numberTextField setText:self.contact.number];
+    }
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    [_contactsController release];
+    _contactsController = nil;
+    [_contact release];
+    _contact = nil;
+    [super dealloc];
 }
-*/
 
 @end
