@@ -15,6 +15,14 @@
 		DD8DA75423E22F9F00261691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8DA75223E22F9F00261691 /* LaunchScreen.storyboard */; };
 		DD8DA75723E22F9F00261691 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA75623E22F9F00261691 /* main.m */; };
 		DD8DA76123E22F9F00261691 /* Contacts_MRCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA76023E22F9F00261691 /* Contacts_MRCTests.m */; };
+		DD8DA77023E2355100261691 /* PNCContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA76F23E2355100261691 /* PNCContactDetailViewController.m */; };
+		DD8DA77123E2355100261691 /* PNCContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA76F23E2355100261691 /* PNCContactDetailViewController.m */; };
+		DD8DA77423E2357E00261691 /* PNCContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA77323E2357E00261691 /* PNCContactsTableViewController.m */; };
+		DD8DA77523E2357E00261691 /* PNCContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA77323E2357E00261691 /* PNCContactsTableViewController.m */; };
+		DD8DA77823E235A800261691 /* PNCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA77723E235A800261691 /* PNCContact.m */; };
+		DD8DA77923E235A800261691 /* PNCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA77723E235A800261691 /* PNCContact.m */; };
+		DD8DA77D23E235D000261691 /* PNCContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA77C23E235D000261691 /* PNCContactController.m */; };
+		DD8DA77E23E235D000261691 /* PNCContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8DA77C23E235D000261691 /* PNCContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,14 @@
 		DD8DA75C23E22F9F00261691 /* Contacts-MRCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Contacts-MRCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8DA76023E22F9F00261691 /* Contacts_MRCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contacts_MRCTests.m; sourceTree = "<group>"; };
 		DD8DA76223E22F9F00261691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD8DA76E23E2355100261691 /* PNCContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCContactDetailViewController.h; sourceTree = "<group>"; };
+		DD8DA76F23E2355100261691 /* PNCContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCContactDetailViewController.m; sourceTree = "<group>"; };
+		DD8DA77223E2357D00261691 /* PNCContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCContactsTableViewController.h; sourceTree = "<group>"; };
+		DD8DA77323E2357E00261691 /* PNCContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCContactsTableViewController.m; sourceTree = "<group>"; };
+		DD8DA77623E235A800261691 /* PNCContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCContact.h; sourceTree = "<group>"; };
+		DD8DA77723E235A800261691 /* PNCContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCContact.m; sourceTree = "<group>"; };
+		DD8DA77B23E235D000261691 /* PNCContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCContactController.h; sourceTree = "<group>"; };
+		DD8DA77C23E235D000261691 /* PNCContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,8 @@
 			children = (
 				DD8DA76D23E231B100261691 /* Storyboards */,
 				DD8DA76C23E231A800261691 /* View Controllers */,
+				DD8DA77A23E235AF00261691 /* Models */,
+				DD8DA77F23E235D700261691 /* Model Controllers */,
 				DD8DA76B23E2319C00261691 /* Resources */,
 			);
 			path = "Contacts-MRC";
@@ -119,6 +137,10 @@
 			children = (
 				DD8DA74A23E22F9C00261691 /* ViewController.h */,
 				DD8DA74B23E22F9C00261691 /* ViewController.m */,
+				DD8DA76E23E2355100261691 /* PNCContactDetailViewController.h */,
+				DD8DA76F23E2355100261691 /* PNCContactDetailViewController.m */,
+				DD8DA77223E2357D00261691 /* PNCContactsTableViewController.h */,
+				DD8DA77323E2357E00261691 /* PNCContactsTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -130,6 +152,24 @@
 				DD8DA75223E22F9F00261691 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DD8DA77A23E235AF00261691 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD8DA77623E235A800261691 /* PNCContact.h */,
+				DD8DA77723E235A800261691 /* PNCContact.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD8DA77F23E235D700261691 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD8DA77B23E235D000261691 /* PNCContactController.h */,
+				DD8DA77C23E235D000261691 /* PNCContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8DA77023E2355100261691 /* PNCContactDetailViewController.m in Sources */,
+				DD8DA77823E235A800261691 /* PNCContact.m in Sources */,
+				DD8DA77D23E235D000261691 /* PNCContactController.m in Sources */,
 				DD8DA74C23E22F9C00261691 /* ViewController.m in Sources */,
 				DD8DA74623E22F9C00261691 /* AppDelegate.m in Sources */,
 				DD8DA75723E22F9F00261691 /* main.m in Sources */,
+				DD8DA77423E2357E00261691 /* PNCContactsTableViewController.m in Sources */,
 				DD8DA74923E22F9C00261691 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8DA77923E235A800261691 /* PNCContact.m in Sources */,
+				DD8DA77E23E235D000261691 /* PNCContactController.m in Sources */,
+				DD8DA77123E2355100261691 /* PNCContactDetailViewController.m in Sources */,
+				DD8DA77523E2357E00261691 /* PNCContactsTableViewController.m in Sources */,
 				DD8DA76123E22F9F00261691 /* Contacts_MRCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
