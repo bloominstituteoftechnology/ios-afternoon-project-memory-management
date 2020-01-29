@@ -16,6 +16,7 @@
 		BB0548F523E22B1E00EF62AF /* SKSContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548F423E22B1E00EF62AF /* SKSContactsTableViewController.m */; };
 		BB0548F823E22B3500EF62AF /* SKSContactsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548F723E22B3500EF62AF /* SKSContactsDetailViewController.m */; };
 		BB0548FC23E2309700EF62AF /* SKSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548FB23E2309700EF62AF /* SKSContact.m */; };
+		BB05490023E233C800EF62AF /* SKSContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548FF23E233C800EF62AF /* SKSContactsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		BB0548F723E22B3500EF62AF /* SKSContactsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSContactsDetailViewController.m; sourceTree = "<group>"; };
 		BB0548FA23E2309700EF62AF /* SKSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSContact.h; sourceTree = "<group>"; };
 		BB0548FB23E2309700EF62AF /* SKSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSContact.m; sourceTree = "<group>"; };
+		BB0548FE23E233C800EF62AF /* SKSContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSContactsController.h; sourceTree = "<group>"; };
+		BB0548FF23E233C800EF62AF /* SKSContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSContactsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				BB0548F923E22B3C00EF62AF /* View Controllers */,
+				BB05490123E233CF00EF62AF /* Model Controllers */,
 				BB0548FD23E2309D00EF62AF /* Models */,
 				BB0548DA23E226E400EF62AF /* AppDelegate.h */,
 				BB0548DB23E226E400EF62AF /* AppDelegate.m */,
@@ -100,6 +104,15 @@
 				BB0548FB23E2309700EF62AF /* SKSContact.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BB05490123E233CF00EF62AF /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB0548FE23E233C800EF62AF /* SKSContactsController.h */,
+				BB0548FF23E233C800EF62AF /* SKSContactsController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +189,7 @@
 				BB0548F523E22B1E00EF62AF /* SKSContactsTableViewController.m in Sources */,
 				BB0548DC23E226E400EF62AF /* AppDelegate.m in Sources */,
 				BB0548ED23E226E800EF62AF /* main.m in Sources */,
+				BB05490023E233C800EF62AF /* SKSContactsController.m in Sources */,
 				BB0548F823E22B3500EF62AF /* SKSContactsDetailViewController.m in Sources */,
 				BB0548FC23E2309700EF62AF /* SKSContact.m in Sources */,
 				BB0548DF23E226E400EF62AF /* SceneDelegate.m in Sources */,
