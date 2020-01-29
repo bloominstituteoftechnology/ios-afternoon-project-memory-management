@@ -40,6 +40,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)dealloc
 {
     [_contactsController release];
@@ -106,7 +112,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     JBContactDetailViewController *detailVC = segue.destinationViewController;
-    detailVC.contactsController = [self.contactsController retain];
+    detailVC.contactsController = self.contactsController;
 
     if ([segue.identifier isEqualToString:@"EditContactSegue"]) {
         detailVC.contact = self.contactsController
