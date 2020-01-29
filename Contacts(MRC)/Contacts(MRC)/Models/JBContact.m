@@ -10,4 +10,15 @@
 
 @implementation JBContact
 
+- (instancetype)initWithName:(NSString *)name emailAddress:(NSString *)emailAddress phoneNumber:(NSString *)phoneNumber
+{
+    self = [super init];
+    if (self) {
+        _name = [name copy];
+        _emailAddress = [emailAddress copy];
+        _phoneNumber = [phoneNumber copy];
+    }
+    return self;
+}
+
 @end
