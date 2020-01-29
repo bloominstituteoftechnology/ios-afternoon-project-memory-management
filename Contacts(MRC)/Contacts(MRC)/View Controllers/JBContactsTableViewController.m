@@ -7,15 +7,27 @@
 //
 
 #import "JBContactsTableViewController.h"
+#import "JBContactsController.h"
+#import "JBContact.h"
 
 
 @interface JBContactsTableViewController ()
 
+@property (retain, nonatomic) JBContactsController *contactsController;
 
 @end
 
 
 @implementation JBContactsTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _contactsController = [[JBContactsController alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,27 +39,32 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)dealloc
+{
+    [_contactsController release];
+    _contactsController = nil;
+    [super dealloc];
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    return self.contactsController.contacts.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell"
+                                                            forIndexPath:indexPath];
+    JBContact *contact = self.contactsController.contacts[indexPath.row];
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    cell.textLabel.text = contact.name;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
