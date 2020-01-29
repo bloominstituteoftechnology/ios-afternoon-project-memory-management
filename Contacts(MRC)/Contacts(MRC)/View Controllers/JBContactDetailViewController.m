@@ -72,6 +72,32 @@
     [super dealloc];
 }
 
+#pragma mark - Setters
+
+- (void)setContact:(JBContact *)contact
+{
+    if (_contact != contact) {
+        [_contact release];
+        _contact = [contact retain];
+    }
+}
+
+- (void)setContactsController:(JBContactsController *)contactsController
+{
+    if (_contactsController != contactsController) {
+        [_contactsController release];
+        _contactsController = [contactsController retain];
+    }
+}
+
+- (void)setContactCardString:(NSString *)contactCardString
+{
+    if (_contactCardString != contactCardString) {
+        [_contactCardString release];
+        _contactCardString = [contactCardString retain];
+    }
+}
+
 #pragma mark - Actions
 
 - (IBAction)saveTapped:(id)sender {
