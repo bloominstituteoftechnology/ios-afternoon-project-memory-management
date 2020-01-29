@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SKSContactsDetailViewController.h
 //  Contacts-MRC-Objc
 //
 //  Created by Lambda_School_Loaner_204 on 1/29/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface SKSContactsDetailViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

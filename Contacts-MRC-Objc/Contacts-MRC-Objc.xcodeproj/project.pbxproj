@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		BB0548DC23E226E400EF62AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548DB23E226E400EF62AF /* AppDelegate.m */; };
 		BB0548DF23E226E400EF62AF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548DE23E226E400EF62AF /* SceneDelegate.m */; };
-		BB0548E223E226E500EF62AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548E123E226E500EF62AF /* ViewController.m */; };
 		BB0548E523E226E500EF62AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0548E323E226E500EF62AF /* Main.storyboard */; };
 		BB0548E723E226E800EF62AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0548E623E226E800EF62AF /* Assets.xcassets */; };
 		BB0548EA23E226E800EF62AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0548E823E226E800EF62AF /* LaunchScreen.storyboard */; };
 		BB0548ED23E226E800EF62AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548EC23E226E800EF62AF /* main.m */; };
+		BB0548F523E22B1E00EF62AF /* SKSContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548F423E22B1E00EF62AF /* SKSContactsTableViewController.m */; };
+		BB0548F823E22B3500EF62AF /* SKSContactsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0548F723E22B3500EF62AF /* SKSContactsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		BB0548DB23E226E400EF62AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB0548DD23E226E400EF62AF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		BB0548DE23E226E400EF62AF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		BB0548E023E226E400EF62AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB0548E123E226E500EF62AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB0548E423E226E500EF62AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB0548E623E226E800EF62AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0548E923E226E800EF62AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB0548EB23E226E800EF62AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB0548EC23E226E800EF62AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB0548F323E22B1E00EF62AF /* SKSContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSContactsTableViewController.h; sourceTree = "<group>"; };
+		BB0548F423E22B1E00EF62AF /* SKSContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSContactsTableViewController.m; sourceTree = "<group>"; };
+		BB0548F623E22B3500EF62AF /* SKSContactsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSContactsDetailViewController.h; sourceTree = "<group>"; };
+		BB0548F723E22B3500EF62AF /* SKSContactsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSContactsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +64,11 @@
 		BB0548D923E226E400EF62AF /* Contacts-MRC-Objc */ = {
 			isa = PBXGroup;
 			children = (
+				BB0548F923E22B3C00EF62AF /* View Controllers */,
 				BB0548DA23E226E400EF62AF /* AppDelegate.h */,
 				BB0548DB23E226E400EF62AF /* AppDelegate.m */,
 				BB0548DD23E226E400EF62AF /* SceneDelegate.h */,
 				BB0548DE23E226E400EF62AF /* SceneDelegate.m */,
-				BB0548E023E226E400EF62AF /* ViewController.h */,
-				BB0548E123E226E500EF62AF /* ViewController.m */,
 				BB0548E323E226E500EF62AF /* Main.storyboard */,
 				BB0548E623E226E800EF62AF /* Assets.xcassets */,
 				BB0548E823E226E800EF62AF /* LaunchScreen.storyboard */,
@@ -74,6 +76,17 @@
 				BB0548EC23E226E800EF62AF /* main.m */,
 			);
 			path = "Contacts-MRC-Objc";
+			sourceTree = "<group>";
+		};
+		BB0548F923E22B3C00EF62AF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB0548F323E22B1E00EF62AF /* SKSContactsTableViewController.h */,
+				BB0548F423E22B1E00EF62AF /* SKSContactsTableViewController.m */,
+				BB0548F623E22B3500EF62AF /* SKSContactsDetailViewController.h */,
+				BB0548F723E22B3500EF62AF /* SKSContactsDetailViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +115,7 @@
 		BB0548CF23E226E400EF62AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SKS;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -146,9 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0548E223E226E500EF62AF /* ViewController.m in Sources */,
+				BB0548F523E22B1E00EF62AF /* SKSContactsTableViewController.m in Sources */,
 				BB0548DC23E226E400EF62AF /* AppDelegate.m in Sources */,
 				BB0548ED23E226E800EF62AF /* main.m in Sources */,
+				BB0548F823E22B3500EF62AF /* SKSContactsDetailViewController.m in Sources */,
 				BB0548DF23E226E400EF62AF /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
