@@ -7,8 +7,16 @@
 //
 
 #import "PNCContactDetailViewController.h"
+#import "PNCContact.h"
 
 @interface PNCContactDetailViewController ()
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
+
+
+
 
 @end
 
@@ -16,7 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	if (self.contact) {
+		self.nameTextField.text = self.contact.name;
+		self.emailTextField.text = self.contact.email;
+		self.phoneTextField.text = self.contact.phoneNumber;
+}
 }
 
 /*
@@ -29,4 +41,12 @@
 }
 */
 
+- (void)dealloc {
+	[_nameTextField release];
+	[_emailTextField release];
+	[_phoneTextField release];
+	[_emailTextField release];
+	[_phoneTextField release];
+	[super dealloc];
+}
 @end

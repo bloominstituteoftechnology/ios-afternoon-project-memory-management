@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class PNCContact;
 
 @interface PNCContactController : NSObject
+
+@property (copy) NSArray *contacts;
+
+- (void)addContactWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email;
+- (void)updateContact: (PNCContact *)contact name:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email;
 
 @end
 

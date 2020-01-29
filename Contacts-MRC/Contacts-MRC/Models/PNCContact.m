@@ -10,4 +10,26 @@
 
 @implementation PNCContact
 
+- (instancetype)initWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email {
+	if (self = [super init]) {
+		_name = [name retain];
+		_phoneNumber = [phoneNumber retain];
+		_email = [email retain];
+
+	}
+	return self;
+}
+
+- (void)dealloc
+{
+	[_name release];
+	_name = nil;
+	[_email release];
+	_email = nil;
+	[_phoneNumber release];
+	_phoneNumber = nil;
+
+	[super dealloc];
+}
+
 @end

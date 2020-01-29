@@ -26,13 +26,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-nB-elJ">
                                             <rect key="frame" x="16" y="1.5" width="42" height="41"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3B-CN-jbD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3B-CN-jbD">
                                                     <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-Cp-0Qn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-Cp-0Qn">
                                                     <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -54,6 +54,9 @@
                                         <constraint firstItem="F4V-nB-elJ" firstAttribute="leading" secondItem="sor-d7-gwA" secondAttribute="leading" constant="16" id="mOK-U6-1d2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uHm-qY-mP4" kind="show" identifier="ShowContactDetailSegue" id="Fmv-qt-aiV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,7 +67,7 @@
                     <navigationItem key="navigationItem" id="A4b-nJ-NhT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dBQ-0B-LZb">
                             <connections>
-                                <segue destination="uHm-qY-mP4" kind="show" id="Hvf-IQ-jOC"/>
+                                <segue destination="uHm-qY-mP4" kind="show" identifier="AddContactShowSegue" id="Hvf-IQ-jOC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,6 +155,11 @@
                         <viewLayoutGuide key="safeArea" id="84G-4u-xfJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="H4d-S7-rqF"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="yxO-Wy-5Py" id="SjI-wd-hLW"/>
+                        <outlet property="nameTextField" destination="qBd-vD-0Ke" id="Zsi-e8-t5O"/>
+                        <outlet property="phoneTextField" destination="zjv-PL-TYx" id="uig-19-9ed"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foT-Au-wYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,4 +184,7 @@
             <point key="canvasLocation" x="121.73913043478262" y="58.928571428571423"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fmv-qt-aiV"/>
+    </inferredMetricsTieBreakers>
 </document>

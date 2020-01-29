@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PNCContact : NSObject
 
+@property (retain) NSString *name;
+@property (retain) NSString *phoneNumber;
+@property (retain) NSString *email;
+
+- (instancetype)initWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber email:(NSString *)email;
+
 @end
 
 NS_ASSUME_NONNULL_END

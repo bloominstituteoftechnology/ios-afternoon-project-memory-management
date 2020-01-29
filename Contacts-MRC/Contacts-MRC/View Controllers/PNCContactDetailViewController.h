@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class PNCContact;
 
 @interface PNCContactDetailViewController : UIViewController
 
+@property (retain) PNCContact *contact;
+
 @end
 
-NS_ASSUME_NONNULL_END
+
