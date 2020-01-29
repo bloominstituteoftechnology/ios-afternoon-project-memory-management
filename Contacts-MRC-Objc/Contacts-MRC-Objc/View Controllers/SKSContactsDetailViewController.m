@@ -47,15 +47,13 @@
     NSString *emailString = self.emailTextField.text;
     NSString *numberString = self.numberTextField.text;
 
-    if (self.contact) {
-
-    } else {
-        if (nameString.length > 0 && emailString.length > 0 &&
-            numberString.length > 0 ) {
-
-            SKSContact *contact = [SKSContact contactWithName:nameString
-                                                        email:emailString
-                                                       number:numberString];
+    if (nameString.length > 0 && emailString.length > 0 && numberString.length > 0 ) {
+        if (self.contact) {
+            [self.contact setName:nameString];
+            [self.contact setEmail:emailString];
+            [self.contact setNumber:numberString];
+        } else {
+            SKSContact *contact = [SKSContact contactWithName:nameString email:emailString number:numberString];
             [self.contactsController addContact: contact];
         }
     }
