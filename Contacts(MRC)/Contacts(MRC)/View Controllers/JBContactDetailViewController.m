@@ -9,6 +9,7 @@
 #import "JBContactDetailViewController.h"
 #import "JBContactsController.h"
 #import "JBContact.h"
+#import <CoreImage/CoreImage.h>
 
 
 @interface JBContactDetailViewController ()
@@ -17,10 +18,13 @@
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 @property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *saveBarButton;
+@property (retain, nonatomic) IBOutlet UIImageView *qrCodeImageView;
 
 - (void)setUpViewsForContact;
 
 - (IBAction)saveTapped:(id)sender;
+
+- (UIImage *_Nullable)qrCodeFromString:(NSString *)string;
 
 @end
 
@@ -50,6 +54,7 @@
     [_emailTextField release];
     [_phoneTextField release];
     [_saveBarButton release];
+    [_qrCodeImageView release];
 
     [_contactsController release];
     if (_contact) { [_contact release]; }
@@ -73,6 +78,22 @@
                                         phoneNumber:self.phoneTextField.text];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark - QR Code
+
+- (UIImage *)qrCodeFromString:(NSString *)string
+{
+    NSData *data = [[string dataUsingEncoding:NSNonLossyASCIIStringEncoding] autorelease];
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [filter setValue:data forKey:@"inputMessage"];
+    CGAffineTransform transform = CGAffineTransformMakeScale(3, 3);
+    CIImage *output = [filter.outputImage imageByApplyingTransform:transform];
+    if (output) {
+        return [UIImage imageWithCIImage:output];
+    } else {
+        return nil;
+    }
 }
 
 @end

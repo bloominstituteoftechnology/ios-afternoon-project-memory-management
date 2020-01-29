@@ -115,12 +115,26 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXM-f7-Du4">
+                                <rect key="frame" x="82" y="315.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="250" id="8dm-l5-Li9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JGB-Ml-hZF"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="O32-hs-flM"/>
+                                    <constraint firstAttribute="width" secondItem="CXM-f7-Du4" secondAttribute="height" multiplier="1:1" id="btT-ij-2sX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ELn-R0-PPe" firstAttribute="top" secondItem="XDn-y6-B1V" secondAttribute="top" constant="20" id="6UC-gG-3mj"/>
+                            <constraint firstItem="XDn-y6-B1V" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CXM-f7-Du4" secondAttribute="trailing" priority="250" constant="8" id="PBB-jA-q4c"/>
+                            <constraint firstItem="CXM-f7-Du4" firstAttribute="top" secondItem="ELn-R0-PPe" secondAttribute="bottom" priority="750" constant="40" id="QiJ-zi-xQH"/>
+                            <constraint firstItem="XDn-y6-B1V" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CXM-f7-Du4" secondAttribute="bottom" constant="20" id="Vdc-xF-j3g"/>
                             <constraint firstItem="XDn-y6-B1V" firstAttribute="trailing" secondItem="ELn-R0-PPe" secondAttribute="trailing" constant="20" id="ZdQ-WG-551"/>
+                            <constraint firstItem="CXM-f7-Du4" firstAttribute="centerX" secondItem="5fU-is-fp6" secondAttribute="centerX" id="cIk-zV-cMK"/>
                             <constraint firstItem="ELn-R0-PPe" firstAttribute="leading" secondItem="XDn-y6-B1V" secondAttribute="leading" constant="20" id="cQ9-GL-3S3"/>
+                            <constraint firstItem="CXM-f7-Du4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XDn-y6-B1V" secondAttribute="leading" priority="250" constant="8" id="z9E-CM-diU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XDn-y6-B1V"/>
                     </view>
@@ -135,6 +149,7 @@
                         <outlet property="emailTextField" destination="OHn-Wu-J32" id="f53-ec-EIJ"/>
                         <outlet property="nameTextField" destination="Krf-hf-6kG" id="2KT-av-lO3"/>
                         <outlet property="phoneTextField" destination="jG8-VN-9nh" id="vrc-rW-Jlw"/>
+                        <outlet property="qrCodeImageView" destination="CXM-f7-Du4" id="K4S-X3-i8G"/>
                         <outlet property="saveBarButton" destination="Zwh-d6-MMT" id="86o-0i-hMz"/>
                     </connections>
                 </viewController>
