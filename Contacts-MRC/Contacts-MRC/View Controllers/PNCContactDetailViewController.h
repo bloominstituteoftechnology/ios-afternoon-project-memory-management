@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class PNCContact;
+@class PNCContactController;
 
 @interface PNCContactDetailViewController : UIViewController
 
 @property (retain) PNCContact *contact;
+@property (retain) PNCContactController *controller;
 
 @end
 

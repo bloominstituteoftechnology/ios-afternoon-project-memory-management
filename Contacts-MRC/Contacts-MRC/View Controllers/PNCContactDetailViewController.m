@@ -8,6 +8,7 @@
 
 #import "PNCContactDetailViewController.h"
 #import "PNCContact.h"
+#import "PNCContactController.h"
 
 @interface PNCContactDetailViewController ()
 
@@ -43,10 +44,16 @@
 
 - (void)dealloc {
 	[_nameTextField release];
+	_nameTextField = nil;
 	[_emailTextField release];
+	_emailTextField = nil;
 	[_phoneTextField release];
-	[_emailTextField release];
-	[_phoneTextField release];
+	_phoneTextField = nil;
+	[_controller release];
+	_controller = nil;
+	[_contact release];
+	_contact = nil;
+
 	[super dealloc];
 }
 @end
