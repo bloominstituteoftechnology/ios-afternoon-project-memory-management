@@ -9,6 +9,7 @@
 #import "JBContactsTableViewController.h"
 #import "JBContactsController.h"
 #import "JBContact.h"
+#import "JBContactDetailViewController.h"
 
 
 @interface JBContactsTableViewController ()
@@ -100,14 +101,17 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    JBContactDetailViewController *detailVC = segue.destinationViewController;
+    detailVC.contactsController = [self.contactsController retain];
+
+    if ([segue.identifier isEqualToString:@"EditContactSegue"]) {
+        detailVC.contact = self.contactsController
+            .contacts[self.tableView.indexPathForSelectedRow.row];
+    }
 }
-*/
 
 @end

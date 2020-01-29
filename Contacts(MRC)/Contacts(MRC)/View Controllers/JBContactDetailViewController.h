@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class JBContact;
+@class JBContactsController;
+
 
 @interface JBContactDetailViewController : UIViewController
 
-@end
+@property (retain, nonatomic, nullable) JBContactsController *contactsController;
+@property (retain, nonatomic, nullable) JBContact *contact;
 
-NS_ASSUME_NONNULL_END
+@end
