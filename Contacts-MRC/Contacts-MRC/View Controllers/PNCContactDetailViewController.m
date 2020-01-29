@@ -24,23 +24,24 @@
 @implementation PNCContactDetailViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	if (self.contact) {
 		self.nameTextField.text = self.contact.name;
 		self.emailTextField.text = self.contact.email;
 		self.phoneTextField.text = self.contact.phoneNumber;
-}
+	}
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButton:(id)sender {
+	if (self.nameTextField != nil && self.phoneTextField != nil && self.emailTextField != nil) {
+		if (self.contact) {
+			[self.controller updateContact:self.contact name:self.nameTextField.text phoneNumber:self.phoneTextField.text email:self.emailTextField.text];
+		} else {
+			[self.controller addContactWithName:self.nameTextField.text phoneNumber:self.phoneTextField.text email:self.emailTextField.text];
+		}
+		[self.navigationController popViewControllerAnimated:YES];
+	}
 }
-*/
 
 - (void)dealloc {
 	[_nameTextField release];

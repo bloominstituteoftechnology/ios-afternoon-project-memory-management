@@ -27,9 +27,16 @@
 }
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
-
 	[self createNewData];
+
+	[super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[self.tableView reloadData];
+
+	//[super viewDidAppear:animated];
+	[super viewDidAppear:animated];
 }
 
 - (void)createNewData {

@@ -154,7 +154,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="84G-4u-xfJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H4d-S7-rqF"/>
+                    <navigationItem key="navigationItem" id="H4d-S7-rqF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bHD-fF-wD2">
+                            <connections>
+                                <action selector="saveButton:" destination="uHm-qY-mP4" id="sSm-YZ-xpv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="yxO-Wy-5Py" id="SjI-wd-hLW"/>
                         <outlet property="nameTextField" destination="qBd-vD-0Ke" id="Zsi-e8-t5O"/>
