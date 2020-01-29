@@ -58,17 +58,57 @@
 		FA30D82923E220B300655567 /* Contacts MRC Objc */ = {
 			isa = PBXGroup;
 			children = (
+				FA30D84323E2212F00655567 /* Storyboards */,
+				FA30D84723E2216D00655567 /* View Controllers */,
+				FA30D84623E2216400655567 /* Model Controller */,
+				FA30D84523E2216000655567 /* Models */,
+				FA30D84423E2215500655567 /* Helper */,
 				FA30D82A23E220B300655567 /* AppDelegate.h */,
 				FA30D82B23E220B300655567 /* AppDelegate.m */,
 				FA30D82D23E220B300655567 /* SceneDelegate.h */,
 				FA30D82E23E220B300655567 /* SceneDelegate.m */,
-				FA30D83323E220B300655567 /* Main.storyboard */,
 				FA30D83623E220B700655567 /* Assets.xcassets */,
-				FA30D83823E220B700655567 /* LaunchScreen.storyboard */,
 				FA30D83B23E220B700655567 /* Info.plist */,
 				FA30D83C23E220B700655567 /* main.m */,
 			);
 			path = "Contacts MRC Objc";
+			sourceTree = "<group>";
+		};
+		FA30D84323E2212F00655567 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA30D83323E220B300655567 /* Main.storyboard */,
+				FA30D83823E220B700655567 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA30D84423E2215500655567 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FA30D84523E2216000655567 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA30D84623E2216400655567 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FA30D84723E2216D00655567 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
