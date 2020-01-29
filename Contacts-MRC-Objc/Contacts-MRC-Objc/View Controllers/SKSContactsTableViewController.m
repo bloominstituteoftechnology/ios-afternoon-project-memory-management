@@ -7,8 +7,13 @@
 //
 
 #import "SKSContactsTableViewController.h"
+#import "SKSContactsDetailViewController.h"
+#import "SKSContactsController.h"
+#import "SKSContact.h"
 
 @interface SKSContactsTableViewController ()
+
+@property (nonatomic) SKSContactsController *contactController;
 
 @end
 
@@ -16,14 +21,25 @@
 
 static NSString * const reuseIdentifier = @"ContactCell";
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _contactController = [[SKSContactsController alloc] init];
+
+
+        SKSContact *contact1 = [SKSContact contactWithName:@"Bob" email:@"bob@gmail.com" number:@"123456789"];
+        SKSContact *contact2 = [SKSContact contactWithName:@"Joe" email:@"Joe@gmail.com" number:@"987654321"];
+        [self.contactController addContact:contact1];
+        [self.contactController addContact:contact2];
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 #pragma mark - Table view data source
@@ -33,8 +49,7 @@ static NSString * const reuseIdentifier = @"ContactCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.contactController.contacts.count;
 }
 
 
@@ -42,7 +57,7 @@ static NSString * const reuseIdentifier = @"ContactCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    cell.textLabel.text = self.contactController.contacts[indexPath.row].name;
     return cell;
 }
 
@@ -81,14 +96,15 @@ static NSString * const reuseIdentifier = @"ContactCell";
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
 }
-*/
+
 
 @end

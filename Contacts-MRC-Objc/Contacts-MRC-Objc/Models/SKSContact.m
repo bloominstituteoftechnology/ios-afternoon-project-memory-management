@@ -10,10 +10,6 @@
 
 @interface SKSContact()
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *email;
-@property (nonatomic, copy) NSString *number;
-
 @end
 
 @implementation SKSContact
@@ -30,6 +26,16 @@
 
 + (instancetype)contactWithName:(NSString *)name email:(NSString *)email number:(NSString *)number {
     return [[[SKSContact alloc] initWithName:name email:email number:number] autorelease];
+}
+
+- (void)dealloc {
+    [_name release];
+    _name = nil;
+    [_email release];
+    _email = nil;
+    [_number release];
+    _number = nil;
+    [super dealloc];
 }
 
 @end

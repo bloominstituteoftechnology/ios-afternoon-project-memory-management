@@ -10,6 +10,9 @@
 
 @interface SKSContact : NSObject
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *number;
 
 - (instancetype)initWithName:(NSString *)name email:(NSString *)email number:(NSString *)number;
 
