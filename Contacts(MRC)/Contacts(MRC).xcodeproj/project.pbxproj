@@ -13,6 +13,8 @@
 		992A4D8023E2204F00DEA71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992A4D7F23E2204F00DEA71F /* Assets.xcassets */; };
 		992A4D8323E2204F00DEA71F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992A4D8123E2204F00DEA71F /* LaunchScreen.storyboard */; };
 		992A4D8623E2204F00DEA71F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D8523E2204F00DEA71F /* main.m */; };
+		992A4D9023E222F800DEA71F /* JBContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D8F23E222F800DEA71F /* JBContactsTableViewController.m */; };
+		992A4D9323E2230800DEA71F /* JBContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D9223E2230800DEA71F /* JBContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		992A4D8223E2204F00DEA71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		992A4D8423E2204F00DEA71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992A4D8523E2204F00DEA71F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		992A4D8E23E222F800DEA71F /* JBContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBContactsTableViewController.h; sourceTree = "<group>"; };
+		992A4D8F23E222F800DEA71F /* JBContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBContactsTableViewController.m; sourceTree = "<group>"; };
+		992A4D9123E2230800DEA71F /* JBContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBContactDetailViewController.h; sourceTree = "<group>"; };
+		992A4D9223E2230800DEA71F /* JBContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				992A4D8D23E222BA00DEA71F /* Storyboards */,
+				992A4D9523E2231900DEA71F /* View Controllers */,
 				992A4D8C23E222AB00DEA71F /* Application */,
 			);
 			path = "Contacts(MRC)";
@@ -87,6 +94,17 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		992A4D9523E2231900DEA71F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				992A4D8E23E222F800DEA71F /* JBContactsTableViewController.h */,
+				992A4D8F23E222F800DEA71F /* JBContactsTableViewController.m */,
+				992A4D9123E2230800DEA71F /* JBContactDetailViewController.h */,
+				992A4D9223E2230800DEA71F /* JBContactDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +131,7 @@
 		992A4D6823E2204E00DEA71F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JB;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jon Bash";
 				TargetAttributes = {
@@ -157,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992A4D9023E222F800DEA71F /* JBContactsTableViewController.m in Sources */,
 				992A4D7523E2204E00DEA71F /* AppDelegate.m in Sources */,
 				992A4D8623E2204F00DEA71F /* main.m in Sources */,
 				992A4D7823E2204E00DEA71F /* SceneDelegate.m in Sources */,
+				992A4D9323E2230800DEA71F /* JBContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
