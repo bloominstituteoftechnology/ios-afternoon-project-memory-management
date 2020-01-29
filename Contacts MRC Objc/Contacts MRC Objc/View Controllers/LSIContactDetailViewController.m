@@ -29,6 +29,26 @@
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
 }
 
+- (void)saveContact {
+    
+    NSString *name = self.nameTextField.text;
+    NSString *email = self.emailTextField.text;
+    NSString *phoneNumString = self.phoneNumTextField.text;
+
+    int phoneNum = [phoneNumString intValue];
+    
+    if (self.contact) {
+        
+        [self.contactController updateContact:self.contact withName:name email:email andPhoneNum:phoneNum];
+        
+    } else {
+        
+        [self.contactController addNewContactWithName:name email:email andPhoneNum:phoneNum];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(void)updateViews {
     
     if (self.contact) {
