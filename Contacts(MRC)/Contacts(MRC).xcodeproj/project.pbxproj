@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		992A4D7523E2204E00DEA71F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D7423E2204E00DEA71F /* AppDelegate.m */; };
 		992A4D7823E2204E00DEA71F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D7723E2204E00DEA71F /* SceneDelegate.m */; };
-		992A4D7B23E2204E00DEA71F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D7A23E2204E00DEA71F /* ViewController.m */; };
 		992A4D7E23E2204E00DEA71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992A4D7C23E2204E00DEA71F /* Main.storyboard */; };
 		992A4D8023E2204F00DEA71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992A4D7F23E2204F00DEA71F /* Assets.xcassets */; };
 		992A4D8323E2204F00DEA71F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992A4D8123E2204F00DEA71F /* LaunchScreen.storyboard */; };
@@ -22,8 +21,6 @@
 		992A4D7423E2204E00DEA71F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		992A4D7623E2204E00DEA71F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		992A4D7723E2204E00DEA71F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		992A4D7923E2204E00DEA71F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		992A4D7A23E2204E00DEA71F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		992A4D7D23E2204E00DEA71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		992A4D7F23E2204F00DEA71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		992A4D8223E2204F00DEA71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,19 +58,33 @@
 		992A4D7223E2204E00DEA71F /* Contacts(MRC) */ = {
 			isa = PBXGroup;
 			children = (
+				992A4D8D23E222BA00DEA71F /* Storyboards */,
+				992A4D8C23E222AB00DEA71F /* Application */,
+			);
+			path = "Contacts(MRC)";
+			sourceTree = "<group>";
+		};
+		992A4D8C23E222AB00DEA71F /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				992A4D7323E2204E00DEA71F /* AppDelegate.h */,
 				992A4D7423E2204E00DEA71F /* AppDelegate.m */,
 				992A4D7623E2204E00DEA71F /* SceneDelegate.h */,
 				992A4D7723E2204E00DEA71F /* SceneDelegate.m */,
-				992A4D7923E2204E00DEA71F /* ViewController.h */,
-				992A4D7A23E2204E00DEA71F /* ViewController.m */,
-				992A4D7C23E2204E00DEA71F /* Main.storyboard */,
 				992A4D7F23E2204F00DEA71F /* Assets.xcassets */,
-				992A4D8123E2204F00DEA71F /* LaunchScreen.storyboard */,
 				992A4D8423E2204F00DEA71F /* Info.plist */,
 				992A4D8523E2204F00DEA71F /* main.m */,
 			);
-			path = "Contacts(MRC)";
+			path = Application;
+			sourceTree = "<group>";
+		};
+		992A4D8D23E222BA00DEA71F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				992A4D7C23E2204E00DEA71F /* Main.storyboard */,
+				992A4D8123E2204F00DEA71F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +157,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992A4D7B23E2204E00DEA71F /* ViewController.m in Sources */,
 				992A4D7523E2204E00DEA71F /* AppDelegate.m in Sources */,
 				992A4D8623E2204F00DEA71F /* main.m in Sources */,
 				992A4D7823E2204E00DEA71F /* SceneDelegate.m in Sources */,
@@ -292,7 +302,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X3GA956P;
-				INFOPLIST_FILE = "Contacts(MRC)/Info.plist";
+				INFOPLIST_FILE = "Contacts(MRC)/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +320,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X3GA956P;
-				INFOPLIST_FILE = "Contacts(MRC)/Info.plist";
+				INFOPLIST_FILE = "Contacts(MRC)/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
