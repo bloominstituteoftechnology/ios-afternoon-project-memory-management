@@ -7,6 +7,7 @@
 //
 
 #import "JBContactsController.h"
+#import "JBContact.h"
 
 
 @interface JBContactsController()
@@ -36,7 +37,10 @@
               emailAddress:(NSString *)emailAddress
                phoneNumber:(NSString *)phoneNumber
 {
-
+    [self.privateContacts
+     addObject:[[JBContact alloc] initWithName:name
+                                  emailAddress:emailAddress
+                                   phoneNumber:phoneNumber]];
 }
 
 - (void)updateContact:(JBContact *)contact
@@ -44,12 +48,14 @@
          emailAddress:(NSString *)emailAddress
           phoneNumber:(NSString *)phoneNumber
 {
-    
+    contact.name = name;
+    contact.emailAddress = emailAddress;
+    contact.phoneNumber = phoneNumber;
 }
 
 - (void)removeContact:(JBContact *)contact
 {
-
+    [self.privateContacts removeObject:contact];
 }
 
 - (void)dealloc
