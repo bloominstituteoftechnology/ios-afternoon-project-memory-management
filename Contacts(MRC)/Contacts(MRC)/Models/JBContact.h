@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (retain, nonatomic, nullable) NSString *phoneNumber;
 
 - (instancetype)initWithName:(NSString *)name
-                emailAddress:(NSString *)emailAddress
-                 phoneNumber:(NSString *)phoneNumber;
+                emailAddress:(NSString * _Nullable)emailAddress
+                 phoneNumber:(NSString * _Nullable)phoneNumber;
 
 @end
 
