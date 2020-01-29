@@ -17,6 +17,7 @@
 		992A4D9323E2230800DEA71F /* JBContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D9223E2230800DEA71F /* JBContactDetailViewController.m */; };
 		992A4D9823E2245300DEA71F /* JBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D9723E2245300DEA71F /* JBContact.m */; };
 		992A4D9C23E2246E00DEA71F /* JBContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4D9B23E2246E00DEA71F /* JBContactsController.m */; };
+		992A4DA123E2488500DEA71F /* NSString+JBHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A4DA023E2488500DEA71F /* NSString+JBHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		992A4D9723E2245300DEA71F /* JBContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBContact.m; sourceTree = "<group>"; };
 		992A4D9A23E2246E00DEA71F /* JBContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBContactsController.h; sourceTree = "<group>"; };
 		992A4D9B23E2246E00DEA71F /* JBContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBContactsController.m; sourceTree = "<group>"; };
+		992A4D9F23E2488500DEA71F /* NSString+JBHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+JBHelpers.h"; sourceTree = "<group>"; };
+		992A4DA023E2488500DEA71F /* NSString+JBHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JBHelpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 				992A4D9523E2231900DEA71F /* View Controllers */,
 				992A4D9D23E2247000DEA71F /* Model Controllers */,
 				992A4D9923E2245700DEA71F /* Models */,
+				992A4D9E23E2486D00DEA71F /* Helpers */,
 				992A4D8C23E222AB00DEA71F /* Application */,
 			);
 			path = "Contacts(MRC)";
@@ -129,6 +133,15 @@
 				992A4D9B23E2246E00DEA71F /* JBContactsController.m */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		992A4D9E23E2486D00DEA71F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				992A4D9F23E2488500DEA71F /* NSString+JBHelpers.h */,
+				992A4DA023E2488500DEA71F /* NSString+JBHelpers.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				992A4D9023E222F800DEA71F /* JBContactsTableViewController.m in Sources */,
+				992A4DA123E2488500DEA71F /* NSString+JBHelpers.m in Sources */,
 				992A4D7523E2204E00DEA71F /* AppDelegate.m in Sources */,
 				992A4D8623E2204F00DEA71F /* main.m in Sources */,
 				992A4D9C23E2246E00DEA71F /* JBContactsController.m in Sources */,
