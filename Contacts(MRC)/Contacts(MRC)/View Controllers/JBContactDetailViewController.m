@@ -20,12 +20,16 @@
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *saveBarButton;
 @property (retain, nonatomic) IBOutlet UIImageView *qrCodeImageView;
 
+@property (retain, nonatomic) NSString *contactCardString;
+
 - (void)setUpViewsForContact;
 
 - (IBAction)saveTapped:(id)sender;
 
 - (void)setQRCodeForContact;
 - (UIImage *_Nullable)qrCodeFromString:(NSString *)string;
+
+- (NSString *)formatPhoneNumberFromString:(NSString *)originalString;
 
 @end
 
@@ -39,6 +43,9 @@
     [super viewDidLoad];
     [self setUpViewsForContact];
     [self setQRCodeForContact];
+    self.nameTextField.delegate = self;
+    self.emailTextField.delegate = self;
+    self.phoneTextField.delegate = self;
 }
 
 - (void)setUpViewsForContact
@@ -60,6 +67,7 @@
 
     [_contactsController release];
     if (_contact) { [_contact release]; }
+    [_contactCardString release];
 
     [super dealloc];
 }
@@ -109,5 +117,43 @@
         return nil;
     }
 }
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.nameTextField) {
+        if ([textField.text isEqualToString:@""]) {
+            return NO;
+        }
+        [self.emailTextField becomeFirstResponder];
+    } else if (textField == self.emailTextField) {
+        [self.phoneTextField becomeFirstResponder];
+    } else if (textField == self.phoneTextField) {
+        [self.view endEditing:YES];
+    }
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self setQRCodeForContact];
+}
+
+- (BOOL)textField:(UITextField *)textField
+shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string
+{
+    if (textField == self.phoneTextField) {
+        NSRange replacementRange =
+            [string rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet]
+                                             invertedSet]];
+        if (replacementRange.location != NSNotFound) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 
 @end

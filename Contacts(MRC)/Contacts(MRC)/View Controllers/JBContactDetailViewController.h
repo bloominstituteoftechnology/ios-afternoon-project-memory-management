@@ -12,7 +12,7 @@
 @class JBContactsController;
 
 
-@interface JBContactDetailViewController : UIViewController
+@interface JBContactDetailViewController : UIViewController <UITextFieldDelegate>
 
 @property (retain, nonatomic, nullable) JBContactsController *contactsController;
 @property (retain, nonatomic, nullable) JBContact *contact;
