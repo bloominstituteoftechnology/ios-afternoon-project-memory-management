@@ -16,6 +16,7 @@
 		FA30D84A23E224C400655567 /* LSIContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D84923E224C400655567 /* LSIContactsTableViewController.m */; };
 		FA30D85023E2251900655567 /* LSIContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D84F23E2251900655567 /* LSIContactDetailViewController.m */; };
 		FA30D85323E229A400655567 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D85223E229A400655567 /* LSIContact.m */; };
+		FA30D85623E22A9600655567 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30D85523E22A9600655567 /* LSIContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		FA30D84F23E2251900655567 /* LSIContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactDetailViewController.m; sourceTree = "<group>"; };
 		FA30D85123E229A400655567 /* LSIContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContact.h; sourceTree = "<group>"; };
 		FA30D85223E229A400655567 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
+		FA30D85423E22A9600655567 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
+		FA30D85523E22A9600655567 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 		FA30D84623E2216400655567 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA30D85423E22A9600655567 /* LSIContactController.h */,
+				FA30D85523E22A9600655567 /* LSIContactController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA30D82C23E220B300655567 /* AppDelegate.m in Sources */,
+				FA30D85623E22A9600655567 /* LSIContactController.m in Sources */,
 				FA30D83D23E220B700655567 /* main.m in Sources */,
 				FA30D84A23E224C400655567 /* LSIContactsTableViewController.m in Sources */,
 				FA30D85023E2251900655567 /* LSIContactDetailViewController.m in Sources */,
