@@ -27,6 +27,7 @@
 }
 
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
+    [self saveContact];
 }
 
 - (void)saveContact {

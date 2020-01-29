@@ -25,7 +25,7 @@
         
         _internalContacts = [[NSMutableArray alloc] init];
         
-        // TODO: Create test data and run here
+        [self createTestData];
     }
     return self;
 }
@@ -39,6 +39,8 @@
     LSIContact *contact = [[LSIContact alloc] initWithName:name email:email andPhoneNum:phoneNum];
     
     [self.internalContacts addObject:contact];
+    
+    [contact release];
 }
 
 - (void)updateContact:(LSIContact *)contact
@@ -49,10 +51,19 @@
     LSIContact *newContact = [[LSIContact alloc] initWithName:name email:email andPhoneNum:phoneNum];
     
     [self.internalContacts replaceObjectAtIndex:contact withObject:newContact];
+    
+    [newContact release];
 }
 
 - (void)deleteContact:(LSIContact *)contact {
     [self.internalContacts removeObject:contact];
+}
+
+- (void)createTestData {
+    
+    [self addNewContactWithName:@"Anna" email:@"anna@gmail.com" andPhoneNum:0001112222];
+    
+    [self addNewContactWithName:@"Jorge" email:@"jorge@gmail.com" andPhoneNum:3334445555];
 }
 
 
@@ -61,6 +72,7 @@
 - (NSArray *)contacts {
     return [self.internalContacts copy];
     // contacts would be an immutable copy of internalContacts
+    
 }
 
 @end
