@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPRContactController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DPRTableViewController : UITableViewController
 
+@property (nonatomic, retain) DPRContactController *controller;
+
 @end
 
 NS_ASSUME_NONNULL_END
+

@@ -52,7 +52,6 @@
                     <navigationItem key="navigationItem" id="Xet-CY-xZT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fjH-W2-J9x">
                             <connections>
-                                <action selector="addButton:" destination="sKr-im-swz" id="MUC-td-ssU"/>
                                 <segue destination="QRc-P3-mwQ" kind="show" identifier="AddSegue" id="ZGP-0h-PGq"/>
                             </connections>
                         </barButtonItem>

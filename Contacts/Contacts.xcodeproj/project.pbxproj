@@ -117,9 +117,8 @@
 				95E7567B23E238C700CBDE45 /* AppDelegate.m */,
 				95E7567D23E238C700CBDE45 /* SceneDelegate.h */,
 				95E7567E23E238C700CBDE45 /* SceneDelegate.m */,
-				95E756BF23E23B9C00CBDE45 /* DPRContactController.h */,
-				95E756C023E23B9C00CBDE45 /* DPRContactController.m */,
 				95E756B923E23ADE00CBDE45 /* Models */,
+				95E756CB23E23F9600CBDE45 /* Model Controllers */,
 				95E756B523E23AA100CBDE45 /* View Controllers */,
 				95E7568323E238C700CBDE45 /* Main.storyboard */,
 				95E7568623E238C900CBDE45 /* Assets.xcassets */,
@@ -166,6 +165,15 @@
 				95E756C323E23BBA00CBDE45 /* DPRContact.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		95E756CB23E23F9600CBDE45 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95E756BF23E23B9C00CBDE45 /* DPRContactController.h */,
+				95E756C023E23B9C00CBDE45 /* DPRContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

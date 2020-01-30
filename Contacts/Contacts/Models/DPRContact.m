@@ -10,4 +10,15 @@
 
 @implementation DPRContact
 
+- (instancetype)initWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone {
+    self = [super init];
+     if (self) {
+         _name = name;
+         _email = email;
+         _phone = phone;
+     }
+     return self;
+}
+
+
 @end

@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DPRContact : NSObject
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *phone;
+
+- (instancetype)initWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DPRContact.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DPRContactController : NSObject
+
+@property (nonatomic, retain)NSMutableArray *contacts;
+
+- (void)addContact:(DPRContact *)contact;
+- (void)updateContact:(DPRContact *)contact name:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
 
 @end
 
