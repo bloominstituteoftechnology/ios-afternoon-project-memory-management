@@ -36,7 +36,7 @@
 	[self.tableView reloadData];
 
 	//[super viewDidAppear:animated];
-	[super viewDidAppear:animated];
+	[super viewWillAppear:animated];
 }
 
 - (void)createNewData {
