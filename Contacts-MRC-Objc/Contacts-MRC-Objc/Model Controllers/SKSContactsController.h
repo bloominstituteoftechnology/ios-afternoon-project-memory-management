@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
+NS_ASSUME_NONNULL_BEGIN
+
 @class SKSContact;
 
 @interface SKSContactsController : NSObject
@@ -16,5 +19,9 @@
 
 - (void)addContact:(SKSContact *)contact;
 
+- (void)randomUsersContacts:(NSString *)users completion:(void (^)(NSError *_Nullable))completion;
+
 @end
+
+NS_ASSUME_NONNULL_END
 

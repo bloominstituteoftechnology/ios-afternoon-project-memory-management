@@ -28,6 +28,14 @@
     return [[[SKSContact alloc] initWithName:name email:email number:number] autorelease];
 }
 
++ (instancetype)contactWithDictionary:(NSDictionary *)dictionary {
+    NSDictionary *nameDictionary = dictionary[@"name"];
+    NSString *name = nameDictionary[@"first"];
+    NSString *email = dictionary[@"email"];
+    NSString *number = dictionary[@"phone"];
+    return [[[SKSContact alloc] initWithName:name email:email number:number] autorelease];
+}
+
 - (void)setName:(NSString *)name {
     if (name != _name) {
         [_name release];

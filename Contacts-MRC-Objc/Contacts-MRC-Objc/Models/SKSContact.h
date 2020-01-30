@@ -17,6 +17,7 @@
 - (instancetype)initWithName:(NSString *)name email:(NSString *)email number:(NSString *)number;
 
 + (instancetype)contactWithName:(NSString *)name email:(NSString *)email number:(NSString *)number;
++ (instancetype)contactWithDictionary:(NSDictionary *)dictionary;
 
 @end
 
