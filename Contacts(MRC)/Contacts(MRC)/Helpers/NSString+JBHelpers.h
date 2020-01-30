@@ -15,8 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSString *strippingNonDecimalCharacters;
 @property (nonatomic, readonly) NSString *formattedAsPhoneNumber;
+@property (nonatomic, readonly) NSString *trimmingWhiteSpace;
 @property (nonatomic, readonly) BOOL isValidEmail;
+@property (nonatomic, readonly) BOOL isValidPhoneNumber;
 @property (nonatomic, readonly) BOOL isEmpty;
+
+- (NSString *)actuallyTrimmingCharactersInSet:(NSCharacterSet *)set;
 
 @end
 

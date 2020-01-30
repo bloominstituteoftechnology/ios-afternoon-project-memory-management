@@ -10,6 +10,7 @@
 #import "JBContactsController.h"
 #import "JBContact.h"
 #import <CoreImage/CoreImage.h>
+#import "NSString+JBHelpers.h"
 
 
 @interface JBContactDetailViewController ()
@@ -22,14 +23,11 @@
 
 @property (retain, nonatomic) NSString *contactCardString;
 
-- (void)setUpViewsForContact;
-
 - (IBAction)saveTapped:(id)sender;
 
+- (void)setUpViewsForContact;
 - (void)setQRCodeForContact;
 - (UIImage *_Nullable)qrCodeFromString:(NSString *)string;
-
-- (NSString *)formatPhoneNumberFromString:(NSString *)originalString;
 
 @end
 
@@ -53,7 +51,7 @@
     if (self.contact) {
         self.nameTextField.text = self.contact.name;
         self.emailTextField.text = self.contact.emailAddress;
-        self.phoneTextField.text = [self formatPhoneNumberFromString:self.contact.phoneNumber];
+        self.phoneTextField.text = self.contact.phoneNumber.formattedAsPhoneNumber;
     }
 }
 
@@ -101,17 +99,25 @@
 #pragma mark - Actions
 
 - (IBAction)saveTapped:(id)sender {
-    if ([self.nameTextField.text isEqualToString:@""]) { return; }
+    // TODO: allow phone # format for different regions, no area code, etc
+    if (self.nameTextField.text.isEmpty ||
+        self.phoneTextField.text.length < 10 ||
+        (!self.emailTextField.text.isEmpty && !self.emailTextField.text.isValidEmail))
+    {
+        return;
+    }
 
     if (self.contact) {
-        [self.contactsController updateContact:self.contact
-                                      withName:self.nameTextField.text
-                                  emailAddress:self.emailTextField.text
-                                   phoneNumber:self.phoneTextField.text];
+        [self.contactsController
+         updateContact:self.contact
+         withName:self.nameTextField.text
+         emailAddress:self.emailTextField.text
+         phoneNumber:self.phoneTextField.text.strippingNonDecimalCharacters];
     } else {
-        [self.contactsController addContactWithName:self.nameTextField.text
-                                       emailAddress:self.emailTextField.text
-                                        phoneNumber:self.phoneTextField.text];
+        [self.contactsController
+         addContactWithName:self.nameTextField.text
+         emailAddress:self.emailTextField.text
+         phoneNumber:self.phoneTextField.text.strippingNonDecimalCharacters];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -120,7 +126,7 @@
 
 - (void)setQRCodeForContact
 {
-    if ([self.nameTextField.text isEqualToString:@""]) { return; }
+    if (self.nameTextField.text.isEmpty) { return; }
     NSString *contactCardString = [NSString stringWithFormat:@"%@\nEmail: %@\nPhone: %@",
                                    self.nameTextField.text,
                                    self.emailTextField.text,
@@ -149,7 +155,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if (textField == self.nameTextField) {
-        if ([textField.text isEqualToString:@""]) {
+        if (textField.text.isEmpty) {
             return NO;
         }
         [self.emailTextField becomeFirstResponder];
@@ -161,10 +167,21 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    if (textField == self.emailTextField && !textField.text.isEmpty) {
+        return textField.text.isValidEmail;
+    } else if (textField == self.phoneTextField && !textField.text.isEmpty) {
+        return textField.text.strippingNonDecimalCharacters.isValidPhoneNumber;
+    } else {
+        return YES;
+    }
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if (textField == self.phoneTextField) {
-        textField.text = [self formatPhoneNumberFromString:textField.text];
+        textField.text = textField.text.formattedAsPhoneNumber;
     }
     [self setQRCodeForContact];
 }
@@ -174,32 +191,15 @@ shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string
 {
     if (textField == self.phoneTextField) {
+        // prevent non-numeric digits from being entered
         NSRange replacementRange =
-            [string rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet]
-                                             invertedSet]];
+            [string rangeOfCharacterFromSet:
+             [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
         if (replacementRange.location != NSNotFound) {
             return NO;
         }
     }
     return YES;
-}
-
-#pragma mark - Helpers
-
-- (NSString *)formatPhoneNumberFromString:(NSString *)originalString
-{
-    NSMutableString *formattedNumber = [[@"(" mutableCopy] autorelease];
-    for (int i = 0; i < originalString.length; i++) {
-        [formattedNumber appendFormat:@"%c", [originalString characterAtIndex:i]];
-        if (i == 2) {
-            [formattedNumber appendString:@") "];
-        } else if (i == 5) {
-            [formattedNumber appendString:@"-"];
-        } else if (i == 9) {
-            break;
-        }
-    }
-    return [[formattedNumber copy] autorelease];
 }
 
 @end

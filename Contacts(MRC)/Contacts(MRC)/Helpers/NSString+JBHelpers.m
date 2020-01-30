@@ -9,32 +9,55 @@
 #import "NSString+JBHelpers.h"
 
 
+@interface NSString()
+
+@property (nonatomic, readonly) NSString *as7DigitPhoneNumber;
+@property (nonatomic, readonly) NSString *as10DigitPhoneNumber;
+
+@end
+
+
 @implementation NSString (JBHelpers)
 
-// TODO: allow format for different regions, no area code, etc
+// TODO: improve this method; format for more regions, etc
 // not actually going to do... will be much much easier in Swift
 - (NSString *)formattedAsPhoneNumber
 {
-    if (self.length <= 2) { return self; }
     NSString *bareNumber = self.strippingNonDecimalCharacters;
-    NSMutableString *formattedNumber = [[@"(" mutableCopy] autorelease];
-    for (int i = 0; i < bareNumber.length; i++) {
-        [formattedNumber appendFormat:@"%c", [bareNumber characterAtIndex:i]];
-        if (i == 2) {
-            [formattedNumber appendString:@") "];
-        } else if (i == 5) {
-            [formattedNumber appendString:@"-"];
-        } else if (i == 9) {
-            break;
-        }
+    if (bareNumber.length == 7) {
+        return self.as7DigitPhoneNumber;
+    } else if (bareNumber.length == 10) {
+        return self.as10DigitPhoneNumber;
+    } else {
+        return bareNumber;
     }
-    return [[formattedNumber copy] autorelease];
 }
 
 - (NSString *)strippingNonDecimalCharacters
 {
-    return [self stringByTrimmingCharactersInSet:
+    return [self.trimmingWhiteSpace actuallyTrimmingCharactersInSet:
             [[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
+}
+
+- (NSString *)trimmingWhiteSpace
+{
+    return [self actuallyTrimmingCharactersInSet:
+            NSCharacterSet.whitespaceAndNewlineCharacterSet];
+}
+
+- (NSString *)actuallyTrimmingCharactersInSet:(NSCharacterSet *)set
+{
+    NSMutableString *newString = [[self mutableCopy] autorelease];
+    int i = 0;
+    while (i < newString.length) {
+        unichar thisChar = [newString characterAtIndex:i];
+        if ([set characterIsMember:thisChar]) {
+            [newString deleteCharactersInRange:NSMakeRange(i, 1)];
+        } else {
+            i++;
+        }
+    }
+    return newString;
 }
 
 - (BOOL)isValidEmail
@@ -47,9 +70,51 @@
    return [emailTest evaluateWithObject:self];
 }
 
+// TODO: improve this method
+- (BOOL)isValidPhoneNumber
+{
+    BOOL is7 = self.length == 7;
+    BOOL is10 = self.length == 10;
+    return (is7 || is10);
+}
+
 - (BOOL)isEmpty
 {
     return [self isEqualToString:@""];
+}
+
+- (NSString *)as7DigitPhoneNumber
+{
+    NSString *bareNumber = self.strippingNonDecimalCharacters;
+    NSMutableString *formattedNumber = [[@"" mutableCopy] autorelease];
+
+    int i = 0;
+    while (i < bareNumber.length) {
+        [formattedNumber appendFormat:@"%c", [bareNumber characterAtIndex:i]];
+        if (i == 2) {
+            [formattedNumber appendString:@"-"];
+        }
+        i++;
+    }
+    return [[formattedNumber copy] autorelease];
+}
+
+- (NSString *)as10DigitPhoneNumber
+{
+    NSString *bareNumber = self.strippingNonDecimalCharacters;
+    NSMutableString *formattedNumber = [[@"(" mutableCopy] autorelease];
+
+    int i = 0;
+    while (i < bareNumber.length) {
+        [formattedNumber appendFormat:@"%c", [bareNumber characterAtIndex:i]];
+        if (i == 2) {
+            [formattedNumber appendString:@") "];
+        } else if (i == 5) {
+            [formattedNumber appendString:@"-"];
+        }
+        i++;
+    }
+    return [[formattedNumber copy] autorelease];
 }
 
 @end
