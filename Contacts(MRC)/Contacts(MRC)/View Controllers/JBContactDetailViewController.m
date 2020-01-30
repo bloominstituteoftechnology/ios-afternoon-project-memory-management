@@ -108,7 +108,8 @@
 - (IBAction)saveTapped:(id)sender {
     // TODO: allow phone # format for different regions, no area code, etc
     if (self.nameTextField.text.isEmpty ||
-        self.phoneTextField.text.length < 10 ||
+        (!self.phoneTextField.text.isEmpty &&
+         !self.phoneTextField.text.strippingNonDecimalCharacters.isValidPhoneNumber) ||
         (!self.emailTextField.text.isEmpty && !self.emailTextField.text.isValidEmail))
     {
         return;
