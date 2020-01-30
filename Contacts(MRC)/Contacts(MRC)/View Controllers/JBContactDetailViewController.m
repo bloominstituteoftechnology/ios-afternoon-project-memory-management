@@ -27,6 +27,7 @@
 
 - (void)setUpViewsForContact;
 - (void)setQRCodeForContact;
+- (void)setSaveButtonEnabled;
 - (UIImage *_Nullable)qrCodeFromString:(NSString *)string;
 
 @end
@@ -41,6 +42,7 @@
     [super viewDidLoad];
     [self setUpViewsForContact];
     [self setQRCodeForContact];
+    [self setSaveButtonEnabled];
     self.nameTextField.delegate = self;
     self.emailTextField.delegate = self;
     self.phoneTextField.delegate = self;
@@ -68,6 +70,11 @@
     [_contactCardString release];
 
     [super dealloc];
+}
+
+- (void)setSaveButtonEnabled
+{
+    [self.saveBarButton setEnabled:!(self.nameTextField.text.isEmpty)];
 }
 
 #pragma mark - Setters
@@ -169,6 +176,9 @@
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
+    if (textField == self.nameTextField) {
+        return !textField.text.isEmpty;
+    }
     if (textField == self.emailTextField && !textField.text.isEmpty) {
         return textField.text.isValidEmail;
     } else if (textField == self.phoneTextField && !textField.text.isEmpty) {
@@ -200,6 +210,13 @@ replacementString:(NSString *)string
         }
     }
     return YES;
+}
+
+- (void)textFieldDidChangeSelection:(UITextField *)textField
+{
+    if (textField == self.nameTextField) {
+        [self setSaveButtonEnabled];
+    }
 }
 
 @end
