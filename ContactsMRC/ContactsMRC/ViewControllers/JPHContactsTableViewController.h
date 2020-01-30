@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JPHContactsTableViewController.h
 //  ContactsMRC
 //
 //  Created by Jerry haaser on 1/29/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface JPHContactsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
