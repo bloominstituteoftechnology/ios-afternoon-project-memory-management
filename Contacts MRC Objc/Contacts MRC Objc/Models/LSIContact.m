@@ -12,7 +12,7 @@
 
 - (instancetype)initWithName:(NSString *)name
                        email:(NSString *)email
-                 andPhoneNum:(int)phoneNum {
+                 andPhoneNum:(NSString *)phoneNum {
     self = [super init];
     if (self) {
         
@@ -30,8 +30,11 @@
     NSLog(@"Contact.dealloc: %@", _name);
     [_name release];
     [_email release];
-    _name = nil;
+    [_phoneNum release];
+    
+//    _name = nil;
     _email = nil;
+    _phoneNum =nil;
 
     [super dealloc];
 }

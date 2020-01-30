@@ -34,9 +34,9 @@
     
     NSString *name = self.nameTextField.text;
     NSString *email = self.emailTextField.text;
-    NSString *phoneNumString = self.phoneNumTextField.text;
+    NSString *phoneNum = self.phoneNumTextField.text;
 
-    int phoneNum = [phoneNumString intValue];
+//    int phoneNum = [phoneNumString intValue];
     
     if (self.contact) {
         
@@ -56,11 +56,11 @@
     
     if (self.contact) {
         
-        NSString *phoneNum = [@(self.contact.phoneNum) stringValue];
+//        NSString *phoneNum = [@(self.contact.phoneNum) stringValue];
         
         self.nameTextField.text = self.contact.name;
         self.emailTextField.text = self.contact.email;
-        self.phoneNumTextField.text = phoneNum;
+        self.phoneNumTextField.text = self.contact.phoneNum;
     } else {
         self.title = @"New Contact";
         NSLog(@"Contact was nil");

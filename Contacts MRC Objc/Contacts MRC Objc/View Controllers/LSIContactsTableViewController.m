@@ -111,8 +111,16 @@
         
         detailVC.contact = contact;
         detailVC.contactController = self.contactController;
+    } else if ([segue.identifier isEqualToString:@"AddNewContactSegue"]) {
+        
+        LSIContactDetailViewController *detailVC = (LSIContactDetailViewController *)[segue destinationViewController];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        LSIContact *contact = self.contactController.contacts[indexPath.row];
+        
+        detailVC.contactController = self.contactController;
     }
-    
 }
 
 

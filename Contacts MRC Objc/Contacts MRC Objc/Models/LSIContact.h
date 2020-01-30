@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain, nullable) NSString *email;
-@property (nonatomic) int phoneNum;  // change NSString, nullable
+@property (nonatomic, retain, nullable) NSString * phoneNum;
 
 - (instancetype)initWithName:(NSString *)name
                        email:(NSString *)email
-                 andPhoneNum:(int)phoneNum;
+                 andPhoneNum:(NSString *)phoneNum;
 
 @end
 

@@ -14,16 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContactController : NSObject
 
-@property (nonatomic) NSArray <LSIContact *> *contacts;
+@property (nonatomic) NSMutableArray <LSIContact *> *contacts;
 
 - (void)addNewContactWithName:(NSString *)name
                         email:(NSString *)email
-                  andPhoneNum:(int)phoneNum;
+                  andPhoneNum:(NSString *)phoneNum;
 
 - (void)updateContact:(LSIContact *)contact
              withName:(NSString *)name
                 email:(NSString *)email
-          andPhoneNum:(int)phoneNum;
+          andPhoneNum:(NSString *)phoneNum;
 
 - (void)deleteContact:(LSIContact *)contact;
 
