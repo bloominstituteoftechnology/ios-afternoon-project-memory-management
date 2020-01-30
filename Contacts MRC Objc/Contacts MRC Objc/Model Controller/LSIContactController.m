@@ -70,7 +70,8 @@
 
 // Computed Property
 - (NSArray *)contacts {
-    return [self.internalContacts copy];
+    
+    return [[self.internalContacts copy] autorelease];
     // contacts would be an immutable copy of internalContacts
     
 }

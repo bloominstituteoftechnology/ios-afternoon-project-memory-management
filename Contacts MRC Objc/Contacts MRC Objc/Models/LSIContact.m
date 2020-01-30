@@ -16,11 +16,24 @@
     self = [super init];
     if (self) {
         
-        _name = name;
+        _name = [name retain];
         _email = email;
         _phoneNum = phoneNum;
+        
+        NSLog(@"Contact.init: %@", _name);
     }
     return self;
+}
+
+- (void)dealloc {
+    // Implement dealloc with MRC (order is important)
+    NSLog(@"Contact.dealloc: %@", _name);
+    [_name release];
+    [_email release];
+    _name = nil;
+    _email = nil;
+
+    [super dealloc];
 }
 
 @end

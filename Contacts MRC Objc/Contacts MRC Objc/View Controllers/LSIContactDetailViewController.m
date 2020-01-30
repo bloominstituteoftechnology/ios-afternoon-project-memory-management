@@ -42,12 +42,14 @@
         
         [self.contactController updateContact:self.contact withName:name email:email andPhoneNum:phoneNum];
         
+        [self.navigationController popViewControllerAnimated:YES];
+        
     } else {
         
         [self.contactController addNewContactWithName:name email:email andPhoneNum:phoneNum];
+        [self.navigationController popViewControllerAnimated:YES];
     }
     
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)updateViews {
