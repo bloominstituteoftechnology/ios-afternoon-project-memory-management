@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Contact;
+
 @interface ContactsController : NSObject
+
+@property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
 
 @end
 

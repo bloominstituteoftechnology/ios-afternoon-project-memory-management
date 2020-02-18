@@ -7,8 +7,12 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "Contact.h"
+#import "ContactsController.h"
 
 @interface ContactsTableViewController ()
+
+
 
 @end
 

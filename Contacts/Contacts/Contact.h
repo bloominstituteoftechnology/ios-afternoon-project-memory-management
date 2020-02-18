@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //MARK: - Methods
 
-- (instancetype)initWithName:(NSMutableString *)name emailAddress:(NSMutableString *)emailAddress phoneNumber:(NSMutableString *)phoneNumber;
+- (instancetype)initWithName:(NSString *)name emailAddress:(NSString *)emailAddress phoneNumber:(NSString *)phoneNumber;
 
 @end
 
