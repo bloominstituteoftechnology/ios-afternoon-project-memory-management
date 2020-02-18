@@ -114,6 +114,11 @@
                         <viewLayoutGuide key="safeArea" id="diU-xl-HYZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="nDq-qW-cma"/>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="hVk-Wy-6gV" id="iha-RN-O2U"/>
+                        <outlet property="nameTextField" destination="Ic5-87-KSO" id="Guw-s9-Z1v"/>
+                        <outlet property="phoneNumberTextField" destination="OAW-27-jcM" id="M4n-5E-6FQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bO-ha-59x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

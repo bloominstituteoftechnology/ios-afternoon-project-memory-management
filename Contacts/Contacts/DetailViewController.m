@@ -12,6 +12,11 @@
 
 //MARK: - Outlets
 
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailAddressTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+
+
 @end
 
 @implementation DetailViewController
@@ -26,4 +31,10 @@
 
 //MARK: - Actions
 
+- (void)dealloc {
+    [_nameTextField release];
+    [_emailAddressTextField release];
+    [_phoneNumberTextField release];
+    [super dealloc];
+}
 @end
