@@ -13,6 +13,8 @@
 		378A49C723FC64B50093FCFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378A49C623FC64B50093FCFC /* Assets.xcassets */; };
 		378A49CA23FC64B50093FCFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378A49C823FC64B50093FCFC /* LaunchScreen.storyboard */; };
 		378A49CD23FC64B50093FCFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49CC23FC64B50093FCFC /* main.m */; };
+		378A49DE23FC68A80093FCFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49DD23FC68A80093FCFC /* DetailViewController.m */; };
+		378A49E123FC68B90093FCFC /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49E023FC68B90093FCFC /* ContactsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		378A49C923FC64B50093FCFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		378A49CB23FC64B50093FCFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378A49CC23FC64B50093FCFC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		378A49DC23FC68A80093FCFC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		378A49DD23FC68A80093FCFC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		378A49DF23FC68B90093FCFC /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		378A49E023FC68B90093FCFC /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,10 @@
 		378A49D523FC65740093FCFC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				378A49DF23FC68B90093FCFC /* ContactsTableViewController.h */,
+				378A49E023FC68B90093FCFC /* ContactsTableViewController.m */,
+				378A49DC23FC68A80093FCFC /* DetailViewController.h */,
+				378A49DD23FC68A80093FCFC /* DetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -191,7 +201,9 @@
 			files = (
 				378A49BC23FC64B40093FCFC /* AppDelegate.m in Sources */,
 				378A49CD23FC64B50093FCFC /* main.m in Sources */,
+				378A49E123FC68B90093FCFC /* ContactsTableViewController.m in Sources */,
 				378A49BF23FC64B40093FCFC /* SceneDelegate.m in Sources */,
+				378A49DE23FC68A80093FCFC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
