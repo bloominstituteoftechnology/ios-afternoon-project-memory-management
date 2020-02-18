@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactsTableViewController : UITableViewController
 
+//MARK: - Properties
+
+//MARK: - Methods
+
 @end
 
 NS_ASSUME_NONNULL_END
