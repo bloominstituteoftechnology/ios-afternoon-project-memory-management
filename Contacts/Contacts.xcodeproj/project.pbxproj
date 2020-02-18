@@ -15,6 +15,7 @@
 		378A49CD23FC64B50093FCFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49CC23FC64B50093FCFC /* main.m */; };
 		378A49DE23FC68A80093FCFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49DD23FC68A80093FCFC /* DetailViewController.m */; };
 		378A49E123FC68B90093FCFC /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49E023FC68B90093FCFC /* ContactsTableViewController.m */; };
+		378A49E423FC70300093FCFC /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A49E323FC70300093FCFC /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		378A49DD23FC68A80093FCFC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		378A49DF23FC68B90093FCFC /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		378A49E023FC68B90093FCFC /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		378A49E223FC70300093FCFC /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		378A49E323FC70300093FCFC /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +69,6 @@
 			children = (
 				378A49D823FC65900093FCFC /* App Lifecycle */,
 				378A49D723FC65780093FCFC /* Models */,
-				378A49D623FC65760093FCFC /* Views */,
 				378A49D523FC65740093FCFC /* View Controllers */,
 				378A49D323FC656B0093FCFC /* Storyboards */,
 				378A49D923FC65AB0093FCFC /* Resources */,
@@ -94,16 +96,11 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		378A49D623FC65760093FCFC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		378A49D723FC65780093FCFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				378A49E223FC70300093FCFC /* Contact.h */,
+				378A49E323FC70300093FCFC /* Contact.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -203,6 +200,7 @@
 				378A49CD23FC64B50093FCFC /* main.m in Sources */,
 				378A49E123FC68B90093FCFC /* ContactsTableViewController.m in Sources */,
 				378A49BF23FC64B40093FCFC /* SceneDelegate.m in Sources */,
+				378A49E423FC70300093FCFC /* Contact.m in Sources */,
 				378A49DE23FC68A80093FCFC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
