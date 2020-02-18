@@ -27,7 +27,21 @@
     }
     
     return self;
-    
+}
+
+- (void)addContact:(Contact *)aContact
+{
+    [_internalContacts addObject: aContact];
+}
+
+- (void)removeContact:(Contact *)aContact
+{
+    [_internalContacts removeObject: aContact];
+}
+
+- (NSArray<Contact *> *)contacts
+{
+    return _internalContacts.copy;
 }
 
 @end

@@ -14,7 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactsController : NSObject
 
+//MARK: - Properties
+
 @property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
+
+//MARK: - Methods
+
+- (void)addContact:(Contact *)aContact;
+
+- (void)removeContact:(Contact *)aContact;
 
 @end
 

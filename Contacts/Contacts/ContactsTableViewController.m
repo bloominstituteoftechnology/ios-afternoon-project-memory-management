@@ -9,6 +9,7 @@
 #import "ContactsTableViewController.h"
 #import "Contact.h"
 #import "ContactsController.h"
+#import "DetailViewController.h"
 
 @interface ContactsTableViewController ()
 
@@ -54,6 +55,15 @@
 //MARK: - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"contactSegue"]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        DetailViewController *detailVC = segue.destinationViewController;
+        detailVC.contactsController = self.contactsController;
+        detailVC.contact = [self.contactsController.contacts objectAtIndex:indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"addContactSegue"]) {
+        DetailViewController *detailVC = segue.destinationViewController;
+        detailVC.contactsController = self.contactsController;
+    }
 }
 
 @end
