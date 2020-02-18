@@ -24,6 +24,7 @@
         
         Contact *contact = [[Contact alloc] initWithName:@"Robert Keffury" emailAddress:@"bobby.keffury@me.com" phoneNumber:@"8057043343"];
         [_internalContacts addObject:contact];
+        [contact release];
     }
     
     return self;
@@ -41,7 +42,7 @@
 
 - (NSArray<Contact *> *)contacts
 {
-    return _internalContacts.copy;
+    return [_internalContacts.copy autorelease];
 }
 
 @end

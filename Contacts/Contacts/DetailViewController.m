@@ -58,6 +58,7 @@
     Contact *contact = [[Contact alloc] initWithName:self.nameTextField.text emailAddress:self.emailAddressTextField.text phoneNumber:self.phoneNumberTextField.text];
     
     [_contactsController addContact:contact];
+    [contact release];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
