@@ -27,13 +27,10 @@
     NSLog(@"-[Contact init]: %@, %@, %@", _name, _emailAddress, _phoneNumber);
     
     [_name release];
-    _name = nil;
     
     [_emailAddress release];
-    _emailAddress = nil;
     
     [_phoneNumber release];
-    _phoneNumber = nil;
     
     [super dealloc];
 }
