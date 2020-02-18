@@ -10,8 +10,6 @@
 
 @interface ContactsTableViewController ()
 
-//MARK: - Outlets
-
 @end
 
 @implementation ContactsTableViewController
