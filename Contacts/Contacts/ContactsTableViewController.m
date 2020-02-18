@@ -12,7 +12,7 @@
 
 @interface ContactsTableViewController ()
 
-
+@property (nonatomic, readonly) ContactsController *contactsController;
 
 @end
 
@@ -22,16 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _contactsController = [[ContactsController alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [self.tableView reloadData];
 }
 
 //MARK: - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return _contactsController.contacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+    
+    Contact *contact = [_contactsController.contacts objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = contact.name;
     
     return cell;
 }
