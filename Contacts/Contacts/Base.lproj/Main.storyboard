@@ -54,17 +54,66 @@
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="-132.58928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Name-->
         <scene sceneID="kCu-ha-k5c">
             <objects>
                 <viewController id="hDQ-Mv-YKg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhB-cH-0Cz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fAf-Ov-Gmk">
+                                <rect key="frame" x="20" y="361" width="374" height="280"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hj-Oz-62R">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ic5-87-KSO">
+                                        <rect key="frame" x="0.0" y="48" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UxO-K3-gSR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-fO-rgu">
+                                        <rect key="frame" x="0.0" y="96" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVk-Wy-6gV">
+                                        <rect key="frame" x="0.0" y="144" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cl-WG-8cI">
+                                        <rect key="frame" x="0.0" y="192" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAW-27-jcM">
+                                        <rect key="frame" x="0.0" y="240" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fAf-Ov-Gmk" firstAttribute="centerX" secondItem="diU-xl-HYZ" secondAttribute="centerX" id="0cX-HV-xhR"/>
+                            <constraint firstItem="diU-xl-HYZ" firstAttribute="trailing" secondItem="fAf-Ov-Gmk" secondAttribute="trailing" constant="20" id="1Ux-4B-ekn"/>
+                            <constraint firstItem="fAf-Ov-Gmk" firstAttribute="leading" secondItem="diU-xl-HYZ" secondAttribute="leading" constant="20" id="2ZL-Ba-zY3"/>
+                            <constraint firstItem="fAf-Ov-Gmk" firstAttribute="centerY" secondItem="diU-xl-HYZ" secondAttribute="centerY" id="E07-Ar-QGg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="diU-xl-HYZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nDq-qW-cma"/>
+                    <navigationItem key="navigationItem" title="Name" id="nDq-qW-cma"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bO-ha-59x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
