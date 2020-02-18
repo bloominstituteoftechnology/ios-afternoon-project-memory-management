@@ -113,7 +113,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="diU-xl-HYZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Name" id="nDq-qW-cma"/>
+                    <navigationItem key="navigationItem" title="Name" id="nDq-qW-cma">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="why-YQ-0oZ">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="hDQ-Mv-YKg" id="QeI-fA-pvx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailAddressTextField" destination="hVk-Wy-6gV" id="iha-RN-O2U"/>
                         <outlet property="nameTextField" destination="Ic5-87-KSO" id="Guw-s9-Z1v"/>

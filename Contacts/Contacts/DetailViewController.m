@@ -31,6 +31,9 @@
 
 //MARK: - Actions
 
+- (IBAction)saveButtonTapped:(id)sender {
+}
+
 - (void)dealloc {
     [_nameTextField release];
     [_emailAddressTextField release];
