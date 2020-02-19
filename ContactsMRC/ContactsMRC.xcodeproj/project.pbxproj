@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		29624B3323FCD5270096CD69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B3223FCD5270096CD69 /* AppDelegate.m */; };
 		29624B3623FCD5270096CD69 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B3523FCD5270096CD69 /* SceneDelegate.m */; };
-		29624B3923FCD5270096CD69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B3823FCD5270096CD69 /* ViewController.m */; };
 		29624B3C23FCD5270096CD69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29624B3A23FCD5270096CD69 /* Main.storyboard */; };
 		29624B3E23FCD5280096CD69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29624B3D23FCD5280096CD69 /* Assets.xcassets */; };
 		29624B4123FCD5280096CD69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29624B3F23FCD5280096CD69 /* LaunchScreen.storyboard */; };
 		29624B4423FCD5280096CD69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B4323FCD5280096CD69 /* main.m */; };
+		29624B5123FCD9760096CD69 /* JDKContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B5023FCD9760096CD69 /* JDKContactsTableViewController.m */; };
+		29624B5423FCD9910096CD69 /* JDKContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B5323FCD9910096CD69 /* JDKContactDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		29624B3223FCD5270096CD69 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		29624B3423FCD5270096CD69 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		29624B3523FCD5270096CD69 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		29624B3723FCD5270096CD69 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		29624B3823FCD5270096CD69 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		29624B3B23FCD5270096CD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29624B3D23FCD5280096CD69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29624B4023FCD5280096CD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29624B4223FCD5280096CD69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29624B4323FCD5280096CD69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29624B4F23FCD9760096CD69 /* JDKContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKContactsTableViewController.h; sourceTree = "<group>"; };
+		29624B5023FCD9760096CD69 /* JDKContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKContactsTableViewController.m; sourceTree = "<group>"; };
+		29624B5223FCD9910096CD69 /* JDKContactDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKContactDetailsViewController.h; sourceTree = "<group>"; };
+		29624B5323FCD9910096CD69 /* JDKContactDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKContactDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +64,61 @@
 		29624B3023FCD5270096CD69 /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
+				29624B4E23FCD9290096CD69 /* Storyboards */,
+				29624B4C23FCD9080096CD69 /* Models */,
+				29624B4B23FCD8FF0096CD69 /* Model Controllers */,
+				29624B4A23FCD8F20096CD69 /* View Controllers */,
+				29624B4D23FCD9130096CD69 /* Resources */,
+			);
+			path = ContactsMRC;
+			sourceTree = "<group>";
+		};
+		29624B4A23FCD8F20096CD69 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29624B4F23FCD9760096CD69 /* JDKContactsTableViewController.h */,
+				29624B5023FCD9760096CD69 /* JDKContactsTableViewController.m */,
+				29624B5223FCD9910096CD69 /* JDKContactDetailsViewController.h */,
+				29624B5323FCD9910096CD69 /* JDKContactDetailsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		29624B4B23FCD8FF0096CD69 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		29624B4C23FCD9080096CD69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		29624B4D23FCD9130096CD69 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29624B4323FCD5280096CD69 /* main.m */,
 				29624B3123FCD5270096CD69 /* AppDelegate.h */,
 				29624B3223FCD5270096CD69 /* AppDelegate.m */,
 				29624B3423FCD5270096CD69 /* SceneDelegate.h */,
 				29624B3523FCD5270096CD69 /* SceneDelegate.m */,
-				29624B3723FCD5270096CD69 /* ViewController.h */,
-				29624B3823FCD5270096CD69 /* ViewController.m */,
-				29624B3A23FCD5270096CD69 /* Main.storyboard */,
-				29624B3D23FCD5280096CD69 /* Assets.xcassets */,
-				29624B3F23FCD5280096CD69 /* LaunchScreen.storyboard */,
 				29624B4223FCD5280096CD69 /* Info.plist */,
-				29624B4323FCD5280096CD69 /* main.m */,
+				29624B3D23FCD5280096CD69 /* Assets.xcassets */,
 			);
-			path = ContactsMRC;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29624B4E23FCD9290096CD69 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				29624B3A23FCD5270096CD69 /* Main.storyboard */,
+				29624B3F23FCD5280096CD69 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +147,7 @@
 		29624B2623FCD5270096CD69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JDK;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "John Kouris";
 				TargetAttributes = {
@@ -146,10 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29624B3923FCD5270096CD69 /* ViewController.m in Sources */,
+				29624B5123FCD9760096CD69 /* JDKContactsTableViewController.m in Sources */,
 				29624B3323FCD5270096CD69 /* AppDelegate.m in Sources */,
 				29624B4423FCD5280096CD69 /* main.m in Sources */,
 				29624B3623FCD5270096CD69 /* SceneDelegate.m in Sources */,
+				29624B5423FCD9910096CD69 /* JDKContactDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

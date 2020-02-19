@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JDKContactDetailsViewController.h
 //  ContactsMRC
 //
 //  Created by John Kouris on 2/18/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface JDKContactDetailsViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
