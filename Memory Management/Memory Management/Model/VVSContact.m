@@ -22,7 +22,7 @@
 
 + (instancetype)contactWithName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber
 {
-    return [[[VVSContact alloc] initWithName:name email:emailAddress phone:phoneNumber] autorelease];
+    return [[[self alloc] initWithName:name email:emailAddress phone:phoneNumber] autorelease];
 }
 
 

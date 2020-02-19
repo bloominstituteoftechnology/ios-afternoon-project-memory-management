@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VVSViewController : UIViewController
 
-@property (nonatomic) VVSContact *contact;
-@property (nonatomic) VVSContactController *contactController;
+@property (nonatomic, strong) VVSContact *contact;
+@property (nonatomic, strong) VVSContactController *contactController;
 
 @property (retain, nonatomic) IBOutlet UITextField *nameTextField;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;

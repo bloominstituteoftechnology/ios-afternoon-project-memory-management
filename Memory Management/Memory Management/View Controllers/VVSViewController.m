@@ -41,6 +41,7 @@
     } else {
         VVSContact *newContact = [[VVSContact alloc] initWithName:name email:email phone:phone];
         [self.contactController addContact:newContact];
+        [newContact release];
     }
     
     [self.navigationController popToRootViewControllerAnimated:true];
@@ -51,6 +52,8 @@
     [_nameTextField release];
     [_emailTextField release];
     [_phoneTextField release];
+    [_contact release];
+    [_contactController release];
     [super dealloc];
 }
 @end

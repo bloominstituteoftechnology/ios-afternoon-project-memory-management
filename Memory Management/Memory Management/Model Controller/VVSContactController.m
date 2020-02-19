@@ -27,7 +27,7 @@
 
 - (void)addContact:(VVSContact *)aContact
 {
-    [_internalContact addObject: aContact];
+    [_internalContact addObject:aContact];
 }
 
 - (void)updateContact:(VVSContact *)aContact withName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber
@@ -39,14 +39,8 @@
     [_internalContact replaceObjectAtIndex:index withObject:aContact];
 }
 
-@synthesize contacts = _contacts;
-
--(void)setContacts:(NSArray<VVSContact *> * _Nonnull)contacts {
-    _contacts = [self internalContact];
-}
-
 - (NSArray *)contacts {
-    return _internalContact.copy;
+    return [[[NSArray alloc] initWithArray:_internalContact] autorelease];
 }
 
 @end

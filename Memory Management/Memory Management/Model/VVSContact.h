@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VVSContact : NSObject
 
-@property (nonatomic, copy) NSString *name;
-@property(nonatomic, copy) NSString *emailAddress;
-@property (nonatomic, copy)NSString *phoneNumber;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property(nonatomic, copy) NSString * _Nullable emailAddress;
+@property (nonatomic, copy)NSString * _Nullable phoneNumber;
 
 - (instancetype)initWithName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber;
 

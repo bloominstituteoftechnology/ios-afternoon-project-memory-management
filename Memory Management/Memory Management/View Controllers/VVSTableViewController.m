@@ -24,6 +24,8 @@
     self = [super initWithCoder:coder];
     if (self) {
         _contactController = [[VVSContactController alloc] init];
+        
+        
     }
     return self;
 }
@@ -31,6 +33,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [_contactController addContact:[VVSContact contactWithName:@"Vici" email:@"vshaweddy@gmail.com" phone:@"314-359-8170"]];
+    [_contactController addContact:[VVSContact contactWithName:@"Robin" email:@"chourobin@gmail.com" phone:@"626-277-1234"]];
 
 }
 
@@ -43,19 +48,16 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.contactController.contacts.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 1;
+    return self.contactController.contacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
-    
     VVSContact *contact = [self.contactController.contacts objectAtIndex:indexPath.row];
-    
     cell.textLabel.text = contact.name;
     return cell;
 }

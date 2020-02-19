@@ -46,5 +46,11 @@
     // to restore the scene back to its current state.
 }
 
+- (void)dealloc
+{
+    [_window release];
+    _window = nil;
+    [super dealloc];
+}
 
 @end
