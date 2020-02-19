@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *emailAddress;
 @property (nonatomic, copy)NSString *phoneNumber;
 
+- (instancetype)initWithName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber;
+
++ (instancetype)contactWithName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

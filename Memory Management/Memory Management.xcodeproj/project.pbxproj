@@ -16,6 +16,7 @@
 		E35CAEF223FCD1BC00009814 /* VVSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E35CAEF123FCD1BC00009814 /* VVSTableViewController.m */; };
 		E35CAEF523FCD22800009814 /* VVSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E35CAEF423FCD22800009814 /* VVSViewController.m */; };
 		E35CAEFA23FCDA5100009814 /* VVSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E35CAEF923FCDA5100009814 /* VVSContact.m */; };
+		E35CAEFE23FCE18300009814 /* VVSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = E35CAEFD23FCE18300009814 /* VVSContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		E35CAEF423FCD22800009814 /* VVSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVSViewController.m; sourceTree = "<group>"; };
 		E35CAEF823FCDA5100009814 /* VVSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VVSContact.h; sourceTree = "<group>"; };
 		E35CAEF923FCDA5100009814 /* VVSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVSContact.m; sourceTree = "<group>"; };
+		E35CAEFC23FCE18300009814 /* VVSContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VVSContactController.h; sourceTree = "<group>"; };
+		E35CAEFD23FCE18300009814 /* VVSContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVSContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +79,8 @@
 				E35CAEE523FCCFA300009814 /* LaunchScreen.storyboard */,
 				E35CAEE823FCCFA300009814 /* Info.plist */,
 				E35CAEE923FCCFA300009814 /* main.m */,
-				E35CAEF723FCDA3900009814 /* Models */,
+				E35CAEFB23FCE16600009814 /* Model Controller */,
+				E35CAEF723FCDA3900009814 /* Model */,
 				E35CAEF623FCD22F00009814 /* View Controllers */,
 			);
 			path = "Memory Management";
@@ -93,13 +97,22 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		E35CAEF723FCDA3900009814 /* Models */ = {
+		E35CAEF723FCDA3900009814 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E35CAEF823FCDA5100009814 /* VVSContact.h */,
 				E35CAEF923FCDA5100009814 /* VVSContact.m */,
 			);
-			path = Models;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E35CAEFB23FCE16600009814 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E35CAEFC23FCE18300009814 /* VVSContactController.h */,
+				E35CAEFD23FCE18300009814 /* VVSContactController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +191,7 @@
 				E35CAEFA23FCDA5100009814 /* VVSContact.m in Sources */,
 				E35CAEF523FCD22800009814 /* VVSViewController.m in Sources */,
 				E35CAEEA23FCCFA300009814 /* main.m in Sources */,
+				E35CAEFE23FCE18300009814 /* VVSContactController.m in Sources */,
 				E35CAEDC23FCCFA100009814 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
