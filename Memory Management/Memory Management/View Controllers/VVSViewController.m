@@ -50,10 +50,21 @@
 
 - (void)dealloc {
     [_nameTextField release];
+    _nameTextField = nil;
+    
     [_emailTextField release];
+    _emailTextField = nil;
+    
     [_phoneTextField release];
+    _phoneTextField = nil;
+    
     [_contact release];
+    _contact = nil;
+    
     [_contactController release];
+    _contactController = nil;
+    
     [super dealloc];
 }
+
 @end
