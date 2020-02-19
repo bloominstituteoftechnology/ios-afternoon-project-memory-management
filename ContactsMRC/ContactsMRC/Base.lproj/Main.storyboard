@@ -94,7 +94,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lXE-1S-Xzn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2g3-I2-mUR"/>
+                    <navigationItem key="navigationItem" id="2g3-I2-mUR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zn7-Vj-MYD">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Ec8-pY-jKJ" id="2hP-Ub-ewa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="GVc-7C-og6" id="Mok-yQ-RMe"/>
+                        <outlet property="nameTextField" destination="rfr-iR-yrr" id="WEO-tB-BdO"/>
+                        <outlet property="phoneNumberTextField" destination="xvQ-Tp-oDg" id="wCh-WP-mp1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p1-CY-8IS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
