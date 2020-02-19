@@ -42,10 +42,13 @@
                     <navigationItem key="navigationItem" title="Contact" id="93E-pr-Smg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cwt-Yi-LSN">
                             <connections>
-                                <segue destination="e48-PJ-Oqr" kind="show" id="D96-Zp-71a"/>
+                                <segue destination="e48-PJ-Oqr" kind="show" identifier="AddSegue" id="D96-Zp-71a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="e48-PJ-Oqr" kind="show" identifier="DetailSegue" id="Car-Lz-gQH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN8-rc-YPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,8 +130,17 @@
                         <viewLayoutGuide key="safeArea" id="xkR-Iz-Vn7"/>
                     </view>
                     <navigationItem key="navigationItem" id="54v-df-xH8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Gjy-3x-bkU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gjy-3x-bkU">
+                            <connections>
+                                <action selector="savePressed:" destination="e48-PJ-Oqr" id="dSj-RW-h7i"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="S7c-YO-3C6" id="VTD-KQ-KYf"/>
+                        <outlet property="nameTextField" destination="JRB-0X-hCR" id="RhF-90-J0I"/>
+                        <outlet property="phoneTextField" destination="nfE-1d-d76" id="7Pk-2q-arv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYi-2q-w8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,4 +165,7 @@
             <point key="canvasLocation" x="91" y="40"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Car-Lz-gQH"/>
+    </inferredMetricsTieBreakers>
 </document>

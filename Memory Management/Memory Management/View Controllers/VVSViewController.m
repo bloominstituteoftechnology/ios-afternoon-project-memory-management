@@ -29,4 +29,13 @@
 }
 */
 
+- (IBAction)savePressed:(id)sender {
+}
+
+- (void)dealloc {
+    [_nameTextField release];
+    [_emailTextField release];
+    [_phoneTextField release];
+    [super dealloc];
+}
 @end
