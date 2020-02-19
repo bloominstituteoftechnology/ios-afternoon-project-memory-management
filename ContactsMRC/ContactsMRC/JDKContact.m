@@ -52,13 +52,13 @@
 - (void)dealloc
 {
     [_name release];
-    _name = nil;
+//    _name = nil;
     
     [_email release];
-    _email = nil;
+//    _email = nil;
     
     [_phoneNumber release];
-    _phoneNumber = nil;
+//    _phoneNumber = nil;
     
     [super dealloc];
 }

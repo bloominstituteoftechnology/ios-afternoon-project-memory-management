@@ -62,10 +62,10 @@
 
 - (void)dealloc {
     [_contactController release];
-    _contactController = nil;
+//    _contactController = nil;
     
     [_contact release];
-    _contact = nil;
+//    _contact = nil;
     
     [super dealloc];
 }
