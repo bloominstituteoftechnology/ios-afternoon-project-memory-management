@@ -25,16 +25,6 @@
     return [[[JDKContact alloc] initWithName:name email:email phoneNumber:phoneNumber] autorelease];
 }
 
-+ (instancetype)contactWithDictionary:(NSDictionary *)dictionary
-{
-    NSDictionary *nameDictionary = dictionary[@"name"];
-    NSString *name = nameDictionary[@"first"];
-    NSString *email = dictionary[@"email"];
-    NSString *phoneNumber = dictionary[@"phone"];
-    
-    return [[[JDKContact alloc] initWithName:name email:email phoneNumber:phoneNumber] autorelease];
-}
-
 - (void)setName:(NSString *)name
 {
     if (name != _name) {

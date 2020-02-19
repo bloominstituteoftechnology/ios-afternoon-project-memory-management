@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber;
 + (instancetype)contactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber;
-+ (instancetype)contactWithDictionary:(NSDictionary *)dictionary;
 
 @end
 
