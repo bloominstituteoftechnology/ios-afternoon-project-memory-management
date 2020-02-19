@@ -16,20 +16,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews
+{
+    if (self.contact != nil) {
+        self.title = @"Update Contact";
+        self.nameTextField.text = self.contact.name;
+        self.emailTextField.text = self.contact.emailAddress;
+        self.phoneTextField.text = self.contact.phoneNumber;
+    } else {
+        self.title = @"New Contact";
+    }
 }
-*/
 
 - (IBAction)savePressed:(id)sender {
+    NSString *name = _nameTextField.text;
+    NSString *email = _emailTextField.text;
+    NSString *phone = _phoneTextField.text;
+    
+    if (self.contact != nil) {
+        [self.contactController updateContact:[self contact] withName:name email:email phone:phone];
+    } else {
+        VVSContact *newContact = [[VVSContact alloc] initWithName:name email:email phone:phone];
+        [self.contactController addContact:newContact];
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:true];
+    
 }
 
 - (void)dealloc {

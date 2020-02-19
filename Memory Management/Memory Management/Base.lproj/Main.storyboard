@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="1086.9565217391305" y="39.508928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Contact-->
         <scene sceneID="E9V-fK-hrI">
             <objects>
                 <viewController id="e48-PJ-Oqr" customClass="VVSViewController" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="805-EL-608">
-                                <rect key="frame" x="20" y="120" width="374" height="227.5"/>
+                                <rect key="frame" x="20" y="160" width="374" height="227.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jy1-Z5-twK">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="62.5"/>
@@ -123,13 +123,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="805-EL-608" firstAttribute="top" secondItem="xkR-Iz-Vn7" secondAttribute="top" constant="20" id="0Df-eq-hRd"/>
                             <constraint firstItem="xkR-Iz-Vn7" firstAttribute="trailing" secondItem="805-EL-608" secondAttribute="trailing" constant="20" id="CF5-9N-CPw"/>
-                            <constraint firstItem="xkR-Iz-Vn7" firstAttribute="top" secondItem="805-EL-608" secondAttribute="top" constant="20" id="UMY-cV-d29"/>
                             <constraint firstItem="805-EL-608" firstAttribute="leading" secondItem="xkR-Iz-Vn7" secondAttribute="leading" constant="20" id="Ufb-DD-zZ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xkR-Iz-Vn7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="54v-df-xH8">
+                    <navigationItem key="navigationItem" title="Add Contact" id="54v-df-xH8">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gjy-3x-bkU">
                             <connections>
                                 <action selector="savePressed:" destination="e48-PJ-Oqr" id="dSj-RW-h7i"/>
