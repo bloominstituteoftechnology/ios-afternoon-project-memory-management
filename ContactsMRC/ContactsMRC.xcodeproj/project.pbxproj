@@ -16,6 +16,7 @@
 		29624B5123FCD9760096CD69 /* JDKContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B5023FCD9760096CD69 /* JDKContactsTableViewController.m */; };
 		29624B5423FCD9910096CD69 /* JDKContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B5323FCD9910096CD69 /* JDKContactDetailsViewController.m */; };
 		29624B5723FCDDE80096CD69 /* JDKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B5623FCDDE80096CD69 /* JDKContact.m */; };
+		29624B5A23FCE3A50096CD69 /* JDKContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29624B5923FCE3A50096CD69 /* JDKContactsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		29624B5323FCD9910096CD69 /* JDKContactDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKContactDetailsViewController.m; sourceTree = "<group>"; };
 		29624B5523FCDDE80096CD69 /* JDKContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKContact.h; sourceTree = "<group>"; };
 		29624B5623FCDDE80096CD69 /* JDKContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKContact.m; sourceTree = "<group>"; };
+		29624B5823FCE3A50096CD69 /* JDKContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKContactsController.h; sourceTree = "<group>"; };
+		29624B5923FCE3A50096CD69 /* JDKContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKContactsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 		29624B4B23FCD8FF0096CD69 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				29624B5823FCE3A50096CD69 /* JDKContactsController.h */,
+				29624B5923FCE3A50096CD69 /* JDKContactsController.m */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29624B5123FCD9760096CD69 /* JDKContactsTableViewController.m in Sources */,
+				29624B5A23FCE3A50096CD69 /* JDKContactsController.m in Sources */,
 				29624B3323FCD5270096CD69 /* AppDelegate.m in Sources */,
 				29624B4423FCD5280096CD69 /* main.m in Sources */,
 				29624B3623FCD5270096CD69 /* SceneDelegate.m in Sources */,
