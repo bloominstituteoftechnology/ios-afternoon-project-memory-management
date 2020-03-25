@@ -10,13 +10,13 @@
         <!--Contacts-->
         <scene sceneID="kgT-Da-dB8">
             <objects>
-                <tableViewController id="XmJ-hy-USd" sceneMemberID="viewController">
+                <tableViewController id="XmJ-hy-USd" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zkc-h5-XZp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DXd-Bi-ugX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="DXd-Bi-ugX">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXd-Bi-ugX" id="ST5-Sc-yLR">
@@ -48,7 +48,7 @@
         <!--Title-->
         <scene sceneID="5kt-Y6-vBj">
             <objects>
-                <viewController id="8Yk-rW-dgj" sceneMemberID="viewController">
+                <viewController id="8Yk-rW-dgj" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rb5-a4-4oG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,12 +64,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDA-9W-hMA">
                                         <rect key="frame" x="0.0" y="42" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0g-Ye-Egg">
                                         <rect key="frame" x="0.0" y="84" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -83,8 +83,18 @@
                         <viewLayoutGuide key="safeArea" id="zAU-HA-wYI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="4WX-Sx-PKw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Kgu-ab-FIs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Kgu-ab-FIs">
+                            <connections>
+                                <action selector="saveTapped:" destination="8Yk-rW-dgj" id="KAs-5Q-gTR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="sDA-9W-hMA" id="Q2b-4L-k9A"/>
+                        <outlet property="nameTextField" destination="KA9-v3-d2G" id="pIg-ZE-cLL"/>
+                        <outlet property="phoneTextField" destination="W0g-Ye-Egg" id="rN3-nM-3hu"/>
+                        <outlet property="saveButton" destination="Kgu-ab-FIs" id="6iC-fs-LaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whG-B1-rU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
