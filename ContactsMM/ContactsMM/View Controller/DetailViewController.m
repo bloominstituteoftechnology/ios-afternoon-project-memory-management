@@ -31,9 +31,14 @@
 - (void)updateViews {
     NSLog(@"updateViews");
     
+    if (!self.isViewLoaded) {return;}
+    
     // view/edit
     if (self.contact) {
-        
+        self.title = self.contact.name;
+        self.nameTextField.text = self.contact.name;
+        self.emailTextField.text = self.contact.email;
+        self.phoneTextField.text = self.contact.phone;
     }
     
     // add
@@ -44,6 +49,11 @@
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
     NSLog(@"Save Tapped");
+    
+//    if (!_contact) {
+//        self.title = @"Nothing to Save";
+//        return;
+//    }
     
     [self.contactController addContactWithName:self.nameTextField.text
                                          email:self.emailTextField.text
