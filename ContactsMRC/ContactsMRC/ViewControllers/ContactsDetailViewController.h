@@ -10,7 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MBMContactController;
+@class MBMContact;
+
 @interface ContactsDetailViewController : UIViewController
+
+@property (nonatomic, retain)MBMContactController *contactController;
+
+@property (nonatomic, retain)MBMContact *contact;
 
 @end
 

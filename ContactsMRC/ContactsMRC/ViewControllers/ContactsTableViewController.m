@@ -7,8 +7,14 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "MBMContact.h"
+#import "MBMContactController.h"
+#import "ContactsDetailViewController.h"
 
 @interface ContactsTableViewController ()
+
+@property (nonatomic, retain) MBMContactController *contactController;
+
 
 @end
 
@@ -17,30 +23,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _contactController = [[MBMContactController alloc] init];
     
+    MBMContact *jorge = [[MBMContact alloc] initWithName:@"Jorge" email:@"notatroll@trolling4lols.com" phone:@"+1 (702) 885-2978" picture:[UIImage imageNamed:@"Jorge"]];
+    
+    [self.contactController.contacts addObject:jorge];
+    [jorge release];
 }
 
 - (IBAction)addContactTapped:(id)sender {
     
 }
 
-
-
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.contactController.contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    MBMContact *contact = self.contactController.contacts[indexPath.row];
+    cell.textLabel.text = contact.name;
+    cell.detailTextLabel.text = contact.email;
+    cell.imageView.image = contact.picture;
     
     return cell;
 }
@@ -80,14 +88,23 @@
 }
 */
 
+- (void)dealloc {
+    [_contactController release];
+    [super dealloc];
+}
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"AddContactSegue"]) {
-        
+        ContactsDetailViewController *addContact = (ContactsDetailViewController *)segue.destinationViewController;
+        addContact.contactController = _contactController;
     } else if ([segue.identifier isEqualToString:@"EditContactSegue"]) {
-        
+        ContactsDetailViewController *editContact = (ContactsDetailViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MBMContact *contact = self.contactController.contacts[indexPath.row];
+        editContact.contact = contact;
+        editContact.contactController = _contactController;
     }
 }
 
