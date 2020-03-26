@@ -47,6 +47,13 @@
     }
 }
 
+// didSet
+- (void)setContact:(Contact *)contact {
+    NSLog(@"contact SET");
+    _contact = contact;
+    [self updateViews];
+}
+
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
     NSLog(@"Save Tapped");
     
