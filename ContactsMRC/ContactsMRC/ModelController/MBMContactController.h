@@ -20,7 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)createContactWithName:(NSString *)name
                         email:(NSString *)email
                         phone:(NSString *)number
-                      picture:(UIImage *)picture;
+                      picture:(UIImage *)picture
+                      contact:(MBMContact *)contact;
+
+- (void)createContact:(MBMContact *)contact;
 
 - (void)editContact:(MBMContact *)contact;
 

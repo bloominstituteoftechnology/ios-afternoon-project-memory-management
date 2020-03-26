@@ -25,11 +25,17 @@
     
     _contactController = [[MBMContactController alloc] init];
     
-    MBMContact *jorge = [[MBMContact alloc] initWithName:@"Jorge" email:@"notatroll@trolling4lols.com" phone:@"+1 (702) 885-2978" picture:[UIImage imageNamed:@"Jorge"]];
+    MBMContact *jorge = [[[MBMContact alloc] initWithName:@"Jorge" email:@"notatroll@trolling4lols.com" phone:@"+1 (702) 885-2978" picture:[UIImage imageNamed:@"Jorge"]] autorelease];
     
     [self.contactController.contacts addObject:jorge];
-    [jorge release];
+
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 
 - (IBAction)addContactTapped:(id)sender {
     

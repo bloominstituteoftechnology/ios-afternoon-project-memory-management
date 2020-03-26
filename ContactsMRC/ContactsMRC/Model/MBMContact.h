@@ -16,17 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, retain)NSString *name;
 @property (nonatomic, retain)NSString *email;
 @property (nonatomic, retain)NSString *phone;
-@property (nonatomic, copy)UIImage * _Nullable picture;
+@property (nonatomic, retain)UIImage * _Nullable picture;
 
 
 - (instancetype)initWithName:(NSString *)name
                        email:(NSString *)email
                        phone:(NSString *)phone
                      picture:(UIImage *)picture;
-
-- (instancetype)initWithNoPicture:(NSString *)name
-                            email:(NSString *)email
-                            phone:(NSString *)phone;
 
 @end
 

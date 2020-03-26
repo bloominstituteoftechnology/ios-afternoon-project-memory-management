@@ -24,19 +24,25 @@
 - (void)createContactWithName:(NSString *)name
                         email:(NSString *)email
                         phone:(NSString *)phone
-                      picture:(UIImage *)picture {
+                      picture:(UIImage *)picture
+                      contact:(MBMContact *)contact {
     
-    MBMContact *contact = [[MBMContact alloc] initWithName:name email:email phone:phone picture:picture];
+//    MBMContact *contact = [[MBMContact alloc] initWithName:name email:email phone:phone picture:picture];
+    [contact setName:name];
+    [contact setEmail:email];
+    [contact setPhone:phone];
+    [contact setPicture:picture];
     
     [self.contacts addObject:contact];
-    
     [contact release];
+}
+
+- (void)createContact:(MBMContact *)contact {
+    [self.contacts addObject:contact];
 }
 
 - (void)deleteContact:(MBMContact *)contact {
     [self.contacts removeObject:contact];
-//    int long index = [self.contacts indexOfObject:contact];
-//    [self.contacts removeObjectAtIndex:index];
 }
 
 - (void)editContactWithName:(NSString *)name
@@ -45,11 +51,14 @@
                     picture:(UIImage *)picture
                     contact:(MBMContact *)contact {
     
-    MBMContact *editedContact = [[MBMContact alloc] initWithName:name email:email phone:phone picture:picture];
-    
+//    MBMContact *editedContact = [[[MBMContact alloc] initWithName:name email:email phone:phone picture:picture] autorelease];
+    [contact setName:name];
+    [contact setEmail:email];
+    [contact setPhone:phone];
+    [contact setPicture:picture];
     int long index = [self.contacts indexOfObject:contact];
-    [self.contacts replaceObjectAtIndex:index withObject:editedContact];
-    [editedContact release];
+    [self.contacts replaceObjectAtIndex:index withObject:contact];
+//    [editedContact release];
 }
 
 - (void)editContact:(MBMContact *)contact {

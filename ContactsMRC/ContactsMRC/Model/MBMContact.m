@@ -16,7 +16,7 @@
         _name = name;
         _email = email;
         _phone = phone;
-        _picture = [picture copy];
+        _picture = picture;
     }
     return self;
 }

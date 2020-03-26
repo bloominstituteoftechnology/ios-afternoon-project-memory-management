@@ -36,24 +36,15 @@
     NSString *email = self.emailTextField.text;
     NSString *phone = self.phoneNumberTextField.text;
     UIImage *image = self.imageView.image;
-    
     UIImage *picture = [UIImage imageNamed:@"Jorge"];
     
     if (self.contact != nil) {
-        
-        [self.contactController.contacts removeObject:self.contact];
-        
-        MBMContact *contact = [[[MBMContact alloc]initWithName:name email:email phone:phone picture:picture] autorelease];
-        
-        [self.contactController.contacts addObject:contact];
-//        [self.contactController editContactWithName:name email:email phone:phone picture:image contact:self.contact];
+        [self.contactController editContactWithName:name email:email phone:phone picture:image contact:self.contact];
         [self.navigationController popViewControllerAnimated:YES];
     } else {
-        
-        MBMContact *contact = [[[MBMContact alloc] initWithName:name email:email phone:phone picture:image] autorelease];
-        
-        [self.contactController.contacts addObject:contact];
-//        [self.contactController createContactWithName:name email:email phone:phone picture:image];
+        self.contact = [[[MBMContact alloc]initWithName:name email:email phone:phone picture:picture] autorelease];
+        [self.contactController createContact:self.contact];
+//        [self.contactController createContactWithName:name email:email phone:phone picture:picture contact:self.contact];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
