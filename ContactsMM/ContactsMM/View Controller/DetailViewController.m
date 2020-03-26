@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "ContactController.h"
+#import "Contact.h"
 
 @interface DetailViewController ()
 
@@ -23,10 +25,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateViews];
+}
+
+- (void)updateViews {
+    NSLog(@"updateViews");
+    
+    // view/edit
+    if (self.contact) {
+        
+    }
+    
+    // add
+    else {
+        self.title = @"Add New Contact";
+    }
 }
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
     NSLog(@"Save Tapped");
+    
+    [self.contactController addContactWithName:self.nameTextField.text
+                                         email:self.emailTextField.text
+                                         phone:self.phoneTextField.text];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

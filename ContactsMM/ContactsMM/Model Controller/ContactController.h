@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactController : NSObject
+
+// MARK: - Properties
+
+@property (nonatomic, readonly) NSArray *contacts;
+
+- (void)addContactWithName:(NSString *)name
+                     email:(NSString *)email
+                     phone:(NSString *)phone;
 
 @end
 
