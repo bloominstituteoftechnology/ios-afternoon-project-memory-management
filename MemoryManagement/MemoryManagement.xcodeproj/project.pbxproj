@@ -15,6 +15,7 @@
 		55398B252450EA010066C4BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B242450EA010066C4BE /* main.m */; };
 		55398B2E2450F7FE0066C4BE /* KMLAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B2D2450F7FE0066C4BE /* KMLAddContactViewController.m */; };
 		55398B312450F8190066C4BE /* KMLContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B302450F8190066C4BE /* KMLContactTableViewController.m */; };
+		55398B3A2450F8E70066C4BE /* KMLContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B392450F8E70066C4BE /* KMLContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		55398B2D2450F7FE0066C4BE /* KMLAddContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLAddContactViewController.m; sourceTree = "<group>"; };
 		55398B2F2450F8190066C4BE /* KMLContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLContactTableViewController.h; sourceTree = "<group>"; };
 		55398B302450F8190066C4BE /* KMLContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLContactTableViewController.m; sourceTree = "<group>"; };
+		55398B382450F8E70066C4BE /* KMLContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLContact.h; sourceTree = "<group>"; };
+		55398B392450F8E70066C4BE /* KMLContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		55398B112450E9FC0066C4BE /* MemoryManagement */ = {
 			isa = PBXGroup;
 			children = (
+				55398B372450F8B20066C4BE /* Model Controller */,
+				55398B362450F8AB0066C4BE /* Model */,
 				55398B2B2450F7D80066C4BE /* View Controllers */,
 				55398B122450E9FC0066C4BE /* AppDelegate.h */,
 				55398B132450E9FC0066C4BE /* AppDelegate.m */,
@@ -87,6 +92,22 @@
 				55398B302450F8190066C4BE /* KMLContactTableViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		55398B362450F8AB0066C4BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55398B382450F8E70066C4BE /* KMLContact.h */,
+				55398B392450F8E70066C4BE /* KMLContact.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55398B372450F8B20066C4BE /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55398B312450F8190066C4BE /* KMLContactTableViewController.m in Sources */,
+				55398B3A2450F8E70066C4BE /* KMLContact.m in Sources */,
 				55398B2E2450F7FE0066C4BE /* KMLAddContactViewController.m in Sources */,
 				55398B142450E9FC0066C4BE /* AppDelegate.m in Sources */,
 				55398B252450EA010066C4BE /* main.m in Sources */,
