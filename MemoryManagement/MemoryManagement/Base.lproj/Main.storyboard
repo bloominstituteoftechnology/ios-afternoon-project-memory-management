@@ -47,7 +47,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="DjW-J1-XA2" kind="show" id="smk-ew-LIS"/>
+                        <segue destination="DjW-J1-XA2" kind="show" identifier="DetailSegue" id="smk-ew-LIS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfQ-Fe-cbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,6 +165,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XwE-0I-LZR"/>
+        <segue reference="smk-ew-LIS"/>
     </inferredMetricsTieBreakers>
 </document>
