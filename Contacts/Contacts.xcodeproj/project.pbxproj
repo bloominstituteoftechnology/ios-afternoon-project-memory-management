@@ -13,7 +13,6 @@
 		B5D2A2BF2450EA2900F046C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D2A2BE2450EA2900F046C6 /* Assets.xcassets */; };
 		B5D2A2C22450EA2900F046C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D2A2C02450EA2900F046C6 /* LaunchScreen.storyboard */; };
 		B5D2A2C52450EA2900F046C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2C42450EA2900F046C6 /* main.m */; };
-		B5D2A2CB2450EB1C00F046C6 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2C32450EA2900F046C6 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,13 +58,13 @@
 		B5D2A2B12450EA2700F046C6 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				B5D2A2BB2450EA2700F046C6 /* Main.storyboard */,
+				B5D2A2C02450EA2900F046C6 /* LaunchScreen.storyboard */,
 				B5D2A2B22450EA2700F046C6 /* AppDelegate.h */,
 				B5D2A2B32450EA2700F046C6 /* AppDelegate.m */,
 				B5D2A2B52450EA2700F046C6 /* SceneDelegate.h */,
 				B5D2A2B62450EA2700F046C6 /* SceneDelegate.m */,
-				B5D2A2BB2450EA2700F046C6 /* Main.storyboard */,
 				B5D2A2BE2450EA2900F046C6 /* Assets.xcassets */,
-				B5D2A2C02450EA2900F046C6 /* LaunchScreen.storyboard */,
 				B5D2A2C32450EA2900F046C6 /* Info.plist */,
 				B5D2A2C42450EA2900F046C6 /* main.m */,
 			);
@@ -142,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D2A2CB2450EB1C00F046C6 /* Info.plist in Sources */,
 				B5D2A2B42450EA2700F046C6 /* AppDelegate.m in Sources */,
 				B5D2A2C52450EA2900F046C6 /* main.m in Sources */,
 				B5D2A2B72450EA2700F046C6 /* SceneDelegate.m in Sources */,
@@ -180,7 +178,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -238,7 +236,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

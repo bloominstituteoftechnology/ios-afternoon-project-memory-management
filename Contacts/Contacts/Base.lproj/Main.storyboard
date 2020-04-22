@@ -107,7 +107,8 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TXy-wO-jJt" firstAttribute="leading" secondItem="K7K-1T-kQo" secondAttribute="leading" constant="8" id="LI0-2O-6yP"/>
                             <constraint firstItem="K7K-1T-kQo" firstAttribute="trailing" secondItem="TXy-wO-jJt" secondAttribute="trailing" constant="8" id="MEp-Ww-WgZ"/>
