@@ -7,22 +7,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Contacts Table View Controller-->
         <scene sceneID="aHu-mi-9qf">
             <objects>
-                <tableViewController id="lNc-Q1-oaL" sceneMemberID="viewController">
+                <tableViewController id="lNc-Q1-oaL" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rwv-pD-p7J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="l8j-BM-R2n">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="WDS-Xq-3v5" style="IBUITableViewCellStyleDefault" id="l8j-BM-R2n">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l8j-BM-R2n" id="TV9-1a-lTZ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WDS-Xq-3v5">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cPO-64-gTE" kind="show" identifier="ContactDetailSegue" id="eSq-lF-kUf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="16.741071428571427"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="SY2-dD-SLb">
             <objects>
-                <viewController id="cPO-64-gTE" sceneMemberID="viewController">
+                <viewController id="cPO-64-gTE" customClass="ContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XqC-VG-gjr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,8 +93,17 @@
                         <viewLayoutGuide key="safeArea" id="8Cz-BS-zH9"/>
                     </view>
                     <navigationItem key="navigationItem" id="fha-ba-N8x">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Tbp-jC-3jc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Tbp-jC-3jc">
+                            <connections>
+                                <action selector="saveTapped:" destination="cPO-64-gTE" id="1vK-hO-vew"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="0mf-Wf-zOT" id="aY7-2A-JSD"/>
+                        <outlet property="nameTextField" destination="Uha-fl-fqE" id="2xr-Su-FgZ"/>
+                        <outlet property="phoneTextField" destination="dQS-et-tVq" id="0Yu-Ic-iyG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQ9-Zu-iyl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,4 +128,7 @@
             <point key="canvasLocation" x="-59.420289855072468" y="16.741071428571427"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eSq-lF-kUf"/>
+    </inferredMetricsTieBreakers>
 </document>
