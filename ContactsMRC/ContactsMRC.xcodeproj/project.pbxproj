@@ -15,6 +15,8 @@
 		724C18812450D37D00AD0BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 724C18802450D37D00AD0BE7 /* main.m */; };
 		724C188E2450D64C00AD0BE7 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724C188D2450D64C00AD0BE7 /* ContactsTableViewController.m */; };
 		724C18912450D65E00AD0BE7 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724C18902450D65E00AD0BE7 /* ContactDetailViewController.m */; };
+		724C18952450D7AF00AD0BE7 /* CDGContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 724C18942450D7AF00AD0BE7 /* CDGContact.m */; };
+		724C18982450D7B800AD0BE7 /* CDGContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724C18972450D7B800AD0BE7 /* CDGContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		724C188D2450D64C00AD0BE7 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		724C188F2450D65E00AD0BE7 /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
 		724C18902450D65E00AD0BE7 /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		724C18932450D7AF00AD0BE7 /* CDGContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGContact.h; sourceTree = "<group>"; };
+		724C18942450D7AF00AD0BE7 /* CDGContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGContact.m; sourceTree = "<group>"; };
+		724C18962450D7B800AD0BE7 /* CDGContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGContactController.h; sourceTree = "<group>"; };
+		724C18972450D7B800AD0BE7 /* CDGContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				724C18892450D61900AD0BE7 /* ViewControllers */,
+				724C18922450D78F00AD0BE7 /* Model Controller */,
 				724C18882450D60000AD0BE7 /* Model */,
 				724C18772450D37C00AD0BE7 /* Main.storyboard */,
 				724C18802450D37D00AD0BE7 /* main.m */,
@@ -90,6 +97,8 @@
 		724C18882450D60000AD0BE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				724C18932450D7AF00AD0BE7 /* CDGContact.h */,
+				724C18942450D7AF00AD0BE7 /* CDGContact.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +128,15 @@
 				724C18902450D65E00AD0BE7 /* ContactDetailViewController.m */,
 			);
 			path = ContactsDetailVC;
+			sourceTree = "<group>";
+		};
+		724C18922450D78F00AD0BE7 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				724C18962450D7B800AD0BE7 /* CDGContactController.h */,
+				724C18972450D7B800AD0BE7 /* CDGContactController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724C18982450D7B800AD0BE7 /* CDGContactController.m in Sources */,
 				724C18702450D37C00AD0BE7 /* AppDelegate.m in Sources */,
+				724C18952450D7AF00AD0BE7 /* CDGContact.m in Sources */,
 				724C18812450D37D00AD0BE7 /* main.m in Sources */,
 				724C188E2450D64C00AD0BE7 /* ContactsTableViewController.m in Sources */,
 				724C18732450D37C00AD0BE7 /* SceneDelegate.m in Sources */,
