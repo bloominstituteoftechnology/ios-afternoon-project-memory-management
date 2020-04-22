@@ -14,6 +14,7 @@
 		5C522D052450D455003181F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C522D032450D455003181F9 /* LaunchScreen.storyboard */; };
 		5C522D082450D455003181F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D072450D455003181F9 /* main.m */; };
 		5C522D132450E52A003181F9 /* EGCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D122450E52A003181F9 /* EGCContact.m */; };
+		5C522D162450E99C003181F9 /* EGCContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D152450E99C003181F9 /* EGCContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		5C522D072450D455003181F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C522D112450E52A003181F9 /* EGCContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCContact.h; sourceTree = "<group>"; };
 		5C522D122450E52A003181F9 /* EGCContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCContact.m; sourceTree = "<group>"; };
+		5C522D142450E99C003181F9 /* EGCContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCContactController.h; sourceTree = "<group>"; };
+		5C522D152450E99C003181F9 /* EGCContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 		5C522D0F2450E4E9003181F9 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5C522D142450E99C003181F9 /* EGCContactController.h */,
+				5C522D152450E99C003181F9 /* EGCContactController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			files = (
 				5C522CF72450D454003181F9 /* AppDelegate.m in Sources */,
 				5C522D082450D455003181F9 /* main.m in Sources */,
+				5C522D162450E99C003181F9 /* EGCContactController.m in Sources */,
 				5C522D132450E52A003181F9 /* EGCContact.m in Sources */,
 				5C522CFA2450D454003181F9 /* SceneDelegate.m in Sources */,
 			);
