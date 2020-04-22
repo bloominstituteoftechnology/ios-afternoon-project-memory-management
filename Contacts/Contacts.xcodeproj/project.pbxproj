@@ -13,6 +13,7 @@
 		B5D2A2BF2450EA2900F046C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D2A2BE2450EA2900F046C6 /* Assets.xcassets */; };
 		B5D2A2C22450EA2900F046C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D2A2C02450EA2900F046C6 /* LaunchScreen.storyboard */; };
 		B5D2A2C52450EA2900F046C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2C42450EA2900F046C6 /* main.m */; };
+		B5D2A2CB2450EB1C00F046C6 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2C32450EA2900F046C6 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D2A2CB2450EB1C00F046C6 /* Info.plist in Sources */,
 				B5D2A2B42450EA2700F046C6 /* AppDelegate.m in Sources */,
 				B5D2A2C52450EA2900F046C6 /* main.m in Sources */,
 				B5D2A2B72450EA2700F046C6 /* SceneDelegate.m in Sources */,
