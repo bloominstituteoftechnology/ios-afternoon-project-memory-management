@@ -13,6 +13,10 @@
 		B5D2A2BF2450EA2900F046C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D2A2BE2450EA2900F046C6 /* Assets.xcassets */; };
 		B5D2A2C22450EA2900F046C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D2A2C02450EA2900F046C6 /* LaunchScreen.storyboard */; };
 		B5D2A2C52450EA2900F046C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2C42450EA2900F046C6 /* main.m */; };
+		B5D2A2CF2450F17500F046C6 /* EPWContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2CE2450F17500F046C6 /* EPWContactTableViewController.m */; };
+		B5D2A2D22450F1B100F046C6 /* EPWContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2D12450F1B100F046C6 /* EPWContactDetailViewController.m */; };
+		B5D2A2D62450F50E00F046C6 /* EPWContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2D52450F50E00F046C6 /* EPWContact.m */; };
+		B5D2A2DA2450F56600F046C6 /* EPWContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2A2D92450F56600F046C6 /* EPWContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		B5D2A2C12450EA2900F046C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5D2A2C32450EA2900F046C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D2A2C42450EA2900F046C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5D2A2CD2450F17500F046C6 /* EPWContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWContactTableViewController.h; sourceTree = "<group>"; };
+		B5D2A2CE2450F17500F046C6 /* EPWContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPWContactTableViewController.m; sourceTree = "<group>"; };
+		B5D2A2D02450F1B100F046C6 /* EPWContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWContactDetailViewController.h; sourceTree = "<group>"; };
+		B5D2A2D12450F1B100F046C6 /* EPWContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPWContactDetailViewController.m; sourceTree = "<group>"; };
+		B5D2A2D42450F50E00F046C6 /* EPWContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWContact.h; sourceTree = "<group>"; };
+		B5D2A2D52450F50E00F046C6 /* EPWContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPWContact.m; sourceTree = "<group>"; };
+		B5D2A2D82450F56600F046C6 /* EPWContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWContactController.h; sourceTree = "<group>"; };
+		B5D2A2D92450F56600F046C6 /* EPWContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPWContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,9 @@
 			children = (
 				B5D2A2BB2450EA2700F046C6 /* Main.storyboard */,
 				B5D2A2C02450EA2900F046C6 /* LaunchScreen.storyboard */,
+				B5D2A2D32450F4F200F046C6 /* Model */,
+				B5D2A2D72450F54600F046C6 /* Model Controllers */,
+				B5D2A2CC2450F14E00F046C6 /* View Controllers */,
 				B5D2A2B22450EA2700F046C6 /* AppDelegate.h */,
 				B5D2A2B32450EA2700F046C6 /* AppDelegate.m */,
 				B5D2A2B52450EA2700F046C6 /* SceneDelegate.h */,
@@ -69,6 +84,35 @@
 				B5D2A2C42450EA2900F046C6 /* main.m */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		B5D2A2CC2450F14E00F046C6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2A2CD2450F17500F046C6 /* EPWContactTableViewController.h */,
+				B5D2A2CE2450F17500F046C6 /* EPWContactTableViewController.m */,
+				B5D2A2D02450F1B100F046C6 /* EPWContactDetailViewController.h */,
+				B5D2A2D12450F1B100F046C6 /* EPWContactDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B5D2A2D32450F4F200F046C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2A2D42450F50E00F046C6 /* EPWContact.h */,
+				B5D2A2D52450F50E00F046C6 /* EPWContact.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5D2A2D72450F54600F046C6 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2A2D82450F56600F046C6 /* EPWContactController.h */,
+				B5D2A2D92450F56600F046C6 /* EPWContactController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D2A2D22450F1B100F046C6 /* EPWContactDetailViewController.m in Sources */,
 				B5D2A2B42450EA2700F046C6 /* AppDelegate.m in Sources */,
+				B5D2A2CF2450F17500F046C6 /* EPWContactTableViewController.m in Sources */,
 				B5D2A2C52450EA2900F046C6 /* main.m in Sources */,
 				B5D2A2B72450EA2700F046C6 /* SceneDelegate.m in Sources */,
+				B5D2A2DA2450F56600F046C6 /* EPWContactController.m in Sources */,
+				B5D2A2D62450F50E00F046C6 /* EPWContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
