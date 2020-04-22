@@ -10,7 +10,7 @@
         <!--Contact-->
         <scene sceneID="bkp-BX-fZS">
             <objects>
-                <tableViewController id="Eeh-aQ-Xxq" sceneMemberID="viewController">
+                <tableViewController id="Eeh-aQ-Xxq" customClass="EGCTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HIz-hm-Mdb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--View Controller-->
         <scene sceneID="tlk-yA-hWE">
             <objects>
-                <viewController id="DjW-J1-XA2" sceneMemberID="viewController">
+                <viewController id="DjW-J1-XA2" customClass="EGCViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8k3-fr-ofS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,8 +129,17 @@
                         <viewLayoutGuide key="safeArea" id="t6k-kt-Zx5"/>
                     </view>
                     <navigationItem key="navigationItem" id="r24-Vi-UHF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cYZ-7b-DGA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cYZ-7b-DGA">
+                            <connections>
+                                <action selector="savePressed:" destination="DjW-J1-XA2" id="ARI-yx-qTc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="WuC-Lv-gMu" id="EcR-6o-42r"/>
+                        <outlet property="nameTextField" destination="Xli-hr-fkl" id="Z3M-bU-osj"/>
+                        <outlet property="phoneTextField" destination="WaN-5k-0cU" id="p4B-hA-M4o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldS-Mm-uhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

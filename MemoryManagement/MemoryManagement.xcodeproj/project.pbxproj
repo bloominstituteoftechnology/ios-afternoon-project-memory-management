@@ -15,6 +15,8 @@
 		5C522D082450D455003181F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D072450D455003181F9 /* main.m */; };
 		5C522D132450E52A003181F9 /* EGCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D122450E52A003181F9 /* EGCContact.m */; };
 		5C522D162450E99C003181F9 /* EGCContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D152450E99C003181F9 /* EGCContactController.m */; };
+		5C522D192450EA62003181F9 /* EGCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D182450EA62003181F9 /* EGCTableViewController.m */; };
+		5C522D1C2450EA6F003181F9 /* EGCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C522D1B2450EA6F003181F9 /* EGCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		5C522D122450E52A003181F9 /* EGCContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCContact.m; sourceTree = "<group>"; };
 		5C522D142450E99C003181F9 /* EGCContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCContactController.h; sourceTree = "<group>"; };
 		5C522D152450E99C003181F9 /* EGCContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCContactController.m; sourceTree = "<group>"; };
+		5C522D172450EA62003181F9 /* EGCTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCTableViewController.h; sourceTree = "<group>"; };
+		5C522D182450EA62003181F9 /* EGCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCTableViewController.m; sourceTree = "<group>"; };
+		5C522D1A2450EA6F003181F9 /* EGCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCViewController.h; sourceTree = "<group>"; };
+		5C522D1B2450EA6F003181F9 /* EGCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 		5C522D102450E4F1003181F9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C522D172450EA62003181F9 /* EGCTableViewController.h */,
+				5C522D182450EA62003181F9 /* EGCTableViewController.m */,
+				5C522D1A2450EA6F003181F9 /* EGCViewController.h */,
+				5C522D1B2450EA6F003181F9 /* EGCViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -177,9 +187,11 @@
 			files = (
 				5C522CF72450D454003181F9 /* AppDelegate.m in Sources */,
 				5C522D082450D455003181F9 /* main.m in Sources */,
+				5C522D1C2450EA6F003181F9 /* EGCViewController.m in Sources */,
 				5C522D162450E99C003181F9 /* EGCContactController.m in Sources */,
 				5C522D132450E52A003181F9 /* EGCContact.m in Sources */,
 				5C522CFA2450D454003181F9 /* SceneDelegate.m in Sources */,
+				5C522D192450EA62003181F9 /* EGCTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
