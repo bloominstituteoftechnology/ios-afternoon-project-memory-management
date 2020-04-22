@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  KMLAddContactViewController.h
 //  MemoryManagement
 //
 //  Created by Keri Levesque on 4/22/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface KMLAddContactViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		55398B142450E9FC0066C4BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B132450E9FC0066C4BE /* AppDelegate.m */; };
 		55398B172450E9FC0066C4BE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B162450E9FC0066C4BE /* SceneDelegate.m */; };
-		55398B1A2450E9FC0066C4BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B192450E9FC0066C4BE /* ViewController.m */; };
 		55398B1D2450E9FC0066C4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55398B1B2450E9FC0066C4BE /* Main.storyboard */; };
 		55398B1F2450EA010066C4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55398B1E2450EA010066C4BE /* Assets.xcassets */; };
 		55398B222450EA010066C4BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55398B202450EA010066C4BE /* LaunchScreen.storyboard */; };
 		55398B252450EA010066C4BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B242450EA010066C4BE /* main.m */; };
+		55398B2E2450F7FE0066C4BE /* KMLAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B2D2450F7FE0066C4BE /* KMLAddContactViewController.m */; };
+		55398B312450F8190066C4BE /* KMLContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B302450F8190066C4BE /* KMLContactTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		55398B132450E9FC0066C4BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		55398B152450E9FC0066C4BE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		55398B162450E9FC0066C4BE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		55398B182450E9FC0066C4BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		55398B192450E9FC0066C4BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		55398B1C2450E9FC0066C4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55398B1E2450EA010066C4BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55398B212450EA010066C4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55398B232450EA010066C4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55398B242450EA010066C4BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55398B2C2450F7FE0066C4BE /* KMLAddContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLAddContactViewController.h; sourceTree = "<group>"; };
+		55398B2D2450F7FE0066C4BE /* KMLAddContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLAddContactViewController.m; sourceTree = "<group>"; };
+		55398B2F2450F8190066C4BE /* KMLContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLContactTableViewController.h; sourceTree = "<group>"; };
+		55398B302450F8190066C4BE /* KMLContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLContactTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +64,11 @@
 		55398B112450E9FC0066C4BE /* MemoryManagement */ = {
 			isa = PBXGroup;
 			children = (
+				55398B2B2450F7D80066C4BE /* View Controllers */,
 				55398B122450E9FC0066C4BE /* AppDelegate.h */,
 				55398B132450E9FC0066C4BE /* AppDelegate.m */,
 				55398B152450E9FC0066C4BE /* SceneDelegate.h */,
 				55398B162450E9FC0066C4BE /* SceneDelegate.m */,
-				55398B182450E9FC0066C4BE /* ViewController.h */,
-				55398B192450E9FC0066C4BE /* ViewController.m */,
 				55398B1B2450E9FC0066C4BE /* Main.storyboard */,
 				55398B1E2450EA010066C4BE /* Assets.xcassets */,
 				55398B202450EA010066C4BE /* LaunchScreen.storyboard */,
@@ -74,6 +76,17 @@
 				55398B242450EA010066C4BE /* main.m */,
 			);
 			path = MemoryManagement;
+			sourceTree = "<group>";
+		};
+		55398B2B2450F7D80066C4BE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55398B2C2450F7FE0066C4BE /* KMLAddContactViewController.h */,
+				55398B2D2450F7FE0066C4BE /* KMLAddContactViewController.m */,
+				55398B2F2450F8190066C4BE /* KMLContactTableViewController.h */,
+				55398B302450F8190066C4BE /* KMLContactTableViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55398B1A2450E9FC0066C4BE /* ViewController.m in Sources */,
+				55398B312450F8190066C4BE /* KMLContactTableViewController.m in Sources */,
+				55398B2E2450F7FE0066C4BE /* KMLAddContactViewController.m in Sources */,
 				55398B142450E9FC0066C4BE /* AppDelegate.m in Sources */,
 				55398B252450EA010066C4BE /* main.m in Sources */,
 				55398B172450E9FC0066C4BE /* SceneDelegate.m in Sources */,
