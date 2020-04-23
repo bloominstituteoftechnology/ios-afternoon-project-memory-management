@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dPq-QI-JEF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact Table View Controller-->
+        <scene sceneID="xL2-U0-IwC">
+            <objects>
+                <tableViewController id="e4c-iM-TuN" customClass="ContactTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m3z-mf-iXj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="70" id="Z4n-ta-eOS">
+                                <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z4n-ta-eOS" id="Y6c-Cb-Dmv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Eg7-GT-xiz" kind="show" identifier="CellSegue" id="gIB-Oc-9B6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e4c-iM-TuN" id="EW5-nE-yZu"/>
+                            <outlet property="delegate" destination="e4c-iM-TuN" id="YVO-u4-mwp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SpY-36-Z27">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="j6c-Ub-ASk">
+                            <connections>
+                                <segue destination="Eg7-GT-xiz" kind="show" identifier="AddSegue" id="LhG-9x-48A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khe-7d-PIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223.1884057971015" y="115.84821428571428"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="BZX-lz-ULz">
+            <objects>
+                <viewController id="Eg7-GT-xiz" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="km8-Cd-eR6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="KNW-vu-5Lw">
+                                <rect key="frame" x="16" y="350" width="382" height="196"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwX-qi-Idf">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yg0-8j-rTE">
+                                        <rect key="frame" x="0.0" y="81" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWB-4J-8E5">
+                                        <rect key="frame" x="0.0" y="162" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KNW-vu-5Lw" firstAttribute="leading" secondItem="mvJ-ik-FMH" secondAttribute="leading" constant="16" id="8W3-8Q-CLW"/>
+                            <constraint firstItem="KNW-vu-5Lw" firstAttribute="centerX" secondItem="km8-Cd-eR6" secondAttribute="centerX" id="Hge-pg-SvS"/>
+                            <constraint firstItem="mvJ-ik-FMH" firstAttribute="trailing" secondItem="KNW-vu-5Lw" secondAttribute="trailing" constant="16" id="Qyf-gB-1qc"/>
+                            <constraint firstItem="KNW-vu-5Lw" firstAttribute="centerY" secondItem="km8-Cd-eR6" secondAttribute="centerY" id="t6O-nA-ps1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mvJ-ik-FMH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZCM-nT-Dag">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="uc0-vF-GXf">
+                            <connections>
+                                <action selector="saveTapped:" destination="Eg7-GT-xiz" id="3Ez-bi-oJf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="yg0-8j-rTE" id="jKA-WM-mDb"/>
+                        <outlet property="nameTextField" destination="cwX-qi-Idf" id="Ouo-JG-d2L"/>
+                        <outlet property="phoneTextField" destination="xWB-4J-8E5" id="6GY-7G-BqX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIZ-hX-OfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228.985507246377" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gZw-9p-k5c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dPq-QI-JEF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NtW-FC-6Fv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e4c-iM-TuN" kind="relationship" relationship="rootViewController" id="dxL-MY-XGf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLs-YX-hPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313.04347826086956" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gIB-Oc-9B6"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
