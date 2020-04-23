@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553938AD24524F4E0000F29C /* KMLContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553938AC24524F4E0000F29C /* KMLContactController.m */; };
 		55398B142450E9FC0066C4BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B132450E9FC0066C4BE /* AppDelegate.m */; };
 		55398B172450E9FC0066C4BE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398B162450E9FC0066C4BE /* SceneDelegate.m */; };
 		55398B1D2450E9FC0066C4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55398B1B2450E9FC0066C4BE /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		553938AB24524F4E0000F29C /* KMLContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLContactController.h; sourceTree = "<group>"; };
+		553938AC24524F4E0000F29C /* KMLContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLContactController.m; sourceTree = "<group>"; };
 		55398B0F2450E9FC0066C4BE /* MemoryManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55398B122450E9FC0066C4BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55398B132450E9FC0066C4BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 		55398B372450F8B20066C4BE /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				553938AB24524F4E0000F29C /* KMLContactController.h */,
+				553938AC24524F4E0000F29C /* KMLContactController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55398B312450F8190066C4BE /* KMLContactTableViewController.m in Sources */,
+				553938AD24524F4E0000F29C /* KMLContactController.m in Sources */,
 				55398B3A2450F8E70066C4BE /* KMLContact.m in Sources */,
 				55398B2E2450F7FE0066C4BE /* KMLAddContactViewController.m in Sources */,
 				55398B142450E9FC0066C4BE /* AppDelegate.m in Sources */,
