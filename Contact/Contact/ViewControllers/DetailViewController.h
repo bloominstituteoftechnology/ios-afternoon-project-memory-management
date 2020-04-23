@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ContactController;
+@class Contact;
+
 @interface DetailViewController : UIViewController
+
+@property (nonatomic, retain) ContactController *contactController;
+@property (nonatomic, retain) Contact *contact;
 
 
 @end

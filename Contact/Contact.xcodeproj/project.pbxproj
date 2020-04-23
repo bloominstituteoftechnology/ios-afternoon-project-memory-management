@@ -15,6 +15,8 @@
 		B66F77A02451137800E0727E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66F779E2451137800E0727E /* LaunchScreen.storyboard */; };
 		B66F77A32451137800E0727E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B66F77A22451137800E0727E /* main.m */; };
 		B66F77AB245114CD00E0727E /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66F77AA245114CD00E0727E /* ContactTableViewController.m */; };
+		B66F77B1245115D400E0727E /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = B66F77B0245115D400E0727E /* Contact.m */; };
+		B66F77B5245117D900E0727E /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66F77B4245117D900E0727E /* ContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		B66F77A22451137800E0727E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B66F77A9245114CD00E0727E /* ContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		B66F77AA245114CD00E0727E /* ContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		B66F77AF245115D400E0727E /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		B66F77B0245115D400E0727E /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		B66F77B3245117D900E0727E /* ContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
+		B66F77B4245117D900E0727E /* ContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		B66F778F2451137600E0727E /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				B66F77B2245116FC00E0727E /* Model */,
 				B66F77AC245114D500E0727E /* Resources */,
 				B66F77AE2451152B00E0727E /* ViewControllers */,
 				B66F77AD245114E200E0727E /* Storyboard */,
@@ -103,6 +110,17 @@
 				B66F77AA245114CD00E0727E /* ContactTableViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B66F77B2245116FC00E0727E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B66F77AF245115D400E0727E /* Contact.h */,
+				B66F77B0245115D400E0727E /* Contact.m */,
+				B66F77B3245117D900E0727E /* ContactController.h */,
+				B66F77B4245117D900E0727E /* ContactController.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66F77B5245117D900E0727E /* ContactController.m in Sources */,
 				B66F77AB245114CD00E0727E /* ContactTableViewController.m in Sources */,
 				B66F77982451137600E0727E /* DetailViewController.m in Sources */,
 				B66F77922451137600E0727E /* AppDelegate.m in Sources */,
 				B66F77A32451137800E0727E /* main.m in Sources */,
+				B66F77B1245115D400E0727E /* Contact.m in Sources */,
 				B66F77952451137600E0727E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
