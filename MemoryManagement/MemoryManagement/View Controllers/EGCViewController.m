@@ -17,10 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateViews];
+//    self.view.subviews // owns the memory (collection) +1
 }
 
-- (void)updateViews
-{
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    [self.nameTextField removeFromSuperview]; // 2 -> 1
+//    [self.view addSubview:self.nameTextField]; // 1 -> 2
+}
+
+- (void)updateViews {
     if (self.contact != nil) {
         self.title = @"Update Contact";
         self.nameTextField.text = self.contact.name;
@@ -32,36 +38,26 @@
 }
 
 - (IBAction)savePressed:(id)sender {
-    NSString *name = _nameTextField.text;
-    NSString *email = _emailTextField.text;
-    NSString *phone = _phoneTextField.text;
+    NSString *name = self.nameTextField.text;
+    NSString *email = self.emailTextField.text;
+    NSString *phone = self.phoneTextField.text;
     
     if (self.contact != nil) {
-        [self.contactController updateContact:[self contact] withName:name email:email phone:phone];
+        [self.contactController updateContact:self.contact withName:name email:email phone:phone];
     } else {
-        EGCContact *newContact = [[EGCContact alloc] initWithName:name email:email phone:phone];
-        [self.contactController addContact:newContact];
-        [newContact release];
+        EGCContact *newContact = [[EGCContact alloc] initWithName:name email:email phone:phone]; // +1
+        [self.contactController addContact:newContact]; // 2
+        [newContact release]; // 1
     }
     [self.navigationController popToRootViewControllerAnimated:true];
 }
 
 - (void)dealloc {
     [_nameTextField release];
-    _nameTextField = nil;
-    
     [_emailTextField release];
-    _emailTextField = nil;
-    
     [_phoneTextField release];
-    _phoneTextField = nil;
-    
     [_contact release];
-    _contact = nil;
-    
     [_contactController release];
-    _contactController = nil;
-    
     [super dealloc];
 }
 

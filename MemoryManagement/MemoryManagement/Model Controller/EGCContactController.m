@@ -10,7 +10,7 @@
 
 @interface EGCContactController ()
 
-@property (nonatomic) NSMutableArray<EGCContact *> *internalContact;
+@property (nonatomic) NSMutableArray<EGCContact *> *internalContacts;
 
 @end
 
@@ -19,25 +19,29 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _internalContact = [[NSMutableArray alloc] init];
+        // use _variableName
+        _internalContacts = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)addContact:(EGCContact *)aContact {
-    [_internalContact addObject:aContact];
+    // use self.variableName KVO Compliant
+    [self.internalContacts addObject:aContact]; // +1
 }
 
+
 - (void)updateContact:(EGCContact *)aContact withName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber {
-    NSUInteger index = [_internalContact indexOfObject:aContact];
+    NSUInteger index = [self.internalContacts indexOfObject:aContact];
     aContact.name = name;
     aContact.emailAddress = emailAddress;
     aContact.phoneNumber = phoneNumber;
-    [_internalContact replaceObjectAtIndex:index withObject:aContact];
+    [self.internalContacts replaceObjectAtIndex:index withObject:aContact]; // changing data without notifying!
 }
 
 - (NSArray *)contacts {
-    return [[[NSArray alloc] initWithArray:_internalContact] autorelease];
+//    return [[[NSArray alloc] initWithArray:self.internalContact] autorelease];
+    return [[self.internalContacts copy] autorelease]; // copy on write
 }
 
 @end

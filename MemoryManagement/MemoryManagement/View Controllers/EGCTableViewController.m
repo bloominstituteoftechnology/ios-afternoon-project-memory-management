@@ -32,7 +32,6 @@
     
     [_contactController addContact:[EGCContact contactWithName:@"Enrique" email:@"Enrique@gmail.com" phone:@"123-456-7890"]];
     [_contactController addContact:[EGCContact contactWithName:@"Madison" email:@"Madison@gmail.com" phone:@"123-456-7890"]];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -55,7 +54,6 @@
     cell.textLabel.text = contact.name;
     return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"DetailSegue" sender:indexPath];
