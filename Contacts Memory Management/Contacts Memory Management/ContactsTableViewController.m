@@ -8,6 +8,7 @@
 
 #import "ContactsTableViewController.h"
 #import "Contact.h"
+#import "ContactDetailViewController.h"
 
 @interface ContactsTableViewController () <ContactDelegate>
 
@@ -44,11 +45,23 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([segue.identifier isEqualToString:@"AddNewContactSegue"]) {
-        NSLog(@"%@", segue.identifier);
+        ContactDetailViewController *addContactVC = [segue destinationViewController];
+        addContactVC.delegate = self;
+        
     } else if ([segue.identifier isEqualToString:@"ShowContactDetailSegue"]) {
-        NSLog(@"%@", segue.identifier);
+        ContactDetailViewController *contactDetailVC = [segue destinationViewController];
+        contactDetailVC.delegate = self;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Contact *contact = self.contacts[indexPath.row];
+        if (!contact) {
+            return;
+        } else {
+            contactDetailVC.contact = contact;
+        }
     }
 }
 
