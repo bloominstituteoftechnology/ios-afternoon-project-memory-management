@@ -69,7 +69,7 @@
 
 - (IBAction)addButtonTapped:(id)sender
 {
-    
+    [self performSegueWithIdentifier:@"AddNewContactSegue" sender:self];
 }
 
 #pragma mark - Delegate Methods
