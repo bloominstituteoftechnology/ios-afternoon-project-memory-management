@@ -93,14 +93,14 @@
                         <viewLayoutGuide key="safeArea" id="hsd-rj-vja"/>
                     </view>
                     <navigationItem key="navigationItem" id="PST-VL-geG">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="II4-AK-zgz">
+                        <barButtonItem key="rightBarButtonItem" title="Button" style="plain" id="II4-AK-zgz">
                             <connections>
-                                <action selector="editButtonTapped:" destination="lOE-jZ-cuV" id="O1C-lq-rCv"/>
+                                <action selector="editOrSaveButtonTapped:" destination="lOE-jZ-cuV" id="O1C-lq-rCv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="editButton" destination="II4-AK-zgz" id="Mht-el-d9U"/>
+                        <outlet property="editOrSaveButton" destination="II4-AK-zgz" id="Mht-el-d9U"/>
                         <outlet property="emailTextField" destination="ani-Jv-CrR" id="7CH-DC-hhv"/>
                         <outlet property="nameTextField" destination="P1M-FU-9UY" id="E2A-Xi-nx0"/>
                         <outlet property="phoneTextField" destination="SBh-N7-Af2" id="GUF-e4-ifC"/>
