@@ -46,6 +46,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="m6S-AV-iwC">
                             <connections>
                                 <action selector="addButtonTapped:" destination="Nge-GR-nvz" id="SS5-Dw-HZy"/>
+                                <segue destination="lOE-jZ-cuV" kind="show" identifier="AddNewContactSegue" id="n00-0K-C0x"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -128,4 +129,7 @@
             <point key="canvasLocation" x="-2133.3333333333335" y="240.40178571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gzU-nw-tKX"/>
+    </inferredMetricsTieBreakers>
 </document>

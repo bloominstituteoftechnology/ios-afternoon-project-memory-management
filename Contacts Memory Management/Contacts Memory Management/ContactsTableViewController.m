@@ -26,11 +26,6 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     return 0;
@@ -80,15 +75,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"AddNewContactSegue"]) {
+        NSLog(@"%@", segue.identifier);
+    } else if ([segue.identifier isEqualToString:@"ShowContactDetailSegue"]) {
+        NSLog(@"%@", segue.identifier);
+    }
 }
-*/
+
 
 - (IBAction)addButtonTapped:(id)sender
 {
