@@ -7,6 +7,7 @@
 //
 
 #import "ContactDetailViewController.h"
+#import "Contact.h"
 
 @interface ContactDetailViewController ()
 
