@@ -9,13 +9,14 @@
 #import "ContactsTableViewController.h"
 #import "Contact.h"
 
-@interface ContactsTableViewController ()
+@interface ContactsTableViewController () <ContactDelegate>
 
 @end
 
 @implementation ContactsTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
 }
@@ -83,11 +84,18 @@
     }
 }
 
+#pragma mark - IBActions
 
 - (IBAction)addButtonTapped:(id)sender
 {
     
 }
 
+#pragma mark - Delegate Methods
+
+- (void)newContactAdded:(nonnull Contact *)contact
+{
+    // Add new contact to local contact array
+}
 
 @end

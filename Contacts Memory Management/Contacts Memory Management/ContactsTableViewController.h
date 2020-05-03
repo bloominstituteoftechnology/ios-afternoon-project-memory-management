@@ -12,9 +12,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ContactDelegate;
+
+
 @interface ContactsTableViewController : UITableViewController
 
 @property (nonatomic, copy) NSMutableArray<Contact *> *contacts;
+
+@end
+
+
+@protocol ContactDelegate <NSObject>
+
+- (void)newContactAdded:(Contact *)contact;
 
 @end
 
