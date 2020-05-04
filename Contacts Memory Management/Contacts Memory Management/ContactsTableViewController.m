@@ -19,7 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.contacts = [[NSMutableArray alloc] init];
+    self.contacts = [[[NSMutableArray alloc] init] autorelease];
+}
+
+- (void)dealloc
+{
+    [_contacts autorelease];
+    [super dealloc];
 }
 
 #pragma mark - Table view data source
@@ -62,7 +68,6 @@
         } else {
             contactDetailVC.indexPath = indexPath;
             contactDetailVC.contact = contact;
-            [indexPath autorelease];
         }
     }
 }
@@ -88,5 +93,7 @@
     [self.contacts addObject:contact];
     [self.tableView reloadData];
 }
+
+
 
 @end

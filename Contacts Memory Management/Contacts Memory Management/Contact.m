@@ -20,4 +20,12 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_name autorelease];
+    [_phoneNumber autorelease];
+    [_email autorelease];
+    [super dealloc];
+}
+
 @end

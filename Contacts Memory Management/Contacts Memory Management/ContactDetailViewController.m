@@ -40,6 +40,7 @@
     [_emailTextField release];
     [_saveButton release];
     [_indexPath autorelease];
+    [_contact autorelease];
     [super dealloc];
 }
 
@@ -52,7 +53,7 @@
             self.contact.phoneNumber = self.phoneTextField.text;
             self.contact.email = self.emailTextField.text;
             
-            [self.contact autorelease];
+//            [self.contact autorelease];
             
             [self.delegate contactWasEdited:self.contact atIndexPath:self.indexPath];
             [self.navigationController popViewControllerAnimated:YES];
