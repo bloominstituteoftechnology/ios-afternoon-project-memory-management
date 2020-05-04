@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) Contact *contact;
 @property (nonatomic, weak) id<ContactDelegate> delegate;
+@property (nonatomic, retain) NSIndexPath *indexPath;
 
 @end
 

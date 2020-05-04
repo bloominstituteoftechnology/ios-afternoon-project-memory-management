@@ -15,7 +15,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *nameTextField;
 @property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *editOrSaveButton;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 - (BOOL)textFieldsAreEmpty;
 
@@ -30,9 +30,6 @@
         self.nameTextField.text = self.contact.name;
         self.phoneTextField.text = self.contact.phoneNumber;
         self.emailTextField.text = self.contact.email;
-        self.editOrSaveButton.title = @"Edit";
-    } else {
-        self.editOrSaveButton.title = @"Save";
     }
 }
 
@@ -41,34 +38,35 @@
     [_nameTextField release];
     [_phoneTextField release];
     [_emailTextField release];
-    [_editOrSaveButton release];
-    [self.contact release];
+    [_saveButton release];
+    [_indexPath autorelease];
     [super dealloc];
 }
 
 
-- (IBAction)editOrSaveButtonTapped:(id)sender
+- (IBAction)saveButtonTapped:(id)sender
 {
-    if (self.contact && !self.textFieldsAreEmpty) {
-        self.contact.name = self.nameTextField.text;
-        self.contact.phoneNumber = self.phoneTextField.text;
-        self.contact.email = self.emailTextField.text;
-        
-        [self.contact autorelease];
-        [self.delegate newContactAdded:self.contact];
-        [self.navigationController popViewControllerAnimated:YES];
-        
-    } else if (!self.textFieldsAreEmpty) {
-        NSString *name = self.nameTextField.text;
-        NSString *phoneNumber = self.phoneTextField.text;
-        NSString *email = self.emailTextField.text;
-        
-        Contact *contact = [[Contact alloc] initWithName:name phoneNumber:phoneNumber email:email];
-        [contact autorelease];
-        
-        [self.delegate newContactAdded:contact];
-        [self.navigationController popViewControllerAnimated:YES];
-        
+    if (!self.textFieldsAreEmpty) {
+        if (self.contact && self.indexPath) {
+            self.contact.name = self.nameTextField.text;
+            self.contact.phoneNumber = self.phoneTextField.text;
+            self.contact.email = self.emailTextField.text;
+            
+            [self.contact autorelease];
+            
+            [self.delegate contactWasEdited:self.contact atIndexPath:self.indexPath];
+            [self.navigationController popViewControllerAnimated:YES];
+        } else if (!self.contact && !self.indexPath) {
+            NSString *name = self.nameTextField.text;
+            NSString *phoneNumber = self.phoneTextField.text;
+            NSString *email = self.emailTextField.text;
+            
+            Contact *contact = [[Contact alloc] initWithName:name phoneNumber:phoneNumber email:email];
+            [contact autorelease];
+            
+            [self.delegate contactWasAdded:contact];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     } else {
         return;
     }

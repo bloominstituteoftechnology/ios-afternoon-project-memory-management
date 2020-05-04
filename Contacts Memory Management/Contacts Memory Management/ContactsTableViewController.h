@@ -17,14 +17,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactsTableViewController : UITableViewController
 
-@property (nonatomic, copy) NSMutableArray<Contact *> *contacts;
+@property (nonatomic, retain) NSMutableArray<Contact *> *contacts;
 
 @end
 
 
 @protocol ContactDelegate <NSObject>
 
-- (void)newContactAdded:(Contact *)contact;
+- (void)contactWasAdded:(Contact *)contact;
+- (void)contactWasEdited:(Contact *)contact atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.contacts = [[NSMutableArray alloc] init];
 }
 
 #pragma mark - Table view data source
@@ -35,7 +35,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactCell" forIndexPath:indexPath];
     Contact *contact = self.contacts[indexPath.row];
     NSString *contactName = [[NSString alloc] initWithFormat:@"%@", contact.name];
-    
+    [contactName autorelease];
     cell.textLabel.text = contactName;
     
     return cell;
@@ -60,7 +60,9 @@
         if (!contact) {
             return;
         } else {
+            contactDetailVC.indexPath = indexPath;
             contactDetailVC.contact = contact;
+            [indexPath autorelease];
         }
     }
 }
@@ -74,9 +76,17 @@
 
 #pragma mark - Delegate Methods
 
-- (void)newContactAdded:(nonnull Contact *)contact
+- (void)contactWasAdded:(nonnull Contact *)contact
 {
-    // Add new contact to local contact array
+    [self.contacts addObject:contact];
+    [self.tableView reloadData];
+}
+
+- (void)contactWasEdited:(Contact *)contact atIndexPath:(NSIndexPath *)indexPath
+{
+    [self.contacts removeObjectAtIndex:indexPath.row];
+    [self.contacts addObject:contact];
+    [self.tableView reloadData];
 }
 
 @end

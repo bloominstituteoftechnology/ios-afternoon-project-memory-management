@@ -93,17 +93,17 @@
                         <viewLayoutGuide key="safeArea" id="hsd-rj-vja"/>
                     </view>
                     <navigationItem key="navigationItem" id="PST-VL-geG">
-                        <barButtonItem key="rightBarButtonItem" title="Button" style="plain" id="II4-AK-zgz">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="II4-AK-zgz">
                             <connections>
-                                <action selector="editOrSaveButtonTapped:" destination="lOE-jZ-cuV" id="O1C-lq-rCv"/>
+                                <action selector="saveButtonTapped:" destination="lOE-jZ-cuV" id="O1C-lq-rCv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="editOrSaveButton" destination="II4-AK-zgz" id="Mht-el-d9U"/>
                         <outlet property="emailTextField" destination="ani-Jv-CrR" id="7CH-DC-hhv"/>
                         <outlet property="nameTextField" destination="P1M-FU-9UY" id="E2A-Xi-nx0"/>
                         <outlet property="phoneTextField" destination="SBh-N7-Af2" id="GUF-e4-ifC"/>
+                        <outlet property="saveButton" destination="II4-AK-zgz" id="Mht-el-d9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYx-Re-vvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
