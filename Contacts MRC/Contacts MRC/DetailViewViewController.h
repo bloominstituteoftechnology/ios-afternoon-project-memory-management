@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class HLOContact;
+@class HLOContactController;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailViewViewController : UIViewController
+
+@property (nonatomic, nullable, retain) HLOContact *contact;
+@property (nonatomic, nonnull, retain) HLOContactController *contactController;
 
 @end
 
