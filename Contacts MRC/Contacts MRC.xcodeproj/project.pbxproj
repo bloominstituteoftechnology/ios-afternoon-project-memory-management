@@ -13,6 +13,10 @@
 		9C6F4F192471D9670080981B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6F4F182471D9670080981B /* Assets.xcassets */; };
 		9C6F4F1C2471D9670080981B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6F4F1A2471D9670080981B /* LaunchScreen.storyboard */; };
 		9C6F4F1F2471D9670080981B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F4F1E2471D9670080981B /* main.m */; };
+		9C6F4F2D2471E9CB0080981B /* DetailViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F4F2C2471E9CB0080981B /* DetailViewViewController.m */; };
+		9C6F4F302471E9DE0080981B /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F4F2F2471E9DE0080981B /* ContactsTableViewController.m */; };
+		9C6F4F332471E9EB0080981B /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F4F322471E9EB0080981B /* Contact.m */; };
+		9C6F4F362471E9F70080981B /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F4F352471E9F70080981B /* ContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		9C6F4F1B2471D9670080981B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6F4F1D2471D9670080981B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6F4F1E2471D9670080981B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C6F4F2B2471E9CB0080981B /* DetailViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewViewController.h; sourceTree = "<group>"; };
+		9C6F4F2C2471E9CB0080981B /* DetailViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewViewController.m; sourceTree = "<group>"; };
+		9C6F4F2E2471E9DE0080981B /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		9C6F4F2F2471E9DE0080981B /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		9C6F4F312471E9EB0080981B /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		9C6F4F322471E9EB0080981B /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		9C6F4F342471E9F70080981B /* ContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
+		9C6F4F352471E9F70080981B /* ContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +70,65 @@
 		9C6F4F0B2471D9640080981B /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
-				9C6F4F0C2471D9640080981B /* AppDelegate.h */,
-				9C6F4F0D2471D9640080981B /* AppDelegate.m */,
-				9C6F4F0F2471D9640080981B /* SceneDelegate.h */,
-				9C6F4F102471D9640080981B /* SceneDelegate.m */,
-				9C6F4F152471D9640080981B /* Main.storyboard */,
+				9C6F4F2A2471E9A50080981B /* View Controllers */,
+				9C6F4F292471E8ED0080981B /* Model Controllers */,
+				9C6F4F272471E8AA0080981B /* Models */,
+				9C6F4F262471E8930080981B /* Storyboards */,
+				9C6F4F252471E8400080981B /* App */,
 				9C6F4F182471D9670080981B /* Assets.xcassets */,
-				9C6F4F1A2471D9670080981B /* LaunchScreen.storyboard */,
 				9C6F4F1D2471D9670080981B /* Info.plist */,
 				9C6F4F1E2471D9670080981B /* main.m */,
 			);
 			path = "Contacts MRC";
+			sourceTree = "<group>";
+		};
+		9C6F4F252471E8400080981B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F4F0C2471D9640080981B /* AppDelegate.h */,
+				9C6F4F0D2471D9640080981B /* AppDelegate.m */,
+				9C6F4F0F2471D9640080981B /* SceneDelegate.h */,
+				9C6F4F102471D9640080981B /* SceneDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C6F4F262471E8930080981B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F4F152471D9640080981B /* Main.storyboard */,
+				9C6F4F1A2471D9670080981B /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9C6F4F272471E8AA0080981B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F4F312471E9EB0080981B /* Contact.h */,
+				9C6F4F322471E9EB0080981B /* Contact.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C6F4F292471E8ED0080981B /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F4F342471E9F70080981B /* ContactController.h */,
+				9C6F4F352471E9F70080981B /* ContactController.m */,
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		9C6F4F2A2471E9A50080981B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C6F4F2B2471E9CB0080981B /* DetailViewViewController.h */,
+				9C6F4F2C2471E9CB0080981B /* DetailViewViewController.m */,
+				9C6F4F2E2471E9DE0080981B /* ContactsTableViewController.h */,
+				9C6F4F2F2471E9DE0080981B /* ContactsTableViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6F4F362471E9F70080981B /* ContactController.m in Sources */,
 				9C6F4F0E2471D9640080981B /* AppDelegate.m in Sources */,
 				9C6F4F1F2471D9670080981B /* main.m in Sources */,
+				9C6F4F302471E9DE0080981B /* ContactsTableViewController.m in Sources */,
+				9C6F4F2D2471E9CB0080981B /* DetailViewViewController.m in Sources */,
+				9C6F4F332471E9EB0080981B /* Contact.m in Sources */,
 				9C6F4F112471D9640080981B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
