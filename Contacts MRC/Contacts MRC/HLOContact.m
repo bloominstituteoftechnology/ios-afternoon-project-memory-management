@@ -45,7 +45,6 @@
     }
 }
 
-// MARK:- QUESTION FOR JON: Wouldn't calling dealloc when setting a new property call dealloc for all other properties?
 - (void)dealloc {
     [_name release]; // name: -1
     _name = nil;
