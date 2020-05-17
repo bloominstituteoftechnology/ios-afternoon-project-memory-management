@@ -24,4 +24,13 @@
     return [[[HLOContact alloc] init] autorelease];
 }
 
+- (void)dealloc {
+
+    [_name dealloc]; // name: -1
+    [_email dealloc]; // email: -1
+    [_phoneNumber dealloc]; // phoneNumber: -1
+
+    [super dealloc]
+}
+
 @end
