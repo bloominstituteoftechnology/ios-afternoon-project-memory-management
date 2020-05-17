@@ -33,7 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XwN-nv-jIN" kind="show" id="CpL-jN-3m2"/>
+                                    <segue destination="XwN-nv-jIN" kind="show" identifier="ViewContactShowSegue" id="CpL-jN-3m2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" id="Kr2-9U-saz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xwZ-Cm-dea">
                             <connections>
-                                <segue destination="XwN-nv-jIN" kind="show" id="vYE-cg-dYZ"/>
+                                <segue destination="XwN-nv-jIN" kind="show" identifier="AddContactShowSegue" id="vYE-cg-dYZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,6 +119,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vYE-cg-dYZ"/>
+        <segue reference="CpL-jN-3m2"/>
     </inferredMetricsTieBreakers>
 </document>
