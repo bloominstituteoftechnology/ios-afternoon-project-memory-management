@@ -7,12 +7,25 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "HLOContact.h"
+#import "HLOContactController.h"
 
 @interface ContactsTableViewController ()
+
+@property (nonatomic) HLOContactController *contactController;
 
 @end
 
 @implementation ContactsTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _contactController = [[HLOContactController alloc] init]; // contactController +1
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,13 +39,12 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return 0;
 }
 
