@@ -34,14 +34,14 @@
 
 - (void)setContact:(HLOContact *)contact {
     if (_contact != contact) {
-        [_contact dealloc];
+        [_contact release];
         _contact = [contact retain];
     }
 }
 
 - (void)setContactController:(HLOContactController *)contactController {
     if (_contactController != contactController) {
-        [_contactController dealloc];
+        [_contactController release];
         _contactController = [contactController retain];
     }
 }
@@ -55,5 +55,12 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    if (self.contact) {
+        self.contact.name = self.nameField.text;
+        self.contact.email = self.emailField.text;
+        self.contact.phoneNumber = self.phoneField.text;
+    }
+
+    [self.navigationController popViewControllerAnimated:true];
 }
 @end

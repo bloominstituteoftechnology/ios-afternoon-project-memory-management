@@ -42,6 +42,11 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -71,11 +76,12 @@
     DetailViewViewController *destination = segue.destinationViewController;
 
     if ([segue.identifier isEqualToString:@"AddContactShowSegue"]){
-
+        destination.contactController = self.contactController;
     } else if ([segue.identifier isEqualToString:@"ViewContactShowSegue"]){
 
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         destination.contact = self.contactController.contacts[indexPath.row];
+        destination.contactController = self.contactController;
     }
 
 }

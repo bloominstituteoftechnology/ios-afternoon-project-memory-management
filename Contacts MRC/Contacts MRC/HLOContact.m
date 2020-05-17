@@ -26,21 +26,21 @@
 
 - (void)setName:(NSString *)name {
     if (_name != name) {
-        [_name dealloc];        // -1 retain on previous value
+        [_name release];        // -1 retain on previous value
         _name = [name retain];  // +1 retain
     }
 }
 
 - (void)setEmail:(NSString *)email {
     if (_email != email) {
-        [_email dealloc];        // -1 retain on previous value
+        [_email release];        // -1 retain on previous value
         _email = [email retain];  // +1 retain
     }
 }
 
 - (void)setPhoneNumber:(NSString *)phoneNumber {
     if (_phoneNumber != phoneNumber) {
-        [_phoneNumber dealloc];        // -1 retain on previous value
+        [_phoneNumber release];        // -1 retain on previous value
         _phoneNumber = [phoneNumber retain];  // +1 retain
     }
 }
