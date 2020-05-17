@@ -59,6 +59,8 @@
         self.contact.name = self.nameField.text;
         self.contact.email = self.emailField.text;
         self.contact.phoneNumber = self.phoneField.text;
+    } else {
+        [self.contactController newContactWithName:self.nameField.text email:self.emailField.text phoneNumber:self.phoneField.text];
     }
 
     [self.navigationController popViewControllerAnimated:true];

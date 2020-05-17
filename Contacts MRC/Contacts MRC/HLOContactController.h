@@ -13,4 +13,6 @@
 
 @property (nonatomic, retain) NSMutableArray<HLOContact *> *contacts;
 
+- (void)newContactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber;
+
 @end

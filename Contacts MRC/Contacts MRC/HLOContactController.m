@@ -21,6 +21,10 @@
     return self;
 }
 
+- (void)newContactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber {
+    [self.contacts addObject:[HLOContact contactWithName:name email:email phoneNumber:phoneNumber]];
+}
+
 - (void)dealloc {
 
     [_contacts release];
