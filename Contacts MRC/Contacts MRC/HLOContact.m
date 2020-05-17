@@ -46,11 +46,11 @@
 }
 
 - (void)dealloc {
-    [_name dealloc]; // name: -1
+    [_name release]; // name: -1
     _name = nil;
-    [_email dealloc]; // email: -1
+    [_email release]; // email: -1
     _email = nil;
-    [_phoneNumber dealloc]; // phoneNumber: -1
+    [_phoneNumber release]; // phoneNumber: -1
     _phoneNumber = nil;
 
     [super dealloc];
