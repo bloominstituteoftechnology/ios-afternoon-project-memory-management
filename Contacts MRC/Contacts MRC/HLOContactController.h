@@ -11,6 +11,6 @@
 @class HLOContact;
 @interface HLOContactController : NSObject
 
-@property (nonatomic, readonly) NSMutableArray<HLOContact *> *contacts;
+@property (nonatomic, retain) NSMutableArray<HLOContact *> *contacts;
 
 @end

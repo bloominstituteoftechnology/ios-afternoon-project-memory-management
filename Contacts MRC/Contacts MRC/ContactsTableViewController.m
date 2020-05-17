@@ -35,6 +35,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    // contactWith initializer returns an autorelease object so its only reference count should be the one created by adding it to the array.
+    [self.contactController.contacts addObject:[HLOContact contactWithName:@"Hector Ledesma" email:@"hectoremil21@hotmail.com" phoneNumber:@"123-456-7890"]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -45,18 +49,21 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.contactController.contacts.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+
+    HLOContact *contact = self.contactController.contacts[indexPath.row];
+
+    cell.textLabel.text = contact.name;
+//    cell.textLabel.text = @"Test";
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

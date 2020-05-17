@@ -14,7 +14,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _contacts = [[[NSMutableArray<HLOContact *> alloc] init] autorelease];
+        // MARK:- Jesus christ that's a lot of stuff.
+        // MARK:- QUESTION FOR JON: Some explanation on how this works? lol
+        _contacts = [[[[NSMutableArray<HLOContact *> alloc] init] autorelease] retain];
     }
     return self;
 }

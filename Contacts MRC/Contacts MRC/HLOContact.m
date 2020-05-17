@@ -21,7 +21,7 @@
 }
 
 + (instancetype)contactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber {
-    return [[[HLOContact alloc] init] autorelease];
+    return [[[HLOContact alloc] initWithName:name email:email phoneNumber:phoneNumber] autorelease];
 }
 
 - (void)setName:(NSString *)name {
