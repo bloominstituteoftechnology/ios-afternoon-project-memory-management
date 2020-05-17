@@ -6,8 +6,8 @@
 //  Copyright © 2020 Hector Ledesma. All rights reserved.
 //
 
-#import "ContactController.h"
+#import "HLOContactController.h"
 
-@implementation ContactController
+@implementation HLOContactController
 
 @end
