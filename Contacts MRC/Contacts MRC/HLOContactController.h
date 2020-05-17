@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
+@class HLOContact;
 @interface HLOContactController : NSObject
 
-@end
+@property (nonatomic, readonly) NSMutableArray<HLOContact *> *contacts;
 
-NS_ASSUME_NONNULL_END
+@end

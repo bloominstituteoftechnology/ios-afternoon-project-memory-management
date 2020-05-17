@@ -7,7 +7,16 @@
 //
 
 #import "HLOContactController.h"
+#import "HLOContact.h"
 
 @implementation HLOContactController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _contacts = [[[NSMutableArray<HLOContact *> alloc] init] autorelease];
+    }
+    return self;
+}
 
 @end
