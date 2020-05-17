@@ -74,6 +74,8 @@
 
     } else if ([segue.identifier isEqualToString:@"ViewContactShowSegue"]){
 
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        destination.contact = self.contactController.contacts[indexPath.row];
     }
 
 }
