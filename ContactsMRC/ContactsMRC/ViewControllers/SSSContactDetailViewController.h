@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SSSContact;
+
 @interface SSSContactDetailViewController : UIViewController
 
+@property (nonatomic, retain) SSSContact *contact;
 
 @end
 

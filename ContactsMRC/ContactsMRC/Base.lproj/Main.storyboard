@@ -33,7 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="mBR-bp-odW"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowContactSegue" id="mBR-bp-odW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="5dF-y6-4R8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pcu-oF-wLy">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="2Dh-U5-08b"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddContactSegue" id="2Dh-U5-08b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,6 +126,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="c70-Lc-LOw"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="3jM-aj-zBP" id="rCv-5w-9HZ"/>
+                        <outlet property="emailTextField" destination="Hip-kS-Pfq" id="FuL-Qo-e8s"/>
+                        <outlet property="nameLabel" destination="eEP-Js-48R" id="Tu5-29-EyQ"/>
+                        <outlet property="nameTextField" destination="bEo-GB-J80" id="6mu-BV-AyY"/>
+                        <outlet property="phoneLabel" destination="L7r-uP-0X0" id="uKM-QB-2Cp"/>
+                        <outlet property="phoneTextField" destination="tZO-ec-0zI" id="D8K-pg-cCy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,7 @@
 
 #import "SSSContactTableViewController.h"
 #import "SSSContact.h"
+#import "SSSContactDetailViewController.h"
 
 @interface SSSContactTableViewController ()
 
@@ -55,6 +56,11 @@
     self.contacts = [self.contacts arrayByAddingObject:john];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 // MARK: - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -88,7 +94,11 @@
 // MARK: - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    if ([segue.identifier isEqualToString:@"ShowContactSegue"]) {
+        SSSContactDetailViewController *contactDetailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        contactDetailVC.contact = self.contacts[indexPath.row];
+    }
 }
 
 
