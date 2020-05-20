@@ -13,6 +13,7 @@
 		130090C72475C5B3007E86CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130090C62475C5B3007E86CA /* Assets.xcassets */; };
 		130090CA2475C5B3007E86CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130090C82475C5B3007E86CA /* LaunchScreen.storyboard */; };
 		130090CD2475C5B3007E86CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090CC2475C5B3007E86CA /* main.m */; };
+		130090D72475CF26007E86CA /* WAHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090D62475CF26007E86CA /* WAHContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		130090C92475C5B3007E86CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		130090CB2475C5B3007E86CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		130090CC2475C5B3007E86CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		130090D52475CF26007E86CA /* WAHContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHContact.h; sourceTree = "<group>"; };
+		130090D62475CF26007E86CA /* WAHContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		130090B92475C5B2007E86CA /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				130090D82475CF29007E86CA /* Model */,
 				130090D42475CD77007E86CA /* Application */,
 				130090D32475CD61007E86CA /* Storyboard */,
 			);
@@ -85,6 +89,15 @@
 				130090CC2475C5B3007E86CA /* main.m */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		130090D82475CF29007E86CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				130090D52475CF26007E86CA /* WAHContact.h */,
+				130090D62475CF26007E86CA /* WAHContact.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +173,7 @@
 				130090BC2475C5B2007E86CA /* AppDelegate.m in Sources */,
 				130090CD2475C5B3007E86CA /* main.m in Sources */,
 				130090BF2475C5B2007E86CA /* SceneDelegate.m in Sources */,
+				130090D72475CF26007E86CA /* WAHContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
