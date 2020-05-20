@@ -58,17 +58,33 @@
 		130090B92475C5B2007E86CA /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				130090D42475CD77007E86CA /* Application */,
+				130090D32475CD61007E86CA /* Storyboard */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		130090D32475CD61007E86CA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				130090C32475C5B2007E86CA /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		130090D42475CD77007E86CA /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				130090BA2475C5B2007E86CA /* AppDelegate.h */,
 				130090BB2475C5B2007E86CA /* AppDelegate.m */,
 				130090BD2475C5B2007E86CA /* SceneDelegate.h */,
 				130090BE2475C5B2007E86CA /* SceneDelegate.m */,
-				130090C32475C5B2007E86CA /* Main.storyboard */,
 				130090C62475C5B3007E86CA /* Assets.xcassets */,
 				130090C82475C5B3007E86CA /* LaunchScreen.storyboard */,
 				130090CB2475C5B3007E86CA /* Info.plist */,
 				130090CC2475C5B3007E86CA /* main.m */,
 			);
-			path = Contacts;
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Contacts/Info.plist;
+				INFOPLIST_FILE = Contacts/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Contacts/Info.plist;
+				INFOPLIST_FILE = Contacts/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
