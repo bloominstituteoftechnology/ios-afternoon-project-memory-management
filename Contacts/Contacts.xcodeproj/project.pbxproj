@@ -14,6 +14,9 @@
 		130090CA2475C5B3007E86CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130090C82475C5B3007E86CA /* LaunchScreen.storyboard */; };
 		130090CD2475C5B3007E86CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090CC2475C5B3007E86CA /* main.m */; };
 		130090D72475CF26007E86CA /* WAHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090D62475CF26007E86CA /* WAHContact.m */; };
+		130090DB2475D39D007E86CA /* WAHContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090DA2475D39D007E86CA /* WAHContactController.m */; };
+		130090DF2475D5C6007E86CA /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090DE2475D5C6007E86CA /* ContactsTableViewController.m */; };
+		130090E32475D5EB007E86CA /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130090E22475D5EB007E86CA /* ContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		130090CC2475C5B3007E86CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		130090D52475CF26007E86CA /* WAHContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHContact.h; sourceTree = "<group>"; };
 		130090D62475CF26007E86CA /* WAHContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHContact.m; sourceTree = "<group>"; };
+		130090D92475D39D007E86CA /* WAHContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHContactController.h; sourceTree = "<group>"; };
+		130090DA2475D39D007E86CA /* WAHContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHContactController.m; sourceTree = "<group>"; };
+		130090DD2475D5C6007E86CA /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		130090DE2475D5C6007E86CA /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		130090E12475D5EB007E86CA /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		130090E22475D5EB007E86CA /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +70,11 @@
 		130090B92475C5B2007E86CA /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				130090E02475D5CF007E86CA /* View Controllers */,
+				130090DC2475D3A6007E86CA /* Model Controller */,
 				130090D82475CF29007E86CA /* Model */,
-				130090D42475CD77007E86CA /* Application */,
 				130090D32475CD61007E86CA /* Storyboard */,
+				130090D42475CD77007E86CA /* Application */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -98,6 +109,26 @@
 				130090D62475CF26007E86CA /* WAHContact.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		130090DC2475D3A6007E86CA /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				130090D92475D39D007E86CA /* WAHContactController.h */,
+				130090DA2475D39D007E86CA /* WAHContactController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		130090E02475D5CF007E86CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				130090DD2475D5C6007E86CA /* ContactsTableViewController.h */,
+				130090DE2475D5C6007E86CA /* ContactsTableViewController.m */,
+				130090E12475D5EB007E86CA /* ContactDetailViewController.h */,
+				130090E22475D5EB007E86CA /* ContactDetailViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130090DB2475D39D007E86CA /* WAHContactController.m in Sources */,
+				130090E32475D5EB007E86CA /* ContactDetailViewController.m in Sources */,
 				130090BC2475C5B2007E86CA /* AppDelegate.m in Sources */,
+				130090DF2475D5C6007E86CA /* ContactsTableViewController.m in Sources */,
 				130090CD2475C5B3007E86CA /* main.m in Sources */,
 				130090BF2475C5B2007E86CA /* SceneDelegate.m in Sources */,
 				130090D72475CF26007E86CA /* WAHContact.m in Sources */,

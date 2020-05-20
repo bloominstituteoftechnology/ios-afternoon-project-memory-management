@@ -10,7 +10,7 @@
         <!--Root View Controller-->
         <scene sceneID="J4G-Pg-xFH">
             <objects>
-                <tableViewController id="0GO-Pc-tBH" sceneMemberID="viewController">
+                <tableViewController id="0GO-Pc-tBH" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HXV-Wg-OuZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="688" y="214"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="dfd-5D-Ce9">
             <objects>
-                <viewController id="rqZ-mE-8Bs" sceneMemberID="viewController">
+                <viewController id="rqZ-mE-8Bs" customClass="ContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZ9-Ay-403">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
