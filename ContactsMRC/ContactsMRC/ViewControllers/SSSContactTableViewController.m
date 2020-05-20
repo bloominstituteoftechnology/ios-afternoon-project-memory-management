@@ -7,20 +7,49 @@
 //
 
 #import "SSSContactTableViewController.h"
+#import "SSSContact.h"
 
 @interface SSSContactTableViewController ()
 
-@property NSArray *contacts;
+@property (nonatomic, retain) NSArray<SSSContact *> *contacts;
+
+- (void)setUp;
 
 @end
 
 @implementation SSSContactTableViewController
 
+// MARK: - Init
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setUp];
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setUp];
+    }
+    return self;
+}
+
+- (void)setUp {
+    _contacts = [[NSArray alloc] init];
+}
+
+- (void)dealloc {
+    [_contacts release];
+    [super dealloc];
+}
+
 // MARK: - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 // MARK: - Table View Data Source
