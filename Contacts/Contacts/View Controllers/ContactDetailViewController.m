@@ -10,6 +10,10 @@
 
 @interface ContactDetailViewController ()
 
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailAddressTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+
 @end
 
 @implementation ContactDetailViewController
@@ -19,14 +23,16 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonTapped:(id)sender {
 }
-*/
 
+- (IBAction)editButtonTapped:(id)sender {
+}
+
+- (void)dealloc {
+    [_nameTextField release];
+    [_emailAddressTextField release];
+    [_phoneNumberTextField release];
+    [super dealloc];
+}
 @end

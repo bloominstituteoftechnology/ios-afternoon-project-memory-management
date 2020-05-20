@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Contacts-->
         <scene sceneID="J4G-Pg-xFH">
             <objects>
                 <tableViewController id="0GO-Pc-tBH" customClass="ContactsTableViewController" sceneMemberID="viewController">
@@ -16,13 +16,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="clf-te-0YD">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="t0H-91-hNP" detailTextLabel="JI7-To-yni" style="IBUITableViewCellStyleSubtitle" id="clf-te-0YD">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="clf-te-0YD" id="clK-qB-BKv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t0H-91-hNP">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JI7-To-yni">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rqZ-mE-8Bs" kind="show" id="Fwp-eQ-1UV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,7 +49,7 @@
                             <outlet property="delegate" destination="0GO-Pc-tBH" id="Wm2-ZQ-4HX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="EZX-kg-kfk">
+                    <navigationItem key="navigationItem" title="Contacts" id="EZX-kg-kfk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Vd-T8-vfg">
                             <connections>
                                 <segue destination="rqZ-mE-8Bs" kind="show" id="bV2-Er-22J"/>
@@ -107,7 +126,11 @@
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kxe-wg-LEn"/>
-                                    <barButtonItem systemItem="edit" id="KxU-OZ-t71"/>
+                                    <barButtonItem systemItem="edit" id="KxU-OZ-t71">
+                                        <connections>
+                                            <action selector="editButtonTapped:" destination="rqZ-mE-8Bs" id="CcP-pe-FhV"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -123,8 +146,17 @@
                         <viewLayoutGuide key="safeArea" id="sFv-Vw-5gH"/>
                     </view>
                     <navigationItem key="navigationItem" id="GTP-kV-OAD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="97b-he-VlE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="97b-he-VlE">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="rqZ-mE-8Bs" id="Wcl-YV-ifa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="aoI-c2-jHc" id="dcm-Gv-ujo"/>
+                        <outlet property="nameTextField" destination="iUK-hW-tE4" id="0j3-X6-XC1"/>
+                        <outlet property="phoneNumberTextField" destination="nXS-5V-v0L" id="yPp-Vn-TZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYH-sU-Kyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,4 +179,7 @@
             <point key="canvasLocation" x="-232" y="213"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bV2-Er-22J"/>
+    </inferredMetricsTieBreakers>
 </document>
