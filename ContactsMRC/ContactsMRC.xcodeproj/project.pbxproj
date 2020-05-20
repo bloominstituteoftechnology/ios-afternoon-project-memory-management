@@ -15,6 +15,7 @@
 		04F10AC12475C9E1004BDB4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F10ABF2475C9E1004BDB4D /* LaunchScreen.storyboard */; };
 		04F10AC42475C9E1004BDB4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AC32475C9E1004BDB4D /* main.m */; };
 		04F10ACC2475CC1D004BDB4D /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10ACB2475CC1D004BDB4D /* ContactTableViewController.m */; };
+		04F10AD12475CEBD004BDB4D /* SSSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AD02475CEBD004BDB4D /* SSSContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		04F10AC32475C9E1004BDB4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F10ACA2475CC1C004BDB4D /* ContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		04F10ACB2475CC1D004BDB4D /* ContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		04F10ACF2475CEBD004BDB4D /* SSSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SSSContact.h; path = ViewControllers/SSSContact.h; sourceTree = "<group>"; };
+		04F10AD02475CEBD004BDB4D /* SSSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SSSContact.m; path = ViewControllers/SSSContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		04F10AB02475C9E0004BDB4D /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
+				04F10ACF2475CEBD004BDB4D /* SSSContact.h */,
+				04F10AD02475CEBD004BDB4D /* SSSContact.m */,
 				04F10ABA2475C9E0004BDB4D /* Main.storyboard */,
 				04F10ACD2475CC23004BDB4D /* ViewControllers */,
 				04F10ACE2475CC3F004BDB4D /* Resources */,
@@ -169,6 +174,7 @@
 			files = (
 				04F10ACC2475CC1D004BDB4D /* ContactTableViewController.m in Sources */,
 				04F10AB92475C9E0004BDB4D /* ContactDetailViewController.m in Sources */,
+				04F10AD12475CEBD004BDB4D /* SSSContact.m in Sources */,
 				04F10AB32475C9E0004BDB4D /* AppDelegate.m in Sources */,
 				04F10AC42475C9E1004BDB4D /* main.m in Sources */,
 				04F10AB62475C9E0004BDB4D /* SceneDelegate.m in Sources */,
