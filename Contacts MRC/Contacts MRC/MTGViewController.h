@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MTGViewController.h
 //  Contacts MRC
 //
 //  Created by Mark Gerrior on 5/20/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface MTGViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

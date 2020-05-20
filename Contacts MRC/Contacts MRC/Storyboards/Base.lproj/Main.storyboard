@@ -10,7 +10,7 @@
         <!--Contacts MRC-->
         <scene sceneID="xxb-oq-b91">
             <objects>
-                <tableViewController id="Jz6-Eq-loy" sceneMemberID="viewController">
+                <tableViewController id="Jz6-Eq-loy" customClass="MTGTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ci2-XJ-eA8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
         <!--Create Contact-->
         <scene sceneID="UxB-FA-WcI">
             <objects>
-                <viewController id="8S0-Hp-kgQ" sceneMemberID="viewController">
+                <viewController id="8S0-Hp-kgQ" customClass="MTGViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W9n-q7-Vsw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

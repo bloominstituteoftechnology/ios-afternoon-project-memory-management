@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		927958992475E72100E9298A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958982475E72100E9298A /* AppDelegate.m */; };
 		9279589C2475E72100E9298A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279589B2475E72100E9298A /* SceneDelegate.m */; };
-		9279589F2475E72100E9298A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279589E2475E72100E9298A /* ViewController.m */; };
 		927958A22475E72100E9298A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927958A02475E72100E9298A /* Main.storyboard */; };
 		927958A42475E72500E9298A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927958A32475E72500E9298A /* Assets.xcassets */; };
 		927958A72475E72500E9298A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927958A52475E72500E9298A /* LaunchScreen.storyboard */; };
 		927958AA2475E72500E9298A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958A92475E72500E9298A /* main.m */; };
+		927958B42475EC9F00E9298A /* MTGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958B32475EC9F00E9298A /* MTGTableViewController.m */; };
+		927958B72475ECAE00E9298A /* MTGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958B62475ECAE00E9298A /* MTGViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		927958982475E72100E9298A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9279589A2475E72100E9298A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		9279589B2475E72100E9298A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		9279589D2475E72100E9298A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9279589E2475E72100E9298A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		927958A12475E72100E9298A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		927958A32475E72500E9298A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		927958A62475E72500E9298A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		927958A82475E72500E9298A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927958A92475E72500E9298A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		927958B22475EC9F00E9298A /* MTGTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGTableViewController.h; sourceTree = "<group>"; };
+		927958B32475EC9F00E9298A /* MTGTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGTableViewController.m; sourceTree = "<group>"; };
+		927958B52475ECAE00E9298A /* MTGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGViewController.h; sourceTree = "<group>"; };
+		927958B62475ECAE00E9298A /* MTGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +64,12 @@
 		927958962475E72100E9298A /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
+				927958B22475EC9F00E9298A /* MTGTableViewController.h */,
+				927958B32475EC9F00E9298A /* MTGTableViewController.m */,
+				927958B52475ECAE00E9298A /* MTGViewController.h */,
+				927958B62475ECAE00E9298A /* MTGViewController.m */,
 				927958B12475EA6100E9298A /* Resources */,
 				927958B02475E82600E9298A /* Storyboards */,
-				9279589D2475E72100E9298A /* ViewController.h */,
-				9279589E2475E72100E9298A /* ViewController.m */,
 			);
 			path = "Contacts MRC";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 		9279588C2475E72100E9298A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MTG;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Mark Gerrior";
 				TargetAttributes = {
@@ -162,7 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9279589F2475E72100E9298A /* ViewController.m in Sources */,
+				927958B72475ECAE00E9298A /* MTGViewController.m in Sources */,
+				927958B42475EC9F00E9298A /* MTGTableViewController.m in Sources */,
 				927958992475E72100E9298A /* AppDelegate.m in Sources */,
 				927958AA2475E72500E9298A /* main.m in Sources */,
 				9279589C2475E72100E9298A /* SceneDelegate.m in Sources */,
