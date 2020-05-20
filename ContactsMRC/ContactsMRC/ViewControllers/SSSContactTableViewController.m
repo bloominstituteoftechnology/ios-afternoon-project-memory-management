@@ -50,6 +50,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    SSSContact *john = [SSSContact contactWithName:@"John Sprague" emailAddress:@"john.s@gmail.com" phoneNumber:@"489-555-3948"];
+    self.contacts = [self.contacts arrayByAddingObject:john];
 }
 
 // MARK: - Table View Data Source
@@ -66,7 +69,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = self.contacts[indexPath.row].name;
     
     return cell;
 }
