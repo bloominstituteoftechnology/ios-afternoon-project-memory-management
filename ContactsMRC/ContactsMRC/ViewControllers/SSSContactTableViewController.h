@@ -1,5 +1,5 @@
 //
-//  ContactTableViewController.h
+//  SSSContactTableViewController.h
 //  ContactsMRC
 //
 //  Created by Shawn Gee on 5/20/20.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ContactTableViewController : UITableViewController
+@interface SSSContactTableViewController : UITableViewController
 
 @end
 

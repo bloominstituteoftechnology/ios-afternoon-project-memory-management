@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		04F10AB32475C9E0004BDB4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB22475C9E0004BDB4D /* AppDelegate.m */; };
 		04F10AB62475C9E0004BDB4D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB52475C9E0004BDB4D /* SceneDelegate.m */; };
-		04F10AB92475C9E0004BDB4D /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB82475C9E0004BDB4D /* ContactDetailViewController.m */; };
+		04F10AB92475C9E0004BDB4D /* SSSContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB82475C9E0004BDB4D /* SSSContactDetailViewController.m */; };
 		04F10ABC2475C9E0004BDB4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F10ABA2475C9E0004BDB4D /* Main.storyboard */; };
 		04F10ABE2475C9E1004BDB4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F10ABD2475C9E1004BDB4D /* Assets.xcassets */; };
 		04F10AC12475C9E1004BDB4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F10ABF2475C9E1004BDB4D /* LaunchScreen.storyboard */; };
 		04F10AC42475C9E1004BDB4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AC32475C9E1004BDB4D /* main.m */; };
-		04F10ACC2475CC1D004BDB4D /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10ACB2475CC1D004BDB4D /* ContactTableViewController.m */; };
+		04F10ACC2475CC1D004BDB4D /* SSSContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10ACB2475CC1D004BDB4D /* SSSContactTableViewController.m */; };
 		04F10AD12475CEBD004BDB4D /* SSSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AD02475CEBD004BDB4D /* SSSContact.m */; };
 /* End PBXBuildFile section */
 
@@ -24,17 +24,17 @@
 		04F10AB22475C9E0004BDB4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04F10AB42475C9E0004BDB4D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		04F10AB52475C9E0004BDB4D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		04F10AB72475C9E0004BDB4D /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
-		04F10AB82475C9E0004BDB4D /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		04F10AB72475C9E0004BDB4D /* SSSContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSContactDetailViewController.h; sourceTree = "<group>"; };
+		04F10AB82475C9E0004BDB4D /* SSSContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSSContactDetailViewController.m; sourceTree = "<group>"; };
 		04F10ABB2475C9E0004BDB4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F10ABD2475C9E1004BDB4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F10AC02475C9E1004BDB4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F10AC22475C9E1004BDB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F10AC32475C9E1004BDB4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04F10ACA2475CC1C004BDB4D /* ContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
-		04F10ACB2475CC1D004BDB4D /* ContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
-		04F10ACF2475CEBD004BDB4D /* SSSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SSSContact.h; path = ViewControllers/SSSContact.h; sourceTree = "<group>"; };
-		04F10AD02475CEBD004BDB4D /* SSSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SSSContact.m; path = ViewControllers/SSSContact.m; sourceTree = "<group>"; };
+		04F10ACA2475CC1C004BDB4D /* SSSContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSContactTableViewController.h; sourceTree = "<group>"; };
+		04F10ACB2475CC1D004BDB4D /* SSSContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSSContactTableViewController.m; sourceTree = "<group>"; };
+		04F10ACF2475CEBD004BDB4D /* SSSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSContact.h; sourceTree = "<group>"; };
+		04F10AD02475CEBD004BDB4D /* SSSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSSContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +67,8 @@
 		04F10AB02475C9E0004BDB4D /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
-				04F10ACF2475CEBD004BDB4D /* SSSContact.h */,
-				04F10AD02475CEBD004BDB4D /* SSSContact.m */,
 				04F10ABA2475C9E0004BDB4D /* Main.storyboard */,
+				04F10AD22475D0A5004BDB4D /* Models */,
 				04F10ACD2475CC23004BDB4D /* ViewControllers */,
 				04F10ACE2475CC3F004BDB4D /* Resources */,
 				04F10AC32475C9E1004BDB4D /* main.m */,
@@ -80,10 +79,10 @@
 		04F10ACD2475CC23004BDB4D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				04F10ACA2475CC1C004BDB4D /* ContactTableViewController.h */,
-				04F10ACB2475CC1D004BDB4D /* ContactTableViewController.m */,
-				04F10AB72475C9E0004BDB4D /* ContactDetailViewController.h */,
-				04F10AB82475C9E0004BDB4D /* ContactDetailViewController.m */,
+				04F10ACA2475CC1C004BDB4D /* SSSContactTableViewController.h */,
+				04F10ACB2475CC1D004BDB4D /* SSSContactTableViewController.m */,
+				04F10AB72475C9E0004BDB4D /* SSSContactDetailViewController.h */,
+				04F10AB82475C9E0004BDB4D /* SSSContactDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -100,6 +99,15 @@
 				04F10AC22475C9E1004BDB4D /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		04F10AD22475D0A5004BDB4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04F10ACF2475CEBD004BDB4D /* SSSContact.h */,
+				04F10AD02475CEBD004BDB4D /* SSSContact.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F10ACC2475CC1D004BDB4D /* ContactTableViewController.m in Sources */,
-				04F10AB92475C9E0004BDB4D /* ContactDetailViewController.m in Sources */,
+				04F10ACC2475CC1D004BDB4D /* SSSContactTableViewController.m in Sources */,
+				04F10AB92475C9E0004BDB4D /* SSSContactDetailViewController.m in Sources */,
 				04F10AD12475CEBD004BDB4D /* SSSContact.m in Sources */,
 				04F10AB32475C9E0004BDB4D /* AppDelegate.m in Sources */,
 				04F10AC42475C9E1004BDB4D /* main.m in Sources */,

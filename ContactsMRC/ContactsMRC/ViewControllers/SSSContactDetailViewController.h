@@ -1,5 +1,5 @@
 //
-//  ContactDetailViewController.h
+//  SSSContactDetailViewController.h
 //  ContactsMRC
 //
 //  Created by Shawn Gee on 5/20/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactDetailViewController : UIViewController
+@interface SSSContactDetailViewController : UIViewController
 
 
 @end

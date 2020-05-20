@@ -1,20 +1,20 @@
 //
-//  ContactTableViewController.m
+//  SSSContactTableViewController.m
 //  ContactsMRC
 //
 //  Created by Shawn Gee on 5/20/20.
 //  Copyright © 2020 Swift Student. All rights reserved.
 //
 
-#import "ContactTableViewController.h"
+#import "SSSContactTableViewController.h"
 
-@interface ContactTableViewController ()
+@interface SSSContactTableViewController ()
 
 @property NSArray *contacts;
 
 @end
 
-@implementation ContactTableViewController
+@implementation SSSContactTableViewController
 
 // MARK: - View Lifecycle
 
