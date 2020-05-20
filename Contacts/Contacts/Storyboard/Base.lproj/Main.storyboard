@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="rqZ-mE-8Bs" kind="show" id="Fwp-eQ-1UV"/>
+                                    <segue destination="rqZ-mE-8Bs" kind="show" identifier="ShowContactDetailSegue" id="Fwp-eQ-1UV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="EZX-kg-kfk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Vd-T8-vfg">
                             <connections>
-                                <segue destination="rqZ-mE-8Bs" kind="show" id="bV2-Er-22J"/>
+                                <segue destination="rqZ-mE-8Bs" kind="show" identifier="ShowAddContactSegue" id="bV2-Er-22J"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

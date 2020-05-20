@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WAHContactController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactDetailViewController : UIViewController
+
+@property (nonatomic, assign) WAHContactController *contactController;
+@property (nonatomic, assign) WAHContact *contact;
+
 
 @end
 
