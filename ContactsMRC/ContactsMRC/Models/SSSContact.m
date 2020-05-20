@@ -23,6 +23,15 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_name release];
+    [_emailAddress release];
+    [_phoneNumber release];
+    
+    [super dealloc];
+}
+
 + (instancetype)contactWithName:(NSString *)name
                    emailAddress:(NSString *)emailAddress
                     phoneNumber:(NSString *)phoneNumber {
