@@ -61,19 +61,35 @@
 		927958962475E72100E9298A /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
-				927958972475E72100E9298A /* AppDelegate.h */,
-				927958982475E72100E9298A /* AppDelegate.m */,
-				9279589A2475E72100E9298A /* SceneDelegate.h */,
-				9279589B2475E72100E9298A /* SceneDelegate.m */,
+				927958B12475EA6100E9298A /* Resources */,
+				927958B02475E82600E9298A /* Storyboards */,
 				9279589D2475E72100E9298A /* ViewController.h */,
 				9279589E2475E72100E9298A /* ViewController.m */,
-				927958A02475E72100E9298A /* Main.storyboard */,
-				927958A32475E72500E9298A /* Assets.xcassets */,
-				927958A52475E72500E9298A /* LaunchScreen.storyboard */,
-				927958A82475E72500E9298A /* Info.plist */,
-				927958A92475E72500E9298A /* main.m */,
 			);
 			path = "Contacts MRC";
+			sourceTree = "<group>";
+		};
+		927958B02475E82600E9298A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				927958A52475E72500E9298A /* LaunchScreen.storyboard */,
+				927958A02475E72100E9298A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		927958B12475EA6100E9298A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				927958972475E72100E9298A /* AppDelegate.h */,
+				927958982475E72100E9298A /* AppDelegate.m */,
+				927958A32475E72500E9298A /* Assets.xcassets */,
+				927958A82475E72500E9298A /* Info.plist */,
+				927958A92475E72500E9298A /* main.m */,
+				9279589A2475E72100E9298A /* SceneDelegate.h */,
+				9279589B2475E72100E9298A /* SceneDelegate.m */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZDYKHFRDV;
-				INFOPLIST_FILE = "Contacts MRC/Info.plist";
+				INFOPLIST_FILE = "Contacts MRC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZDYKHFRDV;
-				INFOPLIST_FILE = "Contacts MRC/Info.plist";
+				INFOPLIST_FILE = "Contacts MRC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
