@@ -20,6 +20,18 @@
 
 @implementation MTGViewController
 
+- (void)dealloc
+{
+    [_contact release];
+    [_contactController release];
+
+    [_nameTextField release];
+    [_emailTextField release];
+    [_phoneTextField release];
+
+    [super dealloc]; // Comes at the end
+}
+
 - (IBAction)saveButton:(UIBarButtonItem *)sender {
     if (_contact != nil) {
         // Update

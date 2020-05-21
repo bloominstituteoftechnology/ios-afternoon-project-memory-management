@@ -14,6 +14,11 @@
 
 @implementation SceneDelegate
 
+- (void)dealloc {
+    [_window release]; // Done per the analyze command
+
+    [super dealloc]; // only in MRC
+}
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

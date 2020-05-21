@@ -16,6 +16,13 @@
 
 @implementation MTGTableViewController
 
+- (void)dealloc
+{
+    [_contactController release];
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

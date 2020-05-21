@@ -18,11 +18,18 @@
 
         if (_contacts) {
             // Create test data (remove it later)
-            [_contacts addObject: [[Contact alloc] initWithName:@"Mark" email:@"lambda@m.gerrior.com" phone:@"650-339-9933"]];
-            [_contacts addObject: [[Contact alloc] initWithName:@"Dennis" email:@"dennis@dennisbrazil.com" phone:@"408-829-6678"]];
+            [self create:@"Mark" email:@"lambda@m.gerrior.com" phone:@"650-339-9933"];
+            [self create:@"Dennis" email:@"dennis@dennisbrazil.com" phone:@"408-829-6678"];
         }
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [_contacts release];
+    
+    [super dealloc];
 }
 
 // When getter is overridden and we use readonly, we need to tell compiler to make
@@ -33,7 +40,7 @@
 }
 
 - (void)create:(NSString *)name email:(NSString *)email phone:(NSString *)phone {
-    [_contacts addObject: [[Contact alloc] initWithName:name email:email phone:phone]];
+    [_contacts addObject: [[[Contact alloc] initWithName:name email:email phone:phone] autorelease]];
 }
 
 - (void)delete:(NSUInteger)index {
