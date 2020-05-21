@@ -37,4 +37,25 @@
     return [[[SSSContact alloc] initWithName:name emailAddress:emailAddress phoneNumber:phoneNumber] autorelease];
 }
 
+- (void)setName:(NSString *)name {
+    if (name == _name) { return; }
+    
+    [_name release];
+    _name = [name copy];
+}
+
+- (void)setEmailAddress:(NSString *)emailAddress {
+    if (emailAddress == _emailAddress) { return; }
+    
+    [_emailAddress release];
+    _emailAddress = [emailAddress copy];
+}
+
+- (void)setPhoneNumber:(NSString *)phoneNumber {
+    if (phoneNumber == _phoneNumber)  { return; }
+    
+    [_phoneNumber release];
+    _phoneNumber = [phoneNumber copy];
+}
+
 @end
