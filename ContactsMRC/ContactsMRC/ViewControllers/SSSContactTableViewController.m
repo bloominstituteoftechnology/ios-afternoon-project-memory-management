@@ -53,12 +53,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Mock data
     SSSContact *john = [SSSContact contactWithName:@"John Sprague" emailAddress:@"john.s@gmail.com" phoneNumber:@"489-555-3948"];
-    //self.contactController.contacts = [self.contacts arrayByAddingObject:john];
+    SSSContact *barry = [SSSContact contactWithName:@"Barry Jones" emailAddress:@"baryrocksthehouse@gmail.com" phoneNumber:@"234-555-3903"];
+    
+    [self.contactController addContact:john];
+    [self.contactController addContact:barry];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 
@@ -80,8 +84,6 @@
     
     return cell;
 }
-
-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
