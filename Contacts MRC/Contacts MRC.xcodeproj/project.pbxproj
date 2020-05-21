@@ -15,6 +15,8 @@
 		927958AA2475E72500E9298A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958A92475E72500E9298A /* main.m */; };
 		927958B42475EC9F00E9298A /* MTGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958B32475EC9F00E9298A /* MTGTableViewController.m */; };
 		927958B72475ECAE00E9298A /* MTGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958B62475ECAE00E9298A /* MTGViewController.m */; };
+		927958BA2475F87F00E9298A /* MTGContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958B92475F87F00E9298A /* MTGContactController.m */; };
+		927958BD2475FD5100E9298A /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 927958BC2475FD5100E9298A /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		927958B32475EC9F00E9298A /* MTGTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGTableViewController.m; sourceTree = "<group>"; };
 		927958B52475ECAE00E9298A /* MTGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGViewController.h; sourceTree = "<group>"; };
 		927958B62475ECAE00E9298A /* MTGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGViewController.m; sourceTree = "<group>"; };
+		927958B82475F87F00E9298A /* MTGContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGContactController.h; sourceTree = "<group>"; };
+		927958B92475F87F00E9298A /* MTGContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGContactController.m; sourceTree = "<group>"; };
+		927958BB2475FD5100E9298A /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		927958BC2475FD5100E9298A /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,10 @@
 		927958962475E72100E9298A /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
+				927958BB2475FD5100E9298A /* Contact.h */,
+				927958BC2475FD5100E9298A /* Contact.m */,
+				927958B82475F87F00E9298A /* MTGContactController.h */,
+				927958B92475F87F00E9298A /* MTGContactController.m */,
 				927958B22475EC9F00E9298A /* MTGTableViewController.h */,
 				927958B32475EC9F00E9298A /* MTGTableViewController.m */,
 				927958B52475ECAE00E9298A /* MTGViewController.h */,
@@ -168,7 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927958BD2475FD5100E9298A /* Contact.m in Sources */,
 				927958B72475ECAE00E9298A /* MTGViewController.m in Sources */,
+				927958BA2475F87F00E9298A /* MTGContactController.m in Sources */,
 				927958B42475EC9F00E9298A /* MTGTableViewController.m in Sources */,
 				927958992475E72100E9298A /* AppDelegate.m in Sources */,
 				927958AA2475E72500E9298A /* main.m in Sources */,
