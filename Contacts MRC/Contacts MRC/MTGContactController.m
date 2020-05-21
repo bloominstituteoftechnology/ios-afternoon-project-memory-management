@@ -14,7 +14,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // TODO: ? What I get EXC_BAD_INSTRUCTION if _contacts? Why such a cyrptic message?
+        // TODO: ? What do I get EXC_BAD_INSTRUCTION if this is written as _contacts when I segue? Why such a cyrptic message?
         self.contacts = [[[NSMutableArray alloc] init] autorelease];
 
         if (self.contacts) {
