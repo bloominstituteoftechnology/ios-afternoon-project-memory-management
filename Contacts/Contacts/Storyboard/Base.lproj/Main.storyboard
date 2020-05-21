@@ -153,6 +153,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="KxU-OZ-t71" id="pSt-8r-PnZ"/>
                         <outlet property="emailAddressTextField" destination="aoI-c2-jHc" id="dcm-Gv-ujo"/>
                         <outlet property="nameTextField" destination="iUK-hW-tE4" id="0j3-X6-XC1"/>
                         <outlet property="phoneNumberTextField" destination="nXS-5V-v0L" id="yPp-Vn-TZd"/>
