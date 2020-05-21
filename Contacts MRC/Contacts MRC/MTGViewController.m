@@ -7,25 +7,41 @@
 //
 
 #import "MTGViewController.h"
+#import "Contact.h"
 
 @interface MTGViewController ()
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end
 
 @implementation MTGViewController
 
+- (IBAction)saveButton:(UIBarButtonItem *)sender {
+    if (_contact != nil) {
+        // Update
+        _contact.name = _nameTextField.text;
+        _contact.email = _emailTextField.text;
+        _contact.phone = _phoneTextField.text;
+    } else {
+        // Create
+
+    }
+
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    _nameTextField.text = _contact.name;
+    _emailTextField.text = _contact.email;
+    _phoneTextField.text = _contact.phone;
 }
-*/
 
 @end

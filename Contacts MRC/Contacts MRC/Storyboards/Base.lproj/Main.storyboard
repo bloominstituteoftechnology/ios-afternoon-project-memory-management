@@ -99,8 +99,17 @@
                         <viewLayoutGuide key="safeArea" id="nz1-eY-YVF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Contact" id="5QY-S9-CUI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="b6a-CB-9go"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="b6a-CB-9go">
+                            <connections>
+                                <action selector="saveButton:" destination="8S0-Hp-kgQ" id="LRB-yN-khc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="T15-wR-2ev" id="asY-lB-gxM"/>
+                        <outlet property="nameTextField" destination="vWc-YM-pLo" id="wbM-oW-NO0"/>
+                        <outlet property="phoneTextField" destination="i4w-Om-3et" id="5eb-xk-y7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbf-3b-ge3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
