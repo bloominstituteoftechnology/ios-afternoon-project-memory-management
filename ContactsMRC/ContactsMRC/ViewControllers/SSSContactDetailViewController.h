@@ -11,7 +11,7 @@
 @class SSSContact;
 @class SSSContactController;
 
-@interface SSSContactDetailViewController : UIViewController
+@interface SSSContactDetailViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, retain) SSSContactController *contactController;
 @property (nonatomic, retain) SSSContact *contact;
