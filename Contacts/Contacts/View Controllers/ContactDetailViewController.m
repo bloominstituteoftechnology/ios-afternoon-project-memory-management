@@ -57,6 +57,7 @@
         self.contact.emailAddress = self.emailAddressTextField.text;
         self.contact.phoneNumber = self.phoneNumberTextField.text;
         
+        [self.navigationController popViewControllerAnimated:YES];
     } else if (self.passedContact == NO) {
         if ([self.nameTextField.text isEqualToString:@""]) {
             return;
