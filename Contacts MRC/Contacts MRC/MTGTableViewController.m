@@ -7,6 +7,7 @@
 //
 
 #import "MTGTableViewController.h"
+#import "Contact.h"
 
 @interface MTGTableViewController ()
 
@@ -17,34 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _contactController = [[MTGContactController alloc] init];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    NSInteger count = _contactController.contacts.count;
+    return count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = _contactController.contacts[indexPath.row].name;
+    cell.detailTextLabel.text = _contactController.contacts[indexPath.row].email;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

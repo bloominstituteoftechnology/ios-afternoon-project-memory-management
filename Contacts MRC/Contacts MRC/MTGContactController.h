@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGContactController : NSObject
+
+
+@property (nonatomic, retain) NSArray<Contact *> *contacts;
 
 @end
 
