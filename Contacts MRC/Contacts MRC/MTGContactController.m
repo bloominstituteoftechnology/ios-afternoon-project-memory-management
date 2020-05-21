@@ -14,7 +14,13 @@
 - (instancetype)init {
     [super init];
     if (self) {
-//        _contacts = [[NSMutableArray alloc] init];
+        _contacts = [[NSMutableArray alloc] init];
+
+        if (_contacts) {
+            // Create test data (remove it later)
+            [_contacts addObject: [[Contact alloc] initWithName:@"Mark" email:@"lambda@m.gerrior.com" phone:@"650-339-9933"]];
+            [_contacts addObject: [[Contact alloc] initWithName:@"Dennis" email:@"dennis@dennisbrazil.com" phone:@"408-829-6678"]];
+        }
     }
     return self;
 }
@@ -22,15 +28,12 @@
 // When getter is overridden and we use readonly, we need to tell compiler to make
 // a "backing" instance variable named _contacts
 @synthesize contacts = _contacts;
-- (NSArray<Contact *> *)contacts {
-    if (!_contacts) {
-        _contacts = @[
-            // Create test data (remove it later)
-            [[Contact alloc] initWithName:@"Mark" email:@"lambda@mark.gerrior.com" phone:@"650-339-9933"],
-            [[Contact alloc] initWithName:@"Dennis" email:@"dennis@dennisbrazil.com" phone:@"408-829-6678"],
-        ];
-    }
+- (NSMutableArray<Contact *> *)contacts {
     return _contacts;
+}
+
+- (void)delete:(NSUInteger)index {
+    [_contacts removeObjectAtIndex:(index)];
 }
 
 @end
