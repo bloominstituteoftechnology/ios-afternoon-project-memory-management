@@ -7,6 +7,7 @@
 //
 
 #import "MTGViewController.h"
+#import "MTGContactController.h"
 #import "Contact.h"
 
 @interface MTGViewController ()
@@ -27,7 +28,7 @@
         _contact.phone = _phoneTextField.text;
     } else {
         // Create
-
+        [_contactController create:_nameTextField.text email:_emailTextField.text phone:_phoneTextField.text];
     }
 
     [self.navigationController popViewControllerAnimated:YES];

@@ -65,12 +65,15 @@
     if ([segue.destinationViewController isKindOfClass:[MTGViewController class]]) {
         MTGViewController *viewVC = segue.destinationViewController;
 
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
         if ([segue.identifier caseInsensitiveCompare:@"EditSegue"] == NSOrderedSame) {
 
-            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
             if (indexPath) {
                 viewVC.contact = _contactController.contacts[indexPath.row];
             }
+        } else if ([segue.identifier caseInsensitiveCompare:@"CreateSegue"] == NSOrderedSame) {
+            viewVC.contactController = _contactController;
         }
     }
 }

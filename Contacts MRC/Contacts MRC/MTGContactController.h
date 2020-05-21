@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) NSMutableArray<Contact *> *contacts;
 
+- (void)create:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
 - (void)delete:(NSUInteger)index;
 
 @end

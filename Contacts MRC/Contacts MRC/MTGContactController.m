@@ -32,6 +32,10 @@
     return _contacts;
 }
 
+- (void)create:(NSString *)name email:(NSString *)email phone:(NSString *)phone {
+    [_contacts addObject: [[Contact alloc] initWithName:name email:email phone:phone]];
+}
+
 - (void)delete:(NSUInteger)index {
     [_contacts removeObjectAtIndex:(index)];
 }

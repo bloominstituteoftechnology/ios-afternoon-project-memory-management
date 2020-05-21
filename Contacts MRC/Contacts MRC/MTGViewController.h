@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class Contact;
+@class MTGContactController;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGViewController : UIViewController
 
+@property (nonatomic, retain) MTGContactController *contactController;
 @property (nonatomic, retain) Contact *contact;
 
 @end
