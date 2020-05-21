@@ -20,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E29A9A322476065500AC1785 /* ContactsMRC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContactsMRC.entitlements; sourceTree = "<group>"; };
 		E29C701F2475C9DA003EEC59 /* ContactsMRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsMRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29C70222475C9DA003EEC59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E29C70232475C9DA003EEC59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		E29C70212475C9DA003EEC59 /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
-				E29A9A322476065500AC1785 /* ContactsMRC.entitlements */,
 				E29C703F2475CABF003EEC59 /* Models */,
 				E29C703E2475CAB8003EEC59 /* Views */,
 				E29C703D2475CAAE003EEC59 /* View Controllers */,
@@ -245,7 +243,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -303,7 +301,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

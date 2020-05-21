@@ -11,6 +11,7 @@
 #import "CBDContactController.h"
 
 @interface CBDContactsTableViewController ()
+@property CBDContactController *contactController;
 
 @end
 
@@ -18,7 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Does this trigger?");
+    CBDContact *christopher = [[CBDContact alloc] initWithName:@"Christopher" email:@"christopher.devito@protonmail.com" phone:@"123-456-7890"];
+    CBDContact *mom = [[CBDContact alloc] initWithName:@"Mom" email:@"mom@mom.com" phone:@"098-765-4321"];
+
+    _contactController = [[CBDContactController alloc] init];
+    [self.contactController.contacts addObject:christopher];
+    [self.contactController.contacts addObject:mom];
+    [christopher release];
+    christopher = nil;
+    [mom release];
+    mom = nil;
+    [self.tableView reloadData];
 }
 
 - (IBAction)addContact:(id)sender {
@@ -31,12 +42,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.contactController.contacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
-    
+    CBDContact *contact = self.contactController.contacts[indexPath.row];
+    cell.textLabel.text = contact.name;
+    cell.detailTextLabel.text = contact.phone;
     return cell;
 }
 

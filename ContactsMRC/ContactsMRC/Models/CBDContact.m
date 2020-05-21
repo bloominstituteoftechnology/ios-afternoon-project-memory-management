@@ -30,9 +30,13 @@
 }
 
 - (void)dealloc {
+    NSLog(@"[Contact dealloc]: %@", _name);
     [_name release];
+    _name = nil;
     [_email release];
+    _email = nil;
     [_phone release];
+    _phone = nil;
 
     [super dealloc];
 }
