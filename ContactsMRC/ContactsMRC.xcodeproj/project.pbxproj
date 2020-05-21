@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B921FE2476366900DF4323 /* SSSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B921FD2476366900DF4323 /* SSSContactController.m */; };
 		04F10AB32475C9E0004BDB4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB22475C9E0004BDB4D /* AppDelegate.m */; };
 		04F10AB62475C9E0004BDB4D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB52475C9E0004BDB4D /* SceneDelegate.m */; };
 		04F10AB92475C9E0004BDB4D /* SSSContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10AB82475C9E0004BDB4D /* SSSContactDetailViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B921FC2476366900DF4323 /* SSSContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSContactController.h; sourceTree = "<group>"; };
+		04B921FD2476366900DF4323 /* SSSContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSSContactController.m; sourceTree = "<group>"; };
 		04F10AAE2475C9E0004BDB4D /* ContactsMRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsMRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F10AB12475C9E0004BDB4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04F10AB22475C9E0004BDB4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 		04F10AD22475D0A5004BDB4D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04B921FC2476366900DF4323 /* SSSContactController.h */,
+				04B921FD2476366900DF4323 /* SSSContactController.m */,
 				04F10ACF2475CEBD004BDB4D /* SSSContact.h */,
 				04F10AD02475CEBD004BDB4D /* SSSContact.m */,
 			);
@@ -186,6 +191,7 @@
 				04F10AB32475C9E0004BDB4D /* AppDelegate.m in Sources */,
 				04F10AC42475C9E1004BDB4D /* main.m in Sources */,
 				04F10AB62475C9E0004BDB4D /* SceneDelegate.m in Sources */,
+				04B921FE2476366900DF4323 /* SSSContactController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "SSSContactDetailViewController.h"
+#import "SSSContactController.h"
 #import "SSSContact.h"
 
 @interface SSSContactDetailViewController ()
@@ -28,6 +29,7 @@
 @implementation SSSContactDetailViewController
 
 - (void)dealloc {
+    [_contactController release];
     [_contact release];
     [_nameLabel release];
     [_emailLabel release];
@@ -73,10 +75,14 @@
         self.nameLabel.text = self.contact.name;
         self.emailLabel.text = self.contact.emailAddress;
         self.phoneLabel.text = self.contact.phoneNumber;
-
-    } else {
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(save)] autorelease];
         
+    } else {
+        self.navigationItem.rightBarButtonItem =
+        [[[UIBarButtonItem alloc] initWithTitle:@"Save"
+                                          style:UIBarButtonItemStylePlain
+                                         target:self
+                                         action:@selector(save)] autorelease];
+    
         [self setLabelsHidden:YES];
         [self setTextFieldsHidden:NO];
     }
@@ -99,7 +105,10 @@
 }
 
 - (void)save {
-    
+    SSSContact *contact = [SSSContact contactWithName:self.nameTextField.text emailAddress:self.emailTextField.text phoneNumber:self.phoneTextField.text];
+    [self.contactController addContact:contact];
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 

@@ -23,8 +23,7 @@
     return self;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     [_name release];
     [_emailAddress release];
     [_phoneNumber release];

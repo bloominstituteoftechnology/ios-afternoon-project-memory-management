@@ -9,10 +9,11 @@
 #import "SSSContactTableViewController.h"
 #import "SSSContact.h"
 #import "SSSContactDetailViewController.h"
+#import "SSSContactController.h"
 
 @interface SSSContactTableViewController ()
 
-@property (nonatomic, retain) NSArray<SSSContact *> *contacts;
+@property (nonatomic, retain) SSSContactController *contactController;
 
 - (void)setUp;
 
@@ -39,11 +40,11 @@
 }
 
 - (void)setUp {
-    _contacts = [[NSArray alloc] init];
+    _contactController = [[SSSContactController alloc] init];
 }
 
 - (void)dealloc {
-    [_contacts release];
+    [_contactController release];
     [super dealloc];
 }
 
@@ -53,7 +54,7 @@
     [super viewDidLoad];
     
     SSSContact *john = [SSSContact contactWithName:@"John Sprague" emailAddress:@"john.s@gmail.com" phoneNumber:@"489-555-3948"];
-    self.contacts = [self.contacts arrayByAddingObject:john];
+    //self.contactController.contacts = [self.contacts arrayByAddingObject:john];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -68,14 +69,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.contacts.count;
+    return self.contactController.contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.contacts[indexPath.row].name;
+    cell.textLabel.text = self.contactController.contacts[indexPath.row].name;
     
     return cell;
 }
@@ -84,9 +85,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSMutableArray *mutableContacts = [NSMutableArray arrayWithArray:self.contacts];
-        [mutableContacts removeObjectAtIndex:indexPath.row];
-        self.contacts = mutableContacts;
+        [self.contactController removeContactAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
@@ -97,9 +96,11 @@
     if ([segue.identifier isEqualToString:@"ShowContactSegue"]) {
         SSSContactDetailViewController *contactDetailVC = segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
-        contactDetailVC.contact = self.contacts[indexPath.row];
+        contactDetailVC.contact = self.contactController.contacts[indexPath.row];
+    } if ([segue.identifier isEqualToString:@"AddContactSegue"]) {
+        SSSContactDetailViewController *contactDetailVC = segue.destinationViewController;
+        contactDetailVC.contactController = self.contactController;
     }
 }
-
 
 @end
