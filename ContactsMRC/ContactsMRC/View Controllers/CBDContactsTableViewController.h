@@ -1,5 +1,5 @@
 //
-//  SceneDelegate.h
+//  CBDContactsTableViewController.h
 //  ContactsMRC
 //
 //  Created by Christopher Devito on 5/20/20.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
-
-@property (strong, nonatomic) UIWindow * window;
+@interface CBDContactsTableViewController : UITableViewController
 
 @end
-

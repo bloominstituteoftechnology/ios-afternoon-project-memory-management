@@ -14,6 +14,12 @@
 
 @implementation SceneDelegate
 
+- (void)dealloc {
+    [_window release];
+
+    [super dealloc]; // Only in Manual Reference Counting - cannot call super when using ARC
+}
+
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
