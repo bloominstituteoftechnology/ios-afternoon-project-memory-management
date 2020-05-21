@@ -12,11 +12,12 @@
 @implementation MTGContactController
 
 - (instancetype)init {
-    [super init];
+    self = [super init];
     if (self) {
-        _contacts = [[NSMutableArray alloc] init];
+        // TODO: ? What I get EXC_BAD_INSTRUCTION if _contacts? Why such a cyrptic message?
+        self.contacts = [[[NSMutableArray alloc] init] autorelease];
 
-        if (_contacts) {
+        if (self.contacts) {
             // Create test data (remove it later)
             [self create:@"Mark" email:@"lambda@m.gerrior.com" phone:@"650-339-9933"];
             [self create:@"Dennis" email:@"dennis@dennisbrazil.com" phone:@"408-829-6678"];
