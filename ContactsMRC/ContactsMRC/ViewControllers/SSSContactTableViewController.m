@@ -55,7 +55,7 @@
     
     // Mock data
     SSSContact *john = [SSSContact contactWithName:@"John Sprague" emailAddress:@"john.s@gmail.com" phoneNumber:@"489-555-3948"];
-    SSSContact *barry = [SSSContact contactWithName:@"Barry Jones" emailAddress:@"baryrocksthehouse@gmail.com" phoneNumber:@"234-555-3903"];
+    SSSContact *barry = [SSSContact contactWithName:@"Barry Jones" emailAddress:@"barryrocksthehouse@gmail.com" phoneNumber:@"234-555-3903"];
     
     [self.contactController addContact:john];
     [self.contactController addContact:barry];
