@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CBDContact;
 
 @interface CBDContactController : NSObject
+
+@property(nonatomic, retain)NSMutableArray<CBDContact *> *contacts;
 
 @end
