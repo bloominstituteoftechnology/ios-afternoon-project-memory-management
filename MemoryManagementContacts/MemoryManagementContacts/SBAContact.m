@@ -10,4 +10,16 @@
 
 @implementation SBAContact
 
+- (instancetype)initWithName:(NSString *)aName
+                       email:(NSString *)aEmail
+                       phone:(NSString *)aphone
+{
+    if (self = [super init]) {
+        _name = aName;
+        _email = aEmail;
+        _phone = aphone;
+    }
+    return self;
+}
+
 @end
