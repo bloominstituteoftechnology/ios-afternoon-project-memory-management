@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+//fwd class declaration
+@class SBAContact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SBAContactController : NSObject
+
+@property (nonatomic, retain) NSMutableArray<SBAContact *> *contacts;
+
+- (void)newContactWithName:(NSString *)name
+                     email:(NSString *)email
+                     phone:(NSString *)phone;
 
 @end
 
