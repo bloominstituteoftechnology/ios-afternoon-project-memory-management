@@ -17,6 +17,7 @@
 		E04C61C62490E7C7001D8F12 /* SBADetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */; };
 		E04C61C92490E92B001D8F12 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C82490E92B001D8F12 /* Contact.swift */; };
 		E04C61CC2490EA4B001D8F12 /* SBAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61CB2490EA4B001D8F12 /* SBAContact.m */; };
+		E04C61CF2490EE6A001D8F12 /* SBAContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61CE2490EE6A001D8F12 /* SBAContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		E04C61C82490E92B001D8F12 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E04C61CA2490EA4B001D8F12 /* SBAContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAContact.h; sourceTree = "<group>"; };
 		E04C61CB2490EA4B001D8F12 /* SBAContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAContact.m; sourceTree = "<group>"; };
+		E04C61CD2490EE6A001D8F12 /* SBAContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAContactController.h; sourceTree = "<group>"; };
+		E04C61CE2490EE6A001D8F12 /* SBAContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				E04C61C72490E92A001D8F12 /* MemoryManagementContacts-Bridging-Header.h */,
 				E04C61CA2490EA4B001D8F12 /* SBAContact.h */,
 				E04C61CB2490EA4B001D8F12 /* SBAContact.m */,
+				E04C61CD2490EE6A001D8F12 /* SBAContactController.h */,
+				E04C61CE2490EE6A001D8F12 /* SBAContactController.m */,
 			);
 			path = MemoryManagementContacts;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				E04C61AD2490E622001D8F12 /* SceneDelegate.m in Sources */,
 				E04C61C62490E7C7001D8F12 /* SBADetailsViewController.m in Sources */,
 				E04C61CC2490EA4B001D8F12 /* SBAContact.m in Sources */,
+				E04C61CF2490EE6A001D8F12 /* SBAContactController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

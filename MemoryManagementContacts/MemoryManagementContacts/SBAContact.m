@@ -10,14 +10,14 @@
 
 @implementation SBAContact
 
-- (instancetype)initWithName:(NSString *)aName
-                       email:(NSString *)aEmail
-                       phone:(NSString *)aphone
+- (instancetype)initWithName:(NSString *)name
+                       email:(NSString *)email
+                       phone:(NSString *)phone
 {
     if (self = [super init]) {
-        _name = aName;
-        _email = aEmail;
-        _phone = aphone;
+        _name = name.copy;
+        _email = email.copy;
+        _phone = phone.copy;
     }
     return self;
 }

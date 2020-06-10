@@ -19,9 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //add initializer
-- (instancetype)initWithName:(NSString *)aName
-                       email:(NSString *)aEmail
-                       phone:(NSString *)aphone;
+- (instancetype)initWithName:(NSString *)name
+                       email:(NSString *)email
+                       phone:(NSString *)phone;
 
 
 @end
