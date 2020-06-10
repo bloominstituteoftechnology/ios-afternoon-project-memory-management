@@ -99,8 +99,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8t5-Lk-H5q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6SS-Wt-0Qw"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6SS-Wt-0Qw">
+                            <connections>
+                                <action selector="saveBtnWasPressed:" destination="BYZ-38-t0r" id="udR-tw-gna"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="ZcT-xg-bq0" id="tM4-gB-CuV"/>
+                        <outlet property="nameField" destination="fYb-Zq-KWz" id="DJn-xo-rLM"/>
+                        <outlet property="phoneField" destination="ux3-2u-ZQg" id="qGg-85-Yqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
