@@ -15,6 +15,7 @@
 		63D368E52490CC730055A1E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368E42490CC730055A1E6 /* main.m */; };
 		63D368F12490D9760055A1E6 /* DTWContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F02490D9760055A1E6 /* DTWContact.m */; };
 		63D368F42490D9B60055A1E6 /* DTWContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */; };
+		63D368F72490D9EB0055A1E6 /* DTWContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F62490D9EB0055A1E6 /* DTWContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		63D368F02490D9760055A1E6 /* DTWContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContact.m; sourceTree = "<group>"; };
 		63D368F22490D9B60055A1E6 /* DTWContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWContactTableViewController.h; sourceTree = "<group>"; };
 		63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContactTableViewController.m; sourceTree = "<group>"; };
+		63D368F52490D9EB0055A1E6 /* DTWContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWContactDetailViewController.h; sourceTree = "<group>"; };
+		63D368F62490D9EB0055A1E6 /* DTWContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				63D368F22490D9B60055A1E6 /* DTWContactTableViewController.h */,
 				63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */,
+				63D368F52490D9EB0055A1E6 /* DTWContactDetailViewController.h */,
+				63D368F62490D9EB0055A1E6 /* DTWContactDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				63D368E52490CC730055A1E6 /* main.m in Sources */,
 				63D368F12490D9760055A1E6 /* DTWContact.m in Sources */,
 				63D368F42490D9B60055A1E6 /* DTWContactTableViewController.m in Sources */,
+				63D368F72490D9EB0055A1E6 /* DTWContactDetailViewController.m in Sources */,
 				63D368D72490CC710055A1E6 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
