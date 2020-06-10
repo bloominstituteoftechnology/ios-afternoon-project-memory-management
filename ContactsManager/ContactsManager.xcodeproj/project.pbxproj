@@ -16,6 +16,7 @@
 		63D368F12490D9760055A1E6 /* DTWContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F02490D9760055A1E6 /* DTWContact.m */; };
 		63D368F42490D9B60055A1E6 /* DTWContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */; };
 		63D368F72490D9EB0055A1E6 /* DTWContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F62490D9EB0055A1E6 /* DTWContactDetailViewController.m */; };
+		63D368FB2490DA4D0055A1E6 /* DTWContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368FA2490DA4D0055A1E6 /* DTWContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContactTableViewController.m; sourceTree = "<group>"; };
 		63D368F52490D9EB0055A1E6 /* DTWContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWContactDetailViewController.h; sourceTree = "<group>"; };
 		63D368F62490D9EB0055A1E6 /* DTWContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContactDetailViewController.m; sourceTree = "<group>"; };
+		63D368F92490DA4D0055A1E6 /* DTWContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWContactController.h; sourceTree = "<group>"; };
+		63D368FA2490DA4D0055A1E6 /* DTWContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				63D368ED2490D9410055A1E6 /* Model */,
+				63D368F82490DA250055A1E6 /* Model Controller */,
 				63D368EE2490D9520055A1E6 /* View Controllers */,
 				63D368EB2490CCA00055A1E6 /* Storyboards */,
 				63D368EC2490CCB30055A1E6 /* Resources */,
@@ -116,6 +120,15 @@
 				63D368F62490D9EB0055A1E6 /* DTWContactDetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		63D368F82490DA250055A1E6 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63D368F92490DA4D0055A1E6 /* DTWContactController.h */,
+				63D368FA2490DA4D0055A1E6 /* DTWContactController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +205,7 @@
 				63D368D42490CC710055A1E6 /* AppDelegate.m in Sources */,
 				63D368E52490CC730055A1E6 /* main.m in Sources */,
 				63D368F12490D9760055A1E6 /* DTWContact.m in Sources */,
+				63D368FB2490DA4D0055A1E6 /* DTWContactController.m in Sources */,
 				63D368F42490D9B60055A1E6 /* DTWContactTableViewController.m in Sources */,
 				63D368F72490D9EB0055A1E6 /* DTWContactDetailViewController.m in Sources */,
 				63D368D72490CC710055A1E6 /* SceneDelegate.m in Sources */,
