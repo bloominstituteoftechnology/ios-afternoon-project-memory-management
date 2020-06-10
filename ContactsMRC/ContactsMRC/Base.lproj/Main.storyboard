@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="1712" y="271"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Contacts-->
         <scene sceneID="tgr-Xo-T3M">
             <objects>
                 <tableViewController id="faf-Qc-mc3" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                             <outlet property="delegate" destination="faf-Qc-mc3" id="aVE-mi-vW1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gaq-BZ-3Vz">
+                    <navigationItem key="navigationItem" title="Contacts" id="gaq-BZ-3Vz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l37-KW-PSP">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="AddContactSegue" id="yht-bh-JxD"/>
