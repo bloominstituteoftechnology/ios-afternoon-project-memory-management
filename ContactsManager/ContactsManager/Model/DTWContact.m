@@ -29,4 +29,25 @@
     [super dealloc];
 }
 
+- (void)setName:(NSString *)name
+{
+    [name retain];
+    [_name release];
+    _name = name.copy;
+}
+
+- (void)setEmail:(NSString *)email
+{
+    [email retain];
+    [_email release];
+    _email = email.copy;
+}
+
+- (void)setPhoneNumber:(NSString *)phoneNumber
+{
+    [phoneNumber retain];
+    [_phoneNumber release];
+    _phoneNumber = phoneNumber.copy;
+}
+
 @end
