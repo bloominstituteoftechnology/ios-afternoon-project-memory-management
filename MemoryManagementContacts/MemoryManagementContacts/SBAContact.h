@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
                        phone:(NSString *)phone;
 
 
++ (instancetype)contactWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
+
 @end
 
 NS_ASSUME_NONNULL_END

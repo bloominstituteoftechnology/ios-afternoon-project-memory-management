@@ -22,4 +22,11 @@
     return self;
 }
 
++ (instancetype)contactWithName:(NSString *)name
+                          email:(NSString *)email
+                          phone:(NSString *)phone
+{
+    return [[[SBAContact alloc] initWithName:name email:email phone:phone] autorelease];
+}
+
 @end
