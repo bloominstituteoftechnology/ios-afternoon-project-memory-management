@@ -27,5 +27,10 @@
 }
 
 //dealloc
+- (void)dealloc {
+    [_contacts release];
+//    _contacts = nil;
+    [super dealloc];
+}
 
 @end

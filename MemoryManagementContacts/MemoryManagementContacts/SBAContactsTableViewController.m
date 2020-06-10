@@ -35,6 +35,13 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+  for (SBAContact *contact in self.contactController.contacts) {
+    [self.tableView reloadData];
+  }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -56,14 +63,21 @@
     return cell;
 }
 
-/*
+ 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    SBADetailsViewController *destination = segue.destinationViewController;
+    
+    if ([segue.identifier isEqualToString:@"addContactSegue"]){
+        destination.contactController = self.contactController;
+    } else if ([segue.identifier isEqualToString:@"showContactSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        destination.contact = self.contactController.contacts[indexPath.row];
+        destination.contactController = self.contactController;
+    }
 }
-*/
+ 
 
 @end

@@ -51,6 +51,8 @@
     [_nameField release];
     [_emailField release];
     [_phoneField release];
+    [_contact release];
+    [_contactController release];
     [super dealloc];
 }
 @end

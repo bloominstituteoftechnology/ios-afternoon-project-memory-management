@@ -29,4 +29,14 @@
     return [[[SBAContact alloc] initWithName:name email:email phone:phone] autorelease];
 }
 
+- (void)dealloc {
+    [_name release];
+//    _name = nil;
+    [_email release];
+//    _email = nil;
+    [_phone release];
+//    _phone = nil;
+    [super dealloc];
+}
+
 @end
