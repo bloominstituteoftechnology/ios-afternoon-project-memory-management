@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		E04C61AA2490E622001D8F12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61A92490E622001D8F12 /* AppDelegate.m */; };
 		E04C61AD2490E622001D8F12 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61AC2490E622001D8F12 /* SceneDelegate.m */; };
-		E04C61B02490E622001D8F12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61AF2490E622001D8F12 /* ViewController.m */; };
 		E04C61B32490E622001D8F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04C61B12490E622001D8F12 /* Main.storyboard */; };
 		E04C61B52490E627001D8F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04C61B42490E627001D8F12 /* Assets.xcassets */; };
 		E04C61B82490E627001D8F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04C61B62490E627001D8F12 /* LaunchScreen.storyboard */; };
 		E04C61BB2490E627001D8F12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61BA2490E627001D8F12 /* main.m */; };
+		E04C61C32490E794001D8F12 /* SBAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C22490E794001D8F12 /* SBAContactsTableViewController.m */; };
+		E04C61C62490E7C7001D8F12 /* SBADetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		E04C61A92490E622001D8F12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E04C61AB2490E622001D8F12 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		E04C61AC2490E622001D8F12 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		E04C61AE2490E622001D8F12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E04C61AF2490E622001D8F12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E04C61B22490E622001D8F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E04C61B42490E627001D8F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04C61B72490E627001D8F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04C61B92490E627001D8F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04C61BA2490E627001D8F12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E04C61C12490E794001D8F12 /* SBAContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAContactsTableViewController.h; sourceTree = "<group>"; };
+		E04C61C22490E794001D8F12 /* SBAContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAContactsTableViewController.m; sourceTree = "<group>"; };
+		E04C61C42490E7C7001D8F12 /* SBADetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBADetailsViewController.h; sourceTree = "<group>"; };
+		E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBADetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +68,15 @@
 				E04C61A92490E622001D8F12 /* AppDelegate.m */,
 				E04C61AB2490E622001D8F12 /* SceneDelegate.h */,
 				E04C61AC2490E622001D8F12 /* SceneDelegate.m */,
-				E04C61AE2490E622001D8F12 /* ViewController.h */,
-				E04C61AF2490E622001D8F12 /* ViewController.m */,
 				E04C61B12490E622001D8F12 /* Main.storyboard */,
 				E04C61B42490E627001D8F12 /* Assets.xcassets */,
 				E04C61B62490E627001D8F12 /* LaunchScreen.storyboard */,
 				E04C61B92490E627001D8F12 /* Info.plist */,
 				E04C61BA2490E627001D8F12 /* main.m */,
+				E04C61C12490E794001D8F12 /* SBAContactsTableViewController.h */,
+				E04C61C22490E794001D8F12 /* SBAContactsTableViewController.m */,
+				E04C61C42490E7C7001D8F12 /* SBADetailsViewController.h */,
+				E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */,
 			);
 			path = MemoryManagementContacts;
 			sourceTree = "<group>";
@@ -146,10 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04C61B02490E622001D8F12 /* ViewController.m in Sources */,
+				E04C61C32490E794001D8F12 /* SBAContactsTableViewController.m in Sources */,
 				E04C61AA2490E622001D8F12 /* AppDelegate.m in Sources */,
 				E04C61BB2490E627001D8F12 /* main.m in Sources */,
 				E04C61AD2490E622001D8F12 /* SceneDelegate.m in Sources */,
+				E04C61C62490E7C7001D8F12 /* SBADetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
