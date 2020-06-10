@@ -15,6 +15,8 @@
 		E04C61BB2490E627001D8F12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61BA2490E627001D8F12 /* main.m */; };
 		E04C61C32490E794001D8F12 /* SBAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C22490E794001D8F12 /* SBAContactsTableViewController.m */; };
 		E04C61C62490E7C7001D8F12 /* SBADetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */; };
+		E04C61C92490E92B001D8F12 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C61C82490E92B001D8F12 /* Contact.swift */; };
+		E04C61CC2490EA4B001D8F12 /* SBAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C61CB2490EA4B001D8F12 /* SBAContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		E04C61C22490E794001D8F12 /* SBAContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAContactsTableViewController.m; sourceTree = "<group>"; };
 		E04C61C42490E7C7001D8F12 /* SBADetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBADetailsViewController.h; sourceTree = "<group>"; };
 		E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBADetailsViewController.m; sourceTree = "<group>"; };
+		E04C61C72490E92A001D8F12 /* MemoryManagementContacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryManagementContacts-Bridging-Header.h"; sourceTree = "<group>"; };
+		E04C61C82490E92B001D8F12 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		E04C61CA2490EA4B001D8F12 /* SBAContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAContact.h; sourceTree = "<group>"; };
+		E04C61CB2490EA4B001D8F12 /* SBAContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,10 @@
 				E04C61C22490E794001D8F12 /* SBAContactsTableViewController.m */,
 				E04C61C42490E7C7001D8F12 /* SBADetailsViewController.h */,
 				E04C61C52490E7C7001D8F12 /* SBADetailsViewController.m */,
+				E04C61C82490E92B001D8F12 /* Contact.swift */,
+				E04C61C72490E92A001D8F12 /* MemoryManagementContacts-Bridging-Header.h */,
+				E04C61CA2490EA4B001D8F12 /* SBAContact.h */,
+				E04C61CB2490EA4B001D8F12 /* SBAContact.m */,
 			);
 			path = MemoryManagementContacts;
 			sourceTree = "<group>";
@@ -112,6 +122,7 @@
 				TargetAttributes = {
 					E04C61A42490E622001D8F12 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -151,11 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04C61C92490E92B001D8F12 /* Contact.swift in Sources */,
 				E04C61C32490E794001D8F12 /* SBAContactsTableViewController.m in Sources */,
 				E04C61AA2490E622001D8F12 /* AppDelegate.m in Sources */,
 				E04C61BB2490E627001D8F12 /* main.m in Sources */,
 				E04C61AD2490E622001D8F12 /* SceneDelegate.m in Sources */,
 				E04C61C62490E7C7001D8F12 /* SBADetailsViewController.m in Sources */,
+				E04C61CC2490EA4B001D8F12 /* SBAContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MYA9HNSTZ;
 				INFOPLIST_FILE = MemoryManagementContacts/Info.plist;
@@ -304,6 +318,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sal.b.amer.MemoryManagementContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemoryManagementContacts/MemoryManagementContacts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -312,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MYA9HNSTZ;
 				INFOPLIST_FILE = MemoryManagementContacts/Info.plist;
@@ -321,6 +339,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sal.b.amer.MemoryManagementContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemoryManagementContacts/MemoryManagementContacts-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
