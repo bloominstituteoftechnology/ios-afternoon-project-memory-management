@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+//fwd class dec
+@class SBAContact;
+@class SBAContactController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SBADetailsViewController : UIViewController
+
+@property (nonatomic, nullable, retain) SBAContact *contact;
+@property (nonatomic, nullable, retain) SBAContactController *contactController;
 
 @end
 
