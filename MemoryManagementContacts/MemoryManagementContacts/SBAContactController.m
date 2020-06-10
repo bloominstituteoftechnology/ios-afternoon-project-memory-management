@@ -7,7 +7,25 @@
 //
 
 #import "SBAContactController.h"
+#import "SBAContact.h"
 
 @implementation SBAContactController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _contacts = [[[[NSMutableArray<SBAContact *> alloc] init] autorelease] retain];
+    }
+    return self;
+}
+
+- (void)newContactWithName:(NSString *)name
+                     email:(NSString *)email
+                     phone:(NSString *)phone
+{
+    [self.contacts addObject: [SBAContact contactWithName:name email:email phone:phone]];
+}
+
+//dealloc
 
 @end
