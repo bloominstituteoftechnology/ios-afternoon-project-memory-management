@@ -14,6 +14,7 @@
 		63D368E22490CC730055A1E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D368E02490CC730055A1E6 /* LaunchScreen.storyboard */; };
 		63D368E52490CC730055A1E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368E42490CC730055A1E6 /* main.m */; };
 		63D368F12490D9760055A1E6 /* DTWContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F02490D9760055A1E6 /* DTWContact.m */; };
+		63D368F42490D9B60055A1E6 /* DTWContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		63D368E42490CC730055A1E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63D368EF2490D9760055A1E6 /* DTWContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWContact.h; sourceTree = "<group>"; };
 		63D368F02490D9760055A1E6 /* DTWContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContact.m; sourceTree = "<group>"; };
+		63D368F22490D9B60055A1E6 /* DTWContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWContactTableViewController.h; sourceTree = "<group>"; };
+		63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWContactTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		63D368EE2490D9520055A1E6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63D368F22490D9B60055A1E6 /* DTWContactTableViewController.h */,
+				63D368F32490D9B60055A1E6 /* DTWContactTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				63D368D42490CC710055A1E6 /* AppDelegate.m in Sources */,
 				63D368E52490CC730055A1E6 /* main.m in Sources */,
 				63D368F12490D9760055A1E6 /* DTWContact.m in Sources */,
+				63D368F42490D9B60055A1E6 /* DTWContactTableViewController.m in Sources */,
 				63D368D72490CC710055A1E6 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
