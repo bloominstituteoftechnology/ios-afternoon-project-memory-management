@@ -37,9 +37,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
-  for (SBAContact *contact in self.contactController.contacts) {
-    [self.tableView reloadData];
-  }
+//  for (SBAContact *contact in self.contactController.contacts) {
+//    [self.tableView reloadData];
+//  }
 }
 
 #pragma mark - Table view data source
