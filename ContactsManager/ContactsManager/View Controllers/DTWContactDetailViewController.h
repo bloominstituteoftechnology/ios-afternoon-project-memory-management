@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class DTWContact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DTWContactDetailViewController : UIViewController
+
+@property (nonatomic, retain) DTWContact *contact;
 
 @end
 
