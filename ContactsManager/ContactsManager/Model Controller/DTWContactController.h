@@ -15,20 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DTWContactController : NSObject
 
 @property (nonatomic, readonly, copy) NSArray<DTWContact *> *contacts;
-
 @property (nonatomic, readonly) NSInteger contactCount;
 
 - (DTWContact *)contactAtIndex:(NSInteger)index;
-
 - (void)deleteContactAtIndex:(NSInteger)index;
-
 - (void)createContactWithContact:(DTWContact *)contact;
-
 - (void)createContactWithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber;
-
-- (void)updateContact:(DTWContact *)contact WithContact:(DTWContact *)contact;
-
-- (void)updateContact:(DTWContact *)contact WithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber;
+- (void)updateContactAtIndex:(NSInteger)index WithContact:(DTWContact *)contact;
+- (void)updateContactAtIndex:(NSInteger)index WithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber;
 
 @end
 
