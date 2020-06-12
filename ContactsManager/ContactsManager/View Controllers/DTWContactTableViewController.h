@@ -8,13 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class DTWContactController;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DTWContactTableViewController : UITableViewController
-
-@property (nonatomic, readonly, retain) DTWContactController *contactController;
 
 @end
 
