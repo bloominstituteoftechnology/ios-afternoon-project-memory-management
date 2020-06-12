@@ -10,7 +10,7 @@
         <!--Contacts-->
         <scene sceneID="Rrp-w1-veL">
             <objects>
-                <tableViewController id="z2F-dA-Xgd" sceneMemberID="viewController">
+                <tableViewController id="z2F-dA-Xgd" customClass="DTWContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9qr-g0-KsT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--New Contact-->
         <scene sceneID="kwx-wb-fwP">
             <objects>
-                <viewController id="t3u-Cx-n7V" sceneMemberID="viewController">
+                <viewController id="t3u-Cx-n7V" customClass="DTWContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tdc-1k-5O4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,8 +134,17 @@
                         <viewLayoutGuide key="safeArea" id="pYg-Xb-gDh"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Contact" id="okM-Tx-u9i">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mAn-o4-wmE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mAn-o4-wmE">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="t3u-Cx-n7V" id="Gma-5o-8uQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="Hnh-UJ-Swl" id="UJg-m7-uur"/>
+                        <outlet property="nameTextField" destination="guA-J9-Eel" id="nwg-qo-B6p"/>
+                        <outlet property="phoneNumberTextField" destination="gut-NI-Jv2" id="XUb-OQ-p6W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqm-RD-3xB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
