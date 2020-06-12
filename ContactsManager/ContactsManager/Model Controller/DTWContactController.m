@@ -65,25 +65,36 @@
 - (void)createContactWithContact:(DTWContact *)contact
 {
     [self.internalContacts addObject:contact];
-//    [contact release];
 }
 
-- (void)createContactWithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber
+- (void)createContactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber
 {
     DTWContact *contact = [[[DTWContact alloc] initWithName:name Email:email PhoneNumber:phoneNumber] autorelease];
     [self createContactWithContact:contact];
 }
 
-- (void)updateContactAtIndex:(NSInteger)index WithContact:(DTWContact *)contact
+- (void)updateContactAtIndex:(NSInteger)index withContact:(DTWContact *)contact
 {
     [self.internalContacts setObject:contact atIndexedSubscript:index];
-//    [contact release];
 }
 
-- (void)updateContactAtIndex:(NSInteger)index WithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber
+- (void)updateContactAtIndex:(NSInteger)index withName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber
 {
     DTWContact *contact = [[[DTWContact alloc] initWithName:name Email:email PhoneNumber:phoneNumber] autorelease];
-    [self updateContactAtIndex:index WithContact:contact];
+    [self updateContactAtIndex:index withContact:contact];
+}
+
+- (void)updateContact:(DTWContact *)contact withName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber
+{
+    contact.name = name;
+    contact.email = email;
+    contact.phoneNumber = phoneNumber;
+    
+    NSUInteger index = [self.internalContacts indexOfObject:contact];
+    
+    DTWContact *updatedContact = [[[DTWContact alloc] initWithName:name Email:email PhoneNumber:phoneNumber] autorelease];
+    
+    [self.internalContacts setObject:updatedContact atIndexedSubscript:index];
 }
 
 @end

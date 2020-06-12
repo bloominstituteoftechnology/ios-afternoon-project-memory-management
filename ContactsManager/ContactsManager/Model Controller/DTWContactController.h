@@ -20,9 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (DTWContact *)contactAtIndex:(NSInteger)index;
 - (void)deleteContactAtIndex:(NSInteger)index;
 - (void)createContactWithContact:(DTWContact *)contact;
-- (void)createContactWithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber;
-- (void)updateContactAtIndex:(NSInteger)index WithContact:(DTWContact *)contact;
-- (void)updateContactAtIndex:(NSInteger)index WithName:(NSString *)name Email:(NSString *)email PhoneNumber:(NSString *)phoneNumber;
+- (void)createContactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber;
+- (void)updateContactAtIndex:(NSInteger)index withContact:(DTWContact *)contact;
+- (void)updateContactAtIndex:(NSInteger)index withName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber;
+- (void)updateContact:(DTWContact *)contact withName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber;
 
 @end
 
