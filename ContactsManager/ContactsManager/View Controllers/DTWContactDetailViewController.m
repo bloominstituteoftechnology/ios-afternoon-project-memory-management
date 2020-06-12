@@ -7,8 +7,14 @@
 //
 
 #import "DTWContactDetailViewController.h"
+#import "DTWContactController.h"
+#import "DTWContact.h"
 
 @interface DTWContactDetailViewController ()
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 
 @end
 
@@ -16,17 +22,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (self.contact) {
+        self.nameTextField.text = self.contact.name;
+        self.emailTextField.text = self.contact.email;
+        self.phoneNumberTextField.text = self.contact.phoneNumber;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    NSString *name = self.nameTextField.text;
+    if (!name || [name isEqualToString:@""]) return;
+    
+    NSString *email = self.emailTextField.text;
+    NSString *phoneNumber = self.phoneNumberTextField.text;
+    
+    if (!self.contact) {
+        [self.contactController createContactWithName:name email:email phoneNumber:phoneNumber];
+    } else {
+        [self.contactController updateContact:self.contact withName:name email:email phoneNumber:phoneNumber];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
 
+- (void)dealloc {
+    [_contact release];
+    [_contactController release];
+    [_nameTextField release];
+    [_emailTextField release];
+    [_phoneNumberTextField release];
+    [super dealloc];
+}
 @end
