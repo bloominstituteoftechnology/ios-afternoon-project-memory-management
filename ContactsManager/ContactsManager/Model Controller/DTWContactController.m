@@ -9,18 +9,26 @@
 #import "DTWContactController.h"
 #import "DTWContact.h"
 
-@interface DTWContactController ()
-
-@property (nonatomic, retain) NSMutableArray *internalContacts;
+@interface DTWContactController () {
+    NSMutableArray *_internalContacts;
+}
 
 @end
 
 @implementation DTWContactController
 
-@synthesize contacts = _contacts;
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _internalContacts = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+//@synthesize contacts = _contacts;
 - (NSArray<DTWContact *> *)contacts
 {
-    if (!_contacts) {
+    if (!_internalContacts) {
         DTWContact *contact1 = [[DTWContact alloc] initWithName:@"David Wright" Email:@"david.wright@email.com" PhoneNumber:@"123-456-7890"];
         DTWContact *contact2 = [[DTWContact alloc] initWithName:@"Katie Wright" Email:@"katie.wright@email.com" PhoneNumber:@"234-789-1560"];
         DTWContact *contact3 = [[DTWContact alloc] initWithName:@"Tim Apple" Email:@"tim.apple@email.com" PhoneNumber:@"555-1029-1560"];
@@ -33,16 +41,15 @@
         [contact2 release];
         [contact3 release];
         
-        _contacts = startingContacts.copy;
+        _internalContacts = startingContacts.copy;
         [startingContacts release];
     }
-    return _contacts;
+    return [_internalContacts.copy autorelease];
 }
 
 - (void)dealloc
 {
     [_internalContacts release];
-    [_contacts release];
     [super dealloc];
 }
 
@@ -53,18 +60,18 @@
 
 - (DTWContact *)contactAtIndex:(NSInteger)index
 {
-    DTWContact *contact = [self.internalContacts objectAtIndex:index];
+    DTWContact *contact = [_internalContacts objectAtIndex:index];
     return contact;
 }
 
 - (void)deleteContactAtIndex:(NSInteger)index
 {
-    [self.internalContacts removeObjectAtIndex:index];
+    [_internalContacts removeObjectAtIndex:index];
 }
 
 - (void)createContactWithContact:(DTWContact *)contact
 {
-    [self.internalContacts addObject:contact];
+    [_internalContacts addObject:contact];
 }
 
 - (void)createContactWithName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber
@@ -75,7 +82,7 @@
 
 - (void)updateContactAtIndex:(NSInteger)index withContact:(DTWContact *)contact
 {
-    [self.internalContacts setObject:contact atIndexedSubscript:index];
+    [_internalContacts setObject:contact atIndexedSubscript:index];
 }
 
 - (void)updateContactAtIndex:(NSInteger)index withName:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber
@@ -90,11 +97,11 @@
     contact.email = email;
     contact.phoneNumber = phoneNumber;
     
-    NSUInteger index = [self.internalContacts indexOfObject:contact];
+    NSUInteger index = [_internalContacts indexOfObject:contact];
     
     DTWContact *updatedContact = [[[DTWContact alloc] initWithName:name Email:email PhoneNumber:phoneNumber] autorelease];
     
-    [self.internalContacts setObject:updatedContact atIndexedSubscript:index];
+    [_internalContacts setObject:updatedContact atIndexedSubscript:index];
 }
 
 @end

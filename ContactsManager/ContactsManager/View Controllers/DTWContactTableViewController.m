@@ -64,11 +64,14 @@
         DTWContactDetailViewController *contactDetailVC = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DTWContact *contact = [self.contactController contactAtIndex:indexPath.row];
+        
         contactDetailVC.contact = contact;
         contactDetailVC.title = contact.name;
+        contactDetailVC.contactController = self.contactController;
         
     } else if ([[segue identifier] isEqualToString:@"ShowAddContactSegue"]) {
         DTWContactDetailViewController *contactDetailVC = [segue destinationViewController];
+        
         contactDetailVC.contactController = self.contactController;
     }
 }
