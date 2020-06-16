@@ -21,29 +21,27 @@
 {
     if (self = [super init]) {
         _internalContacts = [[NSMutableArray alloc] init];
+        [self addTestData];
     }
     return self;
 }
 
-//@synthesize contacts = _contacts;
+- (void)addTestData
+{
+    DTWContact *contact1 = [[DTWContact alloc] initWithName:@"David Wright" Email:@"david.wright@email.com" PhoneNumber:@"123-456-7890"];
+    DTWContact *contact2 = [[DTWContact alloc] initWithName:@"Katie Wright" Email:@"katie.wright@email.com" PhoneNumber:@"234-789-1560"];
+    DTWContact *contact3 = [[DTWContact alloc] initWithName:@"Tim Apple" Email:@"tim.apple@email.com" PhoneNumber:@"555-1029-1560"];
+    
+    [_internalContacts addObject:contact1];
+    [_internalContacts addObject:contact2];
+    [_internalContacts addObject:contact3];
+    [contact1 release];
+    [contact2 release];
+    [contact3 release];
+}
+
 - (NSArray<DTWContact *> *)contacts
 {
-    if (!_internalContacts) {
-        DTWContact *contact1 = [[DTWContact alloc] initWithName:@"David Wright" Email:@"david.wright@email.com" PhoneNumber:@"123-456-7890"];
-        DTWContact *contact2 = [[DTWContact alloc] initWithName:@"Katie Wright" Email:@"katie.wright@email.com" PhoneNumber:@"234-789-1560"];
-        DTWContact *contact3 = [[DTWContact alloc] initWithName:@"Tim Apple" Email:@"tim.apple@email.com" PhoneNumber:@"555-1029-1560"];
-        
-        NSMutableArray *startingContacts = [[NSMutableArray alloc] init];
-        [startingContacts addObject:contact1];
-        [startingContacts addObject:contact2];
-        [startingContacts addObject:contact3];
-        [contact1 release];
-        [contact2 release];
-        [contact3 release];
-        
-        _internalContacts = startingContacts.copy;
-        [startingContacts release];
-    }
     return [_internalContacts.copy autorelease];
 }
 
