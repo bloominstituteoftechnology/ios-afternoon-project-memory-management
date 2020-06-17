@@ -15,11 +15,16 @@
 @end
 
 @implementation HSIContactTableViewController
-
-NSArray<HSIContact *> *contacts;
+//FUTURE: Use a controller
+NSMutableArray<HSIContact *> *contacts;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    HSIContact *kenny = [[HSIContact alloc] initWithName:@"Kenny" emailAddress:@"kennydubroff@hotmail.com" phoneNumber:@"9258497823"];
+    HSIContact *bella = [[HSIContact alloc] initWithName:@"Isabella" emailAddress:@"bella@hotmail.com" phoneNumber:@"9257051709"];
+    contacts = [[NSMutableArray alloc] initWithObjects:kenny, bella, nil];
+    [kenny release];
+    [bella release];
 }
 
 // MARK: - Table view data source -
@@ -29,7 +34,7 @@ NSArray<HSIContact *> *contacts;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
-    
+    cell.textLabel.text = contacts[indexPath.row].name;
     return cell;
 }
 

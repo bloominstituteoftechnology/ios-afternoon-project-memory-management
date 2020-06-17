@@ -11,7 +11,7 @@
 
 @interface HSIDetailViewController : UIViewController
 
-@property (nonatomic, copy) HSIContact *contact;
+@property (nonatomic, retain) HSIContact *contact;
 
 @end
 
