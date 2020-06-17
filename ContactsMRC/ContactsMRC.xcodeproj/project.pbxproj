@@ -13,6 +13,7 @@
 		3F548480249AB0D700B11678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F54847F249AB0D700B11678 /* Assets.xcassets */; };
 		3F548483249AB0D700B11678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F548481249AB0D700B11678 /* LaunchScreen.storyboard */; };
 		3F548486249AB0D700B11678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548485249AB0D700B11678 /* main.m */; };
+		3F548491249AB5E500B11678 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548490249AB5E500B11678 /* LSIContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3F548482249AB0D700B11678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F548484249AB0D700B11678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F548485249AB0D700B11678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F54848F249AB5E500B11678 /* LSIContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContact.h; sourceTree = "<group>"; };
+		3F548490249AB5E500B11678 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				3F548474249AB0D500B11678 /* AppDelegate.m */,
 				3F548476249AB0D500B11678 /* SceneDelegate.h */,
 				3F548477249AB0D500B11678 /* SceneDelegate.m */,
+				3F54848F249AB5E500B11678 /* LSIContact.h */,
+				3F548490249AB5E500B11678 /* LSIContact.m */,
 				3F54847C249AB0D500B11678 /* Main.storyboard */,
 				3F54847F249AB0D700B11678 /* Assets.xcassets */,
 				3F548481249AB0D700B11678 /* LaunchScreen.storyboard */,
@@ -144,6 +149,7 @@
 				3F548475249AB0D500B11678 /* AppDelegate.m in Sources */,
 				3F548486249AB0D700B11678 /* main.m in Sources */,
 				3F548478249AB0D500B11678 /* SceneDelegate.m in Sources */,
+				3F548491249AB5E500B11678 /* LSIContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
