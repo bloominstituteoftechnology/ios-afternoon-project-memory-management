@@ -12,11 +12,11 @@
 
 @interface LSIContact : NSObject
 
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *emailAddress;
-@property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *telephone;
 
-- (instancetype)initWithEmailAddress:(NSString *)emailAddress address:(NSString *)address telephone:(NSString *)telephone;
+- (instancetype)initWithName:(NSString *)name emailAddress:(NSString *)emailAddress telephone:(NSString *)telephone;
 
 @end
 

@@ -11,11 +11,11 @@
 @implementation LSIContact
 
 
-- (instancetype)initWithEmailAddress:(NSString *)emailAddress address:(NSString *)address telephone:(NSString *)telephone {
+- (instancetype)initWithName:(NSString *)name emailAddress:(NSString *)emailAddress telephone:(NSString *)telephone {
     self = [super init];
     if (self) {
+        _name = [name copy];
         _emailAddress = [emailAddress copy];
-        _address = [address copy];
         _telephone = [telephone copy];
     }
     return self;
@@ -25,9 +25,9 @@
 {
     NSLog(@"deallocated the properties %@", self);
    
-    [_emailAddress release];
-    [_address release];
-    [_telephone release];
+    [ _name release];
+    [ _emailAddress release];
+    [ _telephone release];
     
      [super dealloc];
 }
