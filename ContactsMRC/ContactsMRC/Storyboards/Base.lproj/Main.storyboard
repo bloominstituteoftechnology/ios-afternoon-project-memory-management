@@ -10,7 +10,7 @@
         <!--Contacts-->
         <scene sceneID="lxF-DB-bsW">
             <objects>
-                <tableViewController id="nmN-Tx-YgB" sceneMemberID="viewController">
+                <tableViewController id="nmN-Tx-YgB" customClass="LSIContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mCR-hi-m1A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="13.043478260869566" y="41.517857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="fFm-6I-Sm6">
             <objects>
-                <viewController id="TAW-x1-KGm" sceneMemberID="viewController">
+                <viewController id="TAW-x1-KGm" customClass="LSIContactsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lb5-Wd-ncj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YfK-uZ-Dd0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UWv-oe-58e"/>
+                    <navigationItem key="navigationItem" id="UWv-oe-58e">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="rxo-aN-b23"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozg-Fu-PWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
