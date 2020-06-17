@@ -43,11 +43,18 @@
 
 
 - (IBAction)doneButtonTapped:(id)sender {
+    if (self.contact) {
+        [self.contact setValue:_nameTextField.text forKey:@"name"];
+        [self.contact setValue:_emailTextField.text forKey:@"emailAddress"];
+        [self.contact setValue:_phoneTextField.text forKey:@"phoneNumber"];
+        [self.delegate.tableView reloadData];
+        [self dismissViewControllerAnimated:true completion:nil];
+    } else {
+        HSIContact *contact = [[HSIContact alloc] initWithName:_nameTextField.text emailAddress:_emailTextField.text phoneNumber:_phoneTextField.text];
+        [self.delegate.contacts addObject:contact];
+        [self.delegate.tableView reloadData];
+        [self dismissViewControllerAnimated:true completion:nil];
+    }
 
-    [self.contact setValue:_nameTextField.text forKey:@"name"];
-    [self.contact setValue:_emailTextField.text forKey:@"emailAddress"];
-    [self.contact setValue:_phoneTextField.text forKey:@"phoneNumber"];
-    [self.delegate.tableView reloadData];
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 @end

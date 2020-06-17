@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HSIContact;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSIContactTableViewController : UITableViewController
+
+@property (nonatomic, retain) NSMutableArray<HSIContact *> *contacts;
 
 @end
 
