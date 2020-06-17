@@ -46,7 +46,7 @@
         self.nameTextField.text = self.contact.name;
         self.emailAddressTextField.text = self.contact.emailAddress;
         self.telephoneTextField.text = self.contact.telephone;
-    } 
+    }
 }
 
 - (IBAction)saveButtonTapped:(UIButton *)sender {
@@ -79,23 +79,12 @@
     }
 }
 
-
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     [self.nameTextField setUserInteractionEnabled:editing];
     [self.emailAddressTextField setUserInteractionEnabled:editing];
     [self.telephoneTextField setUserInteractionEnabled:editing];
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (void)dealloc {
     [_nameTextField release];

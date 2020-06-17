@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addContacts:(LSIContact *)contacts;
 
-
-
 @end
 
 NS_ASSUME_NONNULL_END
