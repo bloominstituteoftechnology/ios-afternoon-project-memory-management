@@ -70,25 +70,73 @@
 		3F548472249AB0D500B11678 /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
-				3F548473249AB0D500B11678 /* AppDelegate.h */,
-				3F548474249AB0D500B11678 /* AppDelegate.m */,
-				3F548476249AB0D500B11678 /* SceneDelegate.h */,
-				3F548477249AB0D500B11678 /* SceneDelegate.m */,
+				3F54849F249ABAF100B11678 /* Application */,
+				3F54849C249ABAD400B11678 /* Model */,
+				3F54849D249ABADC00B11678 /* ModelController */,
+				3F5484A0249ABB0500B11678 /* Storyboards */,
+				3F5484A1249ABB1000B11678 /* Resources */,
+			);
+			path = ContactsMRC;
+			sourceTree = "<group>";
+		};
+		3F54849C249ABAD400B11678 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F54848F249AB5E500B11678 /* LSIContact.h */,
+				3F548490249AB5E500B11678 /* LSIContact.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F54849D249ABADC00B11678 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				3F548492249AB78C00B11678 /* LSIContactController.h */,
+				3F548493249AB78C00B11678 /* LSIContactController.m */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		3F54849E249ABAE800B11678 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				3F548495249AB92700B11678 /* LSIContactTableViewController.h */,
 				3F548496249AB92700B11678 /* LSIContactTableViewController.m */,
 				3F548498249AB93C00B11678 /* LSIContactsViewController.h */,
 				3F548499249AB93C00B11678 /* LSIContactsViewController.m */,
-				3F54848F249AB5E500B11678 /* LSIContact.h */,
-				3F548490249AB5E500B11678 /* LSIContact.m */,
-				3F548492249AB78C00B11678 /* LSIContactController.h */,
-				3F548493249AB78C00B11678 /* LSIContactController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3F54849F249ABAF100B11678 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3F548473249AB0D500B11678 /* AppDelegate.h */,
+				3F548474249AB0D500B11678 /* AppDelegate.m */,
+				3F548476249AB0D500B11678 /* SceneDelegate.h */,
+				3F548477249AB0D500B11678 /* SceneDelegate.m */,
+				3F54849E249ABAE800B11678 /* ViewControllers */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3F5484A0249ABB0500B11678 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				3F54847C249AB0D500B11678 /* Main.storyboard */,
-				3F54847F249AB0D700B11678 /* Assets.xcassets */,
 				3F548481249AB0D700B11678 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3F5484A1249ABB1000B11678 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F54847F249AB0D700B11678 /* Assets.xcassets */,
 				3F548484249AB0D700B11678 /* Info.plist */,
 				3F548485249AB0D700B11678 /* main.m */,
 			);
-			path = ContactsMRC;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +359,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFBD923VWU;
-				INFOPLIST_FILE = ContactsMRC/Info.plist;
+				INFOPLIST_FILE = ContactsMRC/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +378,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFBD923VWU;
-				INFOPLIST_FILE = ContactsMRC/Info.plist;
+				INFOPLIST_FILE = ContactsMRC/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
