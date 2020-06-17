@@ -42,8 +42,8 @@
 - (void)dealloc
 {
     [_internalContacts release];
+    _internalContacts = nil;
     [_contacts release];
-    _contacts = nil;
     
     [super dealloc];
 }
