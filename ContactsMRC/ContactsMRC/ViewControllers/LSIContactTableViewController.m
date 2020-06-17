@@ -94,15 +94,24 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showContactSegue"]) {
+        NSIndexPath *indexSelected = [self.tableView indexPathForSelectedRow];
+        LSIContactsViewController *controller = (LSIContactsViewController *)segue.destinationViewController;
+        controller.contactController = self.contactController;
+        controller.contact = self.contactController.contacts[indexSelected.row];
+    } else if ([segue.identifier isEqualToString:@"addContactSegue"]) {
+        LSIContactsViewController *controller = (LSIContactsViewController *)segue.destinationViewController;
+        controller.contactController = self.contactController;
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 - (LSIContactController *)contactController {
     if (!_contactController) {

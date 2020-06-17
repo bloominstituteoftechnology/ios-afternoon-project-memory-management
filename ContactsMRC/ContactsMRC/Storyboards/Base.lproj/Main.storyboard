@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="TAW-x1-KGm" kind="show" id="xBj-iV-3Ho"/>
+                                    <segue destination="TAW-x1-KGm" kind="show" identifier="showContactSegue" id="xBj-iV-3Ho"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="5Nr-Mu-3vO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9sL-Ob-X0N">
                             <connections>
-                                <segue destination="TAW-x1-KGm" kind="show" id="tRc-S7-Uah"/>
+                                <segue destination="TAW-x1-KGm" kind="show" identifier="createContactSegue" id="tRc-S7-Uah"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -148,6 +148,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xBj-iV-3Ho"/>
+        <segue reference="tRc-S7-Uah"/>
     </inferredMetricsTieBreakers>
 </document>
