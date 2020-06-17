@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HSIContactTableViewController.h
 //  MRC-project
 //
 //  Created by Kenny on 6/17/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface HSIContactTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
