@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B991EE47249AAC2000411DF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE46249AAC2000411DF0 /* AppDelegate.m */; };
-		B991EE4A249AAC2000411DF0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE49249AAC2000411DF0 /* SceneDelegate.m */; };
 		B991EE4D249AAC2000411DF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE4C249AAC2000411DF0 /* ViewController.m */; };
 		B991EE50249AAC2000411DF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B991EE4E249AAC2000411DF0 /* Main.storyboard */; };
 		B991EE52249AAC2200411DF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B991EE51249AAC2200411DF0 /* Assets.xcassets */; };
 		B991EE55249AAC2200411DF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B991EE53249AAC2200411DF0 /* LaunchScreen.storyboard */; };
-		B991EE58249AAC2200411DF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE57249AAC2200411DF0 /* main.m */; };
 		B991EE62249AAC2200411DF0 /* MRC_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE61249AAC2200411DF0 /* MRC_projectTests.m */; };
+		B991EE74249AADCB00411DF0 /* HSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE73249AADCB00411DF0 /* HSIContact.m */; };
+		B991EE79249AB1A900411DF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE78249AB1A900411DF0 /* AppDelegate.m */; };
+		B991EE7B249AB1BA00411DF0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE7A249AB1BA00411DF0 /* SceneDelegate.m */; };
+		B991EE7E249AB1DC00411DF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B991EE7D249AB1DC00411DF0 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +37,19 @@
 		B991EE4B249AAC2000411DF0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B991EE4C249AAC2000411DF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B991EE4F249AAC2000411DF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B991EE51249AAC2200411DF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B991EE51249AAC2200411DF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../MRC-project/Resources/Assets.xcassets"; sourceTree = "<group>"; };
 		B991EE54249AAC2200411DF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B991EE56249AAC2200411DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B991EE57249AAC2200411DF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B991EE5D249AAC2200411DF0 /* MRC-projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MRC-projectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B991EE61249AAC2200411DF0 /* MRC_projectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRC_projectTests.m; sourceTree = "<group>"; };
 		B991EE63249AAC2200411DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B991EE72249AADCB00411DF0 /* HSIContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSIContact.h; sourceTree = "<group>"; };
+		B991EE73249AADCB00411DF0 /* HSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSIContact.m; sourceTree = "<group>"; };
+		B991EE78249AB1A900411DF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "MRC-project/Resources/AppDelegate.m"; sourceTree = "<group>"; };
+		B991EE7A249AB1BA00411DF0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SceneDelegate.m; path = "MRC-project/Resources/SceneDelegate.m"; sourceTree = "<group>"; };
+		B991EE7C249AB1CC00411DF0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SceneDelegate.m; path = "MRC-project/Resources/SceneDelegate.m"; sourceTree = "<group>"; };
+		B991EE7D249AB1DC00411DF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "MRC-project/Resources/main.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,10 @@
 		B991EE39249AAC2000411DF0 = {
 			isa = PBXGroup;
 			children = (
+				B991EE7D249AB1DC00411DF0 /* main.m */,
+				B991EE7A249AB1BA00411DF0 /* SceneDelegate.m */,
+				B991EE7C249AB1CC00411DF0 /* SceneDelegate.m */,
+				B991EE78249AB1A900411DF0 /* AppDelegate.m */,
 				B991EE44249AAC2000411DF0 /* MRC-project */,
 				B991EE60249AAC2200411DF0 /* MRC-projectTests */,
 				B991EE43249AAC2000411DF0 /* Products */,
@@ -84,17 +95,10 @@
 		B991EE44249AAC2000411DF0 /* MRC-project */ = {
 			isa = PBXGroup;
 			children = (
-				B991EE45249AAC2000411DF0 /* AppDelegate.h */,
-				B991EE46249AAC2000411DF0 /* AppDelegate.m */,
-				B991EE48249AAC2000411DF0 /* SceneDelegate.h */,
-				B991EE49249AAC2000411DF0 /* SceneDelegate.m */,
-				B991EE4B249AAC2000411DF0 /* ViewController.h */,
-				B991EE4C249AAC2000411DF0 /* ViewController.m */,
-				B991EE4E249AAC2000411DF0 /* Main.storyboard */,
-				B991EE51249AAC2200411DF0 /* Assets.xcassets */,
-				B991EE53249AAC2200411DF0 /* LaunchScreen.storyboard */,
-				B991EE56249AAC2200411DF0 /* Info.plist */,
-				B991EE57249AAC2200411DF0 /* main.m */,
+				B991EE71249AAD8F00411DF0 /* Model */,
+				B991EE70249AAD8500411DF0 /* View */,
+				B991EE6E249AAD7A00411DF0 /* Controller */,
+				B991EE6C249AAD2700411DF0 /* Resources */,
 			);
 			path = "MRC-project";
 			sourceTree = "<group>";
@@ -106,6 +110,64 @@
 				B991EE63249AAC2200411DF0 /* Info.plist */,
 			);
 			path = "MRC-projectTests";
+			sourceTree = "<group>";
+		};
+		B991EE6C249AAD2700411DF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B991EE45249AAC2000411DF0 /* AppDelegate.h */,
+				B991EE46249AAC2000411DF0 /* AppDelegate.m */,
+				B991EE48249AAC2000411DF0 /* SceneDelegate.h */,
+				B991EE49249AAC2000411DF0 /* SceneDelegate.m */,
+				B991EE51249AAC2200411DF0 /* Assets.xcassets */,
+				B991EE56249AAC2200411DF0 /* Info.plist */,
+				B991EE57249AAC2200411DF0 /* main.m */,
+			);
+			name = Resources;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		B991EE6D249AAD7400411DF0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B991EE4B249AAC2000411DF0 /* ViewController.h */,
+				B991EE4C249AAC2000411DF0 /* ViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B991EE6E249AAD7A00411DF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B991EE6D249AAD7400411DF0 /* View Controllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B991EE6F249AAD7F00411DF0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B991EE4E249AAC2000411DF0 /* Main.storyboard */,
+				B991EE53249AAC2200411DF0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B991EE70249AAD8500411DF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B991EE6F249AAD7F00411DF0 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B991EE71249AAD8F00411DF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B991EE72249AADCB00411DF0 /* HSIContact.h */,
+				B991EE73249AADCB00411DF0 /* HSIContact.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,10 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B991EE7E249AB1DC00411DF0 /* main.m in Sources */,
+				B991EE7B249AB1BA00411DF0 /* SceneDelegate.m in Sources */,
+				B991EE79249AB1A900411DF0 /* AppDelegate.m in Sources */,
 				B991EE4D249AAC2000411DF0 /* ViewController.m in Sources */,
-				B991EE47249AAC2000411DF0 /* AppDelegate.m in Sources */,
-				B991EE58249AAC2200411DF0 /* main.m in Sources */,
-				B991EE4A249AAC2000411DF0 /* SceneDelegate.m in Sources */,
+				B991EE74249AADCB00411DF0 /* HSIContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34P4RF23ET;
-				INFOPLIST_FILE = "MRC-project/Info.plist";
+				INFOPLIST_FILE = "MRC-project/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34P4RF23ET;
-				INFOPLIST_FILE = "MRC-project/Info.plist";
+				INFOPLIST_FILE = "MRC-project/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
