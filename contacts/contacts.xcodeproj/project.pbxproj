@@ -14,6 +14,8 @@
 		184BD15D249AA59100E620FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184BD15C249AA59100E620FF /* Assets.xcassets */; };
 		184BD160249AA59100E620FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184BD15E249AA59100E620FF /* LaunchScreen.storyboard */; };
 		184BD163249AA59100E620FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD162249AA59100E620FF /* main.m */; };
+		184BD170249AAAF700E620FF /* MJPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD16F249AAAF700E620FF /* MJPContactsTableViewController.m */; };
+		184BD173249AAB2800E620FF /* MJPContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD172249AAB2800E620FF /* MJPContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		184BD15F249AA59100E620FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184BD161249AA59100E620FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184BD162249AA59100E620FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		184BD16E249AAAF700E620FF /* MJPContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MJPContactsTableViewController.h; path = "contacts/View Controller/MJPContactsTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		184BD16F249AAAF700E620FF /* MJPContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MJPContactsTableViewController.m; path = "contacts/View Controller/MJPContactsTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		184BD171249AAB2800E620FF /* MJPContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MJPContactViewController.h; path = "contacts/View Controller/MJPContactViewController.h"; sourceTree = SOURCE_ROOT; };
+		184BD172249AAB2800E620FF /* MJPContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MJPContactViewController.m; path = "contacts/View Controller/MJPContactViewController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				184BD159249AA58C00E620FF /* Main.storyboard */,
+				184BD16E249AAAF700E620FF /* MJPContactsTableViewController.h */,
+				184BD16F249AAAF700E620FF /* MJPContactsTableViewController.m */,
+				184BD171249AAB2800E620FF /* MJPContactViewController.h */,
+				184BD172249AAB2800E620FF /* MJPContactViewController.m */,
 				184BD15E249AA59100E620FF /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -190,6 +200,8 @@
 				184BD152249AA58C00E620FF /* AppDelegate.m in Sources */,
 				184BD163249AA59100E620FF /* main.m in Sources */,
 				184BD155249AA58C00E620FF /* SceneDelegate.m in Sources */,
+				184BD170249AAAF700E620FF /* MJPContactsTableViewController.m in Sources */,
+				184BD173249AAB2800E620FF /* MJPContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
