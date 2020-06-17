@@ -7,6 +7,7 @@
 //
 
 #import "HSIDetailViewController.h"
+#import "HSIContact.h"
 
 @interface HSIDetailViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"name: %@", self.contact.name);
 }
 
 - (void)dealloc

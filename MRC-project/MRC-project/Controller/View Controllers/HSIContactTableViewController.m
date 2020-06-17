@@ -41,13 +41,13 @@ NSMutableArray<HSIContact *> *contacts;
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    HSIDetailViewController *detailViewController = [[HSIDetailViewController alloc] init];
+    HSIDetailViewController *detailViewController = (HSIDetailViewController *)segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"AddContactSegue"]) {
         // FUTURE: create controller and pass
     } else {
         NSIndexPath *selectedindexPath = [self.tableView indexPathForSelectedRow];
-        detailViewController.contact = contacts[selectedindexPath.row];
+        HSIContact *contact = contacts[selectedindexPath.row];
+        detailViewController.contact = contact;
     }
-    [detailViewController release];
 }
 @end
