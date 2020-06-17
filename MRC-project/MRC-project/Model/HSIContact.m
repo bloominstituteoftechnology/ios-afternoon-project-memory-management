@@ -10,6 +10,27 @@
 
 @implementation HSIContact
 
+- (instancetype)initWithName:(NSString *)name emailAddress:(NSString *)email phoneNumber:(NSString *)phone
+{
+    {
+        self = [super init];
+        if (self) {
+            _name = name;
+            _emailAddress = email;
+            _phoneNumber = phone;
 
+        }
+        return self;
+    }
+}
+
+- (void)dealloc
+{
+    [_name release];
+    [_emailAddress release];
+    [_phoneNumber release];
+    
+    [super dealloc];
+}
 
 @end
