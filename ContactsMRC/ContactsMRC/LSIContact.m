@@ -23,10 +23,13 @@
 
 - (void)dealloc
 {
-    [super dealloc];
+    NSLog(@"deallocated the properties %@", self);
+   
     [_emailAddress release];
     [_address release];
     [_telephone release];
+    
+     [super dealloc];
 }
 
 @end
