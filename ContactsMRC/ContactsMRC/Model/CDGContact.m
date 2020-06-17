@@ -13,22 +13,14 @@
 
 - (instancetype)initWithName:(NSString *)name
                 emailAddress:(NSString *)emailAddress
-                 phoneNumber:(NSInteger)phoneNumber {
+                 phoneNumber:(NSString *)phoneNumber {
     self = [super init];
     if (self) {
-        _name = name;
-        _emailAddress = emailAddress;
-        _phoneNumber = phoneNumber;
+        _name = [name copy];
+        _emailAddress = [emailAddress copy];
+        _phoneNumber = [phoneNumber copy];
     }
     return self;
-}
-
-+ (instancetype)contactWithName:(NSString *)name
-                   emailAddress:(NSString *)emailAddress
-                    phoneNumber:(NSInteger)phoneNumber {
-    return [[[self alloc]initWithName:name
-                         emailAddress:emailAddress
-                          phoneNumber:phoneNumber] autorelease];
 }
 
 - (void)dealloc {
@@ -36,6 +28,8 @@
     _name = nil;
     [_emailAddress release];
     _emailAddress = nil;
+    [_phoneNumber release];
+    _phoneNumber = nil;
     
     [super dealloc];
 }

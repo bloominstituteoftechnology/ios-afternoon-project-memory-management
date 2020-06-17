@@ -9,20 +9,43 @@
 #import "CDGContactController.h"
 #import "CDGContact.h"
 
+@interface CDGContactController()
+
+@property (nonatomic, retain) NSMutableArray *internalContacts;
+
+@end
+
 @implementation CDGContactController
 
 - (instancetype)init {
+    self = [super init];
     if (self) {
-        _contacts = [[[NSArray alloc] initWithObjects:[
-                                                       [[CDGContact alloc]initWithName:@"Chris Gonzales"
-                                                                          emailAddress:@"christopher-gonzales@lambdastudents.com"
-                                                                           phoneNumber:9513136966]autorelease],
-                      [[[CDGContact alloc]initWithName:@"Student 2"
-                                          emailAddress:@"TestEmail@company.com"
-                                           phoneNumber:1234567890]autorelease],
-                      nil]autorelease];
+        _internalContacts = [[[[NSMutableArray alloc] init] retain] autorelease];
     }
     return self;
+}
+
+-(void)createContactWithName:(NSString *)name
+                       phone:(NSString *)phone
+                       email:(NSString *)email {
+    CDGContact *contact = [[[CDGContact alloc] initWithName:name
+                                               emailAddress:email
+                                                phoneNumber:phone] autorelease];
+    [self.internalContacts addObject:contact];
+}
+
+-(NSArray *)contacts
+{
+    return [[self.internalContacts copy] autorelease];
+}
+
+- (void)dealloc
+{
+    [_internalContacts release];
+    [_contacts release];
+    _contacts = nil;
+    
+    [super dealloc];
 }
 
 @end

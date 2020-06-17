@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDGContactController.h"
+#import "CDGContact.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactDetailViewController : UIViewController
+
+@property (weak, nonatomic) CDGContactController *contactController;
+@property (weak, nonatomic) CDGContact *contact;
 
 @end
 

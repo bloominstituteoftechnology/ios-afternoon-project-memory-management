@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CDGContact : NSObject
 
-@property (nonatomic, readonly, copy) NSString *name;
-@property (nonatomic, readonly, copy) NSString *emailAddress;
-@property (nonatomic, readonly) NSInteger phoneNumber;
+@property (nonatomic, readonly, copy, nullable) NSString *name;
+@property (nonatomic, readonly, copy, nullable) NSString *emailAddress;
+@property (nonatomic, readonly, copy, nullable) NSString *phoneNumber;
 
 - (instancetype)initWithName:(NSString *)name
                 emailAddress:(NSString *)emailAddress
-                 phoneNumber:(NSInteger)phoneNumber;
+                 phoneNumber:(NSString *)phoneNumber;
 
 @end
 

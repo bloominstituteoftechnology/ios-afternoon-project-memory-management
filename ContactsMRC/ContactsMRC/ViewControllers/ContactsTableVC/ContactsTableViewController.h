@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CDGContactController;
+
 @interface ContactsTableViewController : UITableViewController
 
 @end

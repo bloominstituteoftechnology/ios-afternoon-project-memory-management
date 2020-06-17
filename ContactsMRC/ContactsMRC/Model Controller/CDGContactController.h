@@ -14,7 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CDGContactController : NSObject
 
-@property (nonatomic, readonly, copy, nonnull) NSArray<CDGContact *> *contacts;
+@property (nonatomic, retain) NSMutableArray *contacts;
+
+- (void)createContactWithName:(NSString *)name
+                        phone:(NSString *)phone
+                        email:(NSString *)email;
 
 @end
 

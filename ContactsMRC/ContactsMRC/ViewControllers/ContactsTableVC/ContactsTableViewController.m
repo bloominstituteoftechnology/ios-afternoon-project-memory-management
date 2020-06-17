@@ -7,8 +7,13 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "CDGContactController.h"
+#import "CDGContact.h"
+#import "ContactDetailViewController.h"
 
 @interface ContactsTableViewController ()
+
+@property (nonatomic) CDGContactController *contactController;
 
 @end
 
@@ -16,78 +21,58 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.contactController = [[[CDGContactController alloc]init]autorelease];
+    [self testData];
+    [self.tableView reloadData];
+}
+
+- (void)testData {
+    [self.contactController createContactWithName:@"Chris Gonzales"
+                                            phone:@"123-456-7890"
+                                            email:@"me@me.com"];
+    [self.contactController createContactWithName:@"Test 2"
+                                            phone:@"098-765-4321"
+                                            email:@"2@2.com"];
+    [self.contactController createContactWithName:@"Test 3"
+                                            phone:@"123-098-4756"
+                                            email:@"3@3.com"];
+    [self.contactController createContactWithName:@"Test 4"
+                                            phone:@"019-283-4756"
+                                            email:@"4@4.com"];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _contactController.contacts.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    CDGContact *contact = _contactController.contacts[indexPath.row];
     
+    cell.textLabel.text = contact.name;
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"AddContactSegue"]){
+        ContactDetailViewController *detailVC = (ContactDetailViewController *)segue.destinationViewController;
+        detailVC.contactController = _contactController;
+    } else if ([segue.identifier isEqualToString:@"ContactDetailSegue"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CDGContact *contact = _contactController.contacts[indexPath.row];
+        ContactDetailViewController *detailVC = (ContactDetailViewController *)segue.destinationViewController;
+        detailVC.contactController = _contactController;
+        detailVC.contact = contact;
+        
+    }
 }
-*/
 
 @end
