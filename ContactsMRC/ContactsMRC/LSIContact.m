@@ -21,4 +21,12 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [super dealloc];
+    [_emailAddress release];
+    [_address release];
+    [_telephone release];
+}
+
 @end
