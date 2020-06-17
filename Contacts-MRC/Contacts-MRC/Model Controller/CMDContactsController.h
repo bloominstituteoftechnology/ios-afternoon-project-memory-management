@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CMDContact;
+
 @interface CMDContactsController : NSObject
+
+@property (nonatomic, readonly) NSMutableArray<CMDContact *> *contacts;
+
+- (void)addContact:(CMDContact *)contact;
+
+- (void)randomUsersContacts:(NSString *)users completion:(void (^)(NSError *_Nullable))completion;
 
 @end
 

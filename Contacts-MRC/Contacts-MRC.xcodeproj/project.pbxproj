@@ -16,7 +16,7 @@
 		27798242249AB429005659CF /* CMDContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27798241249AB429005659CF /* CMDContactsTableViewController.m */; };
 		27798245249AB460005659CF /* CMDContactsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27798244249AB460005659CF /* CMDContactsDetailViewController.m */; };
 		2779824A249AB4EF005659CF /* CMDContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27798249249AB4EF005659CF /* CMDContactsController.m */; };
-		2779824D249AB515005659CF /* CMDContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779824C249AB515005659CF /* CMDContacts.m */; };
+		2779824D249AB515005659CF /* CMDContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779824C249AB515005659CF /* CMDContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		27798244249AB460005659CF /* CMDContactsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDContactsDetailViewController.m; sourceTree = "<group>"; };
 		27798248249AB4EF005659CF /* CMDContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDContactsController.h; sourceTree = "<group>"; };
 		27798249249AB4EF005659CF /* CMDContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDContactsController.m; sourceTree = "<group>"; };
-		2779824B249AB515005659CF /* CMDContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDContacts.h; sourceTree = "<group>"; };
-		2779824C249AB515005659CF /* CMDContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDContacts.m; sourceTree = "<group>"; };
+		2779824B249AB515005659CF /* CMDContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDContact.h; sourceTree = "<group>"; };
+		2779824C249AB515005659CF /* CMDContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 				2779823F249AB3DC005659CF /* View Controllers */,
 				2779823E249AB366005659CF /* Resources */,
 				27780246249AB18500F2CA8F /* Main.storyboard */,
+				2778024F249AB18B00F2CA8F /* main.m */,
 			);
 			path = "Contacts-MRC";
 			sourceTree = "<group>";
@@ -89,7 +90,6 @@
 				27780249249AB18B00F2CA8F /* Assets.xcassets */,
 				2778024B249AB18B00F2CA8F /* LaunchScreen.storyboard */,
 				2778024E249AB18B00F2CA8F /* Info.plist */,
-				2778024F249AB18B00F2CA8F /* main.m */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -117,8 +117,8 @@
 		27798247249AB4CB005659CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2779824B249AB515005659CF /* CMDContacts.h */,
-				2779824C249AB515005659CF /* CMDContacts.m */,
+				2779824B249AB515005659CF /* CMDContact.h */,
+				2779824C249AB515005659CF /* CMDContact.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 				2778023F249AB18500F2CA8F /* AppDelegate.m in Sources */,
 				27780250249AB18B00F2CA8F /* main.m in Sources */,
 				27798242249AB429005659CF /* CMDContactsTableViewController.m in Sources */,
-				2779824D249AB515005659CF /* CMDContacts.m in Sources */,
+				2779824D249AB515005659CF /* CMDContact.m in Sources */,
 				27780242249AB18500F2CA8F /* SceneDelegate.m in Sources */,
 				27798245249AB460005659CF /* CMDContactsDetailViewController.m in Sources */,
 				2779824A249AB4EF005659CF /* CMDContactsController.m in Sources */,
