@@ -35,23 +35,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return self.contactController.contacts.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+  
+    cell.textLabel.text = self.contactController.contacts[indexPath.row].name;
+    cell.detailTextLabel.text = self.contactController.contacts[indexPath.row].emailAddress;
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -96,5 +98,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (LSIContactController *)contactController {
+    if (!_contactController) {
+          _contactController = [[LSIContactController alloc] init];
+      }
+      return _contactController;
+}
 
 @end
