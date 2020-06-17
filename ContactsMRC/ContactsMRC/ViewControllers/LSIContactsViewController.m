@@ -68,8 +68,20 @@
 }
 
 - (IBAction)editButtonTapped:(id)sender {
-    
-    
+    if (self.isEditing == NO) {
+           [self setEditing:YES animated:YES];
+           [self.editButton setTitle:@"Done"];
+       }else if (self.isEditing == YES) {
+           [self setEditing:NO animated:YES];
+           [self.editButton setTitle:@"Edit"];
+       }
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    [self.nameTextField setUserInteractionEnabled:editing];
+    [self.emailAddressTextField setUserInteractionEnabled:editing];
+    [self.telephoneTextField setUserInteractionEnabled:editing];
 }
 
 /*
