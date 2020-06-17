@@ -17,6 +17,7 @@
 		184BD170249AAAF700E620FF /* MJPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD16F249AAAF700E620FF /* MJPContactsTableViewController.m */; };
 		184BD173249AAB2800E620FF /* MJPContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD172249AAB2800E620FF /* MJPContactViewController.m */; };
 		184BD176249AABEF00E620FF /* MJPContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD175249AABEF00E620FF /* MJPContact.m */; };
+		184BD179249AB59000E620FF /* MJPContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BD178249AB59000E620FF /* MJPContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		184BD172249AAB2800E620FF /* MJPContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MJPContactViewController.m; path = "contacts/View Controller/MJPContactViewController.m"; sourceTree = SOURCE_ROOT; };
 		184BD174249AABEF00E620FF /* MJPContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPContact.h; sourceTree = "<group>"; };
 		184BD175249AABEF00E620FF /* MJPContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPContact.m; sourceTree = "<group>"; };
+		184BD177249AB59000E620FF /* MJPContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPContactController.h; sourceTree = "<group>"; };
+		184BD178249AB59000E620FF /* MJPContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 		184BD16A249AA7AA00E620FF /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				184BD177249AB59000E620FF /* MJPContactController.h */,
+				184BD178249AB59000E620FF /* MJPContactController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184BD179249AB59000E620FF /* MJPContactController.m in Sources */,
 				184BD158249AA58C00E620FF /* ViewController.m in Sources */,
 				184BD152249AA58C00E620FF /* AppDelegate.m in Sources */,
 				184BD163249AA59100E620FF /* main.m in Sources */,

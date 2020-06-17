@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MJPContact : NSObject
 
-@property (copy) NSString *name;
-@property (copy) NSString *emailAddress;
-@property (copy) NSString *phoneNumber;
+@property (copy) NSString *_Nullable name;
+@property (copy) NSString *_Nullable emailAddress;
+@property (copy) NSString *_Nullable phoneNumber;
 
 - (instancetype)initWithName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber;
 

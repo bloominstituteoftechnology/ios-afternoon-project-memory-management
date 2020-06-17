@@ -20,4 +20,18 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_name release];
+    [_emailAddress release];
+    [_phoneNumber release];
+    
+    _name = nil;
+    _emailAddress = nil;
+    _phoneNumber = nil;
+
+    [super dealloc];
+
+}
+
 @end
