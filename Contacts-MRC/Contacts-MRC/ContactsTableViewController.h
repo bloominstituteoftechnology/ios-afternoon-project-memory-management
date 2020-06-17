@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ContactsTableViewController.h
 //  Contacts-MRC
 //
 //  Created by Hunter Oppel on 6/17/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ContactsTableViewController : UIViewController
 
 
 @end
