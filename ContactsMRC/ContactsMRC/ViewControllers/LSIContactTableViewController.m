@@ -7,21 +7,28 @@
 //
 
 #import "LSIContactTableViewController.h"
+#import "LSIContact.h"
+#import "LSIContactsViewController.h"
+#import "LSIContactController.h"
 
 @interface LSIContactTableViewController ()
+
+@property (nonatomic) LSIContactController *contactController;
 
 @end
 
 @implementation LSIContactTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    LSIContact *contact1 = [[[LSIContact alloc] initWithName:@"Bharat" emailAddress:@"Bharatiosdeveloper@gmail.com" telephone:@"6197884323"] autorelease];
+    LSIContact *contact2 = [[[LSIContact alloc] initWithName:@"Rick" emailAddress:@"bhawnish@gmail.com" telephone:@"6197884323"] autorelease];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.contactController addContacts:contact1];
+     [self.contactController addContacts:contact2];
+    
 }
 
 
