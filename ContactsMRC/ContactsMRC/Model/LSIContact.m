@@ -11,7 +11,9 @@
 @implementation LSIContact
 
 
-- (instancetype)initWithName:(NSString *)name emailAddress:(NSString *)emailAddress telephone:(NSString *)telephone {
+- (instancetype)initWithName:(NSString *)name
+                emailAddress:(NSString *)emailAddress
+                   telephone:(NSString *)telephone {
     self = [super init];
     if (self) {
         _name = [name copy];

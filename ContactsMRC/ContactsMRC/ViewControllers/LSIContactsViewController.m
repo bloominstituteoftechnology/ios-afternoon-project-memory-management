@@ -14,6 +14,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *emailAddressTextField;
 @property (retain, nonatomic) IBOutlet UITextField *telephoneTextField;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property (retain, nonatomic) IBOutlet UIButton *saveButton;
 
 @property (nonatomic)BOOL contactUpdated;
 
@@ -45,7 +46,7 @@
         self.nameTextField.text = self.contact.name;
         self.emailAddressTextField.text = self.contact.emailAddress;
         self.telephoneTextField.text = self.contact.telephone;
-    }
+    } 
 }
 
 - (IBAction)saveButtonTapped:(UIButton *)sender {
@@ -57,8 +58,9 @@
         
         [self.navigationController popViewControllerAnimated:true];
     } else if (self.contactUpdated == NO) {
-        
-        LSIContact *newContact = [[LSIContact alloc] initWithName:self.nameTextField.text emailAddress:self.emailAddressTextField.text telephone:self.telephoneTextField.text];
+        LSIContact *newContact = [[[LSIContact alloc]
+                                   initWithName:self.nameTextField.text emailAddress:self.emailAddressTextField.text
+                                   telephone:self.telephoneTextField.text] autorelease];
         
         [self.contactController addContacts:newContact];
         
@@ -69,12 +71,12 @@
 
 - (IBAction)editButtonTapped:(id)sender {
     if (self.isEditing == NO) {
-           [self setEditing:YES animated:YES];
-           [self.editButton setTitle:@"Done"];
-       }else if (self.isEditing == YES) {
-           [self setEditing:NO animated:YES];
-           [self.editButton setTitle:@"Edit"];
-       }
+        [self setEditing:YES animated:YES];
+        [self.editButton setTitle:@"Done"];
+    }else if (self.isEditing == YES) {
+        [self setEditing:NO animated:YES];
+        [self.editButton setTitle:@"Edit"];
+    }
 }
 
 
@@ -86,20 +88,21 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (void)dealloc {
     [_nameTextField release];
     [_emailAddressTextField release];
     [_telephoneTextField release];
     [_editButton release];
+    [_saveButton release];
     [super dealloc];
 }
 

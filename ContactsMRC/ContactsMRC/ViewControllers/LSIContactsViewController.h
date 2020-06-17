@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) LSIContactController *contactController;
 @property (nonatomic, assign) LSIContact *contact;
+@property(nonatomic, getter=isHidden) BOOL hidden;
 
 @end
 

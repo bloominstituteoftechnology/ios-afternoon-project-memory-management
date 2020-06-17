@@ -104,9 +104,11 @@
         LSIContactsViewController *controller = (LSIContactsViewController *)segue.destinationViewController;
         controller.contactController = self.contactController;
         controller.contact = self.contactController.contacts[indexSelected.row];
-    } else if ([segue.identifier isEqualToString:@"addContactSegue"]) {
+    } else if ([segue.identifier isEqualToString:@"createContactSegue"]) {
         LSIContactsViewController *controller = (LSIContactsViewController *)segue.destinationViewController;
         controller.contactController = self.contactController;
+        
+    
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

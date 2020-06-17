@@ -121,6 +121,7 @@
                         <outlet property="editButton" destination="rxo-aN-b23" id="waa-fg-aoi"/>
                         <outlet property="emailAddressTextField" destination="Jiv-ce-KVp" id="BzT-6b-8zq"/>
                         <outlet property="nameTextField" destination="Qv7-ns-6eJ" id="mE3-zo-Fpo"/>
+                        <outlet property="saveButton" destination="wXF-oV-IvL" id="Wy7-t8-PGN"/>
                         <outlet property="telephoneTextField" destination="oJn-1a-N9e" id="tOC-oD-3W9"/>
                     </connections>
                 </viewController>
