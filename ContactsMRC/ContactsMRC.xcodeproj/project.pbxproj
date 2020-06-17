@@ -70,6 +70,7 @@
 		3F548472249AB0D500B11678 /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
+				3F54849E249ABAE800B11678 /* ViewControllers */,
 				3F54849F249ABAF100B11678 /* Application */,
 				3F54849C249ABAD400B11678 /* Model */,
 				3F54849D249ABADC00B11678 /* ModelController */,
@@ -115,7 +116,6 @@
 				3F548474249AB0D500B11678 /* AppDelegate.m */,
 				3F548476249AB0D500B11678 /* SceneDelegate.h */,
 				3F548477249AB0D500B11678 /* SceneDelegate.m */,
-				3F54849E249ABAE800B11678 /* ViewControllers */,
 			);
 			path = Application;
 			sourceTree = "<group>";
