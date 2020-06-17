@@ -89,19 +89,40 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXF-oV-IvL">
+                                <rect key="frame" x="20" y="323" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="TAW-x1-KGm" eventType="touchUpInside" id="lY0-Nr-XoM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="YfK-uZ-Dd0" firstAttribute="bottom" secondItem="wXF-oV-IvL" secondAttribute="bottom" constant="503" id="Fyf-zy-FuJ"/>
+                            <constraint firstItem="wXF-oV-IvL" firstAttribute="leading" secondItem="YfK-uZ-Dd0" secondAttribute="leading" constant="20" id="IFX-Xe-4Zl"/>
+                            <constraint firstItem="wXF-oV-IvL" firstAttribute="top" secondItem="EWl-Ws-lQN" secondAttribute="bottom" constant="7" id="MV9-jP-j6Y"/>
                             <constraint firstItem="YfK-uZ-Dd0" firstAttribute="trailing" secondItem="EWl-Ws-lQN" secondAttribute="trailing" constant="20" id="NMH-IT-L39"/>
-                            <constraint firstItem="YfK-uZ-Dd0" firstAttribute="bottom" secondItem="EWl-Ws-lQN" secondAttribute="bottom" constant="546" id="end-LE-ENB"/>
                             <constraint firstItem="EWl-Ws-lQN" firstAttribute="leading" secondItem="YfK-uZ-Dd0" secondAttribute="leading" constant="20" id="ktz-ei-pMg"/>
                             <constraint firstItem="EWl-Ws-lQN" firstAttribute="top" secondItem="YfK-uZ-Dd0" secondAttribute="top" constant="60" id="mvX-3C-Ql1"/>
+                            <constraint firstItem="YfK-uZ-Dd0" firstAttribute="trailing" secondItem="wXF-oV-IvL" secondAttribute="trailing" constant="20" id="ndR-CD-hFI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YfK-uZ-Dd0"/>
                     </view>
                     <navigationItem key="navigationItem" id="UWv-oe-58e">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="rxo-aN-b23"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="rxo-aN-b23">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="TAW-x1-KGm" id="zEU-Em-tly"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="rxo-aN-b23" id="waa-fg-aoi"/>
+                        <outlet property="emailAddressTextField" destination="Jiv-ce-KVp" id="BzT-6b-8zq"/>
+                        <outlet property="nameTextField" destination="Qv7-ns-6eJ" id="mE3-zo-Fpo"/>
+                        <outlet property="telephoneTextField" destination="oJn-1a-N9e" id="tOC-oD-3W9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozg-Fu-PWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
