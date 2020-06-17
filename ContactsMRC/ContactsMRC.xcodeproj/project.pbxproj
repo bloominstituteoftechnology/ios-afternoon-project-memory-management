@@ -15,6 +15,8 @@
 		3F548486249AB0D700B11678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548485249AB0D700B11678 /* main.m */; };
 		3F548491249AB5E500B11678 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548490249AB5E500B11678 /* LSIContact.m */; };
 		3F548494249AB78C00B11678 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548493249AB78C00B11678 /* LSIContactController.m */; };
+		3F548497249AB92700B11678 /* LSIContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548496249AB92700B11678 /* LSIContactTableViewController.m */; };
+		3F54849A249AB93C00B11678 /* LSIContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F548499249AB93C00B11678 /* LSIContactsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		3F548490249AB5E500B11678 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
 		3F548492249AB78C00B11678 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
 		3F548493249AB78C00B11678 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
+		3F548495249AB92700B11678 /* LSIContactTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactTableViewController.h; sourceTree = "<group>"; };
+		3F548496249AB92700B11678 /* LSIContactTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactTableViewController.m; sourceTree = "<group>"; };
+		3F548498249AB93C00B11678 /* LSIContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactsViewController.h; sourceTree = "<group>"; };
+		3F548499249AB93C00B11678 /* LSIContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,10 @@
 				3F548474249AB0D500B11678 /* AppDelegate.m */,
 				3F548476249AB0D500B11678 /* SceneDelegate.h */,
 				3F548477249AB0D500B11678 /* SceneDelegate.m */,
+				3F548495249AB92700B11678 /* LSIContactTableViewController.h */,
+				3F548496249AB92700B11678 /* LSIContactTableViewController.m */,
+				3F548498249AB93C00B11678 /* LSIContactsViewController.h */,
+				3F548499249AB93C00B11678 /* LSIContactsViewController.m */,
 				3F54848F249AB5E500B11678 /* LSIContact.h */,
 				3F548490249AB5E500B11678 /* LSIContact.m */,
 				3F548492249AB78C00B11678 /* LSIContactController.h */,
@@ -154,6 +164,8 @@
 				3F548494249AB78C00B11678 /* LSIContactController.m in Sources */,
 				3F548475249AB0D500B11678 /* AppDelegate.m in Sources */,
 				3F548486249AB0D700B11678 /* main.m in Sources */,
+				3F548497249AB92700B11678 /* LSIContactTableViewController.m in Sources */,
+				3F54849A249AB93C00B11678 /* LSIContactsViewController.m in Sources */,
 				3F548478249AB0D500B11678 /* SceneDelegate.m in Sources */,
 				3F548491249AB5E500B11678 /* LSIContact.m in Sources */,
 			);
