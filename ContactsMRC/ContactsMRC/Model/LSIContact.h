@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 @interface LSIContact : NSObject
 
 @property (nonatomic, copy) NSString *name;

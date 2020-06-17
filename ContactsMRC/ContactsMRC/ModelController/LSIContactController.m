@@ -10,7 +10,7 @@
 
 @implementation LSIContactController
 
-- (instancetype)initWithContact:(NSMutableArray<LSIContact *>*)contacts {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _contacts = [[NSMutableArray alloc] init];

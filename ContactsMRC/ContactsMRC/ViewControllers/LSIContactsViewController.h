@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSIContactController.h"
+#import "LSIContact.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContactsViewController : UIViewController
+
+@property (nonatomic, assign) LSIContactController *contactController;
 
 @end
 
