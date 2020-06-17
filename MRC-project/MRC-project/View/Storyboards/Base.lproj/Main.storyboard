@@ -12,16 +12,104 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HSIDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aa-OQ-7P7">
+                                <rect key="frame" x="20" y="20" width="374" height="505"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-w8-KnZ">
+                                        <rect key="frame" x="20" y="20" width="334" height="322.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SYT-ji-Oze">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFz-Fj-Y65">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYQ-UH-qfT">
+                                                        <rect key="frame" x="0.0" y="28.5" width="334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F63-NL-Eqx">
+                                                <rect key="frame" x="0.0" y="86.5" width="334" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELR-YJ-ZJ0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLx-cQ-c7b">
+                                                        <rect key="frame" x="0.0" y="28.5" width="334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e6B-rn-LuU">
+                                                <rect key="frame" x="0.0" y="173" width="334" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEX-Lk-J4Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-rl-JmK">
+                                                        <rect key="frame" x="0.0" y="28.5" width="334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xs8-ZQ-rWe">
+                                                <rect key="frame" x="0.0" y="259.5" width="334" height="63"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="40"/>
+                                                <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="doneButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hAh-QH-N2z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="5.4902665169720422e-07" green="0.4784313440322876" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dBQ-w8-KnZ" secondAttribute="trailing" constant="20" id="7mV-Ax-tbe"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dBQ-w8-KnZ" secondAttribute="bottom" constant="20" id="Wf9-R5-0Ls"/>
+                                    <constraint firstItem="dBQ-w8-KnZ" firstAttribute="leading" secondItem="1aa-OQ-7P7" secondAttribute="leading" constant="20" id="fgm-DS-RdV"/>
+                                    <constraint firstItem="dBQ-w8-KnZ" firstAttribute="top" secondItem="1aa-OQ-7P7" secondAttribute="top" constant="20" id="unv-uH-yyr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1aa-OQ-7P7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="5u0-NS-xX7"/>
+                            <constraint firstItem="1aa-OQ-7P7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ha5-zM-MCs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1aa-OQ-7P7" secondAttribute="trailing" constant="20" id="Ykq-VD-cUh"/>
+                            <constraint firstItem="1aa-OQ-7P7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="beP-ek-ib3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ujb-V8-zVw"/>
+                    <connections>
+                        <outlet property="doneButton" destination="Xs8-ZQ-rWe" id="bdk-wS-4tk"/>
+                        <outlet property="emailTextField" destination="ZLx-cQ-c7b" id="cF4-Hs-NT6"/>
+                        <outlet property="nameTextField" destination="MYQ-UH-qfT" id="A0k-pv-CEQ"/>
+                        <outlet property="phoneTextField" destination="vsF-rl-JmK" id="WAh-NW-zbz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1000" y="-220"/>
         </scene>
         <!--Contact Table View Controller-->
         <scene sceneID="3xV-g1-yYI">
@@ -40,7 +128,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ViewContactSegue" id="s9N-Q3-E0Y"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="ViewContactSegue" id="s9N-Q3-E0Y"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,7 +141,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gXm-9U-AIE">
                             <connections>
                                 <action selector="addContactButtonPressed:" destination="FoD-aF-hmi" id="BRg-jb-0xa"/>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddContactSegue" id="lUl-Rb-SAN"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddContactSegue" id="lUl-Rb-SAN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,6 +170,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s9N-Q3-E0Y"/>
+        <segue reference="lUl-Rb-SAN"/>
     </inferredMetricsTieBreakers>
 </document>
