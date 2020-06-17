@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSArray<MJPContact *> *contacts;
 
-- (void)createContact:(MJPContact *)contact;
-- (void)editContact:(MJPContact *)contact;
+- (void)addContact:(MJPContact *)contact;
+- (void)editContact:(MJPContact *)contact withName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber;
 
 @end
 
