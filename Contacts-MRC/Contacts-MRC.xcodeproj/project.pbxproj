@@ -14,6 +14,8 @@
 		2B132785249ACC9B00D78C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B132784249ACC9B00D78C4A /* Assets.xcassets */; };
 		2B132788249ACC9B00D78C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B132786249ACC9B00D78C4A /* LaunchScreen.storyboard */; };
 		2B13278B249ACC9B00D78C4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B13278A249ACC9B00D78C4A /* main.m */; };
+		2B132796249AD4DC00D78C4A /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B132795249AD4DC00D78C4A /* Contact.m */; };
+		2B132799249AD73F00D78C4A /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B132798249AD73F00D78C4A /* ContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		2B132787249ACC9B00D78C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B132789249ACC9B00D78C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B13278A249ACC9B00D78C4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B132794249AD4DC00D78C4A /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		2B132795249AD4DC00D78C4A /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		2B132797249AD73F00D78C4A /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		2B132798249AD73F00D78C4A /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			children = (
 				2B132781249ACC9800D78C4A /* Main.storyboard */,
 				2B132792249AD3C200D78C4A /* ViewControllers */,
+				2B132793249AD4BB00D78C4A /* Models */,
 				2B132791249ACD2A00D78C4A /* Resources */,
 			);
 			path = "Contacts-MRC";
@@ -88,8 +95,19 @@
 			children = (
 				2B13277E249ACC9800D78C4A /* ContactsTableViewController.h */,
 				2B13277F249ACC9800D78C4A /* ContactsTableViewController.m */,
+				2B132797249AD73F00D78C4A /* ContactDetailViewController.h */,
+				2B132798249AD73F00D78C4A /* ContactDetailViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2B132793249AD4BB00D78C4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B132794249AD4DC00D78C4A /* Contact.h */,
+				2B132795249AD4DC00D78C4A /* Contact.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B132799249AD73F00D78C4A /* ContactDetailViewController.m in Sources */,
 				2B132780249ACC9800D78C4A /* ContactsTableViewController.m in Sources */,
 				2B13277A249ACC9800D78C4A /* AppDelegate.m in Sources */,
+				2B132796249AD4DC00D78C4A /* Contact.m in Sources */,
 				2B13278B249ACC9B00D78C4A /* main.m in Sources */,
 				2B13277D249ACC9800D78C4A /* SceneDelegate.m in Sources */,
 			);

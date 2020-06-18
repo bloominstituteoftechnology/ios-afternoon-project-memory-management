@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Contact;
+
 @interface ContactsTableViewController : UIViewController
 
+@property (retain, nonatomic) NSMutableArray<Contact *> *contacts;
 
 @end
 

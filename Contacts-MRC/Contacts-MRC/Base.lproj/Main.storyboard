@@ -65,6 +65,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="j93-e7-VFm" id="pkf-9u-IYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +76,7 @@
         <!--DetailVC-->
         <scene sceneID="S9H-k0-IvQ">
             <objects>
-                <viewController id="FcU-mo-pmb" sceneMemberID="viewController">
+                <viewController id="FcU-mo-pmb" customClass="ContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJc-lc-e47">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,6 +137,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxP-po-DR1">
                                 <rect key="frame" x="190" y="412" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveContact:" destination="FcU-mo-pmb" eventType="touchUpInside" id="3oy-Vb-CBj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -152,6 +158,12 @@
                     <navigationItem key="navigationItem" title="DetailVC" id="Jvh-an-dxO">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="wHn-gh-pU0"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="wHn-gh-pU0" id="pDF-RQ-ima"/>
+                        <outlet property="emailTextField" destination="5fk-75-LOI" id="E03-HW-YqI"/>
+                        <outlet property="nameTextField" destination="Trv-Ze-YW9" id="5aR-RD-sUp"/>
+                        <outlet property="phoneNumberTextField" destination="LWI-bI-ONc" id="g5v-IE-dRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atc-wf-JcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
