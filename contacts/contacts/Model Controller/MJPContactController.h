@@ -13,10 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MJPContactController : NSObject
 
-@property (nonatomic, readonly) NSArray<MJPContact *> *contacts;
+@property (nonatomic, readonly, copy) NSArray<MJPContact *> *contacts;
 
 - (void)addContact:(MJPContact *)contact;
 - (void)editContact:(MJPContact *)contact withName:(NSString *)name email:(NSString *)emailAddress phone:(NSString *)phoneNumber;
+- (void)deleteContact:(MJPContact *)contact;
 
 @end
 

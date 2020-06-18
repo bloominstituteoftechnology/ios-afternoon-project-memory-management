@@ -10,7 +10,7 @@
 
 @interface MJPContactController ()
 
-@property (nonatomic) NSMutableArray *internalContacts;
+@property (nonatomic) NSMutableArray<MJPContact *> *internalContacts;
 
 @end
 
@@ -20,8 +20,7 @@
     self = [super init];
 
     if (self) {
-        _internalContacts = [[[NSMutableArray alloc] init] autorelease];
-        [self addTestContact];
+        _internalContacts = [[NSMutableArray alloc] init];
 
     }
     return self;
@@ -46,12 +45,5 @@
 - (void)deleteContact:(MJPContact *)contact {
     [self.internalContacts removeObject:contact];
 }
-
-- (void)addTestContact {
-    MJPContact *testContact = [[MJPContact alloc] initWithName:@"TestName" email:@"Test E-mail" phone:@"Test Phone Number"];
-    [self addContact:testContact];
-    [testContact release];
-}
-
 
 @end
