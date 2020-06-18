@@ -7,8 +7,13 @@
 //
 
 #import "MJPContactsTableViewController.h"
+#import "MJPContact.h"
+#import "MJPContactController.h"
+#import "MJPContactViewController.h"
 
 @interface MJPContactsTableViewController ()
+
+@property (nonatomic, readonly) MJPContactController *contactController;
 
 @end
 
@@ -16,78 +21,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    //created an instance of the contact controller
+    _contactController = [[MJPContactController alloc] init];
+
+//    [_contactController addContact:[MJPContact contactWithName:@"Test Name" email:@"Test E-mail" phone:@"Test number"]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewDidAppear:true];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.contactController.contacts.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+    MJPContact *contact = [self.contactController.contacts objectAtIndex:indexPath.row];
+    cell.textLabel.text = contact.name;
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        MJPContact *contact = [self.contactController.contacts objectAtIndex:indexPath.row];
+        [self.contactController deleteContact:contact];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ #pragma mark - Navigation
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+     if ([[segue identifier] isEqualToString:@"AddContactSegue"]) {
+            MJPContactViewController *addVC = [segue destinationViewController];
+            addVC.contactController = self.contactController;
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+     } else if ([[segue identifier] isEqualToString:@"DetailContactSegue"]) {
+         MJPContactViewController *detailVC = [segue destinationViewController];
+         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         detailVC.contactController = self.contactController;
+         detailVC.contact = [self.contactController.contacts objectAtIndex:indexPath.row];
+     }
+ }
 
 @end
