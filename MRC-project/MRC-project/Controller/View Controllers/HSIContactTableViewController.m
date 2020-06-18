@@ -25,6 +25,10 @@
     self.contacts = [[[NSMutableArray alloc] initWithObjects:kenny, bella, nil] autorelease];
     [kenny release];
     [bella release];
+    [self updateViews];
+}
+
+- (void)updateViews {
     [self.tableView reloadData];
 }
 
