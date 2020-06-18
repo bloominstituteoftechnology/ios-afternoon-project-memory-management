@@ -74,7 +74,7 @@
 				184BD16A249AA7AA00E620FF /* Model Controller */,
 				184BD16B249AA7B400E620FF /* View Controller */,
 				184BD16C249AA7C800E620FF /* Storyboard */,
-				184BD16D249AA7E100E620FF /* New Group */,
+				184BD16D249AA7E100E620FF /* Resources */,
 				184BD162249AA59100E620FF /* main.m */,
 			);
 			path = contacts;
@@ -118,7 +118,7 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		184BD16D249AA7E100E620FF /* New Group */ = {
+		184BD16D249AA7E100E620FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				184BD150249AA58C00E620FF /* AppDelegate.h */,
@@ -128,7 +128,7 @@
 				184BD161249AA59100E620FF /* Info.plist */,
 				184BD15C249AA59100E620FF /* Assets.xcassets */,
 			);
-			name = "New Group";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
