@@ -32,6 +32,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="UTl-5Z-i5L" kind="show" identifier="DetailContactSegue" id="H8S-nR-j1s"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +45,7 @@
                     <navigationItem key="navigationItem" id="3AF-BO-Ktm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fpM-Fl-GBN">
                             <connections>
-                                <segue destination="UTl-5Z-i5L" kind="show" id="f9I-rE-IzG"/>
+                                <segue destination="UTl-5Z-i5L" kind="show" identifier="AddContactSegue" id="f9I-rE-IzG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -106,11 +109,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tm7-hK-OVR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4GK-HF-0yT"/>
+                    <navigationItem key="navigationItem" id="4GK-HF-0yT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="AeA-Ga-LPE">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="UTl-5Z-i5L" id="0HK-pO-3Kk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="hrX-CJ-Qda" id="bIF-s3-Iev"/>
+                        <outlet property="nameTextField" destination="TOl-Wd-dyr" id="vDg-AC-GEO"/>
+                        <outlet property="phoneTextField" destination="Lr9-Ww-scO" id="foF-F7-iQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVF-CX-cjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2206" y="138"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="f9I-rE-IzG"/>
+    </inferredMetricsTieBreakers>
 </document>
