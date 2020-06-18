@@ -13,7 +13,6 @@
 
 @end
 
-
 @implementation CMDContactsController
 
 - (instancetype)init {

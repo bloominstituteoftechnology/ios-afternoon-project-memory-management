@@ -61,9 +61,8 @@
 
 - (void)dealloc {
     [_contactsController release];
-    _contactsController = nil;
     [_contact release];
-    _contact = nil;
+   // _contact = nil;
     [super dealloc];
 }
 
