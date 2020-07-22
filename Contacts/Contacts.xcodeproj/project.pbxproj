@@ -13,6 +13,8 @@
 		5EF034C424C8D0850093137A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF034C324C8D0850093137A /* Assets.xcassets */; };
 		5EF034C724C8D0850093137A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF034C524C8D0850093137A /* LaunchScreen.storyboard */; };
 		5EF034CA24C8D0850093137A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034C924C8D0850093137A /* main.m */; };
+		5EF034D924C8DAC30093137A /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034D824C8DAC30093137A /* ContactsTableViewController.m */; };
+		5EF034DC24C8DB1E0093137A /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034DB24C8DB1E0093137A /* ContactDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		5EF034C624C8D0850093137A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EF034C824C8D0850093137A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF034C924C8D0850093137A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EF034D724C8DAC30093137A /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		5EF034D824C8DAC30093137A /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		5EF034DA24C8DB1E0093137A /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		5EF034DB24C8DB1E0093137A /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 		5EF034D124C8D1920093137A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EF034D724C8DAC30093137A /* ContactsTableViewController.h */,
+				5EF034D824C8DAC30093137A /* ContactsTableViewController.m */,
+				5EF034DA24C8DB1E0093137A /* ContactDetailViewController.h */,
+				5EF034DB24C8DB1E0093137A /* ContactDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,7 +209,9 @@
 			files = (
 				5EF034B924C8D07F0093137A /* AppDelegate.m in Sources */,
 				5EF034CA24C8D0850093137A /* main.m in Sources */,
+				5EF034D924C8DAC30093137A /* ContactsTableViewController.m in Sources */,
 				5EF034BC24C8D07F0093137A /* SceneDelegate.m in Sources */,
+				5EF034DC24C8DB1E0093137A /* ContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
