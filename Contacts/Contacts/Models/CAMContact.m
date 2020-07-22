@@ -39,9 +39,13 @@
 - (void) dealloc
 {
     [_name release];
+    _name = nil;
     [_email release];
+    _email = nil;
     [_phone release];
+    _phone = nil;
     [_company release];
+    _company = nil;
     [super dealloc];
 }
 

@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CAMContact : NSObject
 
-@property (nonatomic, copy) NSMutableString *name;
-@property (nonatomic, copy) NSMutableString *email;
-@property (nonatomic, copy) NSMutableString *phone;
-@property (nonatomic, copy) NSMutableString *company;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *company;
 
 - (instancetype)initWithName:(NSString *)name
                        email:(NSString *)email
