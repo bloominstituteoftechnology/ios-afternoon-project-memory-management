@@ -16,6 +16,7 @@
 		5EF034D924C8DAC30093137A /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034D824C8DAC30093137A /* ContactsTableViewController.m */; };
 		5EF034DC24C8DB1E0093137A /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034DB24C8DB1E0093137A /* ContactDetailViewController.m */; };
 		5EF034DF24C8E5050093137A /* CAMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034DE24C8E5050093137A /* CAMContact.m */; };
+		5EF034E224C8EE1E0093137A /* CAMContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF034E124C8EE1E0093137A /* CAMContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		5EF034DB24C8DB1E0093137A /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
 		5EF034DD24C8E5050093137A /* CAMContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMContact.h; sourceTree = "<group>"; };
 		5EF034DE24C8E5050093137A /* CAMContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMContact.m; sourceTree = "<group>"; };
+		5EF034E024C8EE1E0093137A /* CAMContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMContactController.h; sourceTree = "<group>"; };
+		5EF034E124C8EE1E0093137A /* CAMContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 		5EF034D524C8D1E20093137A /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EF034E024C8EE1E0093137A /* CAMContactController.h */,
+				5EF034E124C8EE1E0093137A /* CAMContactController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				5EF034DF24C8E5050093137A /* CAMContact.m in Sources */,
 				5EF034D924C8DAC30093137A /* ContactsTableViewController.m in Sources */,
 				5EF034BC24C8D07F0093137A /* SceneDelegate.m in Sources */,
+				5EF034E224C8EE1E0093137A /* CAMContactController.m in Sources */,
 				5EF034DC24C8DB1E0093137A /* ContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
