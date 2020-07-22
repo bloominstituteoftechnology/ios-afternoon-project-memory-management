@@ -9,6 +9,10 @@
 #import "ContactDetailViewController.h"
 
 @interface ContactDetailViewController ()
+@property (retain, nonatomic) IBOutlet UITextField *nameField;
+@property (retain, nonatomic) IBOutlet UITextField *emailField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneField;
+@property (retain, nonatomic) IBOutlet UITextField *companyField;
 
 @end
 
@@ -29,4 +33,11 @@
 }
 */
 
+- (void)dealloc {
+    [_nameField release];
+    [_emailField release];
+    [_phoneField release];
+    [_companyField release];
+    [super dealloc];
+}
 @end
