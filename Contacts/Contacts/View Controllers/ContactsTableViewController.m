@@ -84,5 +84,13 @@
     }
 }
 
+//MARK: - Memory Management -
+-(void)dealloc
+{
+    [_controller release];
+    _controller = nil;
+    [super dealloc];
+}
+
 
 @end

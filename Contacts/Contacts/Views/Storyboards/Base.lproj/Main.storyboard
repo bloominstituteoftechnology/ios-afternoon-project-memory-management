@@ -141,7 +141,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xkG-be-ZET"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="j5z-Vk-YSV"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="j5z-Vk-YSV">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gS9-xn-iCm">
+                            <connections>
+                                <action selector="saveContact:" destination="1EL-VI-Pqb" id="V4v-AI-Tnd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="companyField" destination="Jg1-fx-XJn" id="qZD-OA-AbU"/>
                         <outlet property="emailField" destination="QHR-0W-0dq" id="FpJ-wN-iUi"/>
@@ -173,6 +179,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qne-RT-5iX"/>
+        <segue reference="VVs-vg-Qp2"/>
     </inferredMetricsTieBreakers>
 </document>
