@@ -9,7 +9,6 @@
 #import "CAMContactController.h"
 #import "CAMContact.h"
 
-
 @implementation CAMContactController
 
 - (instancetype)init

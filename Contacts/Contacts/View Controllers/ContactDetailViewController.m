@@ -7,8 +7,11 @@
 //
 
 #import "ContactDetailViewController.h"
+#import "CAMContact.h"
+#import "CAMContactController.h"
 
 @interface ContactDetailViewController ()
+
 @property (retain, nonatomic) IBOutlet UITextField *nameField;
 @property (retain, nonatomic) IBOutlet UITextField *emailField;
 @property (retain, nonatomic) IBOutlet UITextField *phoneField;

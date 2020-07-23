@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class CAMContact;
+@class CAMContactController;
 
 @interface ContactDetailViewController : UIViewController
+
+@property (nonatomic, retain, nullable) CAMContactController *controller;
+@property (nonatomic, retain, nullable) CAMContact *contact;
 
 @end
 
