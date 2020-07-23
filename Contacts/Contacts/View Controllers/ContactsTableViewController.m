@@ -21,8 +21,8 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.controller = [CAMContactController new];
-    [self.controller retain];
+    _controller = [CAMContactController new];
+    [_controller retain];
     
 }
 
@@ -77,9 +77,7 @@
         ContactDetailViewController *detailVC = [segue destinationViewController];
         [detailVC retain];
         detailVC.controller = self.controller;
-        [detailVC.controller retain];
         detailVC.contact = self.controller.contacts[indexPath.row];
-        [detailVC.contact retain];
         [detailVC release];
     }
 }

@@ -21,20 +21,24 @@
 
 @implementation ContactDetailViewController
 //MARK: - Life Cycles -
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [_contact retain];
+        [_controller retain];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
     if (self.contact) {
-        self.nameField.text = self.contact.name;
-        self.emailField.text = self.contact.email;
-        self.phoneField.text = self.contact.phone;
-        self.companyField.text = self.contact.company;
+        [self setupEdit];
     } else {
-        [self.nameField.placeholder isEqualToString: @"Enter name:"];
-        [self.emailField.placeholder isEqualToString: @"Enter email:"];
-        [self.phoneField.placeholder isEqualToString: @"Enter phone #:"];
-        [self.companyField.placeholder isEqualToString: @"Company:"];
+        [self setupAdd];
     }
 }
 
@@ -57,6 +61,24 @@
         NSLog(@"Enter name to save or edit a contact.");
     }
     return;
+}
+
+
+//MARK: - Methods -
+- (void)setupEdit
+{
+    self.nameField.text = self.contact.name;
+    self.emailField.text = self.contact.email;
+    self.phoneField.text = self.contact.phone;
+    self.companyField.text = self.contact.company;
+}
+
+- (void)setupAdd
+{
+    [self.nameField.placeholder isEqualToString: @"Enter name:"];
+    [self.emailField.placeholder isEqualToString: @"Enter email:"];
+    [self.phoneField.placeholder isEqualToString: @"Enter phone #:"];
+    [self.companyField.placeholder isEqualToString: @"Company:"];
 }
 
 
