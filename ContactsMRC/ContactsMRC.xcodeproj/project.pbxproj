@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		50444EEA24D36A3A0048EFE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444EE924D36A3A0048EFE7 /* AppDelegate.m */; };
 		50444EED24D36A3A0048EFE7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444EEC24D36A3A0048EFE7 /* SceneDelegate.m */; };
-		50444EF024D36A3A0048EFE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444EEF24D36A3A0048EFE7 /* ViewController.m */; };
 		50444EF324D36A3A0048EFE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50444EF124D36A3A0048EFE7 /* Main.storyboard */; };
 		50444EF524D36A3E0048EFE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50444EF424D36A3E0048EFE7 /* Assets.xcassets */; };
 		50444EF824D36A3E0048EFE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50444EF624D36A3E0048EFE7 /* LaunchScreen.storyboard */; };
 		50444EFB24D36A3E0048EFE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444EFA24D36A3E0048EFE7 /* main.m */; };
+		50444F0324D470840048EFE7 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0224D470840048EFE7 /* ContactsTableViewController.m */; };
+		50444F0624D470F90048EFE7 /* CreateEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0524D470F90048EFE7 /* CreateEditContactViewController.m */; };
+		50444F0924D471C40048EFE7 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0824D471C40048EFE7 /* LSIContact.m */; };
+		50444F0C24D473A00048EFE7 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0B24D473A00048EFE7 /* LSIContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,19 @@
 		50444EE924D36A3A0048EFE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		50444EEB24D36A3A0048EFE7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		50444EEC24D36A3A0048EFE7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		50444EEE24D36A3A0048EFE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		50444EEF24D36A3A0048EFE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		50444EF224D36A3A0048EFE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50444EF424D36A3E0048EFE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50444EF724D36A3E0048EFE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50444EF924D36A3E0048EFE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50444EFA24D36A3E0048EFE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50444F0124D470840048EFE7 /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		50444F0224D470840048EFE7 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		50444F0424D470F90048EFE7 /* CreateEditContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateEditContactViewController.h; sourceTree = "<group>"; };
+		50444F0524D470F90048EFE7 /* CreateEditContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateEditContactViewController.m; sourceTree = "<group>"; };
+		50444F0724D471C40048EFE7 /* LSIContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContact.h; sourceTree = "<group>"; };
+		50444F0824D471C40048EFE7 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
+		50444F0A24D473A00048EFE7 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
+		50444F0B24D473A00048EFE7 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +74,19 @@
 				50444EE924D36A3A0048EFE7 /* AppDelegate.m */,
 				50444EEB24D36A3A0048EFE7 /* SceneDelegate.h */,
 				50444EEC24D36A3A0048EFE7 /* SceneDelegate.m */,
-				50444EEE24D36A3A0048EFE7 /* ViewController.h */,
-				50444EEF24D36A3A0048EFE7 /* ViewController.m */,
 				50444EF124D36A3A0048EFE7 /* Main.storyboard */,
 				50444EF424D36A3E0048EFE7 /* Assets.xcassets */,
 				50444EF624D36A3E0048EFE7 /* LaunchScreen.storyboard */,
 				50444EF924D36A3E0048EFE7 /* Info.plist */,
 				50444EFA24D36A3E0048EFE7 /* main.m */,
+				50444F0124D470840048EFE7 /* ContactsTableViewController.h */,
+				50444F0224D470840048EFE7 /* ContactsTableViewController.m */,
+				50444F0424D470F90048EFE7 /* CreateEditContactViewController.h */,
+				50444F0524D470F90048EFE7 /* CreateEditContactViewController.m */,
+				50444F0724D471C40048EFE7 /* LSIContact.h */,
+				50444F0824D471C40048EFE7 /* LSIContact.m */,
+				50444F0A24D473A00048EFE7 /* LSIContactController.h */,
+				50444F0B24D473A00048EFE7 /* LSIContactController.m */,
 			);
 			path = ContactsMRC;
 			sourceTree = "<group>";
@@ -146,10 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50444EF024D36A3A0048EFE7 /* ViewController.m in Sources */,
+				50444F0624D470F90048EFE7 /* CreateEditContactViewController.m in Sources */,
+				50444F0C24D473A00048EFE7 /* LSIContactController.m in Sources */,
 				50444EEA24D36A3A0048EFE7 /* AppDelegate.m in Sources */,
 				50444EFB24D36A3E0048EFE7 /* main.m in Sources */,
+				50444F0324D470840048EFE7 /* ContactsTableViewController.m in Sources */,
 				50444EED24D36A3A0048EFE7 /* SceneDelegate.m in Sources */,
+				50444F0924D471C40048EFE7 /* LSIContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
