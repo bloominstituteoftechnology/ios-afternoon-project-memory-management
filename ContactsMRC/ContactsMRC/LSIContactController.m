@@ -7,7 +7,34 @@
 //
 
 #import "LSIContactController.h"
+#import "LSIContact.h"
+
+@interface LSIContactController ()
+
+@property (nonatomic, readwrite, retain) NSMutableArray<LSIContact *> *internalContacts;
+
+@end
 
 @implementation LSIContactController
+
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        _internalContacts = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (NSArray<LSIContact *> *)contacts {
+    
+    return [_internalContacts copy];
+    
+}
+
+- (void)addContact:(LSIContact *)contact {
+    [self.internalContacts addObject:contact];
+}
+
+
 
 @end

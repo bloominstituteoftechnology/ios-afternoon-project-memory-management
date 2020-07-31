@@ -12,6 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContact : NSObject
 
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic, retain) NSNumber *phonenumber;
+@property (nonatomic,copy) NSString *email;
+
+
+- (instancetype)initWithName:(NSString *)name
+                 phonenumber:(NSNumber *)phoneNumber
+                       email:(NSString *)email;
+
 @end
 
 NS_ASSUME_NONNULL_END
