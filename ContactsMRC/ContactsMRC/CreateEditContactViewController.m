@@ -7,6 +7,8 @@
 //
 
 #import "CreateEditContactViewController.h"
+#import "LSIContact.h"
+#import "LSIContactController.h"
 
 @interface CreateEditContactViewController ()
 
@@ -15,7 +17,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *emailAddressTextField;
 @property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 
-
+-(void)updateViews;
 
 @end
 
@@ -23,7 +25,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (self.contact) {
+        [self updateViews];
+    } else {
+        self.title = [[NSString alloc] initWithString:@"Add new Artist"];
+    }
+}
+
+// MARK: - Private functions
+- (void)updateViews {
+    if (self.contact) {
+        self.title = self.contact.name;
+        self.nameTextField.text = self.contact.name;
+        self.phoneNumberTextField.text = self.contact.phonenumber;
+        self.emailAddressTextField.text = self.contact.email;
+    }
 }
 
 
@@ -33,10 +50,12 @@
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+    NSLog(@"Save button tapped.");
+    LSIContact *contact = [[LSIContact alloc]initWithName:self.nameTextField.text phonenumber: self.phoneNumberTextField.text email:self.emailAddressTextField.text];
     
+    [self.controller addContact: contact];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
-
 
 - (void)dealloc {
     [_nameTextField release];

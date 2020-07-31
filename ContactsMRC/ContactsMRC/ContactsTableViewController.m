@@ -14,6 +14,7 @@
 @interface ContactsTableViewController ()
 @property LSIContactController *controller;
 @property LSIContact *contact;
+@property (weak, nonatomic)NSMutableArray *savedContacts;
 
 @end
 
@@ -22,26 +23,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+//    NSArray *newContacts = [self.controller fetchSavedContacts];
+//    self.savedContacts = [[NSMutableArray alloc] initWithArray: newContacts]
+    self.controller = [[LSIContactController alloc]init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.controller.contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactTableViewCell" forIndexPath:indexPath];
     
-    //TODO: Uncomment to display data
-//    cell.textLabel = contact.name;
-//    cell.detailTextLabel = contact.phonenumber;
+    LSIContact *contact = [self.controller.contacts objectAtIndex:indexPath.row];
+    self.contact = contact;
+    cell.textLabel.text = contact.name;
+    cell.detailTextLabel.text = contact.phonenumber;
     
     return cell;
 }
@@ -79,6 +84,13 @@
         destinationVc.contact = self.contact;
     }
 }
+
+//- (LSIContactController *)controller {
+//    if (!_controller) {
+//        _controller = [[LSIContactController alloc] init];
+//    }
+//    return _controller;
+//}
 
 
 @end

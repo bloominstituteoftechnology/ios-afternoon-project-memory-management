@@ -28,7 +28,6 @@
 - (NSArray<LSIContact *> *)contacts {
     
     return [_internalContacts copy];
-    
 }
 
 - (void)addContact:(LSIContact *)contact {

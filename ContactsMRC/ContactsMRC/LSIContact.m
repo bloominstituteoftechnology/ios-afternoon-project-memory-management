@@ -11,12 +11,12 @@
 @implementation LSIContact
 
 - (instancetype)initWithName:(NSString *)name
-                 phonenumber:(NSNumber *)phoneNumber
+                 phonenumber:(NSString *)phoneNumber
                        email:(NSString *)email {
     self = [super init];
     if (self) {
         _name = [name copy];
-        _phonenumber = [phoneNumber retain];
+        _phonenumber = [phoneNumber copy];
         _email = [email copy];
         NSLog(@"-[Contact init]: %@, %@, %@", _name, _phonenumber, _email);
     }
