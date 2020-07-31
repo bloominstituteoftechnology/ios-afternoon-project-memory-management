@@ -12,9 +12,9 @@
 #import "CreateEditContactViewController.h"
 
 @interface ContactsTableViewController ()
-@property LSIContactController *controller;
+@property (nonatomic) LSIContactController *controller;
 @property LSIContact *contact;
-@property (weak, nonatomic)NSMutableArray *savedContacts;
+//@property (weak, nonatomic)NSMutableArray *savedContacts;
 
 @end
 
@@ -25,17 +25,18 @@
     
 //    NSArray *newContacts = [self.controller fetchSavedContacts];
 //    self.savedContacts = [[NSMutableArray alloc] initWithArray: newContacts]
-    self.controller = [[LSIContactController alloc]init];
     
     [self.tableView reloadData];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
+    [super viewWillAppear:animated];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return self.controller.contacts.count;
 }
 
@@ -85,12 +86,17 @@
     }
 }
 
-//- (LSIContactController *)controller {
-//    if (!_controller) {
-//        _controller = [[LSIContactController alloc] init];
-//    }
-//    return _controller;
-//}
+- (LSIContactController *)controller {
+    if (!_controller) {
+        _controller = [[LSIContactController alloc] init];
+    }
+    return _controller;
+}
+
+- (void)dealloc
+{
+    [super dealloc];
+}
 
 
 @end

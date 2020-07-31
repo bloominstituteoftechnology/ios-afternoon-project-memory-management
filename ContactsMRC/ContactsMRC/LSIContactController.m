@@ -27,13 +27,19 @@
 
 - (NSArray<LSIContact *> *)contacts {
     
-    return [_internalContacts copy];
+    return [[_internalContacts copy]autorelease];
 }
 
 - (void)addContact:(LSIContact *)contact {
     [self.internalContacts addObject:contact];
 }
 
+- (void)dealloc
+{
+    [_contacts release];
+    [_internalContacts release];
+    [super dealloc];
+}
 
 
 @end

@@ -29,7 +29,9 @@
     if (self.contact) {
         [self updateViews];
     } else {
-        self.title = [[NSString alloc] initWithString:@"Add new Artist"];
+        NSString *titleString = [[NSString alloc] initWithString:@"Add new Artist"];
+        self.title = titleString;
+        [titleString release];
     }
 }
 
@@ -51,7 +53,7 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     NSLog(@"Save button tapped.");
-    LSIContact *contact = [[LSIContact alloc]initWithName:self.nameTextField.text phonenumber: self.phoneNumberTextField.text email:self.emailAddressTextField.text];
+    LSIContact *contact = [[[LSIContact alloc]initWithName:self.nameTextField.text phonenumber: self.phoneNumberTextField.text email:self.emailAddressTextField.text]autorelease];
     
     [self.controller addContact: contact];
     [self.navigationController popViewControllerAnimated:YES];

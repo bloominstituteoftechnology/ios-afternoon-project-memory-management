@@ -23,6 +23,14 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_name release];
+    NSLog(@"%@💡", _name);
+    [_phonenumber release];
+    [_email release];
+    [super dealloc];
+}
 
 
 @end

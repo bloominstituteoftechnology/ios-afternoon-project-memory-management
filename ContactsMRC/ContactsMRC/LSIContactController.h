@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContactController : NSObject
 
-@property (nonatomic, retain) NSArray<LSIContact *> *contacts;
+@property (nonatomic,retain) NSArray<LSIContact *> *contacts;
 
 -(void)addContact:(LSIContact *)contact;
 
