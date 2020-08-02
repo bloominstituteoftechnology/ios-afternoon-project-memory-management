@@ -34,6 +34,14 @@
     [self.internalContacts addObject:contact];
 }
 
+- (void)updateContact:(LSIContact *)contact withName:(NSString *)name email:(NSString *)email phone:(NSString *)phone {
+    
+    contact.name = name;
+    contact.email = email;
+    contact.phonenumber = phone;
+    
+}
+
 - (void)dealloc
 {
     [_contacts release];

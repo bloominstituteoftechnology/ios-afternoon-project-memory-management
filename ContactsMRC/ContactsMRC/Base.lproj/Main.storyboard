@@ -99,18 +99,11 @@
                         <viewLayoutGuide key="safeArea" id="xbu-1a-Ujp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="wLs-9Q-Cn0">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Save" id="75g-vO-rnP">
-                                <connections>
-                                    <action selector="saveButtonTapped:" destination="eYA-np-Dne" id="xdA-Gj-ZCn"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Edit" id="NX0-rc-rSC">
-                                <connections>
-                                    <action selector="editButtonTapped:" destination="eYA-np-Dne" id="WQA-vo-PMs"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Finish" id="75g-vO-rnP">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="eYA-np-Dne" id="xdA-Gj-ZCn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailAddressTextField" destination="j5s-2V-eB9" id="GVa-FR-ehq"/>

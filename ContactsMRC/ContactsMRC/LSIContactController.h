@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)addContact:(LSIContact *)contact;
 
+- (void)updateContact:(LSIContact *)contact withName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
+
 
 @end
 

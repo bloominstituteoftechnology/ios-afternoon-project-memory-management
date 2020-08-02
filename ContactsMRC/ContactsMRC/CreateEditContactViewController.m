@@ -17,6 +17,8 @@
 @property (retain, nonatomic) IBOutlet UITextField *emailAddressTextField;
 @property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 
+@property BOOL wasEdited;
+
 -(void)updateViews;
 
 @end
@@ -33,7 +35,40 @@
         self.title = titleString;
         [titleString release];
     }
+    
 }
+
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//
+//    if (self.wasEdited) {
+//        NSString *name = self.nameTextField.text;
+//        NSString *email = self.emailAddressTextField.text;
+//        NSString *phone = self.phoneNumberTextField.text;
+//
+//        self.contact.phonenumber = phone;
+//        self.contact.name = name;
+//        self.contact.email = email;
+//    }
+//
+//
+//}
+
+//- (void)setEditing:(BOOL)editing {
+//    [super setEditing:editing];
+//    if (editing) {
+//        self.wasEdited = YES;
+//    }
+//    [self.nameTextField setUserInteractionEnabled:editing];
+//    [self.phoneNumberTextField setUserInteractionEnabled:editing];
+//    [self.emailAddressTextField setUserInteractionEnabled:editing];
+//
+//
+//    self.navigationItem.hidesBackButton = editing;
+//
+//
+//
+//}
 
 // MARK: - Private functions
 - (void)updateViews {
@@ -42,21 +77,31 @@
         self.nameTextField.text = self.contact.name;
         self.phoneNumberTextField.text = self.contact.phonenumber;
         self.emailAddressTextField.text = self.contact.email;
+        
+        [self.nameTextField setAllowsEditingTextAttributes:YES];
+        [self.emailAddressTextField setAllowsEditingTextAttributes:YES];
+        [self.phoneNumberTextField setAllowsEditingTextAttributes:YES];
     }
 }
 
 
 // MARK: - Actions
-- (IBAction)editButtonTapped:(id)sender {
-    
-}
 
 - (IBAction)saveButtonTapped:(id)sender {
-    NSLog(@"Save button tapped.");
-    LSIContact *contact = [[[LSIContact alloc]initWithName:self.nameTextField.text phonenumber: self.phoneNumberTextField.text email:self.emailAddressTextField.text]autorelease];
     
-    [self.controller addContact: contact];
-    [self.navigationController popViewControllerAnimated:YES];
+    NSString *name = self.nameTextField.text;
+    NSString *email = self.emailAddressTextField.text;
+    NSString *phone = self.phoneNumberTextField.text;
+    
+    if (self.contact) {
+        [self.controller updateContact:self.contact withName:name email:email phone:phone];
+    } else if (!self.contact) {
+        NSLog(@"Save button tapped.");
+        LSIContact *contact = [[[LSIContact alloc]initWithName:self.nameTextField.text phonenumber: self.phoneNumberTextField.text email:self.emailAddressTextField.text]autorelease];
+        
+        [self.controller addContact: contact];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)dealloc {
