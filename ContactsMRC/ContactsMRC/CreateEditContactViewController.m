@@ -93,8 +93,11 @@
     NSString *email = self.emailAddressTextField.text;
     NSString *phone = self.phoneNumberTextField.text;
     
-    if (self.contact) {
-        [self.controller updateContact:self.contact withName:name email:email phone:phone];
+    if (self.controller == nil && self.contact != nil) {
+        LSIContactController *newController = [[LSIContactController alloc]init];
+        [newController updateContact:self.contact withName:name email:email phone:phone];
+        [newController release];
+
     } else if (!self.contact) {
         NSLog(@"Save button tapped.");
         LSIContact *contact = [[[LSIContact alloc]initWithName:self.nameTextField.text phonenumber: self.phoneNumberTextField.text email:self.emailAddressTextField.text]autorelease];
