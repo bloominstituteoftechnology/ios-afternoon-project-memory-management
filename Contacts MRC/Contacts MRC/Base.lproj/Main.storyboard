@@ -92,7 +92,11 @@
                         <viewLayoutGuide key="safeArea" id="Afn-lv-rYg"/>
                     </view>
                     <navigationItem key="navigationItem" id="xL1-n5-YLU">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="WTe-ho-gMD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="WTe-ho-gMD">
+                            <connections>
+                                <action selector="saveContactTapped:" destination="ezi-na-3k6" id="oUo-lz-Tue"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contactEmailAddressTextField" destination="KKS-FZ-4C1" id="leV-uA-ogD"/>
@@ -124,7 +128,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ssc-6k-YRv"/>
+        <segue reference="OSp-Uj-2tW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

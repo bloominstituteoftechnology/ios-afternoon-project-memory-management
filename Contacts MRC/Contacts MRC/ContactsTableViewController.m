@@ -13,7 +13,7 @@
 
 @interface ContactsTableViewController ()
 
-@property ContactController *contactController;
+@property (nonatomic, retain) ContactController *contactController;
 
 @end
 
@@ -23,6 +23,12 @@
     [super viewDidLoad];
     
     self.contactController = [[ContactController alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+    [super viewWillAppear:true];
 }
 
 #pragma mark - Table view data source
@@ -43,7 +49,7 @@
 
 - (void)dealloc
 {
-    [self.contactController release];
+    [_contactController release];
     [super dealloc];
 }
 
@@ -57,6 +63,12 @@
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         contactDetailVC.contact = [self.contactController.contacts objectAtIndex:indexPath.row];
+        contactDetailVC.isAddContact = NO;
+        contactDetailVC.contactController = self.contactController;
+    } else {
+        ContactDetailViewController *contactDetailVC = segue.destinationViewController;
+        contactDetailVC.isAddContact = YES;
+        contactDetailVC.contactController = self.contactController;
     }
 }
 
