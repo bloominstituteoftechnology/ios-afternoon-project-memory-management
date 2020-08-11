@@ -10,13 +10,13 @@
         <!--Contacts-->
         <scene sceneID="De1-FP-Jrr">
             <objects>
-                <tableViewController id="9HX-7V-xMM" sceneMemberID="viewController">
+                <tableViewController id="9HX-7V-xMM" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="52i-NH-dnR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="woc-LH-RwT" style="IBUITableViewCellStyleDefault" id="X0p-jQ-UWc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="woc-LH-RwT" style="IBUITableViewCellStyleDefault" id="X0p-jQ-UWc">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X0p-jQ-UWc" id="NXQ-Qb-KCg">
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1223.1884057971015" y="158.70535714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="HGI-Zs-HBd">
             <objects>
-                <viewController id="ezi-na-3k6" sceneMemberID="viewController">
+                <viewController id="ezi-na-3k6" customClass="ContactDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OQY-td-kiX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +94,11 @@
                     <navigationItem key="navigationItem" id="xL1-n5-YLU">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="WTe-ho-gMD"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contactEmailAddressTextField" destination="KKS-FZ-4C1" id="leV-uA-ogD"/>
+                        <outlet property="contactNameTextField" destination="Ht8-Oq-9LJ" id="4HF-vI-IpL"/>
+                        <outlet property="contactPhoneNumberTextField" destination="OFs-0r-lFo" id="TkP-Ie-7KB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4j1-Pw-hjh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
