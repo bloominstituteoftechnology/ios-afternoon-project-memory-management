@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.contactController = [[ContactController alloc] init];
+    _contactController = [[ContactController alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated
