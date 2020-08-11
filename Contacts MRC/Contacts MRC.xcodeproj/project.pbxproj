@@ -16,6 +16,7 @@
 		66F732B624E316E9009FF9C3 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732B524E316E9009FF9C3 /* ContactsTableViewController.m */; };
 		66F732B924E3170F009FF9C3 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732B824E3170F009FF9C3 /* ContactDetailViewController.m */; };
 		66F732BC24E31852009FF9C3 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732BB24E31852009FF9C3 /* Contact.m */; };
+		66F732BF24E32151009FF9C3 /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732BE24E32151009FF9C3 /* ContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		66F732B824E3170F009FF9C3 /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
 		66F732BA24E31852009FF9C3 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		66F732BB24E31852009FF9C3 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		66F732BD24E32151009FF9C3 /* ContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
+		66F732BE24E32151009FF9C3 /* ContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				66F7329E24E314CE009FF9C3 /* SceneDelegate.h */,
 				66F7329F24E314CE009FF9C3 /* SceneDelegate.m */,
 				66F732A424E314CE009FF9C3 /* Main.storyboard */,
+				66F732BD24E32151009FF9C3 /* ContactController.h */,
+				66F732BE24E32151009FF9C3 /* ContactController.m */,
 				66F732BA24E31852009FF9C3 /* Contact.h */,
 				66F732BB24E31852009FF9C3 /* Contact.m */,
 				66F732B724E3170F009FF9C3 /* ContactDetailViewController.h */,
@@ -156,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F732BF24E32151009FF9C3 /* ContactController.m in Sources */,
 				66F7329D24E314CE009FF9C3 /* AppDelegate.m in Sources */,
 				66F732AE24E314CF009FF9C3 /* main.m in Sources */,
 				66F732B624E316E9009FF9C3 /* ContactsTableViewController.m in Sources */,
