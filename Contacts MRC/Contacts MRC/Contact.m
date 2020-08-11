@@ -10,4 +10,24 @@
 
 @implementation Contact
 
+- (instancetype)initWithContactName:(NSString *)contactName
+                        emailAdress:(NSString *)emailAddress
+                        phoneNumber:(NSString *)phoneNumber
+{
+    if (self = [super init]) {
+        _contactName = contactName.copy;
+        _emailAddress = emailAddress.copy;
+        _phoneNumber = phoneNumber.copy;
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [_contactName release];
+    [_emailAddress release];
+    [_phoneNumber release];
+    [super dealloc];
+}
+
 @end
