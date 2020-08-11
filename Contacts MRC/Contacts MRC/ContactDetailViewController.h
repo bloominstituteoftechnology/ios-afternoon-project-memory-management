@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactDetailViewController : UIViewController
 
-@property (nonatomic) Contact *contact;
+@property (nonatomic, retain) Contact *contact;
 
 @end
 
