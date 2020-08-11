@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Contact.h"
+#import "ContactController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactDetailViewController : UIViewController
 
+@property (nonatomic, retain) ContactController *contactController;
 @property (nonatomic, retain) Contact *contact;
+@property (nonatomic) BOOL isAddContact;
 
 @end
 
