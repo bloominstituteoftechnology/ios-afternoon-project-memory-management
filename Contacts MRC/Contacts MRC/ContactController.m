@@ -8,6 +8,31 @@
 
 #import "ContactController.h"
 
+@interface ContactController()
+
+@property NSMutableArray<Contact *> *internalContacts;
+
+@end
+
 @implementation ContactController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _internalContacts = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)addContact:(Contact *)contact
+{
+    [self.internalContacts addObject:contact];
+}
+
+- (NSArray<Contact *> *)contacts
+{
+    return self.internalContacts.copy;
+}
 
 @end
