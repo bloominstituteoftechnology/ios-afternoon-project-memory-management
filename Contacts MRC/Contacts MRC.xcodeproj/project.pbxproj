@@ -15,6 +15,7 @@
 		66F732AE24E314CF009FF9C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732AD24E314CF009FF9C3 /* main.m */; };
 		66F732B624E316E9009FF9C3 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732B524E316E9009FF9C3 /* ContactsTableViewController.m */; };
 		66F732B924E3170F009FF9C3 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732B824E3170F009FF9C3 /* ContactDetailViewController.m */; };
+		66F732BC24E31852009FF9C3 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F732BB24E31852009FF9C3 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		66F732B524E316E9009FF9C3 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		66F732B724E3170F009FF9C3 /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
 		66F732B824E3170F009FF9C3 /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		66F732BA24E31852009FF9C3 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		66F732BB24E31852009FF9C3 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				66F7329E24E314CE009FF9C3 /* SceneDelegate.h */,
 				66F7329F24E314CE009FF9C3 /* SceneDelegate.m */,
 				66F732A424E314CE009FF9C3 /* Main.storyboard */,
+				66F732BA24E31852009FF9C3 /* Contact.h */,
+				66F732BB24E31852009FF9C3 /* Contact.m */,
 				66F732B724E3170F009FF9C3 /* ContactDetailViewController.h */,
 				66F732B824E3170F009FF9C3 /* ContactDetailViewController.m */,
 				66F732B424E316E9009FF9C3 /* ContactsTableViewController.h */,
@@ -155,6 +160,7 @@
 				66F732AE24E314CF009FF9C3 /* main.m in Sources */,
 				66F732B624E316E9009FF9C3 /* ContactsTableViewController.m in Sources */,
 				66F732A024E314CE009FF9C3 /* SceneDelegate.m in Sources */,
+				66F732BC24E31852009FF9C3 /* Contact.m in Sources */,
 				66F732B924E3170F009FF9C3 /* ContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
