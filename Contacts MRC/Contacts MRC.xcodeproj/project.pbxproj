@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		C9AE242724E24C99003290A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE242624E24C99003290A0 /* AppDelegate.m */; };
 		C9AE242A24E24C99003290A0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE242924E24C99003290A0 /* SceneDelegate.m */; };
-		C9AE242D24E24C99003290A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE242C24E24C99003290A0 /* ViewController.m */; };
 		C9AE243024E24C99003290A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE242E24E24C99003290A0 /* Main.storyboard */; };
 		C9AE243224E24C9E003290A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AE243124E24C9E003290A0 /* Assets.xcassets */; };
 		C9AE243524E24C9E003290A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE243324E24C9E003290A0 /* LaunchScreen.storyboard */; };
 		C9AE243824E24C9E003290A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE243724E24C9E003290A0 /* main.m */; };
+		C9AE244024E37B59003290A0 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE243F24E37B59003290A0 /* ContactsTableViewController.m */; };
+		C9AE244324E37B79003290A0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE244224E37B79003290A0 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		C9AE242624E24C99003290A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C9AE242824E24C99003290A0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		C9AE242924E24C99003290A0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		C9AE242B24E24C99003290A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C9AE242C24E24C99003290A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C9AE242F24E24C99003290A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9AE243124E24C9E003290A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AE243424E24C9E003290A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9AE243624E24C9E003290A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AE243724E24C9E003290A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9AE243E24E37B59003290A0 /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		C9AE243F24E37B59003290A0 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		C9AE244124E37B79003290A0 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C9AE244224E37B79003290A0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +68,10 @@
 				C9AE242624E24C99003290A0 /* AppDelegate.m */,
 				C9AE242824E24C99003290A0 /* SceneDelegate.h */,
 				C9AE242924E24C99003290A0 /* SceneDelegate.m */,
-				C9AE242B24E24C99003290A0 /* ViewController.h */,
-				C9AE242C24E24C99003290A0 /* ViewController.m */,
+				C9AE243E24E37B59003290A0 /* ContactsTableViewController.h */,
+				C9AE243F24E37B59003290A0 /* ContactsTableViewController.m */,
+				C9AE244124E37B79003290A0 /* DetailViewController.h */,
+				C9AE244224E37B79003290A0 /* DetailViewController.m */,
 				C9AE242E24E24C99003290A0 /* Main.storyboard */,
 				C9AE243124E24C9E003290A0 /* Assets.xcassets */,
 				C9AE243324E24C9E003290A0 /* LaunchScreen.storyboard */,
@@ -146,9 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AE242D24E24C99003290A0 /* ViewController.m in Sources */,
+				C9AE244324E37B79003290A0 /* DetailViewController.m in Sources */,
 				C9AE242724E24C99003290A0 /* AppDelegate.m in Sources */,
 				C9AE243824E24C9E003290A0 /* main.m in Sources */,
+				C9AE244024E37B59003290A0 /* ContactsTableViewController.m in Sources */,
 				C9AE242A24E24C99003290A0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
