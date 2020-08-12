@@ -32,7 +32,7 @@
 
 - (NSArray<Contact *> *)contacts
 {
-    return _contactsInternal.copy;
+    return [_contactsInternal.copy autorelease];
 }
 
 - (void)addContact:(Contact *)contact

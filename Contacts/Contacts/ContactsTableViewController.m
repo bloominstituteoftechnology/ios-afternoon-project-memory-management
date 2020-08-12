@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.contactsController = [[ContactController alloc] init];
+    self.contactsController = [[[ContactController alloc] init] autorelease];
     
     // Create contacts to test table
     Contact *me = [[Contact alloc] initWithFullName:@"Claudia Maciel" emailAddress:@"clc_80@yahoo.com" phoneNumber:@"831-123-5698"];
@@ -78,7 +78,6 @@
 
 - (void)dealloc
 {
-    [_contactsController release];
     [super dealloc];
 }
 

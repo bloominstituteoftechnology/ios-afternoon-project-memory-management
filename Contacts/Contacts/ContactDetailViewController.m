@@ -37,6 +37,8 @@
     [_emailAddressTextField release];
     [_phoneNumberTextField release];
     [_topLeftButton release];
+    [_contact release];
+    [_contactsController release];
     [super dealloc];
 }
 
