@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Contact : NSObject
 
-@property (nonatomic, copy) NSUUID *identifier;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *email;
-@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, retain) NSUUID *identifier;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *email;
+@property (nonatomic, retain) NSString *phone;
 
 @end
 
