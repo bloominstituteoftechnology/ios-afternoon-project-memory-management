@@ -9,9 +9,11 @@
 #import "ContactsTableViewController.h"
 #import "ContactDetailViewController.h"
 #import "Contact.h"
+#import "ContactController.h"
 
 @interface ContactsTableViewController ()
 
+@property ContactController *contactsController;
 @end
 
 @implementation ContactsTableViewController
@@ -26,11 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.contactsController = [[ContactController alloc] init];
+    
     // Create contacts to test table
     Contact *me = [[Contact alloc] initWithFullName:@"Claudia Maciel" emailAddress:@"clc_80@yahoo.com" phoneNumber:@"831-123-5698"];
     Contact *husband = [[Contact alloc] initWithFullName:@"Eddie Maciel" emailAddress:@"macieleddie@yahoo.com" phoneNumber:@"209-987-6541"];
     
-    self.contacts = [[NSMutableArray alloc] initWithObjects:me, husband, nil];
+    [self.contactsController addContact:me];
+    [self.contactsController addContact:husband];
 }
 
 #pragma mark - Table view data source
@@ -40,13 +45,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _contacts.count;
+    return self.contactsController.contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Contact Cell" forIndexPath:indexPath];
-    cell.textLabel.text = _contacts[indexPath.row].fullName;
+    Contact *contact = [self.contactsController.contacts objectAtIndex:indexPath.row];
+    cell.textLabel.text = contact.fullName;
     return cell;
 }
 
@@ -57,14 +63,13 @@
     {
         ContactDetailViewController *contactDetailVC = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Contact *contact = _contacts[indexPath.row];
+        Contact *contact = [self.contactsController.contacts objectAtIndex:indexPath.row];
         contactDetailVC.contact = contact;
         
     } else if ([[segue identifier] isEqualToString:@"addNewContactSegue"])
     {
-//        ContactDetailViewController *contactDetailVC = [segue destinationViewController];
-//        contactDetailVC.
-//        contactDetailVC.
+        ContactDetailViewController *contactDetailVC = [segue destinationViewController];
+        contactDetailVC.contactsController = self.contactsController;
     }
 }
 

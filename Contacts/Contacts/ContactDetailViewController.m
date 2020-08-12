@@ -8,6 +8,7 @@
 
 #import "ContactDetailViewController.h"
 #import "Contact.h"
+#import "ContactController.h"
 
 @interface ContactDetailViewController ()
 
@@ -50,7 +51,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     } else {
         Contact *contact = [[Contact alloc] initWithFullName:_fullNameTextField.text emailAddress:_emailAddressTextField.text phoneNumber:_phoneNumberTextField.text];
-        // need a controller to add new contact
+        [self.contactsController addContact:contact];
         [self.navigationController popViewControllerAnimated:YES];
     }
     
