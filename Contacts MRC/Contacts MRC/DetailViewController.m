@@ -7,8 +7,13 @@
 //
 
 #import "DetailViewController.h"
+#import "Contact.h"
 
 @interface DetailViewController ()
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end
 
@@ -16,17 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (_contact) {
+        _nameTextField.text = _contact.name;
+        _emailTextField.text = _contact.email;
+        _phoneTextField.text = _contact.phone;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    
 }
-*/
 
+- (void)dealloc {
+    [_nameTextField release];
+    [_emailTextField release];
+    [_phoneTextField release];
+    [super dealloc];
+}
 @end

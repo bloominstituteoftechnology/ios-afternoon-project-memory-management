@@ -16,6 +16,7 @@
 		C9AE244024E37B59003290A0 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE243F24E37B59003290A0 /* ContactsTableViewController.m */; };
 		C9AE244324E37B79003290A0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE244224E37B79003290A0 /* DetailViewController.m */; };
 		C9AE244624E37C6D003290A0 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE244524E37C6D003290A0 /* Contact.m */; };
+		C9AE244924E3856C003290A0 /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE244824E3856C003290A0 /* ContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		C9AE244224E37B79003290A0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C9AE244424E37C6D003290A0 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		C9AE244524E37C6D003290A0 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		C9AE244724E3856C003290A0 /* ContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
+		C9AE244824E3856C003290A0 /* ContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				C9AE244224E37B79003290A0 /* DetailViewController.m */,
 				C9AE244424E37C6D003290A0 /* Contact.h */,
 				C9AE244524E37C6D003290A0 /* Contact.m */,
+				C9AE244724E3856C003290A0 /* ContactController.h */,
+				C9AE244824E3856C003290A0 /* ContactController.m */,
 			);
 			path = "Contacts MRC";
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AE244924E3856C003290A0 /* ContactController.m in Sources */,
 				C9AE244324E37B79003290A0 /* DetailViewController.m in Sources */,
 				C9AE242724E24C99003290A0 /* AppDelegate.m in Sources */,
 				C9AE243824E24C9E003290A0 /* main.m in Sources */,

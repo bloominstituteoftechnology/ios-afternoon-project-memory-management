@@ -9,8 +9,11 @@
 #import "ContactsTableViewController.h"
 #import "Contact.h"
 #import "DetailViewController.h"
+#import "ContactController.h"
 
 @interface ContactsTableViewController ()
+
+@property (nonatomic) ContactController *contactController;
 
 @end
 
@@ -19,10 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _contactController = [[ContactController alloc] init];
     Contact *moss = [[[Contact alloc] initWithName:@"Maurice Moss " email:@"maurice.moss@gmail.com" phone:@"011-8999"] autorelease];
     Contact *roy = [[[Contact alloc] initWithName:@"Roy Trenneman" email:@"roy.trenneman@gmail.com" phone:@"881-9991"] autorelease];
     Contact *jen = [[[Contact alloc] initWithName:@"Jen Barber" email:@"jen.barber@gmail.com" phone:@"197-253"] autorelease];
-    self.contacts = [[[NSMutableArray alloc] initWithObjects:moss, roy, jen, nil] autorelease];
+    [self.contactController addContact:moss];
+    [self.contactController addContact:roy];
+    [self.contactController addContact:jen];
     [self.tableView reloadData];
 }
 
@@ -30,14 +36,14 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _contacts.count;
+    return self.contactController.contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = _contacts [indexPath.row].name;
+    cell.textLabel.text = self.contactController.contacts[indexPath.row].name;
     
     return cell;
 }
@@ -48,7 +54,7 @@
     } else if ([segue.identifier isEqualToString:@"DetailSegue"]) {
         DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Contact *contact = _contacts[indexPath.row];
+        Contact *contact = self.contactController.contacts[indexPath.row];
         detailVC.contact = contact;
     }
 }
