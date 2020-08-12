@@ -128,8 +128,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="quN-ph-IOa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="beq-4r-FpG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="beq-4r-FpG">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="BYZ-38-t0r" id="hx2-LU-GxY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="LjG-LH-xmT" id="Qdb-Qa-7Fe"/>
+                        <outlet property="fullNameTextField" destination="e24-qo-dhh" id="VRo-6K-fzf"/>
+                        <outlet property="phoneNumberTextField" destination="HNw-Dg-37n" id="CoU-kw-vJR"/>
+                        <outlet property="topLeftButton" destination="beq-4r-FpG" id="z55-5h-yg1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +165,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iS7-o7-VXI"/>
+        <segue reference="pzJ-xN-g3m"/>
     </inferredMetricsTieBreakers>
 </document>

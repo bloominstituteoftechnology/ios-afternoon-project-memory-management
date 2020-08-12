@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactDetailViewController : UIViewController
 
-@property (nonatomic, copy) Contact *contact;
+@property (nonatomic, retain) Contact *contact;
 
 @end
 

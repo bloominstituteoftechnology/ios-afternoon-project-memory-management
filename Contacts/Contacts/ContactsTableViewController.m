@@ -17,7 +17,11 @@
 @implementation ContactsTableViewController
 
 
-NSMutableArray <Contact *> *contacts;
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:true];
+    [self.tableView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +30,7 @@ NSMutableArray <Contact *> *contacts;
     Contact *me = [[Contact alloc] initWithFullName:@"Claudia Maciel" emailAddress:@"clc_80@yahoo.com" phoneNumber:@"831-123-5698"];
     Contact *husband = [[Contact alloc] initWithFullName:@"Eddie Maciel" emailAddress:@"macieleddie@yahoo.com" phoneNumber:@"209-987-6541"];
     
-    contacts = [[NSMutableArray alloc] initWithObjects:me, husband, nil];
+    self.contacts = [[NSMutableArray alloc] initWithObjects:me, husband, nil];
 }
 
 #pragma mark - Table view data source
@@ -36,13 +40,13 @@ NSMutableArray <Contact *> *contacts;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return contacts.count;
+    return _contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Contact Cell" forIndexPath:indexPath];
-    cell.textLabel.text = contacts[indexPath.row].fullName;
+    cell.textLabel.text = _contacts[indexPath.row].fullName;
     return cell;
 }
 
@@ -53,7 +57,7 @@ NSMutableArray <Contact *> *contacts;
     {
         ContactDetailViewController *contactDetailVC = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Contact *contact = contacts[indexPath.row];
+        Contact *contact = _contacts[indexPath.row];
         contactDetailVC.contact = contact;
         
     } else if ([[segue identifier] isEqualToString:@"addNewContactSegue"])
