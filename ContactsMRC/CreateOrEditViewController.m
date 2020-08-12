@@ -31,6 +31,7 @@
 
 - (void)dealloc
 {
+    [_contactsController release];
     [_nameTextField release];
     [_emailTextField release];
     [_phoneTextField release];
@@ -46,6 +47,7 @@
                                                email:self.emailTextField.text
                                                phone:self.phoneTextField.text];
     [self.contactsController createContact:contact];
+    [contact release];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
