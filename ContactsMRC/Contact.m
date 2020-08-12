@@ -23,4 +23,13 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_identifier release];
+    [_name release];
+    [_email release];
+    [_phone release];
+    [super dealloc];
+}
+
 @end
