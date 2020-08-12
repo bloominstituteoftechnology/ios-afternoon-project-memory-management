@@ -62,6 +62,7 @@
         DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Contact *contact = self.contactController.contacts[indexPath.row];
+        detailVC.contactController = self.contactController;
         detailVC.indexPath = indexPath;
         NSLog(@"IndexPath: %ld", (long)indexPath.row);
         detailVC.contact = contact;
