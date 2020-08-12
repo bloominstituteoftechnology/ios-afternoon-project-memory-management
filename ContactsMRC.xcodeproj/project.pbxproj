@@ -15,6 +15,7 @@
 		6309B7FA24E38815004B7BE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309B7F924E38815004B7BE9 /* main.m */; };
 		6309B80224E38B66004B7BE9 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309B80124E38B66004B7BE9 /* ContactsTableViewController.m */; };
 		6309B80524E38B83004B7BE9 /* CreateOrEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309B80424E38B83004B7BE9 /* CreateOrEditViewController.m */; };
+		6309B80824E38EAB004B7BE9 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309B80724E38EAB004B7BE9 /* ContactsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		6309B80124E38B66004B7BE9 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		6309B80324E38B83004B7BE9 /* CreateOrEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateOrEditViewController.h; sourceTree = "<group>"; };
 		6309B80424E38B83004B7BE9 /* CreateOrEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateOrEditViewController.m; sourceTree = "<group>"; };
+		6309B80624E38EAB004B7BE9 /* ContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsController.h; sourceTree = "<group>"; };
+		6309B80724E38EAB004B7BE9 /* ContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				6309B7E824E38813004B7BE9 /* AppDelegate.m */,
 				6309B7EA24E38813004B7BE9 /* SceneDelegate.h */,
 				6309B7EB24E38813004B7BE9 /* SceneDelegate.m */,
+				6309B80624E38EAB004B7BE9 /* ContactsController.h */,
+				6309B80724E38EAB004B7BE9 /* ContactsController.m */,
 				6309B80024E38B66004B7BE9 /* ContactsTableViewController.h */,
 				6309B80124E38B66004B7BE9 /* ContactsTableViewController.m */,
 				6309B80324E38B83004B7BE9 /* CreateOrEditViewController.h */,
@@ -153,6 +158,7 @@
 			files = (
 				6309B7E924E38813004B7BE9 /* AppDelegate.m in Sources */,
 				6309B7FA24E38815004B7BE9 /* main.m in Sources */,
+				6309B80824E38EAB004B7BE9 /* ContactsController.m in Sources */,
 				6309B80224E38B66004B7BE9 /* ContactsTableViewController.m in Sources */,
 				6309B7EC24E38813004B7BE9 /* SceneDelegate.m in Sources */,
 				6309B80524E38B83004B7BE9 /* CreateOrEditViewController.m in Sources */,
