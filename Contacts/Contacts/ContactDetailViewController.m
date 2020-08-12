@@ -52,6 +52,9 @@
     } else {
         Contact *contact = [[Contact alloc] initWithFullName:_fullNameTextField.text emailAddress:_emailAddressTextField.text phoneNumber:_phoneNumberTextField.text];
         [self.contactsController addContact:contact];
+        
+        [contact release];
+        
         [self.navigationController popViewControllerAnimated:YES];
     }
     

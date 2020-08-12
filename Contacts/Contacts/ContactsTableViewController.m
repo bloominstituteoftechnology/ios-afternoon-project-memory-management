@@ -36,6 +36,9 @@
     
     [self.contactsController addContact:me];
     [self.contactsController addContact:husband];
+    
+    [me release];
+    [husband release];
 }
 
 #pragma mark - Table view data source
@@ -71,6 +74,12 @@
         ContactDetailViewController *contactDetailVC = [segue destinationViewController];
         contactDetailVC.contactsController = self.contactsController;
     }
+}
+
+- (void)dealloc
+{
+    [_contactsController release];
+    [super dealloc];
 }
 
 

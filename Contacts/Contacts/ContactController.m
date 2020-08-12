@@ -40,4 +40,10 @@
     [_contactsInternal addObject:contact];
 }
 
+-(void)dealloc
+{
+    [_contactsInternal release];
+    [super dealloc];
+}
+
 @end
