@@ -19,6 +19,12 @@
 
 @implementation ContactsTableViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -50,7 +56,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"AddContactSegue"]) {
-        
+        DetailViewController *addDetailVC = (DetailViewController *)segue.destinationViewController;
+        addDetailVC.contactController = self.contactController;
     } else if ([segue.identifier isEqualToString:@"DetailSegue"]) {
         DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
