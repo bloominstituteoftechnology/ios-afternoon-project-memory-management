@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) Contact *contact;
 @property (nonatomic, assign) ContactController *contactController;
+@property (nonatomic, assign) NSIndexPath *indexPath;
 
 @end
 

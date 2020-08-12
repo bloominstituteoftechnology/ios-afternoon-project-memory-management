@@ -7,6 +7,7 @@
 //
 
 #import "ContactController.h"
+#import "Contact.h"
 
 @implementation ContactController
 
@@ -22,6 +23,12 @@
 - (void)addContact:(Contact *)contact
 {
     [self.contacts addObject:contact];
+}
+
+- (void)updateContactAtIndex:(NSInteger)index withName:(NSString *)name email:(NSString *)email phone:(NSString *)phone
+{
+    Contact *contact = [[[Contact alloc] initWithName:name email:email phone:phone] autorelease];
+    [_contacts setObject:contact atIndexedSubscript:index];
 }
 
 @end

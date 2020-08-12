@@ -16,6 +16,8 @@
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 @property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
 
+//@property (nonatomic) NSInteger *indexPath;
+
 @end
 
 @implementation DetailViewController
@@ -31,11 +33,23 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
-    Contact *newContact = [[[Contact alloc] initWithName:self.nameTextField.text
-                                                   email:self.emailTextField.text
-                                                   phone:self.phoneTextField.text] autorelease];
-    [self.contactController addContact:newContact];
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    if ([self.nameTextField.text isEqualToString:@""]) return;
+    
+    if (!self.contact) {
+        Contact *newContact = [[[Contact alloc] initWithName:self.nameTextField.text
+                                                       email:self.emailTextField.text
+                                                       phone:self.phoneTextField.text] autorelease];
+        [self.contactController addContact:newContact];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self.contactController updateContactAtIndex:(self.indexPath.row)
+                                            withName:self.nameTextField.text
+                                               email:self.emailTextField.text
+                                               phone:self.phoneTextField.text];
+        NSLog(@"update Contact is at IndexPath: %ld", (long)self.indexPath.row);
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)dealloc {

@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSMutableArray<Contact *> *contacts;
 
 - (void)addContact:(Contact *)contact;
+- (void)updateContactAtIndex:(NSInteger)index withName:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
 
 @end
 
