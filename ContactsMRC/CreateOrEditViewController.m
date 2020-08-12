@@ -7,6 +7,8 @@
 //
 
 #import "CreateOrEditViewController.h"
+#import "ContactsController.h"
+#import "Contact.h"
 
 @interface CreateOrEditViewController ()
 
@@ -40,7 +42,11 @@
 
 - (IBAction)saveContact:(UIBarButtonItem *)sender
 {
-
+    Contact *contact = [[Contact alloc] initWithName:self.nameTextField.text
+                                               email:self.emailTextField.text
+                                               phone:self.phoneTextField.text];
+    [self.contactsController createContact:contact];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

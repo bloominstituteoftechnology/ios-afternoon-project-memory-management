@@ -37,8 +37,7 @@
 
 - (void)createContact:(Contact *)contact
 {
-    Contact *newContact = [contact copy];
-    [self.contacts addObject:newContact];
+    [self.contacts addObject:contact];
 }
 
 @end
