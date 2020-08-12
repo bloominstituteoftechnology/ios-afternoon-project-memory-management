@@ -15,6 +15,7 @@
 		C9AE243824E24C9E003290A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE243724E24C9E003290A0 /* main.m */; };
 		C9AE244024E37B59003290A0 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE243F24E37B59003290A0 /* ContactsTableViewController.m */; };
 		C9AE244324E37B79003290A0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE244224E37B79003290A0 /* DetailViewController.m */; };
+		C9AE244624E37C6D003290A0 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE244524E37C6D003290A0 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		C9AE243F24E37B59003290A0 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		C9AE244124E37B79003290A0 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C9AE244224E37B79003290A0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C9AE244424E37C6D003290A0 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		C9AE244524E37C6D003290A0 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				C9AE243324E24C9E003290A0 /* LaunchScreen.storyboard */,
 				C9AE243624E24C9E003290A0 /* Info.plist */,
 				C9AE243724E24C9E003290A0 /* main.m */,
+				C9AE244424E37C6D003290A0 /* Contact.h */,
+				C9AE244524E37C6D003290A0 /* Contact.m */,
 			);
 			path = "Contacts MRC";
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				C9AE242724E24C99003290A0 /* AppDelegate.m in Sources */,
 				C9AE243824E24C9E003290A0 /* main.m in Sources */,
 				C9AE244024E37B59003290A0 /* ContactsTableViewController.m in Sources */,
+				C9AE244624E37C6D003290A0 /* Contact.m in Sources */,
 				C9AE242A24E24C99003290A0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
