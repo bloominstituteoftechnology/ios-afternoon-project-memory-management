@@ -28,6 +28,13 @@
     self.contactsController = [[ContactsController alloc] init];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - Table view data source
 
