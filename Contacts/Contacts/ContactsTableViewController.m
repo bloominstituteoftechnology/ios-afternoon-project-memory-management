@@ -17,11 +17,16 @@
 @implementation ContactsTableViewController
 
 
-NSArray <Contact *> *contacts;
+NSMutableArray <Contact *> *contacts;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Create contacts to test table
+    Contact *me = [[Contact alloc] initWithFullName:@"Claudia Maciel" emailAddress:@"clc_80@yahoo.com" phoneNumber:@"831-123-5698"];
+    Contact *husband = [[Contact alloc] initWithFullName:@"Eddie Maciel" emailAddress:@"macieleddie@yahoo.com" phoneNumber:@"209-987-6541"];
+    
+    contacts = [[NSMutableArray alloc] initWithObjects:me, husband, nil];
 }
 
 #pragma mark - Table view data source
