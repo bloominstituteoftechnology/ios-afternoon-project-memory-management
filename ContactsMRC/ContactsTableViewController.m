@@ -7,8 +7,12 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "ContactsController.h"
+#import "Contact.h"
 
 @interface ContactsTableViewController ()
+
+@property (nonatomic) ContactsController *contactsController;
 
 @end
 
@@ -19,6 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.contactsController = [[ContactsController alloc] init];
 }
 
 
@@ -26,14 +32,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return self.contactsController.contactCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    Contact *contact = [self.contactsController contactAtIndex:indexPath.row];
+    cell.textLabel.text = contact.name;
     
     return cell;
 }
