@@ -9,6 +9,7 @@
 #import "ContactsTableViewController.h"
 #import "ContactsController.h"
 #import "Contact.h"
+#import "CreateOrEditViewController.h"
 
 @interface ContactsTableViewController ()
 
@@ -62,6 +63,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    CreateOrEditViewController *createOrEditVC = segue.destinationViewController;
+    createOrEditVC.contactsController = self.contactsController;
+
     if ([segue.identifier isEqualToString:@"EditContactSegue"])
     {
 

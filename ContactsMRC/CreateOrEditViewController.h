@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ContactsController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CreateOrEditViewController : UIViewController
+
+@property (nonatomic, retain) ContactsController *contactsController;
 
 @end
 
