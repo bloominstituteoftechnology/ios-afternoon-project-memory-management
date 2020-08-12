@@ -15,6 +15,7 @@
 		3A66E4F624E378780006F4D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A66E4F524E378780006F4D6 /* main.m */; };
 		3A66E4FE24E37BD20006F4D6 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A66E4FD24E37BD20006F4D6 /* ContactsTableViewController.m */; };
 		3A66E50124E37BF60006F4D6 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A66E50024E37BF60006F4D6 /* ContactDetailViewController.m */; };
+		3A66E50424E37CC00006F4D6 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A66E50324E37CC00006F4D6 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3A66E4FD24E37BD20006F4D6 /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		3A66E4FF24E37BF60006F4D6 /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
 		3A66E50024E37BF60006F4D6 /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		3A66E50224E37CC00006F4D6 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		3A66E50324E37CC00006F4D6 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				3A66E4FD24E37BD20006F4D6 /* ContactsTableViewController.m */,
 				3A66E4FF24E37BF60006F4D6 /* ContactDetailViewController.h */,
 				3A66E50024E37BF60006F4D6 /* ContactDetailViewController.m */,
+				3A66E50224E37CC00006F4D6 /* Contact.h */,
+				3A66E50324E37CC00006F4D6 /* Contact.m */,
 				3A66E4EC24E378760006F4D6 /* Main.storyboard */,
 				3A66E4EF24E378780006F4D6 /* Assets.xcassets */,
 				3A66E4F124E378780006F4D6 /* LaunchScreen.storyboard */,
@@ -155,6 +160,7 @@
 				3A66E4FE24E37BD20006F4D6 /* ContactsTableViewController.m in Sources */,
 				3A66E4F624E378780006F4D6 /* main.m in Sources */,
 				3A66E4E824E378760006F4D6 /* SceneDelegate.m in Sources */,
+				3A66E50424E37CC00006F4D6 /* Contact.m in Sources */,
 				3A66E50124E37BF60006F4D6 /* ContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
