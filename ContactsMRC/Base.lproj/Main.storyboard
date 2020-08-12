@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="df3-za-ElG" kind="show" id="nLO-kv-bjJ"/>
+                                    <segue destination="df3-za-ElG" kind="show" identifier="EditContactSegue" id="nLO-kv-bjJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="RhT-q7-Cbq">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="XaZ-ga-BLC">
                             <connections>
-                                <segue destination="df3-za-ElG" kind="show" id="GNR-eq-8Aj"/>
+                                <segue destination="df3-za-ElG" kind="show" identifier="AddContactSegue" id="GNR-eq-8Aj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -156,6 +156,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GNR-eq-8Aj"/>
+        <segue reference="nLO-kv-bjJ"/>
     </inferredMetricsTieBreakers>
 </document>
