@@ -7,6 +7,8 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "Contact.h"
+#import "DetailViewController.h"
 
 @interface ContactsTableViewController ()
 
@@ -17,37 +19,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    Contact *moss = [[[Contact alloc] initWithName:@"Maurice Moss " email:@"maurice.moss@gmail.com" phone:@"011-8999"] autorelease];
+    Contact *roy = [[[Contact alloc] initWithName:@"Roy Trenneman" email:@"roy.trenneman@gmail.com" phone:@"881-9991"] autorelease];
+    Contact *jen = [[[Contact alloc] initWithName:@"Jen Barber" email:@"jen.barber@gmail.com" phone:@"197-253"] autorelease];
+    self.contacts = [[[NSMutableArray alloc] initWithObjects:moss, roy, jen, nil] autorelease];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = _contacts [indexPath.row].name;
     
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"AddContactSegue"]) {
+        
+    } else if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Contact *contact = _contacts[indexPath.row];
+        detailVC.contact = contact;
+    }
+}
+
+- (void)dealloc
+{
+    [super dealloc];
 }
 
 
