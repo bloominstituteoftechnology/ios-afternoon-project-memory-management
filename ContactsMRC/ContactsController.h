@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactsController : NSObject
 
 @property (nonatomic, readonly) NSUInteger contactCount;
+
+- (nonnull Contact *)contactAtIndex:(NSInteger)index;
+- (void)createContact:(Contact *)contact;
 
 @end
 
