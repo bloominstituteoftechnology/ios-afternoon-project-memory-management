@@ -51,8 +51,10 @@ NSMutableArray <Contact *> *contacts;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"editContactSegue"])
     {
-//        ContactDetailViewController *contactDetailVC = [segue destinationViewController];
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ContactDetailViewController *contactDetailVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Contact *contact = contacts[indexPath.row];
+        contactDetailVC.contact = contact;
         
     } else if ([[segue identifier] isEqualToString:@"addNewContactSegue"])
     {
