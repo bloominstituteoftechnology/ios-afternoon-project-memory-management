@@ -13,7 +13,7 @@
 
 @interface ContactsTableViewController ()
 
-@property (nonatomic) ContactsController *contactsController;
+@property (nonatomic, retain) ContactsController *contactsController;
 
 @end
 
@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
 
-    self.contactsController = [[ContactsController alloc] init];
+    self.contactsController = [[[ContactsController alloc] init] autorelease];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -33,6 +33,12 @@
     [super viewDidAppear:animated];
 
     [self.tableView reloadData];
+}
+
+- (void)dealloc
+{
+    [_contactsController release];
+    [super dealloc];
 }
 
 
