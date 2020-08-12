@@ -10,23 +10,37 @@
 
 @interface CreateOrEditViewController ()
 
+#pragma mark - Outlets
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneTextField;
+
 @end
 
 @implementation CreateOrEditViewController
 
-- (void)viewDidLoad {
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc
+{
+    [_nameTextField release];
+    [_emailTextField release];
+    [_phoneTextField release];
+    [super dealloc];
 }
-*/
+
+
+#pragma mark - Actions
+
+- (IBAction)saveContact:(UIBarButtonItem *)sender
+{
+
+}
 
 @end
