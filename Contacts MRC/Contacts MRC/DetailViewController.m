@@ -31,9 +31,9 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
-    Contact *newContact = [[Contact alloc] initWithName:self.nameTextField.text
-                                                  email:self.emailTextField.text
-                                                  phone:self.phoneTextField.text];
+    Contact *newContact = [[[Contact alloc] initWithName:self.nameTextField.text
+                                                   email:self.emailTextField.text
+                                                   phone:self.phoneTextField.text] autorelease];
     [self.contactController addContact:newContact];
     [self.navigationController popViewControllerAnimated:YES];
 }
