@@ -17,6 +17,8 @@
 		50444F0624D470F90048EFE7 /* CreateEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0524D470F90048EFE7 /* CreateEditContactViewController.m */; };
 		50444F0924D471C40048EFE7 /* LSIContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0824D471C40048EFE7 /* LSIContact.m */; };
 		50444F0C24D473A00048EFE7 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F0B24D473A00048EFE7 /* LSIContactController.m */; };
+		50B85C2C24DCC15A00569E8E /* test132456.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B85C2B24DCC15A00569E8E /* test132456.m */; };
+		50B85C2F24DCC19C00569E8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B85C2E24DCC19C00569E8E /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		50444F0824D471C40048EFE7 /* LSIContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContact.m; sourceTree = "<group>"; };
 		50444F0A24D473A00048EFE7 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
 		50444F0B24D473A00048EFE7 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
+		50B85C2A24DCC15A00569E8E /* test132456.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test132456.h; sourceTree = "<group>"; };
+		50B85C2B24DCC15A00569E8E /* test132456.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test132456.m; sourceTree = "<group>"; };
+		50B85C2D24DCC19C00569E8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50B85C2E24DCC19C00569E8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				50444F0824D471C40048EFE7 /* LSIContact.m */,
 				50444F0A24D473A00048EFE7 /* LSIContactController.h */,
 				50444F0B24D473A00048EFE7 /* LSIContactController.m */,
+				50B85C2A24DCC15A00569E8E /* test132456.h */,
+				50B85C2B24DCC15A00569E8E /* test132456.m */,
+				50B85C2D24DCC19C00569E8E /* ViewController.h */,
+				50B85C2E24DCC19C00569E8E /* ViewController.m */,
 			);
 			path = ContactsMRC;
 			sourceTree = "<group>";
@@ -161,10 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B85C2F24DCC19C00569E8E /* ViewController.m in Sources */,
 				50444F0624D470F90048EFE7 /* CreateEditContactViewController.m in Sources */,
 				50444F0C24D473A00048EFE7 /* LSIContactController.m in Sources */,
 				50444EEA24D36A3A0048EFE7 /* AppDelegate.m in Sources */,
 				50444EFB24D36A3E0048EFE7 /* main.m in Sources */,
+				50B85C2C24DCC15A00569E8E /* test132456.m in Sources */,
 				50444F0324D470840048EFE7 /* ContactsTableViewController.m in Sources */,
 				50444EED24D36A3A0048EFE7 /* SceneDelegate.m in Sources */,
 				50444F0924D471C40048EFE7 /* LSIContact.m in Sources */,

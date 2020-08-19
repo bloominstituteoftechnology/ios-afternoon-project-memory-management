@@ -97,6 +97,7 @@
         LSIContactController *newController = [[LSIContactController alloc]init];
         [newController updateContact:self.contact withName:name email:email phone:phone];
         [newController release];
+        newController = nil;
 
     } else if (!self.contact) {
         NSLog(@"Save button tapped.");
