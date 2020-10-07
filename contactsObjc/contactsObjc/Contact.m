@@ -12,11 +12,20 @@
 - (instancetype) initWithName:(NSString *)aName phoneNumber:(NSString *)aPhoneNumber email:(NSString *)anEmail
 {
     if (self = [super init]) {
-        _name = aName.copy;
-        _phoneNumber = aPhoneNumber.copy;
-        _email = anEmail.copy;
+        _name = [aName.copy retain];
+        _phoneNumber = [aPhoneNumber.copy retain];
+        _email = [anEmail.copy retain];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"-[Contact dealloc]: %@", _name);
+    [_name release];
+    [_phoneNumber release];
+    [_email release];
+    [super dealloc];
 }
 
 
