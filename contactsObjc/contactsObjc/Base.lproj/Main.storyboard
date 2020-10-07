@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts Table View Controller-->
+        <!--Contact Manager-->
         <scene sceneID="WTD-lO-1DE">
             <objects>
                 <tableViewController id="uEa-k9-SYt" customClass="ContactsTableViewController" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="uEa-k9-SYt" id="cHa-7A-nrx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="R0H-14-teI">
+                    <navigationItem key="navigationItem" title="Contact Manager" id="R0H-14-teI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="krO-kj-3gF">
                             <connections>
                                 <segue destination="f93-U8-oQk" kind="show" identifier="AddSegue" id="4Li-pF-gyo"/>
