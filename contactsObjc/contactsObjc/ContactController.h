@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ContactController : NSObject
 
 @property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly) NSInteger contactCount;
 
 - (instancetype)init;
 

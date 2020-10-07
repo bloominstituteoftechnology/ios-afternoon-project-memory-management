@@ -12,7 +12,7 @@
 
 @interface ContactsTableViewController ()
 
-@property ContactController *contactController;
+@property (nonatomic, retain) ContactController *contactController;
 
 @end
 
@@ -39,7 +39,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.contactController.contacts.count;
+    return self.contactController.contactCount;
 }
 
 
@@ -52,11 +52,24 @@
 }
 
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"ShowSegue"])
+    {
+        ContactDetailViewController *detailVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Contact *chosenContact = [self.contactController.contacts objectAtIndex:indexPath.row];
+        detailVC.contact = chosenContact;
+    } else if ([[segue identifier] isEqualToString:@"AddSegue"]) {
+        ContactDetailViewController *addVC = [segue destinationViewController];
+        addVC.contactController = self.contactController;
+    }
+    
+}
+
+- (void)dealloc
+{
+    [_contactController release];
+    [super dealloc];
 }
 
 @end

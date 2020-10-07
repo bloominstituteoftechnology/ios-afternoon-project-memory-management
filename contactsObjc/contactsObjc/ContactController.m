@@ -34,6 +34,11 @@
     [_internalContacts addObject:contact];
 }
 
+- (NSInteger)contactCount
+{
+    return _internalContacts.count;
+}
+
 - (void)dealloc
 {
     [_internalContacts release];
