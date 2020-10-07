@@ -6,8 +6,14 @@
 //
 
 #import "ContactDetailViewController.h"
+#import "Contact.h"
+#import "ContactController.h"
 
 @interface ContactDetailViewController ()
+
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 
 @end
 
@@ -15,17 +21,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.nameTextField.text = self.contact.name;
+    self.phoneNumberTextField.text = self.contact.phoneNumber;
+    self.emailTextField.text = self.contact.email;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    [_nameTextField release];
+    [_phoneNumberTextField release];
+    [_emailTextField release];
+    [_contact release];
+    [_contactController release];
+    [super dealloc];
 }
-*/
+
+- (IBAction)saveButton:(id)sender {
+    if (self.contact) {
+        [self.contact setValue:_nameTextField.text forKey:@"name"];
+        [self.contact setValue:_phoneNumberTextField.text forKey:@"phoneNumber"];
+        [self.contact setValue:_emailTextField.text forKey:@"email"];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        Contact *newContact = [[Contact alloc] initWithName:_nameTextField.text phoneNumber:_phoneNumberTextField.text email:_emailTextField.text];
+        [self.contactController createContact:newContact];
+        [newContact release];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
 
 @end

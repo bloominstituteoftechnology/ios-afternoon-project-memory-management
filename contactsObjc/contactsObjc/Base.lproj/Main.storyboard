@@ -91,6 +91,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WJ-pP-Xt4">
                                         <rect key="frame" x="0.0" y="177" width="394" height="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButton:" destination="f93-U8-oQk" eventType="touchUpInside" id="cKx-jj-b0f"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,9 +106,12 @@
                             <constraint firstItem="FeT-gA-Q4z" firstAttribute="trailing" secondItem="MnG-Rc-TS4" secondAttribute="trailing" constant="10" id="pcc-YI-MaB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add a contact" id="gu6-3i-T4B">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="92X-C8-lLF"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add a contact" id="gu6-3i-T4B"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="FxE-uY-g3H" id="XfY-wE-9rD"/>
+                        <outlet property="nameTextField" destination="KyH-qH-iSl" id="X7H-Pv-7V9"/>
+                        <outlet property="phoneNumberTextField" destination="883-SB-RpC" id="vtP-RC-79n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4S-Wr-9AI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
