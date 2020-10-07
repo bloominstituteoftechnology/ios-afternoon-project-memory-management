@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		0B977FD6252E37620022F85B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B977FD5252E37620022F85B /* AppDelegate.m */; };
 		0B977FD9252E37620022F85B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B977FD8252E37620022F85B /* SceneDelegate.m */; };
-		0B977FDC252E37620022F85B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B977FDB252E37620022F85B /* ViewController.m */; };
 		0B977FDF252E37620022F85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B977FDD252E37620022F85B /* Main.storyboard */; };
 		0B977FE1252E37640022F85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B977FE0252E37640022F85B /* Assets.xcassets */; };
 		0B977FE4252E37640022F85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B977FE2252E37640022F85B /* LaunchScreen.storyboard */; };
 		0B977FE7252E37640022F85B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B977FE6252E37640022F85B /* main.m */; };
 		0B977FF1252E37640022F85B /* contactsObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B977FF0252E37640022F85B /* contactsObjcTests.m */; };
 		0B977FFC252E37640022F85B /* contactsObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B977FFB252E37640022F85B /* contactsObjcUITests.m */; };
+		0B978014252E38F70022F85B /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B978013252E38F70022F85B /* ContactsTableViewController.m */; };
+		0B97801A252E390A0022F85B /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B978019252E390A0022F85B /* ContactDetailViewController.m */; };
+		0B978020252E39300022F85B /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B97801F252E39300022F85B /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +43,6 @@
 		0B977FD5252E37620022F85B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B977FD7252E37620022F85B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		0B977FD8252E37620022F85B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0B977FDA252E37620022F85B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0B977FDB252E37620022F85B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0B977FDE252E37620022F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B977FE0252E37640022F85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B977FE3252E37640022F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +54,12 @@
 		0B977FF7252E37640022F85B /* contactsObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contactsObjcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B977FFB252E37640022F85B /* contactsObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = contactsObjcUITests.m; sourceTree = "<group>"; };
 		0B977FFD252E37640022F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B978012252E38F70022F85B /* ContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		0B978013252E38F70022F85B /* ContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		0B978018252E390A0022F85B /* ContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		0B978019252E390A0022F85B /* ContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		0B97801E252E39300022F85B /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		0B97801F252E39300022F85B /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +114,17 @@
 				0B977FD5252E37620022F85B /* AppDelegate.m */,
 				0B977FD7252E37620022F85B /* SceneDelegate.h */,
 				0B977FD8252E37620022F85B /* SceneDelegate.m */,
-				0B977FDA252E37620022F85B /* ViewController.h */,
-				0B977FDB252E37620022F85B /* ViewController.m */,
 				0B977FDD252E37620022F85B /* Main.storyboard */,
 				0B977FE0252E37640022F85B /* Assets.xcassets */,
 				0B977FE2252E37640022F85B /* LaunchScreen.storyboard */,
 				0B977FE5252E37640022F85B /* Info.plist */,
 				0B977FE6252E37640022F85B /* main.m */,
+				0B978012252E38F70022F85B /* ContactsTableViewController.h */,
+				0B978013252E38F70022F85B /* ContactsTableViewController.m */,
+				0B978018252E390A0022F85B /* ContactDetailViewController.h */,
+				0B978019252E390A0022F85B /* ContactDetailViewController.m */,
+				0B97801E252E39300022F85B /* Contact.h */,
+				0B97801F252E39300022F85B /* Contact.m */,
 			);
 			path = contactsObjc;
 			sourceTree = "<group>";
@@ -266,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B977FDC252E37620022F85B /* ViewController.m in Sources */,
 				0B977FD6252E37620022F85B /* AppDelegate.m in Sources */,
 				0B977FE7252E37640022F85B /* main.m in Sources */,
+				0B978014252E38F70022F85B /* ContactsTableViewController.m in Sources */,
 				0B977FD9252E37620022F85B /* SceneDelegate.m in Sources */,
+				0B978020252E39300022F85B /* Contact.m in Sources */,
+				0B97801A252E390A0022F85B /* ContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = contactsObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = contactsObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
