@@ -52,6 +52,10 @@
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
 }
-
+- (void)dealloc
+{
+    [_window release];
+    [super dealloc];
+}
 
 @end
