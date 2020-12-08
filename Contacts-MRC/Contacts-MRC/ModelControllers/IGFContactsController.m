@@ -6,7 +6,33 @@
 //
 
 #import "IGFContactsController.h"
+#import "IGFContacts.h"
+
+@interface IGFContactsController()
+
+@end
+
+
 
 @implementation IGFContactsController
 
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _contacts = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
+-(void)addContact:(IGFContacts *)contact
+{
+    [self.contacts addObject:contact];
+}
+
+- (void)randomUsersContacts:(NSString *)users completion:(void (^)(NSError *_Nullable))completion
+{
+
+}
 @end

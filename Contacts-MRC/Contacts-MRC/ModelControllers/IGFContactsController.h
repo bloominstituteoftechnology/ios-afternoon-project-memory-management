@@ -9,7 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+@class IGFContacts;
+
 @interface IGFContactsController : NSObject
+
+@property (nonatomic, readonly) NSMutableArray<IGFContacts *> *contacts;
+
+- (void)addContact:(IGFContacts *)contact;
+
+- (void)randomUsersContacts:(NSString *)users completion:(void (^)(NSError *_Nullable))completion;
 
 @end
 
