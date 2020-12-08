@@ -6,16 +6,37 @@
 //
 
 #import "IGFContactsViewController.h"
+#import "IGFContactsController.h"
+#import "IGFContacts.h"
 
-@interface IGFContactsViewController ()
+@interface IGFContactsViewController()
+
+
+#pragma mark - Properties
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+
 
 @end
 
 @implementation IGFContactsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
+}
+
+- (void)updateViews
+{
+    if (self.contact) {
+        self.title = @"Edit Contact";
+        [self.nameTextField setText:self.contact.name];
+        [self.emailTextField setText:self.contact.email];
+        [self.phoneTextField setText:self.contact.number];
+    }
 }
 
 /*
@@ -28,4 +49,10 @@
 }
 */
 
+- (void)dealloc {
+    [_nameTextField release];
+    [_emailTextField release];
+    [_phoneTextField release];
+    [super dealloc];
+}
 @end

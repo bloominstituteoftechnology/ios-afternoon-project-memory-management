@@ -9,7 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class IGFContactsController;
+@class IGFContacts;
+
 @interface IGFContactsViewController : UIViewController
+
+@property (nonatomic, retain) IGFContactsController *contactsController;
+@property (nonatomic, retain) IGFContacts *contact;
+
+
 
 @end
 

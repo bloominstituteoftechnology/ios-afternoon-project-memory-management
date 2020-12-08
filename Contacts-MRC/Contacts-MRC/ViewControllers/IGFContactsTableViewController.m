@@ -6,10 +6,17 @@
 //
 
 #import "IGFContactsTableViewController.h"
+#import "IGFContactsViewController.h"
+#import "IGFContacts.h"
+#import "IGFContactsController.h"
 
 @interface IGFContactsTableViewController ()
 
+@property (nonatomic) IGFContactsController *contactController;
+
 @end
+
+
 
 @implementation IGFContactsTableViewController
 
