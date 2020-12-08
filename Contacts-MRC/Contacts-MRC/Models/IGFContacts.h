@@ -7,10 +7,18 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface IGFContacts : NSObject
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *number;
+
+- (instancetype)initWithName:(NSString *)name email:(NSString *)email number:(NSString *)number;
+
++ (instancetype)contactWithName:(NSString *)name email:(NSString *)email number:(NSString *)number;
++ (instancetype)contactWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
-NS_ASSUME_NONNULL_END
+
