@@ -13,6 +13,10 @@
 		3C27CAD225801C2700BBC809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C27CAD125801C2700BBC809 /* Assets.xcassets */; };
 		3C27CAD525801C2700BBC809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C27CAD325801C2700BBC809 /* LaunchScreen.storyboard */; };
 		3C27CAD825801C2700BBC809 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C27CAD725801C2700BBC809 /* main.m */; };
+		3C27CAE72580212400BBC809 /* IGFContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C27CAE62580212400BBC809 /* IGFContactsTableViewController.m */; };
+		3C27CAEC2580214500BBC809 /* IGFContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C27CAEB2580214500BBC809 /* IGFContactsViewController.m */; };
+		3C27CAF0258021B100BBC809 /* IGFContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C27CAEF258021B100BBC809 /* IGFContactsController.m */; };
+		3C27CAF4258021E400BBC809 /* IGFContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C27CAF3258021E400BBC809 /* IGFContacts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		3C27CAD425801C2700BBC809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C27CAD625801C2700BBC809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C27CAD725801C2700BBC809 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C27CAE52580212400BBC809 /* IGFContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFContactsTableViewController.h; sourceTree = "<group>"; };
+		3C27CAE62580212400BBC809 /* IGFContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFContactsTableViewController.m; sourceTree = "<group>"; };
+		3C27CAEA2580214500BBC809 /* IGFContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFContactsViewController.h; sourceTree = "<group>"; };
+		3C27CAEB2580214500BBC809 /* IGFContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFContactsViewController.m; sourceTree = "<group>"; };
+		3C27CAEE258021B100BBC809 /* IGFContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFContactsController.h; sourceTree = "<group>"; };
+		3C27CAEF258021B100BBC809 /* IGFContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFContactsController.m; sourceTree = "<group>"; };
+		3C27CAF2258021E400BBC809 /* IGFContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFContacts.h; sourceTree = "<group>"; };
+		3C27CAF3258021E400BBC809 /* IGFContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFContacts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,9 @@
 		3C27CAC425801C2700BBC809 /* Contacts-MRC */ = {
 			isa = PBXGroup;
 			children = (
+				3C27CAE4258020F000BBC809 /* ModelControllers */,
+				3C27CAE3258020CE00BBC809 /* Models */,
+				3C27CAE2258020B100BBC809 /* ViewControllers */,
 				3C27CAC525801C2700BBC809 /* AppDelegate.h */,
 				3C27CAC625801C2700BBC809 /* AppDelegate.m */,
 				3C27CAC825801C2700BBC809 /* SceneDelegate.h */,
@@ -69,6 +84,35 @@
 				3C27CAD725801C2700BBC809 /* main.m */,
 			);
 			path = "Contacts-MRC";
+			sourceTree = "<group>";
+		};
+		3C27CAE2258020B100BBC809 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C27CAE52580212400BBC809 /* IGFContactsTableViewController.h */,
+				3C27CAE62580212400BBC809 /* IGFContactsTableViewController.m */,
+				3C27CAEA2580214500BBC809 /* IGFContactsViewController.h */,
+				3C27CAEB2580214500BBC809 /* IGFContactsViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C27CAE3258020CE00BBC809 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C27CAF2258021E400BBC809 /* IGFContacts.h */,
+				3C27CAF3258021E400BBC809 /* IGFContacts.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C27CAE4258020F000BBC809 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C27CAEE258021B100BBC809 /* IGFContactsController.h */,
+				3C27CAEF258021B100BBC809 /* IGFContactsController.m */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C27CAC725801C2700BBC809 /* AppDelegate.m in Sources */,
+				3C27CAF4258021E400BBC809 /* IGFContacts.m in Sources */,
+				3C27CAEC2580214500BBC809 /* IGFContactsViewController.m in Sources */,
 				3C27CAD825801C2700BBC809 /* main.m in Sources */,
+				3C27CAE72580212400BBC809 /* IGFContactsTableViewController.m in Sources */,
 				3C27CACA25801C2700BBC809 /* SceneDelegate.m in Sources */,
+				3C27CAF0258021B100BBC809 /* IGFContactsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

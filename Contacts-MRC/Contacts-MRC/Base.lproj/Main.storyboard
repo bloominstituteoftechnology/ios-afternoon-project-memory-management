@@ -12,7 +12,7 @@
         <!--Contacts-->
         <scene sceneID="zI8-LJ-bAK">
             <objects>
-                <tableViewController id="u7Y-nY-QYH" sceneMemberID="viewController">
+                <tableViewController id="u7Y-nY-QYH" customClass="IGFContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4V6-Dc-0fb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--Add Contact-->
         <scene sceneID="bbU-XL-hV0">
             <objects>
-                <viewController id="qxw-db-s7v" sceneMemberID="viewController">
+                <viewController id="qxw-db-s7v" customClass="IGFContactsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qY5-pc-YVj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
