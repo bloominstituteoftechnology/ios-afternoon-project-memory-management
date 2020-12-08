@@ -127,8 +127,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="Lpc-nq-FTV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Uco-Jl-Jfq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Uco-Jl-Jfq">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="qxw-db-s7v" id="1S0-yq-Bth"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="1sf-Z1-504" id="yQC-7t-ZTK"/>
+                        <outlet property="nameTextField" destination="IeD-qo-csx" id="Gmx-QS-AbD"/>
+                        <outlet property="phoneTextField" destination="0kb-79-PIU" id="xYU-Hr-hXQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekq-rA-IIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

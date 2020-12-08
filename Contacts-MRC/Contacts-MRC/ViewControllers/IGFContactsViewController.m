@@ -39,6 +39,34 @@
     }
 }
 
+#pragma mark - Actions
+
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    [self saveContact];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)saveContact
+{
+    NSString *nameString = self.nameTextField.text;
+    NSString *emailString = self.emailTextField.text;
+    NSString *phoneString = self.phoneTextField.text;
+
+    if (nameString.length > 0 && emailString.length > 0 && phoneString.length > 0 ) {
+        if (self.contact) {
+            [self.contact setName:nameString];
+            [self.contact setEmail:emailString];
+            [self.contact setNumber:phoneString];
+        } else {
+            IGFContacts *contact = [IGFContacts contactWithName:nameString email:emailString number:phoneString];
+            [self.contactsController addContact: contact];
+        }
+    }
+}
+
+
+
+
 /*
 #pragma mark - Navigation
 
@@ -49,10 +77,12 @@
 }
 */
 
-- (void)dealloc {
-    [_nameTextField release];
-    [_emailTextField release];
-    [_phoneTextField release];
+
+// removed release of textfields since changed to weak
+- (void)dealloc
+{
+    [_contactsController release];
+    [_contact release];
     [super dealloc];
 }
 @end
