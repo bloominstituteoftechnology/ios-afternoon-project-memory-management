@@ -38,4 +38,47 @@
 }
 
 
+
+// Another great alternative:
+- (void)setName:(NSString *)name
+{
+    if (name != _name) {
+        [_name release];
+        _name = [name retain];
+    }
+}
+
+
+
+
+- (void)setEmail:(NSString *)email
+{
+    if (email != _email) {
+        [_email release];
+        _email = [email retain];
+    }
+}
+
+
+
+
+
+- (void)setNumber:(NSString *)number
+{
+    if (number != _number) {
+        [_number release];
+        _number = [number retain];
+    }
+}
+
+
+
+- (void)dealloc
+{
+    [_name release];
+    [_email release];
+    [_number release];
+    [super dealloc];
+}
+
 @end
