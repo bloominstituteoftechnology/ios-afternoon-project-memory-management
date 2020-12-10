@@ -15,6 +15,7 @@
 		1AE1E6892582E30300303492 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6882582E30300303492 /* main.m */; };
 		1AE1E6952582E74300303492 /* TableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6942582E74300303492 /* TableVC.m */; };
 		1AE1E6992582E76300303492 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6982582E76300303492 /* DetailVC.m */; };
+		1AE1E69D2582E84600303492 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E69C2582E84600303492 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		1AE1E6942582E74300303492 /* TableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableVC.m; sourceTree = "<group>"; };
 		1AE1E6972582E76300303492 /* DetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
 		1AE1E6982582E76300303492 /* DetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
+		1AE1E69B2582E84600303492 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		1AE1E69C2582E84600303492 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				1AE1E6772582E2FF00303492 /* AppDelegate.m */,
 				1AE1E6792582E2FF00303492 /* SceneDelegate.h */,
 				1AE1E67A2582E2FF00303492 /* SceneDelegate.m */,
+				1AE1E69B2582E84600303492 /* Contact.h */,
+				1AE1E69C2582E84600303492 /* Contact.m */,
 				1AE1E6932582E74300303492 /* TableVC.h */,
 				1AE1E6942582E74300303492 /* TableVC.m */,
 				1AE1E6972582E76300303492 /* DetailVC.h */,
@@ -154,6 +159,7 @@
 				1AE1E6992582E76300303492 /* DetailVC.m in Sources */,
 				1AE1E6952582E74300303492 /* TableVC.m in Sources */,
 				1AE1E6892582E30300303492 /* main.m in Sources */,
+				1AE1E69D2582E84600303492 /* Contact.m in Sources */,
 				1AE1E67B2582E2FF00303492 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
