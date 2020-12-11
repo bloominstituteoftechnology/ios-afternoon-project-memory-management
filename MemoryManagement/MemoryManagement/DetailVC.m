@@ -31,14 +31,16 @@
         self.contact.name = self.nameTextField.text;
         self.contact.email = self.emailTextField.text;
         self.contact.phone = self.phoneTextField.text;
+        [self.navigationController popViewControllerAnimated:YES];
+        [self.delegate didAddContact];
     } else {
         Contact *contact = [Contact contactWithName:self.nameTextField.text
                                               email:self.emailTextField.text
                                               phone:self.phoneTextField.text];
-        [ContactController.sharedContactController.contacts addObject:contact];
+        [self.delegate addContact:(Contact *)contact];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.delegate didAddContact];
     }
-    [ContactController.sharedContactController.delegate didAddContact];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)setUpViews {

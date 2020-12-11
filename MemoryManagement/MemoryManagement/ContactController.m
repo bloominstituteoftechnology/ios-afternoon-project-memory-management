@@ -9,29 +9,46 @@
 
 @implementation ContactController
 
-+ (instancetype)sharedContactController
-{
++ (instancetype)sharedInstance {
     static ContactController *contactController = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        contactController = [[self alloc] init];
-    });
-
-    return [contactController autorelease];
+    contactController = [[super allocWithZone:NULL] init];
+    return contactController;
 }
 
 - (instancetype)initSharedInstance
 {
     if (self = [super init]) {
-        _contacts = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [_contacts release];
     [super dealloc];
+}
+
++ (id)allocWithZone:(NSZone*)zone {
+    return [[self sharedInstance] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
+
+- (id)retain {
+    return self;
+}
+
+- (NSUInteger)retainCount {
+    return NSUIntegerMax;
+}
+
+- (oneway void)release {
+
+}
+
+- (id)autorelease {
+    return self;
 }
 
 @end

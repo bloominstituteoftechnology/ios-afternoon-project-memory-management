@@ -7,9 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Contact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TableVC : UITableViewController
+
+@property (nonatomic, retain) NSMutableArray <Contact *> *contacts;
 
 @end
 

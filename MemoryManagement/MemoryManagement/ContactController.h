@@ -10,21 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ContactControllerDelegate;
-
 @interface ContactController : NSObject
 
-@property (nonatomic, retain, nullable) NSMutableArray<Contact *> *contacts;
-
-+ (instancetype)sharedContactController;
-
-@property (nonatomic, weak) id<ContactControllerDelegate> delegate;
-
-@end
-
-@protocol ContactControllerDelegate <NSObject>
-
-- (void)didAddContact;
++ (instancetype)sharedInstance;
 
 @end
 

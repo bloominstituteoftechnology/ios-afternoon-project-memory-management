@@ -119,6 +119,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-S2-Hln">
                                 <rect key="frame" x="190" y="380.5" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="YwX-Nu-hVW" eventType="touchUpInside" id="Bal-px-pSt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IX-wJ-alS">
                                 <rect key="frame" x="152.5" y="118" width="109" height="20.5"/>
@@ -140,6 +143,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5NH-85-67u"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Hly-Wi-RTn" id="N5l-Xo-Rhu"/>
+                        <outlet property="nameTextField" destination="AtJ-Rj-jgK" id="G7X-Bm-eDR"/>
+                        <outlet property="phoneTextField" destination="1rn-2c-P2W" id="KaR-L9-lbu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7d8-bJ-9VO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
