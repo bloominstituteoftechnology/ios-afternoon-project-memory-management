@@ -9,13 +9,18 @@
 
 @implementation ContactController
 
-+ (instancetype)contactController
++ (instancetype)sharedContactController
 {
-    ContactController *contactController = [[self alloc] init];
+    static ContactController *contactController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        contactController = [[self alloc] init];
+    });
+
     return [contactController autorelease];
 }
 
-- (instancetype)init
+- (instancetype)initSharedInstance
 {
     if (self = [super init]) {
         _contacts = [[NSMutableArray alloc] init];

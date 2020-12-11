@@ -14,13 +14,19 @@
     return [self contactWithName:nil email:nil phone:nil];
 }
 
-+ (instancetype)contactWithName:(NSString *)aName email:(NSString *)anEmail phone:(NSString *)aPhone
++ (instancetype)contactWithName:(NSString *)aName
+                          email:(NSString *)anEmail
+                          phone:(NSString *)aPhone
 {
-    Contact *contact = [[self alloc] initWithName:aName email:anEmail phone:aPhone];
+    Contact *contact = [[self alloc] initWithName:aName
+                                            email:anEmail
+                                            phone:aPhone];
     return [contact autorelease];
 }
 
-- (instancetype)initWithName:(NSString *)aName email:(NSString *)anEmail phone:(NSString *)aPhone
+- (instancetype)initWithName:(NSString *)aName
+                       email:(NSString *)anEmail
+                       phone:(NSString *)aPhone
 {
     if (self = [super init]) {
         _name = aName.copy;

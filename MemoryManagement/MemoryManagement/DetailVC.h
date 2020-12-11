@@ -12,7 +12,6 @@
 
 @interface DetailVC : UIViewController
 
-@property (nonatomic, retain, nonnull) ContactController *contactController;
 @property (nonatomic, retain, nullable) Contact *contact;
 
 @end

@@ -13,9 +13,13 @@
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *phone;
 
-- (instancetype)initWithName:(NSString *)aName email:(NSString *)anEmail phone:(NSString *)aPhone;
+- (instancetype)initWithName:(NSString *)aName
+                       email:(NSString *)anEmail
+                       phone:(NSString *)aPhone;
 
 + (instancetype)contact;
-+ (instancetype)contactWithName:(NSString *)aName email:(NSString *)anEmail phone:(NSString *)aPhone;
++ (instancetype)contactWithName:(NSString *)aName
+                          email:(NSString *)anEmail
+                          phone:(NSString *)aPhone;
 
 @end

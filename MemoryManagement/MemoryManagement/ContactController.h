@@ -6,13 +6,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Contact.h"
 
-@class Contact;
+NS_ASSUME_NONNULL_BEGIN
+
+@protocol ContactControllerDelegate;
 
 @interface ContactController : NSObject
 
-@property (nonatomic, copy, nullable) NSMutableArray<Contact *> *contacts;
+@property (nonatomic, retain, nullable) NSMutableArray<Contact *> *contacts;
 
-+ (instancetype _Nullable)contactController;
++ (instancetype)sharedContactController;
+
+@property (nonatomic, weak) id<ContactControllerDelegate> delegate;
 
 @end
+
+@protocol ContactControllerDelegate <NSObject>
+
+- (void)didAddContact;
+
+@end
+
+NS_ASSUME_NONNULL_END
